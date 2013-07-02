@@ -13,35 +13,37 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 80, 8080
   config.vm.share_folder "www", "/var/www", "/mnt/box-www", :create => true
 
-  config.vm.provision :shell, :inline => "sudo apt-get update"
+  # config.vm.provision :shell, :inline => "sudo apt-get update"
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
-    chef.log_level = :debug
+    # chef.log_level = :debug
 
     chef.add_recipe "apt"
+    chef.add_recipe "git"
+    chef.add_recipe "nginx"
 
-#    chef.add_recipe "git"
-#    chef.add_recipe "nginx"
-
-#    chef.add_recipe "php"
-#    chef.add_recipe "php::module_curl"
-#    chef.add_recipe "php::module_mysql"
-#    chef.add_recipe "php::module_gd"
+    chef.add_recipe "php"
+    chef.add_recipe "php::module_curl"
+    chef.add_recipe "php::module_mysql"
+    chef.add_recipe "php::module_gd"
 
     chef.add_recipe "mysql"
     chef.add_recipe "mysql::server"
     chef.add_recipe "mysql::client"
 
     chef.json = {
-#      :php => {
-#        :version => "5.3.*"
-#      },
+      :php => {
+        :version => "5.3.*"
+      },
       :mysql => {
-        :server_root_password => 'password',
+        :server_root_password => '1',
+        :server_debian_password => '1',
+        :server_repl_password => '1',
         :bind_address => '127.0.0.1'
       }
     }
   end
 
 end
+

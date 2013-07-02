@@ -2,7 +2,7 @@
 # Cookbook Name:: mysql
 # Recipe:: client
 #
-# Copyright 2008-2009, Opscode, Inc.
+# Copyright 2008-2011, Opscode, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,57 +17,43 @@
 # limitations under the License.
 #
 
-p = package "mysql-devel" do
-  package_name value_for_platform(
-    [ "centos", "redhat", "suse", "fedora"] => { "default" => "mysql-devel" },
-    "debian" => {
-      "5.0" => "libmysqlclient15-dev",
-      "5.0.1" => "libmysqlclient15-dev",
-      "5.0.2" => "libmysqlclient15-dev",
-      "5.0.3" => "libmysqlclient15-dev",
-      "5.0.4" => "libmysqlclient15-dev",
-      "5.0.5" => "libmysqlclient15-dev"
-    },
-    "ubuntu" => {
-      "8.04" => "libmysqlclient15-dev",
-      "8.10" => "libmysqlclient15-dev",
-      "9.04" => "libmysqlclient15-dev"
-    },
-    "default" => 'libmysqlclient-dev'
-  )
-  action :nothing
-end
+# Include Opscode helper in Recipe class to get access
+# to debian_before_squeeze? and ubuntu_before_lucid?
+::Chef::Recipe.send(:include, Opscode::Mysql::Helpers)
 
-p.run_action(:install)
-
-o = package "mysql-client" do
-  package_name value_for_platform(
-    [ "centos", "redhat", "suse", "fedora"] => { "default" => "mysql" },
-    "default" => "mysql-client"
-  )
-  action :nothing
-end
-
-o.run_action(:install)
-
-r = gem_package "mysql" do
-  action :nothing
-end
-
-case node[:node]
-when "centos",
-  if node[:platform_version].to_f >= 5.0
-    r.run_action(:install)
-  else
-    package "ruby-mysql" do
-      action :install
-    end
+case node['platform']
+when "windows"
+  package_file = node['mysql']['client']['package_file']
+  remote_file "#{Chef::Config[:file_cache_path]}/#{package_file}" do
+    source node['mysql']['client']['url']
+    not_if { File.exists? "#{Chef::Config[:file_cache_path]}/#{package_file}" }
   end
-when "redhat", "suse", "fedora"
-  package "ruby-mysql" do
+
+  windows_package node['mysql']['client']['packages'].first do
+    source "#{Chef::Config[:file_cache_path]}/#{package_file}"
+  end
+  windows_path node['mysql']['client']['bin_dir'] do
+    action :add
+  end
+  def package(*args, &blk)
+    windows_package(*args, &blk)
+  end
+when "mac_os_x"
+  include_recipe 'homebrew'
+end
+
+node['mysql']['client']['packages'].each do |mysql_pack|
+  package mysql_pack do
     action :install
   end
+end
 
-else
-  r.run_action(:install)
+if platform? 'windows'
+  ruby_block "copy libmysql.dll into ruby path" do
+    block do
+      require 'fileutils'
+      FileUtils.cp "#{node['mysql']['client']['lib_dir']}\\libmysql.dll", node['mysql']['client']['ruby_dir']
+    end
+    not_if { File.exist?("#{node['mysql']['client']['ruby_dir']}\\libmysql.dll") }
+  end
 end
