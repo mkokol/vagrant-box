@@ -1,0 +1,2 @@
+sudo apt-get install vagrant
+sudo apt-get install virtualbox-guest-utils

@@ -11,32 +11,34 @@ Vagrant::Config.run do |config|
   config.vm.network :hostonly, "192.168.56.11"
   config.vm.network :bridged, :bridge => "eth0"
   config.vm.forward_port 80, 8080
+
   config.vm.share_folder "www", "/var/www", "/mnt/box-www", :create => true
 
-  config.vm.provision :shell, :inline => "sudo apt-get update"
+#  config.vm.provision :shell, :inline => "sudo apt-get update"
+#  config.vm.provision :shell, :inline => "sudo apt-get install virtualbox-guest-utils"
 
-  config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = "recipes/cookbooks, recipes/my-cookbooks"
-    # chef.log_level = :debug
+  config.vm.provision :chef_solo do |chef|\
+#    chef.log_level = :debug
 
-    # 
+    chef.cookbooks_path = ["recipes/cookbooks", "recipes/my_cookbooks"]
+
     chef.add_recipe "apt"
-#    chef.add_recipe "vim"
-#    chef.add_recipe "git"
+    chef.add_recipe "vim"
+    chef.add_recipe "git"
     chef.add_recipe "nginx"
 
-#    chef.add_recipe "php"
-#    chef.add_recipe "php-fpm"
-#    chef.add_recipe "php::module_curl"
-#    chef.add_recipe "php::module_mysql"
-#    chef.add_recipe "php::module_gd"
+    chef.add_recipe "php"
+    chef.add_recipe "php::module_curl"
+    chef.add_recipe "php::module_mysql"
+    chef.add_recipe "php::module_gd"
 
-#    chef.add_recipe "mysql"
-#    chef.add_recipe "mysql::server"
-#    chef.add_recipe "mysql::client"
+    chef.add_recipe "mysql"
+    chef.add_recipe "mysql::server"
+    chef.add_recipe "mysql::client"
 
     #personall coocbocks
-    chef.add_recipe "nginx-config"
+    chef.add_recipe "squeeze_php_fpm"
+    chef.add_recipe "nginx_config"
 
     chef.json = {
       :php => {
@@ -47,14 +49,12 @@ Vagrant::Config.run do |config|
         :server_debian_password => '1',
         :server_repl_password => '1',
         :bind_address => '127.0.0.1'
+      },
+      :nginx_config => {
+        :www_path => "/var/www/cool-another-app",
+        :server_name => "cool-another-app",
+        :server_email => "admin@cool-another-app.com"
       }
-      #,
-      #:"nginx-config" => {
-      #  :path => "/var/www/cool-another-app",
-      #  :server_name => "cool-another-app",
-      #  :server_email => "cool@another-app.com",
-      #  :database => "cool_another_app_db"
-      #}
     }
   end
 
