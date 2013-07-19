@@ -1,6 +1,9 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+# os distribution: lsb_release -a
+
+
 Vagrant::Config.run do |config|
   config.vm.box = "debian-squeeze"
   # Debian Squeeze amd64 (Chef 10.24.4, Puppet 3.1.1, VirtualBox 4.2.12)
