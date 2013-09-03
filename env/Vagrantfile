@@ -9,6 +9,7 @@ Vagrant::Config.run do |config|
   # Debian Squeeze amd64 (Chef 10.24.4, Puppet 3.1.1, VirtualBox 4.2.12)
   # https://dl.dropboxusercontent.com/u/13054557/vagrant_boxes/debian-squeeze.box
   config.vm.box_url = "~/debian-squeeze.box"
+
   # Boot with a GUI so you can see the screen. (Default is headless)
   # config.vm.boot_mode = :gui
   config.vm.network :hostonly, "192.168.56.11"
@@ -18,11 +19,9 @@ Vagrant::Config.run do |config|
   config.vm.share_folder "www", "/var/www", "/mnt/box-www", :create => true
 
 #  config.vm.provision :shell, :inline => "sudo apt-get update"
-#  config.vm.provision :shell, :inline => "sudo apt-get install virtualbox-guest-utils"
 
-  config.vm.provision :chef_solo do |chef|\
-#    chef.log_level = :debug
-
+  config.vm.provision :chef_solo do |chef|
+    # chef.log_level = :debug
     chef.cookbooks_path = ["recipes/cookbooks", "recipes/my_cookbooks"]
 
     chef.add_recipe "apt"
