@@ -1,11 +1,26 @@
+# <%= node[:nginx_config][:server_name] %> config
+
 server {
-  listen   80;
-  server_name  <%= node[:nginx_config][:server_name] %>;
+    server_name  www.<%= node[:nginx_config][:server_name] %>;
+    rewrite ^(.*) http://<%= node[:nginx_config][:server_name] %>$1 permanent;
+}
 
-  access_log  /var/log/nginx/<%= node[:nginx_config][:server_name] %>.access.log;
+server {
+    root /var/www/<%= node[:nginx_config][:server_name] %>;
+    index index.html index.php;
 
-  location / {
-    root   /var/www/nginx-default;
-    index  index.html index.htm;
-  }
+    # Make site accessible from http://<%= node[:nginx_config][:server_name] %>/
+    server_name <%= node[:nginx_config][:server_name] %>;
+
+    location / {
+        try_files $uri $uri/ /index.php?$args;
+    }
+
+    location ~ \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass    127.0.0.1:9000;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param   APPLICATION_ENV  development;
+    }
 }

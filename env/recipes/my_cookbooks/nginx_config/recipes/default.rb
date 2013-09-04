@@ -12,7 +12,6 @@ directory node["nginx_config"]["www_path"] do
   recursive true
 end
 
-
 # create VirtualHost for nginx
 template "/etc/nginx/sites-available/#{node['nginx_config']['server_name']}.conf" do
   source "vhost.erb"
@@ -20,6 +19,7 @@ template "/etc/nginx/sites-available/#{node['nginx_config']['server_name']}.conf
   group "root"
   mode "0644"
 end
+
 # create simlink in sites-enabled
 link "/etc/nginx/sites-enabled/#{node['nginx_config']['server_name']}.conf" do
   to "/etc/nginx/sites-available/#{node['nginx_config']['server_name']}.conf"

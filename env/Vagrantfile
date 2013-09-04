@@ -18,7 +18,8 @@ Vagrant::Config.run do |config|
 
   config.vm.share_folder "www", "/var/www", "/mnt/box-www", :create => true
 
-#  config.vm.provision :shell, :inline => "sudo apt-get update"
+  config.vm.provision :shell, :inline => "sudo apt-get update"
+  config.vm.provision :shell, :inline => "sudo apt-get remove apashe2"
 
   config.vm.provision :chef_solo do |chef|
     # chef.log_level = :debug
@@ -38,7 +39,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "mysql::server"
     chef.add_recipe "mysql::client"
 
-    #personall coocbocks
+    #personall cookbooks
     chef.add_recipe "squeeze_php_fpm"
     chef.add_recipe "nginx_config"
 
