@@ -26,7 +26,7 @@ link "/etc/nginx/sites-enabled/#{node['nginx_config']['server_name']}.conf" do
   action :create
 end
 
-%W{php5-fpm nginx}.each do |s|
+%W{nginx}.each do |s|
   service s do
     action :restart
   end

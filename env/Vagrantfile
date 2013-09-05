@@ -1,9 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# os distribution: lsb_release -a
-
-
 Vagrant::Config.run do |config|
   config.vm.box = "debian-squeeze"
   # Debian Squeeze amd64 (Chef 10.24.4, Puppet 3.1.1, VirtualBox 4.2.12)
@@ -19,7 +16,6 @@ Vagrant::Config.run do |config|
   config.vm.share_folder "www", "/var/www", "/mnt/box-www", :create => true
 
   config.vm.provision :shell, :inline => "sudo apt-get update"
-  config.vm.provision :shell, :inline => "sudo apt-get remove apashe2"
 
   config.vm.provision :chef_solo do |chef|
     # chef.log_level = :debug
@@ -28,9 +24,11 @@ Vagrant::Config.run do |config|
     chef.add_recipe "apt"
     chef.add_recipe "vim"
     chef.add_recipe "git"
-    chef.add_recipe "nginx"
 
-    chef.add_recipe "php"
+    chef.add_recipe "nginx"
+    chef.add_recipe "nginx_config"
+
+    chef.add_recipe "squeeze_php_fpm"
     chef.add_recipe "php::module_curl"
     chef.add_recipe "php::module_mysql"
     chef.add_recipe "php::module_gd"
@@ -38,10 +36,6 @@ Vagrant::Config.run do |config|
     chef.add_recipe "mysql"
     chef.add_recipe "mysql::server"
     chef.add_recipe "mysql::client"
-
-    #personall cookbooks
-    chef.add_recipe "squeeze_php_fpm"
-    chef.add_recipe "nginx_config"
 
     chef.json = {
       :php => {
