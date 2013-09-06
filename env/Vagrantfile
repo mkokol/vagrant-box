@@ -22,20 +22,23 @@ Vagrant::Config.run do |config|
     chef.cookbooks_path = ["recipes/cookbooks", "recipes/my_cookbooks"]
 
     chef.add_recipe "apt"
-    chef.add_recipe "vim"
-    chef.add_recipe "git"
+    #chef.add_recipe "vim"
+    #chef.add_recipe "git"
 
     chef.add_recipe "nginx"
     chef.add_recipe "nginx_config"
+
+    chef.add_recipe "memcached"
+
+    chef.add_recipe "mysql"
+    chef.add_recipe "mysql::server"
+    chef.add_recipe "mysql::client"
 
     chef.add_recipe "squeeze_php_fpm"
     chef.add_recipe "php::module_curl"
     chef.add_recipe "php::module_mysql"
     chef.add_recipe "php::module_gd"
-
-    chef.add_recipe "mysql"
-    chef.add_recipe "mysql::server"
-    chef.add_recipe "mysql::client"
+    chef.add_recipe "php::module_memcache"
 
     chef.json = {
       :php => {
@@ -47,13 +50,26 @@ Vagrant::Config.run do |config|
         :server_repl_password => '1',
         :bind_address => '127.0.0.1'
       },
+       :memcached => {
+         :memory => 64
+       },
       :nginx_config => {
-        :www_path => "/var/www/cool-another-app",
-        :server_name => "cool-another-app",
-        :server_email => "admin@cool-another-app.com"
+        :folders => [
+          { :path => "/var/www/intvou" }
+        ],
+        :hosts => [
+          {
+            :path => "/var/www/intvou/frontend/public",
+            :server_name => "intvou.frontend",
+            :server_email => "admin@cool-another-app1.com"
+          },
+          {
+            :path => "/var/www/intvou/backend/public",
+            :server_name => "intvou.backend",
+            :server_email => "admin@cool-another-app2.com"
+          }
+        ]
       }
     }
   end
-
 end
-
