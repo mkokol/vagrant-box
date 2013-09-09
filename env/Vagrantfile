@@ -21,12 +21,10 @@ Vagrant::Config.run do |config|
     # chef.log_level = :debug
     chef.cookbooks_path = ["recipes/cookbooks", "recipes/my_cookbooks"]
 
+    chef.add_recipe "locale-gen"
     chef.add_recipe "apt"
-    #chef.add_recipe "vim"
-    #chef.add_recipe "git"
-
-    chef.add_recipe "nginx"
-    chef.add_recipe "nginx_config"
+    chef.add_recipe "vim"
+    chef.add_recipe "git"
 
     chef.add_recipe "memcached"
 
@@ -40,33 +38,45 @@ Vagrant::Config.run do |config|
     chef.add_recipe "php::module_gd"
     chef.add_recipe "php::module_memcache"
 
+    chef.add_recipe "nginx"
+    chef.add_recipe "nginx_config"
+
     chef.json = {
+      :localegen  => {
+        'lang' => ['en_US','en_US.utf8','de_DE','de_DE.utf8' ]
+      },
       :php => {
         :version => "5.3.*"
       },
       :mysql => {
-        :server_root_password => '1',
-        :server_debian_password => '1',
-        :server_repl_password => '1',
+        :server_root_password => '',
+        :server_debian_password => '',
+        :server_repl_password => '',
         :bind_address => '127.0.0.1'
       },
-       :memcached => {
-         :memory => 64
-       },
+      :memcached => {
+        :memory => 64
+      },
       :nginx_config => {
         :folders => [
-          { :path => "/var/www/intvou" }
+          { :path => "/var/www/intvou" },
+          { :path => "/var/www/test.vb" }
         ],
         :hosts => [
           {
-            :path => "/var/www/intvou/frontend/public",
-            :server_name => "intvou.frontend",
-            :server_email => "admin@cool-another-app1.com"
+            :path => "/var/www/intvou/frontend/public/",
+            :server_name => "intvou.frontend.vb",
+            :server_email => "admin@intvou.frontend"
           },
           {
-            :path => "/var/www/intvou/backend/public",
-            :server_name => "intvou.backend",
-            :server_email => "admin@cool-another-app2.com"
+            :path => "/var/www/intvou/backend/public/",
+            :server_name => "intvou.backend.vb",
+            :server_email => "admin@intvou.backend"
+          },
+          {
+            :path => "/var/www/test.vb/",
+            :server_name => "test.vb",
+            :server_email => "admin@test.vb"
           }
         ]
       }

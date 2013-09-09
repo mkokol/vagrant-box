@@ -34,7 +34,7 @@ end
 
 
 
-%W{nginx}.each do |s|
+%W{nginx php5-fpm}.each do |s|
   service s do
     action :restart
   end
