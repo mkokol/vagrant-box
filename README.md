@@ -9,4 +9,4 @@ instaling and configuring:
 
 nginx, php 5.3, mysql, memcached
 
-configuring virtual hosts
+configuring  multi-VM environments

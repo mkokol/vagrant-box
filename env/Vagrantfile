@@ -31,10 +31,7 @@ Vagrant::Config.run do |config|
             chef.add_recipe "subversion"
 
             chef.add_recipe "memcached"
-
-            chef.add_recipe "mysql"
-            chef.add_recipe "mysql::server"
-            chef.add_recipe "mysql::client"
+            chef.add_recipe "redisio"
 
             chef.add_recipe "squeeze_php_fpm"
             chef.add_recipe "php::module_curl"
@@ -51,12 +48,6 @@ Vagrant::Config.run do |config|
                 },
                 :php => {
                     :version => "5.3.*"
-                },
-                :mysql => {
-                    :server_root_password => '',
-                    :server_debian_password => '',
-                    :server_repl_password => '',
-                    :bind_address => '127.0.0.1'
                 },
                 :memcached => {
                     :memory => 64
@@ -101,7 +92,7 @@ Vagrant::Config.run do |config|
 
         db.vm.provision :shell, :inline => "sudo apt-get update"
 
-        db.vm.provision :chef_solo do |chef|
+       db.vm.provision :chef_solo do |chef|
             # chef.log_level = :debug
             chef.cookbooks_path = ["recipes/cookbooks", "recipes/my_cookbooks"]
 
@@ -110,8 +101,6 @@ Vagrant::Config.run do |config|
             chef.add_recipe "vim"
             chef.add_recipe "git"
             chef.add_recipe "subversion"
-
-            chef.add_recipe "memcached"
 
             chef.add_recipe "mysql"
             chef.add_recipe "mysql::server"
@@ -138,9 +127,6 @@ Vagrant::Config.run do |config|
                     :server_debian_password => '',
                     :server_repl_password => '',
                     :bind_address => '127.0.0.1'
-                },
-                :memcached => {
-                    :memory => 64
                 },
                 :nginx_config => {
                     :folders => [
