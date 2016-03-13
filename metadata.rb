@@ -1,0 +1,12 @@
+name             'project'
+maintainer       'author'
+maintainer_email 'author@email.com'
+license          'All rights reserved'
+description      'lorem ipsum'
+long_description 'lorem ipsum'
+version          '0.2.0'
+
+depends 'nginx', '~> 2.7.6'
+depends 'mysql', '~> 6.1.2'
+depends 'php', '~> 1.8.0'
+depends 'elasticsearch', '~> 2.2.1'
