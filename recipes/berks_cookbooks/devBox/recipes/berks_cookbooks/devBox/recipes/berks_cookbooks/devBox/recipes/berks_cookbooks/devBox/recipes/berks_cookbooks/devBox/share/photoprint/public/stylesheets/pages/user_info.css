@@ -1,0 +1,113 @@
+/**/
+.upload-info {
+    color: #8C98A1;
+    font-size: 14px;
+    line-height: 140%;
+    margin: 0 auto;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.upload-functional {
+    padding-top: 50px;
+}
+
+.upload-functional a {
+    box-shadow: 0 0 7px #915B5A inset;
+    border-radius: 5px;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 30px;
+    margin: 0 auto;
+    padding: 20px 12px 10px 14px;
+    width: 205px;
+    color: #fef4e9 !important;
+    border: solid 1px #a46588;
+    background: #ac767e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ac767e), to(#916269));
+    background: -moz-linear-gradient(top, #ac767e, #916269);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ac767e', endColorstr='#916269');
+}
+
+.upload-functional a:hover {
+    text-decoration: none;
+    background: #9d626c;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9d626c), to(#6a3d43));
+    background: -moz-linear-gradient(top, #9d626c, #6a3d43);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9d626c', endColorstr='#6a3d43');
+}
+
+.upload-loading {
+    padding-top: 50px;
+    color: #8C98A1;
+    font-size: 14px;
+    line-height: 140%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.qq-upload-list {
+    display: none;
+}
+
+.qq-upload-button {
+    overflow: none !important;
+}
+
+#edit-avatar {
+    display: block;
+}
+
+#delete-avatar {
+    display: block;
+}
+
+.zend_form {
+    width: 100%
+}
+
+.zend_form dt {
+    width: 23% !important;
+}
+
+/*
+ * imgAreaSelect default style
+*/
+
+.imgareaselect-border1 {
+    background: url(../../theme/border-v.gif) repeat-y left top;
+}
+
+.imgareaselect-border2 {
+    background: url(../../theme/border-h.gif) repeat-x left top;
+}
+
+.imgareaselect-border3 {
+    background: url(../../theme/border-v.gif) repeat-y right top;
+}
+
+.imgareaselect-border4 {
+    background: url(../../theme/border-h.gif) repeat-x left bottom;
+}
+
+.imgareaselect-border1, .imgareaselect-border2,
+.imgareaselect-border3, .imgareaselect-border4 {
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.imgareaselect-handle {
+    background-color: #FFFFFF;
+    border: solid 1px #000000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+.imgareaselect-outer {
+    background-color: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.imgareaselect-selection {
+}

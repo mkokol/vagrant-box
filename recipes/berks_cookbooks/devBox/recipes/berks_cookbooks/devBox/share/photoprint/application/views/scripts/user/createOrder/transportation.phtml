@@ -1,0 +1,15 @@
+﻿<div class="step-block">
+    <form id="createOrderForm" name="<?php echo $this->transportationForm->getName(); ?>"
+          method="<?php echo $this->transportationForm->getMethod(); ?>"
+          action="<?php echo $this->transportationForm->getAction(); ?>">
+        <dl class="zend_form">
+            <?php echo ($this->transportationForm->getElement('transportTovar') != null) ? $this->transportationForm->getElement('transportTovar')->render() : ''; ?>
+            <?php echo ($this->transportationForm->getElement('transportVidkrutka') != null) ? $this->transportationForm->getElement('transportVidkrutka')->render() : ''; ?>
+        </dl>
+    </form>
+</div>
+
+<?php
+$this->gaEvent = ['category' => 'Замовлення', 'action' => 'Оплата', 'label' => 'Крок-2'];
+echo $this->render('controls/ga/event.phtml');
+?>

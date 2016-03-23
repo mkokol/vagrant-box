@@ -1,0 +1,57 @@
+﻿    <?php if($this->paymentType != 'webmoney'):?>
+    <h2 class="step-block"><?php echo $this->t->_('thanks'); ?></h2>
+<?php endif; ?>
+<?php if($this->paymentType == 'privatbank'):?>
+    <div style="padding-top: 50px; color: #AA0000; text-align: center; font-size: 16px;">
+        <?php echo $this->t->_('privatbank_info_start') . ' ' .  number_format($this->sum, 2, '.', '')
+            . ' ' . $this->t->_('privatbank_info_end') ?>
+    </div>
+<?php endif; ?>
+<?php if($this->paymentType == 'creditcart'):?>
+    <div class="section step-block" align="center">
+        <form action="https://liqpay.com?do=clickNbuy" method="POST" accept-charset="utf-8">
+            <input type="hidden" name="version" value="1.2" />
+            <input type="hidden" name="merchant_id" value="+380988054041" />
+            <input type="hidden" name="amount" value="<?php echo number_format($this->sum, 2, '.', '') ?>" />
+            <input type="hidden" name="currency" value="UAH" />
+            <input type="hidden" name="description" value="<?php echo $this->t->_('order_is').' '.$this->orderId ?>" />
+            <input type="hidden" name="order_id"  value="<?php echo $this->orderId ?>" />
+            <input type="submit" value="<?php echo $this->t->_('go_to_pay') ?>" />
+        </form>
+    </div>
+<?php endif; ?>
+<?php if($this->paymentType == 'webmoney'):?>
+    <div class="webMoneyPrice" style="padding-top: 35px;">
+        <h2>Прием платежа через сервис Web Merchant Interface</h2>
+        <h2>Сума платежа <?php echo number_format($this->sum, 2, '.', '') ?> WMU.</h2>
+        <form id=pay name=pay method="POST" action="https://merchant.webmoney.ru/lmi/payment.asp">
+            <input type="hidden" name="LMI_PAYMENT_AMOUNT" value="<?php echo number_format($this->sum, 2, '.', '') ?>">
+            <input type="hidden" name="LMI_PAYMENT_DESC" value="<?php echo $this->t->_('order_is').' '.$this->orderId ?>">
+            <input type="hidden" name="LMI_PAYMENT_NO" value="1">
+            <input type="hidden" name="LMI_PAYEE_PURSE" value="U369999478379">
+            <input type="hidden" name="LMI_SIM_MODE" value="0">
+            <input type="submit" value="Перейти к Оплате" style="margin-top: 15px;">
+        </form>
+    </div>
+<?php endif; ?>
+
+<?php echo $this->render('controls/ga/ecommerce-add.phtml') ?>
+
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1003674539;
+    var google_conversion_language = "uk";
+    var google_conversion_format = "2";
+    var google_conversion_color = "ffffff";
+    var google_conversion_label = "EoVpCMTOmFYQq7fL3gM";
+    var google_conversion_value = <?php echo number_format($this->sum, 2, '.', '') ?>;
+    var google_conversion_currency = "UAH";
+    var google_remarketing_only = false;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style=" border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1003674539/?value=<?php echo number_format($this->sum, 2, '.', '') ?>&amp;currency_code=UAH&amp;label=EoVpCMTOmFYQq7fL3gM&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>

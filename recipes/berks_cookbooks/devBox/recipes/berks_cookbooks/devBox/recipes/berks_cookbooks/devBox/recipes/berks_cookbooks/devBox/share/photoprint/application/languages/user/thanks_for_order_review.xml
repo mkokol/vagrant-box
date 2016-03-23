@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="thanks_for_order_review" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Дякуємо Вам за залишений відгук. Ми обов'язково врахуємо всі Ваші побажання та зауваження. З найкращими побажаннями, колектив компанії Photoprint.in.ua
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Благодарим Вас за оставленный отзыв. Мы обязательно учтем все Ваши пожелания и замечания. С наилучшими пожеланиями, коллектив компании Photoprint.in.ua
+                </seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

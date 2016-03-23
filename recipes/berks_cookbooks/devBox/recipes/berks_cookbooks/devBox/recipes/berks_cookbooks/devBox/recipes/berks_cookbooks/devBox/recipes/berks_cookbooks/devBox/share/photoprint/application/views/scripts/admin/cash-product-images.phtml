@@ -1,0 +1,64 @@
+<?php echo $this->render('controls/header.phtml'); ?>
+
+<script type="text/javascript">
+    var i = 0;
+    var itemSrcList = [
+        <?php foreach ($this->productList as $product):
+            echo '\'' . $this->h()->product()->getImgUrl($this->item, $product, $this->side, $this->size, $this->color) . '\', ';
+        endforeach; ?>
+    ];
+
+    $(document).ready(function () {
+        console.log("start");
+        console.log(itemSrcList[0]);
+        preLoadItemImg(0, itemSrcList[0]);
+    });
+
+    function preLoadItemImg(numEl, src) {
+        var image = new Image();
+        image.onload = function () {
+            addItem(numEl, src);
+        };
+        image.src = src;
+    }
+
+    function addItem(numEl, src) {
+        var cssClass = '';
+        if (i == 0) {
+            cssClass = 'alpha';
+        }
+        if (i == 3) {
+            cssClass = 'omega';
+        }
+
+        var itemHtml = '<div class="grid-25 ' + cssClass + '">' +
+            '<div class="preview">' +
+                '<div class="image">' +
+                    '<img src="' + src + ' " style="padding: 10px" />' +
+                '</div>' +
+            '</div>' +
+        '</div>';
+
+        $('#images').append(itemHtml);
+
+        i++;
+        if (i == 4) {
+            i = 0;
+        }
+
+        numEl++;
+        if (numEl != itemSrcList.length) {
+            $('#images-done').html(itemSrcList.length - numEl);
+            preLoadItemImg(numEl, itemSrcList[numEl]);
+        } else {
+            $('#images-done').html('DONE');
+        }
+    }
+</script>
+
+<div class="grid-container">
+    <div id="images" class="grid-100"></div>
+    <div id="images-done" class="grid-100"></div>
+</div>
+
+<?php echo $this->render('controls/footer.phtml'); ?>

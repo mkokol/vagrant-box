@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Довідка про технології друку.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Справка о технологии печати.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Технології друку на текстилі, листівках, пазлах, гуртках, вогнище, і килимках під мишку.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Технологии печати на текстиле, открытках, пазлах, кружках, костерах, и ковриках под мышку.</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

@@ -1,0 +1,38 @@
+{
+  "name": "devBox",
+  "description": "dev box",
+  "long_description": "",
+  "maintainer": "Mykhailo Kokolius",
+  "maintainer_email": "mickokolius@gmail.com",
+  "license": "All rights reserved",
+  "platforms": {
+  },
+  "dependencies": {
+    "locale": "~> 1.0.2",
+    "apt": "~> 2.9.2",
+    "vim": "~> 2.0.1",
+    "nginx": "~> 2.7.6",
+    "mysql": "~> 6.1.2",
+    "php": "~> 1.8.0",
+    "elasticsearch": "~> 2.2.1"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.0.1",
+  "source_url": "",
+  "issues_url": ""
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки unisex з жіночою тематикою.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки unisex с женской тематикой.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки unisex(универсальні) з написами, малюнками та жартами для жінок.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки unisex (универсальные) с надписями, рисунками и шутками для женщин.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="keywords" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Жіночі жарти, малюнки та прінти на футболки unisex.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Женские шутки, рисунки и принты на футболки unisex.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="header" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Жіночі жарти,написи та прінти на універсальні футболки (unisex).</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Женские шутки, надписи и принты на универсальные футболки (unisex).</seg>
+            </tuv>
+        </tu>
+        <tu tuid="content" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Різні жарти та приколи, які зрозумілі та близкі для дівчат та жінок. Малюнки та прінти, написи,
+                    фрази та жіночі сарказми.
+                    <a href="http://photoprint.in.ua/ua/produces/products/group/tshirt">Друк на футболках</a>
+                    з цієї категорії замовляють в основному жінки та дівчата чи в подарунок прекрасній половині.
+                    Футболки unisex підійдуть дівчатам які люблять більш свобідний стиль в одязі.
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Различные шутки и приколы, которые понятны и близки для девушек и женщин. Рисунки и принты,
+                    надписи, фразы и женские сарказмы.
+                    <a href="http://photoprint.in.ua/ru/produces/products/group/tshirt">Печать на футболках</a>
+                    с этой категории заказывают в основном женщины и девушки или в подарок прекрасной половине. Футболки
+                    unisex подойдут девушкам которые любят более свободный стиль в одежде.
+                </seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

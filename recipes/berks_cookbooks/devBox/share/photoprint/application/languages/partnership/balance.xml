@@ -1,0 +1,254 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Партнерська програма. Друк ваших фото та логотипів на сувенірах. - photoprint.in.ua</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Партнерская программа. Печать ваших фото и логотипов на сувенирах. - photoprint.in.ua</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid="history" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Історія</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>История</seg>
+            </tuv>
+        </tu>
+        <tu tuid="grn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>грн</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>грн</seg>
+            </tuv>
+        </tu>
+        <tu tuid="balance" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Баланс</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Баланс</seg>
+            </tuv>
+        </tu>
+        <tu tuid="referrals" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Мої продажі</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Мои продажи</seg>
+            </tuv>
+        </tu>
+        <tu tuid="public_shop" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Мої продукти</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Мои продукты</seg>
+            </tuv>
+        </tu>
+        <tu tuid="total" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Підтверджено</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Подтверждено</seg>
+            </tuv>
+        </tu>
+        <tu tuid="in_process" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>В очікуванні</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>В ожидании</seg>
+            </tuv>
+        </tu>
+        <tu tuid="inOrder" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Підтверджений</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Подтвержден</seg>
+            </tuv>
+        </tu>
+        <tu tuid="produced" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Виготовлений</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Изготовлен</seg>
+            </tuv>
+        </tu>
+        <tu tuid="sended" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Відправлений</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Отправлен</seg>
+            </tuv>
+        </tu>
+        <tu tuid="canceled_orders" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Відмінені</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Отменены</seg>
+            </tuv>
+        </tu>
+        <tu tuid="pay_me" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Виплатити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Виплатить</seg>
+            </tuv>
+        </tu>
+        <tu tuid="balance_details" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Детально по Вашому рахунку</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Подробно по Вашему счету</seg>
+            </tuv>
+        </tu>
+        <tu tuid="by_your_referrals_there_is_no_orders_yet" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>По ваших посиланнях ще не було замовлень</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>По вашим ссылкам еще не было заказов</seg>
+            </tuv>
+        </tu>
+        <tu tuid="orderet" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Замовлення зроблено</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Заказ сделан</seg>
+            </tuv>
+        </tu>
+        <tu tuid="totalbenefit" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ваш прибуток із замовлення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Ваша прибыль с заказа</seg>
+            </tuv>
+        </tu>
+        <tu tuid="status" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Статус замовлення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Статус заказа</seg>
+            </tuv>
+        </tu>
+        <tu tuid="item" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Замовлені товари</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Заказанные товары</seg>
+            </tuv>
+        </tu>
+        <tu tuid="count" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Кількість</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Количество</seg>
+            </tuv>
+        </tu>
+        <tu tuid="byref" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>З продаж</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Из продаж</seg>
+            </tuv>
+        </tu>
+        <tu tuid="byprod" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>З продуктів</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Из продуктов</seg>
+            </tuv>
+        </tu>
+        <tu tuid="mybenefit" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ваш дохід</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Ваша прибыль</seg>
+            </tuv>
+        </tu>
+        <tu tuid="confirmed" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Підтверджено</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Подтверждено</seg>
+            </tuv>
+        </tu>
+        <tu tuid="payed" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Виплачено</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Выплачено</seg>
+            </tuv>
+        </tu>
+        <tu tuid="canceled" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Відмінений</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Отменен</seg>
+            </tuv>
+        </tu>
+        <tu tuid="closed" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Закритий(отримано кошти)</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Закрыт(получены деньги)</seg>
+            </tuv>
+        </tu>
+        <tu tuid="created" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Очікує підтвердження</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Ожидает подтверждения</seg>
+            </tuv>
+        </tu>
+        <tu tuid="min_sum_for_payout_is" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Мінімальна сума для виплати</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Минимальная сумма для выплаты</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

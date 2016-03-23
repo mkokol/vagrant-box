@@ -1,0 +1,59 @@
+<script>
+    $(document).ready(function(){
+        reloadBox();
+        $(".shop-product-theme").click(function(){
+            $(".shop-product-theme").removeClass('selected');
+            $(this).addClass("selected");
+            loadProducts("public", $(this).attr("data-group-id"), 1);
+        });
+        $("#create-more-product").click(function(){
+            if($(".v-nav .selected").attr("data-group-id") == ""){
+                showBox(this.href);
+                this.blur();
+            } else{
+                location.href = "<?= $this->h()->url()->build('/partnership/product/group/'); ?>" + $(".v-nav .selected").attr("data-group-name");
+            }
+            return false;
+        });
+    });
+</script>
+<style>
+    .add-more-items {
+        text-align: right;
+    }
+</style>
+<?php if($this->acceptShopRules): ?>
+    <?php echo $this->render('partnership/controls/shopstatus.phtml'); ?>
+    <div class="grid-container">
+        <nav class="grid-25 v-nav alpha">
+            <ul>
+                <li class="title">
+                    <?php echo $this->t->_('products') . ':'; ?>
+                </li>
+                <li class="shop-product-theme selected" data-group-id="">
+                    <span class="link">
+                        <?php echo $this->t->_('all'); ?>
+                    </span>
+                </li>
+                <?php foreach ($this->publicProductsGroup as $key => $value): ?>
+                    <li class="shop-product-theme" data-group-id="<?php echo $value['id']; ?>"
+                        data-group-name="<?php echo $value['name']; ?>">
+                        <span class="link">
+                            <?php echo $this->t->_($value['name']); ?>
+                        </span>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </nav>
+
+        <div class="add-more-items grid-75">
+            <a id="create-more-product" href="<?= $this->h()->url()->build('/partnership/selectproducts'); ?>" class="violet-btn">
+                <?php echo $this->t->_('add_more_product'); ?>
+            </a>
+        </div>
+        <div id="shop-content-products"></div>
+    </div>
+<?php else: ?>
+    <?php echo $this->t->_('you_dont_accept_rules_yet'); ?>
+<?php endif; ?>
+

@@ -1,0 +1,41 @@
+<?php
+    /**
+     * uk-ua
+     * ru-ua
+    */
+    echo '<?xml version="1.0" encoding="UTF-8"?><urlset  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">';
+    $i = 0;
+    foreach ($this->content as $id => $url):
+        if(strpos($url['loc'], '{{lang}}')):
+            echo '<url>';
+            echo str_replace('{{lang}}', 'ru', "<loc>{$url['loc']}</loc>");
+            echo str_replace('{{lang}}', 'ru', '<xhtml:link rel="alternate" hreflang="ru" href="'.$url['loc'].'"/>');
+            echo str_replace('{{lang}}', 'ua', '<xhtml:link rel="alternate" hreflang="uk" href="'.$url['loc'].'"/>');
+            echo '<changefreq>daily</changefreq>';
+            echo "<priority>{$url['priority']}</priority>";
+            echo '</url>';
+            echo '<url>';
+            echo str_replace('{{lang}}', 'ua', "<loc>{$url['loc']}</loc>");
+            echo str_replace('{{lang}}', 'ru', '<xhtml:link rel="alternate" hreflang="ru" href="'.$url['loc'].'"/>');
+            echo str_replace('{{lang}}', 'ua', '<xhtml:link rel="alternate" hreflang="uk" href="'.$url['loc'].'"/>');
+            echo '<changefreq>daily</changefreq>';
+            echo "<priority>{$url['priority']}</priority>";
+            echo '</url>';
+            $i++;$i++;
+        else:
+            echo '<url>';
+            echo "<loc>{$url['loc']}</loc>";
+            if(($i % 2) == 0):
+                echo str_replace('{{lang}}', 'ru', '<xhtml:link rel="alternate" hreflang="ru" href="' . $this->content[$id]['loc'] . '"/>');
+                echo str_replace('{{lang}}', 'uk', '<xhtml:link rel="alternate" hreflang="uk" href="' . $this->content[$id + 1]['loc'] . '"/>');
+            else:
+                echo str_replace('{{lang}}', 'ru', '<xhtml:link rel="alternate" hreflang="ru" href="' . $this->content[$id - 1]['loc'] . '"/>');
+                echo str_replace('{{lang}}', 'uk', '<xhtml:link rel="alternate" hreflang="uk" href="' . $this->content[$id]['loc'] . '"/>');
+            endif;
+            echo '<changefreq>daily</changefreq>';
+            echo "<priority>{$url['priority']}</priority>";
+            echo '</url>';
+            $i++;
+        endif;
+    endforeach;
+    echo "</urlset>";

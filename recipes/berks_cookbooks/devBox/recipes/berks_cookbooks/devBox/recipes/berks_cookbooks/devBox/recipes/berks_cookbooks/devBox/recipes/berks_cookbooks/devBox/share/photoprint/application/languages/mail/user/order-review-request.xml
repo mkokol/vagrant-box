@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="leave_a_review_on_your_order" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Залиште відгук про замовлення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Оставьте отзыв о заказе</seg>
+            </tuv>
+        </tu>
+        <tu tuid="help_us_to_improve_our_quality" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Допоможіть нам стати кращими!</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Помогите нам стать лучше!</seg>
+            </tuv>
+        </tu>
+        <tu tuid="text_for_email_about_order_review" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>
+                    Ми постійно працюємо над покращенням сервісу та якості продукції. Та це можливо лише завдяки
+                    Вашим відгукам. Ми високо цінуємо ваш час, тому максимально спростили нашу форму відгуків. Це
+                    займе у Вас лише пару хвилин, а дасть нам можливість покращити сервіс для вас.
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>
+                    Мы постоянно работаем над улучшением сервиса и качества продукции. Но это возможно только
+                    благодаря Вашим отзывам. Мы высоко ценим ваше время, поэтому максимально упростили нашу форму
+                    отзывов. Это займет у Вас всего пару минут, а даст нам возможность улучшить сервис для вас.
+                </seg>
+            </tuv>
+        </tu>
+        <tu tuid="leave_a_review" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Залишити відгук</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Оставить отзыв</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

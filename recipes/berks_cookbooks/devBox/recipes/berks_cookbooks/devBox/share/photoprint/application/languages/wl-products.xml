@@ -1,0 +1,230 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="all" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Всі</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Все</seg>
+            </tuv>
+        </tu>
+        <tu tuid="postcard" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Листівки</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Открытки</seg>
+            </tuv>
+        </tu>
+        <tu tuid="puzzle" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Пазли</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пазлы</seg>
+            </tuv>
+        </tu>
+        <tu tuid="tshirt" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки</seg>
+            </tuv>
+        </tu>
+        <tu tuid="cup" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Горнятка</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Кружки</seg>
+            </tuv>
+        </tu>
+        <tu tuid="trivet" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Підставки під горнятко</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Подставки под кружку</seg>
+            </tuv>
+        </tu>
+        <tu tuid="mousepad" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Килимки під мишку</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Коврики под мышку</seg>
+            </tuv>
+        </tu>
+        <tu tuid="double" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Подвійна листівка</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Двойная открытка</seg>
+            </tuv>
+        </tu>
+        <tu tuid="a5" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>формату А5, 60 ел.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>формата А5, 60 эл.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="a4" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>формату А4, 120 ел.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>формата А4, 120 эл.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="a3" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>формату А3, 240 ел.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>формата А3, 240 эл.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="130x180" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>130x180 мм, 40 ел., в рамці.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>130x180 мм, 40 эл., в рамке.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="square" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Килимок прямокутний</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Коврик прямоугольный</seg>
+            </tuv>
+        </tu>
+        <tu tuid="circle" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Килимок резиновий круглий</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Коврик резиновый круглый</seg>
+            </tuv>
+        </tu>
+        <tu tuid="cork" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер корковий. Квадрат.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер пробковый. Квадрат.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="rubber" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер резиновий. Квадрат.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер резиновый. Квадрат.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="ceramic" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер коло</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер круг</seg>
+            </tuv>
+        </tu>
+        <tu tuid="cardboard" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер квадрат</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер квадрат</seg>
+            </tuv>
+        </tu>
+        <tu tuid="white" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Біле керамічне горнятко.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Белая керамическая</seg>
+            </tuv>
+        </tu>
+        <tu tuid="glass" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Матове, скляне горнятко.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Матовая, стеклянная</seg>
+            </tuv>
+        </tu>
+        <tu tuid="magic" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Керамічне, "Магічне"</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Керамическая, "Магическая"</seg>
+            </tuv>
+        </tu>
+        <tu tuid="glassmagic" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Скляне, "Магічне" горнятко.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Стеклянная, "Магическая"</seg>
+            </tuv>
+        </tu>
+        <tu tuid="mantshirt" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболка чоловіча</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболка мужская</seg>
+            </tuv>
+        </tu>
+        <tu tuid="womantshirt" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболка жіноча</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболка женская</seg>
+            </tuv>
+        </tu>
+        <tu tuid="front_and_back" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Фото спереду і ззаду</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Фото спереди и сзади</seg>
+            </tuv>
+        </tu>
+        <tu tuid="front" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Фото спереду</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Фото спереди</seg>
+            </tuv>
+        </tu>
+        <tu tuid="back" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Фото ззаду</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Фото сзади</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

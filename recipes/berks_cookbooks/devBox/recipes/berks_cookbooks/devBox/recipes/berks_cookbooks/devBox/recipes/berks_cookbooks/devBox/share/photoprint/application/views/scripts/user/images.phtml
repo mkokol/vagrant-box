@@ -1,0 +1,42 @@
+<script language="javascript" type="text/javascript">
+    <?php if(!count($this->allImages)): ?>
+        $("#deleteImageForm").hide();
+    <?php else: ?>
+        $("#deleteImageForm").show();
+    <?php endif; ?>
+</script>
+
+<div class="breadcrumbs" itemprop="breadcrumb">
+    <a href="javascript:loadAlbums();"><?php echo $this->t->_('albums'); ?></a> &raquo;
+    <?php if($this->albumName !== null): ?>
+        <?php echo $this->albumName; ?>
+    <?php else: ?>
+        <?php echo $this->t->_('not_selected'); ?>
+    <?php endif; ?>
+
+    <div class="underline"></div>
+</div>
+<input type="hidden" id="currentAlbumId" value="<?php echo $this->albumId; ?>" />
+
+<div style="overflow: auto; padding-top: 10px;">
+    <?php foreach ($this->allImages as $key => $value): ?>
+    <div style="float: left; width: 184px; height: 150px; text-align: center; padding-bottom: 10px;">
+        <div style="height:130px">
+            <img src="<?php $this->h()->image()->path($value['img_name'], 's', $value['extension']); ?>"
+                    alt="<?php echo $value['alt']; ?>" title="<?php echo $value['alt']; ?>" style="background: url(../../public/theme/img-bg.png);" />
+        </div>
+        <div style="font-size:16px;">
+            <input type="checkbox" id="chImgName_<?php echo $value['id']; ?>" class="chImgName" />
+            <?php echo $value['alt']; ?>
+        </div>
+    </div>
+    <?php endforeach; ?>
+</div>
+<div style="padding-top: 10px; text-align: right;">
+    <a id="uploadImageForm" class="mbox violet-btn" href="<?= $this->h()->url()->build('/user/uploadimageswnd', array('albumId' => $this->albumId)); ?>">
+        <?php echo $this->t->_('add_image'); ?>
+    </a>
+    <a id="deleteImageForm" class="mbox violet-btn" href="<?= $this->h()->url()->build('/user/deleteimageswnd'); ?>">
+        <?php echo $this->t->_('delete_selected_images'); ?>
+    </a>
+</div>

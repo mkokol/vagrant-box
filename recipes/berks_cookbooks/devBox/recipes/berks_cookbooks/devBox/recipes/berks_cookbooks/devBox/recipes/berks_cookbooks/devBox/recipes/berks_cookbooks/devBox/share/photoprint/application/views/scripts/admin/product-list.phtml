@@ -1,0 +1,80 @@
+<?php echo $this->render('controls/header.phtml'); ?>
+
+<div class="grid-container">
+    <div id="products-list" class="grid-100">
+        <div>
+            <ul>
+                <?php foreach($this->userList as $user): ?>
+                <li><a href="<?= $this->h()->url()->build("/admin/product-list/userId/{$user['user_id']}") ?>"><?= $user['user_name'] ?></a></li>
+                <?php endforeach ?>
+            </ul>
+        </div>
+        <div class="grid-100 center">
+            <?php echo $this->render('controls/ajaxPaging.phtml'); ?>
+        </div>
+
+        <?php $i = 0;
+        foreach ($this->userProducts as $product):
+            switch ($i % 4) {
+                case 0: $prodClass = 'alpha'; break;
+                case 3: $prodClass = 'omega'; break;
+                default: $prodClass = '';
+            }
+            $this->productName = $product[$this->language]; ?>
+            <?php $item = $this->h()->product()->baseItem($product['group_name']); ?>
+            <div class="preview-product-holder grid-25 <?php echo $prodClass ?>">
+                <div class="preview">
+                    <div class="info">
+                        <label><?php echo $this->t->_('status'); ?>:</label>
+                        <?php echo $this->t->_($product["status"]); ?>
+                    </div>
+                    <div class="functional">
+                        <a href="<?= $this->h()->url()->build("/admin/user", array('id' => $product['user_id'])); ?>"><?php
+                            ?><img style="cursor:pointer;" src="<?php echo $this->baseUrl ?>/public/theme/user/table/user.png" /><?php
+                        ?></a><?php
+                        ?><a href="<?= $this->h()->url()->build("/produces/catalog/item/{$item}", array('id' => $product['id'])); ?>"><?php
+                            ?><img style="cursor:pointer;" src="<?php echo $this->baseUrl ?>/public/theme/user/table/view.png" /><?php
+                        ?></a><?php
+                        ?><a href="<?= $this->h()->url()->build("/admin/edit-product-wnd", array('id' => $product['id'])); ?>" class="mbox"><?php
+                            ?><img style="cursor:pointer;" src="<?php echo $this->baseUrl ?>/public/theme/user/table/edit.png" /><?php
+                        ?></a><?php
+                        ?><a href="<?= $this->h()->url()->build("/admin/delete-product-wnd", array('id' => $product['id'])); ?>" class="mbox"><?php
+                            ?><img style="cursor:pointer;" src="<?php echo $this->baseUrl ?>/public/theme/user/table/remove.png" /><?php
+                        ?></a>
+                    </div>
+                    <div class="image" data-product-id="<?php echo $product['id']; ?>">
+                        <?= $this->h()->product()->getImg($this->t, null, $product, 'p'); ?>
+                    </div>
+                    <div class="info">
+                        <label class="list"><?php echo $this->t->_('themes'); ?>:</label>
+                        <?php foreach ($product['themes'] as $theme): ?>
+                            <span class="list">
+                                <?php echo $theme[$this->language]; ?>
+                            </span>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="info">
+                        <label class="list"><?php echo $this->t->_('tags'); ?>:</label>
+                        <?php foreach ($product['tags'] as $tags): ?>
+                            <span class="list" style="font-size: 12px;">
+                                <?php echo $tags[$this->language]; ?>
+                            </span>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="info-more">
+                        <a itemprop="name" class="view-item" href="<?= $this->h()->url()->build("/produces/catalog/item/{$item}", array('id' => $product['id'])); ?>">
+                            <?php echo(($this->productName == '') ? $this->t->_('deteils') : $this->productName) ?>
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+
+        <div class="grid-100 center">
+            <?php echo $this->render('controls/ajaxPaging.phtml'); ?>
+        </div>
+    </div>
+</div>
+
+<?php echo $this->render('controls/footer.phtml'); ?>

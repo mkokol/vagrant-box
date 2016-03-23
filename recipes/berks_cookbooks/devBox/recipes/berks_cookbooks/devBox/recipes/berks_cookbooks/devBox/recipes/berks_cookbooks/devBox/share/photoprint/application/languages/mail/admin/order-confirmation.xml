@@ -1,0 +1,208 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="new_order_on_photoprint" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Нове замовлення на photoprint.in.ua</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Новый заказ на photoprint.in.ua</seg>
+            </tuv>
+        </tu>
+        <tu tuid="new_order" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Нове замовлення.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Новый заказ.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="product_detail" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Продукт</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Продукт</seg>
+            </tuv>
+        </tu>
+        <tu tuid="client_name" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Прізвище І.Б.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Фамилия И.О.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="phone" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Телефон</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Телефон</seg>
+            </tuv>
+        </tu>
+
+        <tu tuid="total" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Сума</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Сумма</seg>
+            </tuv>
+        </tu>
+        <tu tuid="count" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Кількість</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Количество</seg>
+            </tuv>
+        </tu>
+        <tu tuid="price" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Цінв</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Цена</seg>
+            </tuv>
+        </tu>
+        <tu tuid="size" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Розмір</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Размер</seg>
+            </tuv>
+        </tu>
+        <tu tuid="total_count" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Загальна кількість</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Общее количество</seg>
+            </tuv>
+        </tu>
+        <tu tuid="total_price" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Сума до оплати</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Сумма к оплате</seg>
+            </tuv>
+        </tu>
+        <tu tuid="delivery" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Доставка</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Доставка</seg>
+            </tuv>
+        </tu>
+        <tu tuid="delivery_system" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Служба доставки</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Служба доставки</seg>
+            </tuv>
+        </tu>
+        <tu tuid="delivery_address" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Адреса доставки</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Адрес доставки</seg>
+            </tuv>
+        </tu>
+        <tu tuid="NewPost" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Нова Пошта</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Нова Пошта</seg>
+            </tuv>
+        </tu>
+        <tu tuid="AvtoLyks" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Автолюкс</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Автолюкс</seg>
+            </tuv>
+        </tu>
+        <tu tuid="payment" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Оплата</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Оплата</seg>
+            </tuv>
+        </tu>
+        <tu tuid="payment_system" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Система оплати</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Система оплаты</seg>
+            </tuv>
+        </tu>
+        <tu tuid="privatbank" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Переклад на картку Приватбанку:</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Перевод на карточку Приватбанка:</seg>
+            </tuv>
+        </tu>
+        <tu tuid="privatbank_details" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>5168 7555 1177 7142, одержувач Коколюс В.Б.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>5168 7555 1177 7142, получатель Коколюс В.Б.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="webmoney" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>WebMoney</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>WebMoney</seg>
+            </tuv>
+        </tu>
+        <tu tuid="afterreceive" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Оплата після доставки</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Оплата после доставки</seg>
+            </tuv>
+        </tu>
+
+        <tu tuid="confirm" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Підтвердити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Подтвердить</seg>
+            </tuv>
+        </tu>
+        <tu tuid="cancel" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Відмінити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Отменить</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

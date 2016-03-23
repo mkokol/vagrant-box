@@ -1,0 +1,104 @@
+<div id="popup-wnd-data-content" class="popup-wnd-t-shirt-size-<?= $this->type; ?>-size">
+    <div class="popup-wnd-header">
+        <?= $this->t->_('t_shirt_sizes'); ?>
+    </div>
+    <div class="popup-t-shirt-size">
+        <?php if ($this->type == 'mantshirt'): ?>
+            <table class="t-shirt-size" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="nobg"></th>
+                        <th>
+                            <?= $this->t->_('width'); ?>
+                        </th>
+                        <th>
+                            <?= $this->t->_('height'); ?>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>S</td>
+                        <td>48,5</td>
+                        <td>69,5</td>
+                    </tr>
+                    <tr class="alt">
+                        <td>M</td>
+                        <td>53,5</td>
+                        <td>72</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>56</td>
+                        <td>74,5</td>
+                    </tr>
+                    <tr class="alt">
+                        <td>XL</td>
+                        <td>61</td>
+                        <td>77</td>
+                    </tr>
+                    <tr>
+                        <td>XXL</td>
+                        <td>66</td>
+                        <td>78,5</td>
+                    </tr>
+                </tbody>
+            </table>
+        <?php endif; ?>
+
+        <?php if ($this->type == 'womantshirt'): ?>
+            <table class="t-shirt-size" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="nobg"></th>
+                        <th>
+                            <?= $this->t->_('width'); ?>
+                        </th>
+                        <th>
+                            <?= $this->t->_('height'); ?>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>XS</td>
+                        <td>41,5</td>
+                        <td>62</td>
+                    </tr>
+                    <tr class="alt">
+                        <td>S</td>
+                        <td>44</td>
+                        <td>63</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>46,5</td>
+                        <td>64</td>
+                    </tr>
+                    <tr class="alt">
+                        <td>L</td>
+                        <td>49</td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+                        <td>XL</td>
+                        <td>51,5</td>
+                        <td>66</td>
+                    </tr>
+                    <tr class="alt">
+                        <td>XXL</td>
+                        <td>54</td>
+                        <td>67</td>
+                    </tr>
+                </tbody>
+            </table>
+        <?php endif; ?>
+
+        <div class="width">
+            <?= $this->t->_('width_how_to_check') ?>
+        </div>
+        <div class="height">
+            <?= $this->t->_('height_how_to_check') ?>
+        </div>
+    </div>
+</div>

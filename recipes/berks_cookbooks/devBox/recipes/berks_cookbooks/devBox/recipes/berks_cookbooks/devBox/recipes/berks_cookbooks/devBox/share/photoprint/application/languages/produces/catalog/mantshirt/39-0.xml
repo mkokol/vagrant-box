@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки на тему алкоголь.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки на тему алкоголь.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки на тему алкоголь. Алкогольні марки на футболках.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки на тему алкоголь. Алкогольные бренды на футболках.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="keywords" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки на тему алкоголь.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки на тему алкоголь.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="header" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки на тему алкоголь.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки на тему алкоголь.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="content" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки на тему алкоголь. Відомі алкогольні торгові марки та бренди. Жарти з алкогольним нахилом
+                    та приколи про алкоголіків. Малюнки, фрази та вислови про вечірки та алкогольні розваги. Барна
+                    символіка та атрибутика.
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки на тему алкоголь. Известные алкогольные торговые марки и бренды. Шутки с алкогольным
+                    уклоном и приколы про алкоголиков. Рисунки, фразы и высказывания про вечеринки, и алкогольные
+                    развлечения. Символика и атрибутика баров.
+                </seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

@@ -1,0 +1,54 @@
+<script>
+    $(document).ready(function(){
+        reloadBox();
+        $('.product-image-block').click(function(event){
+            showBox(baseUrl + "/produces/previewitem?id=" + $(this).attr('data-product-id'));
+        });
+    });
+</script>
+<div class="grid-75">
+    <?php if ($this->pageCount > 1): ?>
+        <div class="product-paging-top grid-100">
+            <?php echo $this->render('controls/ajaxPaging.phtml') ?>
+        </div>
+    <?php endif; ?>
+
+    <?php $i = 0; ?>
+    <?php foreach ($this->userProducts as $product): ?>
+
+        <?php switch ($i % 3):
+            case 0: $gridClass = 'alpha'; break;
+            case 2: $gridClass = 'omega';  break;
+            default: $gridClass = ''; ?>
+        <?php endswitch; ?>
+
+        <?php $this->productName = $product[$this->language]; ?>
+        <div class="preview-product-holder grid-33 <?php echo $gridClass ?>">
+            <div class="preview">
+                <div class="functional">
+                    <a href="<?= $this->h()->url()->build("/partnership/product/group/{$product['group_name']}", array('id' => $product['id'])); ?>">
+                        <img style="cursor:pointer;" src="<?php echo $this->baseUrl ?>/public/theme/user/table/edit.png" />
+                    </a>
+                    <a class="mbox" href="<?= $this->h()->url()->build('/partnership/deleteproductwnd', array('id' => $product['id'])); ?>">
+                        <img style="cursor:pointer;" src="<?php echo $this->baseUrl ?>/public/theme/user/table/remove.png" />
+                    </a>
+                </div>
+                <div class="image" data-product-id="<?php echo $product['id']; ?>">
+                    <?= $this->h()->product()->getImg($this->t, null, $product, 'p'); ?>
+                </div>
+                <div class="info"><?php echo $this->t->_($product['group_name']); ?></div>
+                <div class="info">
+                    <label><?php echo $this->t->_('status'); ?>:</label>
+                    <?php echo $this->t->_($product["status"]); ?>
+                </div>
+            </div>
+        </div>
+        <?php $i++; ?>
+    <?php endforeach; ?>
+
+    <?php if ($this->pageCount > 1): ?>
+        <div class="product-paging-bottom grid-75">
+            <?php echo $this->render('controls/ajaxPaging.phtml') ?>
+        </div>
+    <?php endif; ?>
+</div>

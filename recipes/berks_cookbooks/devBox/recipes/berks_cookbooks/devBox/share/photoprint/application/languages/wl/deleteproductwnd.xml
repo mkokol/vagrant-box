@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="delete_product_item" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Видалення товару</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Удаление товара</seg>
+            </tuv>
+        </tu>
+        <tu tuid="do_you_realy_wont_to_delete_carrent_product_item" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ви дійсно бажаєте видалити цей товар назавжди</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Вы действительно желаете удалить этот товар навсегда</seg>
+            </tuv>
+        </tu>
+        <tu tuid="yes" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>так</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>да</seg>
+            </tuv>
+        </tu>
+        <tu tuid="no" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>ні</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>нет</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

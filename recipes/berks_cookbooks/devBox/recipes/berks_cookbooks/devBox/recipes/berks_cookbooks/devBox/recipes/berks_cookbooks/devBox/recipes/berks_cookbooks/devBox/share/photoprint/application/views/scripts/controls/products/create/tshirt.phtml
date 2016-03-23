@@ -1,0 +1,74 @@
+<?php if($this->item == ''): ?>
+    <?php $this->item = 'mantshirt'; ?>
+<?php endif; ?>
+
+<div class="tshirt">
+    <div class="template">
+        <div class="images-count">
+            <label><?php echo $this->t->_('product_template'); ?>:</label>
+            <?php foreach ($this->productsTemplatesList as $template): ?>
+                <div>
+                    <input class="product-template" name="product-template" type="radio" value="<?php echo $template['id'] ?>"
+                        <?php if(($this->itemXml && $this->itemXml->template == $template['id']) || (!$this->itemXml && $template['default'])): ?> checked="checked"<?php endif ?>>
+                    <?php echo $this->t->_($template['name']) ?>
+                    </input>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+        <?php if($this->colors && is_array($this->colors) && count($this->colors)): ?>
+            <div id="tshirt-color" data-selected-color="white">
+                <label style="padding-top: 10px;">
+                    <?php echo $this->t->_('color') . ':'; ?>
+                </label>
+                <?php foreach($this->colors as $color): ?>
+                    <?php $this->h()->image()->getColorInfo($this->itemXml, $color); ?>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if($this->item != ''): ?>
+            <div id="tshirt-sizes">
+                <label style="padding-top: 10px; padding-bottom: 4px;">
+                    <?php echo $this->t->_('size') . ':'; ?>
+                </label>
+                <?php $tShirtSizes = ['S', 'M', 'L', 'XL', 'XXL'] ?>
+                <?php foreach ($tShirtSizes as $size): ?>
+                    <?php $selected = (($this->itemXml && $this->itemXml->size == $size)) ? ' class="selected"' : ''; ?>
+                    <span<?php echo $selected; ?>>
+                        <?php echo $size; ?>
+                    </span>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+    </div>
+
+    <?php $color = ($this->itemXml && '' != (string) $this->itemXml->color) ? (string) $this->itemXml->color : 'white'?>
+
+    <div class="constructor template-<?php echo ($this->itemXml && $this->itemXml->template) ? $this->itemXml->template : '1' ?>">
+        <div class="front show">
+            <div class="functional-btn" id="btn_1"><?php echo $this->render('produces/controls/button.phtml') ?></div>
+            <div id="insert-img1" class="insert-img content <?php echo $this->item . ' ' . $color; ?>">
+                <?php $this->h()->image()->buildImgHolder('front', 1, $this->itemXml, 'size-origin-tshirt', 'tshirt/border.png'); ?>
+            </div>
+            <div class="functional">
+                <?php echo $this->t->_('front'); ?> |
+                <a href="javascript:showSide('back');">
+                    <?php echo $this->t->_('back') ?>
+                </a>
+            </div>
+        </div>
+        <div class="back">
+            <div class="functional-btn" id="btn_2"><?php echo $this->render('produces/controls/button.phtml') ?></div>
+            <div id="insert-img2" class="insert-img content <?php echo $this->item . ' ' . $color; ?>">
+                <?php $this->h()->image()->buildImgHolder('back', 2, $this->itemXml, 'size-origin-tshirt', 'tshirt/border.png'); ?>
+            </div>
+            <div class="functional">
+                <a href="javascript:showSide('front')">
+                    <?php echo $this->t->_('front') ?>
+                </a> |
+                <?php echo $this->t->_('back'); ?>
+            </div>
+        </div>
+    </div>
+</div>

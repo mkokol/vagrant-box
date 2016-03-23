@@ -1,0 +1,11 @@
+<div id="popup-wnd-data-content" class="popup-wnd-dialog-size">
+    <?php echo $this->render('controls/emptyheader.phtml'); ?>
+    <div>
+        <div class="popup-wnd-header"><?php echo $this->t->_('notification'); ?></div>
+        <div class="popup-wnd-warn-msg"><?php echo $this->t->_($this->message)?></div>
+        <div class="popup-wnd-functional">
+            <input class="close-popup-wnd" type="button" value="<?php echo $this->t->_('close_btn'); ?>">
+        </div>
+    </div>
+    <?php echo $this->render('controls/emptyfooter.phtml'); ?>
+</div>

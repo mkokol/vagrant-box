@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="notification" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Повідомлення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Уведомление</seg>
+            </tuv>
+        </tu>
+        <tu tuid="close_btn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Закрити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Закрыть</seg>
+            </tuv>
+        </tu>
+        <tu tuid="please_select_tshirt_size" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Будь ласка спочатку виберіть розмір футболки.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пожалуйста сначала выберите размер футболки.</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

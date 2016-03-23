@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="mantshirt_sm_title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболка %s чоловіча в магазині PhotoPrint.in.ua</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболка %s мужская в магазине PhotoPrint.in.ua</seg>
+            </tuv>
+        </tu>
+        <tu tuid="mantshirt_sm_description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Купити чоловічу футболку '%s' в інтернет-магазині PhotoPrint.in.ua</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Купить мужскую футболку '%s' в интернет-магазине PhotoPrint.in.ua</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

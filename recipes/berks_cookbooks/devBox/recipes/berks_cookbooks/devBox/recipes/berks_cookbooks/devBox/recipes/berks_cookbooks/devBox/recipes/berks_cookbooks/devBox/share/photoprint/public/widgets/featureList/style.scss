@@ -1,0 +1,207 @@
+//div#slider {
+//  position: relative;
+//  overflow: hidden;
+//  span {
+//    &.title {
+//      margin: 0;
+//      padding: 7px 0 0 0;
+//      font-size: 15px;
+//      padding: 3px 3px;
+//      color: #C25549;
+//    }
+//    &.rectangle {
+//      float: left;
+//      display: inline-block;
+//      width: 8px;
+//    }
+//    &.postcardR {
+//      background: #7d5586;
+//    }
+//    &.puzzleR {
+//      background: #9f5e7b;
+//    }
+//    &.cupR {
+//      background: #b78d40;
+//    }
+//    &.trivetR {
+//      background: #c15a48;
+//    }
+//    &.mousepadR {
+//      background: #954e5f;
+//    }
+//    &.tshirtR {
+//      background: #9e6563;
+//    }
+//    &.triangle {
+//      border: transparent solid 9px;
+//      float: left;
+//      position: relative;
+//      display: none;
+//      width: 0px;
+//      height: 0px;
+//    }
+//  }
+//  a.current {
+//    span {
+//      &.postcardT {
+//        border-color: transparent transparent transparent #7d5586;
+//        display: inline-block;
+//      }
+//      &.puzzleT {
+//        border-color: transparent transparent transparent #9f5e7b;
+//        display: inline-block;
+//      }
+//      &.cupT {
+//        border-color: transparent transparent transparent #b78d40;
+//        display: inline-block;
+//      }
+//      &.trivetT {
+//        border-color: transparent transparent transparent #c15a48;
+//        display: inline-block;
+//      }
+//      &.mousepadT {
+//        border-color: transparent transparent transparent #954e5f;
+//        display: inline-block;
+//      }
+//      &.tshirtT {
+//        border-color: transparent transparent transparent #9e6563;
+//        display: inline-block;
+//      }
+//    }
+//  }
+//  span.title {
+//    font-size: 14px;
+//    cursor: pointer;
+//    color: #878989;
+//    font-weight: bold;
+//  }
+//  li {
+//    &.postcard a.current span.title {
+//      color: #7d5586;
+//    }
+//    &.puzzle a.current span.title {
+//      color: #9f5e7b;
+//    }
+//    &.cup a.current span.title {
+//      color: #b78d40;
+//    }
+//    &.trivet a.current span.title {
+//      color: #c15a48;
+//    }
+//    &.mousepad a.current span.title {
+//      color: #954e5f;
+//    }
+//    &.tshirt a.current span.title {
+//      color: #9e6563;
+//    }
+//  }
+//  ul {
+//    position: absolute;
+//    top: 0;
+//    list-style: none;
+//    padding: 0;
+//    margin: 0;
+//    &#tabs {
+//      left: 0;
+//      z-index: 2;
+//      width: 240px;
+//      cursor: pointer;
+//      li {
+//        font-size: 12px;
+//        font-family: Arial;
+//        &.postcard {
+//          background: url('./postcard.png') bottom left no-repeat;
+//        }
+//        &.puzzle {
+//          background: url('./puzzle.png') bottom left no-repeat;
+//        }
+//        &.cup {
+//          background: url('./cup.png') bottom left no-repeat;
+//        }
+//        &.trivet {
+//          background: url('./trivet.png') bottom left no-repeat;
+//        }
+//        &.mousepad {
+//          background: url('./mousepad.png') bottom left no-repeat;
+//        }
+//        &.tshirt {
+//          background: url('./tshirt.png') bottom left no-repeat;
+//        }
+//        &:last-child {
+//          background: none;
+//        }
+//        img {
+//          padding: 5px;
+//          border: none;
+//          float: left;
+//          margin: 10px 10px 0 0;
+//          max-width: 530px;
+//        }
+//        a {
+//          width: 191px;
+//          text-decoration: none;
+//          display: block;
+//          padding: 7px;
+//          padding-left: 15px;
+//          outline: none;
+//          &:hover {
+//            text-decoration: underline;
+//          }
+//          &.current {
+//            width: 219px;
+//            color: #ffffff;
+//            padding-left: 7px;
+//            &:hover {
+//              text-decoration: none;
+//            }
+//          }
+//        }
+//      }
+//    }
+//    &#output {
+//      right: 0;
+//      width: 100%;
+//      height: 320px;
+//      position: relative;
+//      li {
+//        position: absolute;
+//        width: 100%;
+//        height: 330px;
+//        a {
+//          position: absolute;
+//          bottom: 10px;
+//          right: 0px;
+//        }
+//        img {
+//          cursor: pointer;
+//        }
+//      }
+//    }
+//  }
+//  div {
+//    &#feature-list-6 {
+//      span {
+//        &.rectangle {
+//          height: 53.33px;
+//        }
+//      }
+//      ul {
+//        &#tabs {
+//          li {
+//            a {
+//              line-height: 39.33px;
+//            }
+//          }
+//        }
+//      }
+//      span {
+//        &.title {
+//          padding-top: 11.66px;
+//        }
+//        &.triangle {
+//          top: 11.66px;
+//        }
+//      }
+//    }
+//  }
+//}

@@ -1,0 +1,206 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболка біла, бавовна, unisex. Створити футболку з оригінальним малюнком чи фото. -
+                    photoprint.in.ua
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболка белая, хлопок, unisex. Создать футболку с оригинальным рисунком или фото. -
+                    photoprint.in.ua
+                </seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Оригінальні білі футболки із 100% натуральної тканини (бавовни). Конструктор для самостійного
+                    створення унікальної авторської футболки.
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Оригинальные белые футболки из 100% натуральной ткани (хлопка). Конструктор для самостоятельного
+                    создания уникальной, авторской футболки.
+                </seg>
+            </tuv>
+        </tu>
+        <tu tuid="tshirt" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки</seg>
+            </tuv>
+        </tu>
+        <tu tuid="save_btn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Зберегти</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Сохранить</seg>
+            </tuv>
+        </tu>
+        <tu tuid="cancel_btn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Відміна</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Отмена</seg>
+            </tuv>
+        </tu>
+        <tu tuid="main_page" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Головна</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Главная</seg>
+            </tuv>
+        </tu>
+        <tu tuid="inner_page" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Внутрішні</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Внешние</seg>
+            </tuv>
+        </tu>
+        <tu tuid="last_page" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Зворот</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Задняя</seg>
+            </tuv>
+        </tu>
+        <tu tuid="size" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Розмір</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Размер</seg>
+            </tuv>
+        </tu>
+        <tu tuid="select_size" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Виберіть розмір</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Выберите размер</seg>
+            </tuv>
+        </tu>
+        <tu tuid="click" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Клікніть</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Кликните</seg>
+            </tuv>
+        </tu>
+        <tu tuid="here" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>сюди</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>сюда</seg>
+            </tuv>
+        </tu>
+        <tu tuid="for_dawnload" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>для завантяження</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>для загрузки</seg>
+            </tuv>
+        </tu>
+        <tu tuid="you_photo" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ваших фото</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Ваших фото</seg>
+            </tuv>
+        </tu>
+        <tu tuid="product_template" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Малюнок</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Рисунок</seg>
+            </tuv>
+        </tu>
+        <tu tuid="front" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>спереду</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>спереди</seg>
+            </tuv>
+        </tu>
+        <tu tuid="front_and_back" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>спереду і ззаду</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>спереди и сзади</seg>
+            </tuv>
+        </tu>
+        <tu tuid="back" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>ззаду</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>сзади</seg>
+            </tuv>
+        </tu>
+        <tu tuid="color" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Колір</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Цвет</seg>
+            </tuv>
+        </tu>
+        <tu tuid="or_draganddrop" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>або перетягніть зображення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>или перетяните изображение</seg>
+            </tuv>
+        </tu>
+        <tu tuid="top_panel" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>з верхньої панелі</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>с верхней панели</seg>
+            </tuv>
+        </tu>
+        <tu tuid="mantshirt" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболка біла (unisex)</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболка белая (unisex)</seg>
+            </tuv>
+        </tu>
+        <tu tuid="womantshirt" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболка біла (жіноча)</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболка белая (женская)</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

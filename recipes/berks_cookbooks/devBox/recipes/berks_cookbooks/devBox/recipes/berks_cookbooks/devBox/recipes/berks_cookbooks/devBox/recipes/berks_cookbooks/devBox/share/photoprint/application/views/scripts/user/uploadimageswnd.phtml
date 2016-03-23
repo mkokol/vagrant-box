@@ -1,0 +1,81 @@
+<div id="popup-wnd-data-content" class="popup-wnd-upload-images-size">
+    <?php echo $this->render('controls/emptyheader.phtml'); ?>
+
+    <style>
+        #progressbar {
+            background-color: #d0d0d0;
+            border-radius: 3px;
+            padding: 3px;
+            margin: 52px;
+        }
+        #progressbar > div {
+            background-color: orange;
+            width: 1%;
+            height: 20px;
+            border-radius: 3px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $("#upload-img-btn").click(function () {
+                $("input[name=img]:file").trigger('click');
+
+            });
+            $("input[name=img]:file").change(function (){
+                $("#upload-img-name").val($(this).val().split('\\').pop());
+            });
+            $('#uploadImagesForm').ajaxForm({
+                beforeSend: function() {
+                    $("#image-upload-form").hide();
+                    $("#image-upload-process").show();
+                },
+                uploadProgress: function(event, position, total, percentComplete) {
+                    $('#progressbar div').css({'width': percentComplete + '%'})
+                },
+                complete: function(xhr) {
+                    var data = eval("(" + xhr.responseText + ')');
+                    if (data.status == 'success'){
+                        updateFormPlaseHolder(data.imgName);
+                    } else {
+                        $('#image-upload-process').hide();
+                        $('#image-upload-form').show();
+                        $('#img-element .errors').html(data.errors.img.fileUploadErrorIniSize);
+                    }
+                }
+            });
+        });
+    </script>
+
+    <div id="popup-wnd-add-theme">
+        <div class="popup-wnd-header"> <?php echo $this->t->_('please_upload_photo'); ?> </div>
+        <div id="image-upload-process">
+            <div id="progressbar"><div></div></div>
+        </div>
+        <div id="image-upload-form" align="center">
+            <form id="<?php echo $this->image_form->getAttrib('id'); ?>"
+                    name="<?php echo $this->image_form->getName(); ?>"
+                    enctype="<?php echo $this->image_form->getAttrib('enctype'); ?>"
+                    action="<?php echo $this->image_form->getAction(); ?>"
+                    method="<?php echo $this->image_form->getMethod(); ?>">
+                <?php echo $this->image_form->getElement('albumId')->renderViewHelper(); ?>
+                <?php echo $this->image_form->getElement('createdBy')->renderViewHelper(); ?>
+                <?php echo $this->image_form->getElement('theme')->renderViewHelper(); ?>
+                <dl class="zend_form">
+                    <?php echo $this->image_form->getElement('currentForm')->render(); ?>
+                    <?php echo $this->image_form->getElement('img')->renderLabel(); ?>
+                    <dd id="img-element">
+                        <?php echo $this->image_form->getElement('img')->renderFile(); ?>
+                        <input type="text" id="upload-img-name"><input id="upload-img-btn" type="button" value="Вибрати Фото">
+                        <span class="errors"></span>
+                    </dd>
+                    <?php echo $this->image_form->getElement('title')->render(); ?>
+                </dl>
+                <div class="popup-wnd-functional">
+                    <?php echo $this->image_form->getElement('submit')->renderViewHelper(); ?>
+                    <input type="button" value="<?php echo $this->t->_('cancel_btn'); ?>" onclick="mboxRemove();">
+                </div>
+            </form>
+        </div>
+    <?php echo $this->render('controls/emptyfooter.phtml'); ?>
+</div>

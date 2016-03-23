@@ -1,0 +1,46 @@
+<div id="popup-wnd-data-content" class="popup-wnd-user-create-albums-size">
+    <?php echo $this->render('controls/emptyheader.phtml'); ?>
+
+    <script>
+        $(document).ready(function(){
+            $("#new-album-name").keypress(function (event){
+                if((event.keyCode == 13) && ($(this).val() != "")){
+                    $("#create-album-btn").click();
+                }
+                return true;
+            });
+            $('#create-album-btn').click(function(){
+                var newAlbumName = $("#new-album-name").val();
+                if(newAlbumName != "") {
+                    $.ajax({
+                        type: "POST",
+                        url: baseUrl + "/user/createalbum",
+                        data: {
+                            newAlbumName: newAlbumName
+                        },
+                        success: function(data) {
+                            $("#userImages").load(
+                                baseUrl + "/user/albums?v=" + baseVersion,
+                                function(){ reloadBox(); mboxRemove();}
+                            );
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+    <div id="popup-wnd-delete-theme">
+        <div class="popup-wnd-header"><?php echo $this->t->_('create_album'); ?></div>
+        <div class="popup-wnd-default-content">
+            <label><?php echo $this->t->_('album_name'); ?>:</label>
+            <input type="text" id="new-album-name" value=""/>
+        </div>
+        <div class="popup-wnd-functional">
+            <input id="create-album-btn" type="button" value="<?php echo $this->t->_('create_album_btn'); ?>">
+            <input class="close-popup-wnd" type="button" value="<?php echo $this->t->_('cancel_btn'); ?>">
+        </div>
+    </div>
+
+    <?php echo $this->render('controls/emptyfooter.phtml'); ?>
+</div>

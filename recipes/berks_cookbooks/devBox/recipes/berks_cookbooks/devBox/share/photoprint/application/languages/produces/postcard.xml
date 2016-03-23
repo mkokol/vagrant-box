@@ -1,0 +1,145 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Вітальні листівки з днем народження, новим роком та 8 березня. Створення, друк та доставка -
+                    photoprint.in.ua
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Открытки с днем рождения, новым годом и 8 марта. Создание, печать и доставка - photoprint.in.ua
+                </seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid="postcard" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Листівки</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Открытки</seg>
+            </tuv>
+        </tu>
+        <tu tuid="save_btn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Зберегти</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Сохранить</seg>
+            </tuv>
+        </tu>
+        <tu tuid="cancel_btn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Відміна</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Отмена</seg>
+            </tuv>
+        </tu>
+        <tu tuid="main_page" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Головна</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Главная</seg>
+            </tuv>
+        </tu>
+        <tu tuid="inner_page" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Внутрішні</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Внешние</seg>
+            </tuv>
+        </tu>
+        <tu tuid="last_page" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Зворот</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Задняя</seg>
+            </tuv>
+        </tu>
+        <tu tuid="click" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Клікніть</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Кликните</seg>
+            </tuv>
+        </tu>
+        <tu tuid="here" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>сюди</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>сюда</seg>
+            </tuv>
+        </tu>
+        <tu tuid="for_dawnload" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>для завантяження</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>для загрузки Ваших фото</seg>
+            </tuv>
+        </tu>
+        <tu tuid="you_photo" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ваших фото</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Ваших фото</seg>
+            </tuv>
+        </tu>
+        <tu tuid="or_draganddrop" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>або перетягніть зображення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>или перетяните изображение</seg>
+            </tuv>
+        </tu>
+        <tu tuid="top_panel" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>з верхньої панелі</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>с верхней панели</seg>
+            </tuv>
+        </tu>
+        <tu tuid="click_for_text" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Клікніть сюди для введення тексту</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Нажмите сюда для ввода текста</seg>
+            </tuv>
+        </tu>
+        <tu tuid="double" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Подвійна листівка</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Двойная открытка</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

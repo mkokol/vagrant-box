@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="login" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>логування</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>вход на сайт</seg>
+            </tuv>
+        </tu>
+        <tu tuid="login_email" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>E-mail</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>E-mail</seg>
+            </tuv>
+        </tu>
+        <tu tuid="password" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Пароль</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пароль</seg>
+            </tuv>
+        </tu>
+        <tu tuid="login_btn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Увійти</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Войти</seg>
+            </tuv>
+        </tu>
+        <tu tuid="cancel_btn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Відміна</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Отмена</seg>
+            </tuv>
+        </tu>
+        <tu tuid="forget_pass" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Забули пароль?</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Забыли пароль?</seg>
+            </tuv>
+        </tu>
+        <tu tuid="error_message_incorrect" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Невірний e-mail або пароль.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Неверный e-mail или пароль.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="error_message_missed" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Введіть e-mail і пароль.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Введите e-mail и пароль.</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

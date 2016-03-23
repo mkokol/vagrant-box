@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="edit_theme" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Список тем</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Список тем</seg>
+            </tuv>
+        </tu>
+        <tu tuid="new_theme" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Нова тема</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Новая тема</seg>
+            </tuv>
+        </tu>
+        <tu tuid="save" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Зберегти</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Сохранить</seg>
+            </tuv>
+        </tu>
+        <tu tuid="cancel" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Відміна</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Отмена</seg>
+            </tuv>
+        </tu>
+        <tu tuid="select_theme_or_input_new_one" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Виберіть тему, або створіть власну</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Выберите тему, или создайте собственную</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PhotoPrint" default="main" basedir=".">
+
+    <if>
+        <not><isset property="env" /></not>
+        <then><property name="env" value="dev" /></then>
+    </if>
+
+    <property file="./build/properties/${env}.ini" />
+
+    <php function="preg_replace" returnProperty="consoleSrcPath">
+        <param value="/(Dropbox\ \(Personal\))+/"/>
+        <param value="Dropbox\\ \\(Personal\\)"/>
+        <param value="${project.basedir}"/>
+    </php>
+
+    <target name="main">
+        <echo message="+------------------------------------------+"/>
+        <echo message="| Build PhotoPrint.in.ua                   |"/>
+        <echo message="+------------------------------------------+"/>
+
+        <phing phingfile="${project.basedir}/build/phing/database.xml" target="database" />
+    </target>
+
+</project>

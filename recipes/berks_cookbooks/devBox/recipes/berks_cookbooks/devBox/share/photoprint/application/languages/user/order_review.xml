@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid="keywords" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid="are_you_happy_with_our_service" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Чи задоволені Ви сервісом?</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Удовлетворены ли Вы сервисом?</seg>
+            </tuv>
+        </tu>
+        <tu tuid="are_you_happy_with_the_quality_of_the_product" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Чи задоволені Ви якістю продукції?</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Удовлетворены ли Вы качеством продукции?</seg>
+            </tuv>
+        </tu>
+        <tu tuid="send" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Відправити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Отправить</seg>
+            </tuv>
+        </tu>
+        <tu tuid="leave_here_your_comment" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Залиште тут свій коментар ...</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Оставьте здесь свой комментарий</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

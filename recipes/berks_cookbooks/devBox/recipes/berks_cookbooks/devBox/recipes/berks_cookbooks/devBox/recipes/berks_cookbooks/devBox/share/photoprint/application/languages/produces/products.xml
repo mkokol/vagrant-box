@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="catalog" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Каталог</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Каталог</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Catalog</seg>
+            </tuv>
+        </tu>
+        <tu tuid="we_propose" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Також ми пропонуємо</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Также мы предлагаем</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>We also propose</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param1" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Матеріал</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Материал</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param2" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Розмір</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Размер</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param3" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Щільность</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Плотность</seg>
+            </tuv>
+        </tu>
+        <tu tuid="price" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ціна</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Цена</seg>
+            </tuv>
+        </tu>
+        <tu tuid="order_it" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Замовити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Заказать</seg>
+            </tuv>
+        </tu>
+        <tu tuid="zoom" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Збільшити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Увеличить</seg>
+            </tuv>
+        </tu>
+        <tu tuid="all_categories" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Категорії</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Категории</seg>
+            </tuv>
+        </tu>
+        <tu tuid="create_own_cup" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Створити своє горнятко</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Создать свою чашку</seg>
+            </tuv>
+        </tu>
+        <tu tuid="create_own_mousepad" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Створити свій килимок</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Создать свой коврик</seg>
+            </tuv>
+        </tu>
+        <tu tuid="create_own_postcard" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Створити свою листівку</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Создать свою открытку</seg>
+            </tuv>
+        </tu>
+        <tu tuid="create_own_puzzle" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Створити свій пазл</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Создать свой пазл</seg>
+            </tuv>
+        </tu>
+        <tu tuid="create_own_trivet" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Створити свій костер</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Создать свой костер</seg>
+            </tuv>
+        </tu>
+        <tu tuid="create_own_tshirt" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Створити свою футболку</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Создать свою футболку</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

@@ -1,0 +1,50 @@
+<?php $position = 1; ?>
+<?php foreach ($this->productList as $product): ?>
+    <?php $this->productName = $product[$this->language]; ?>
+    <?php $itemCodes = ($this->item) ? [$this->item] : $this->h()->product()->getTypeItems($product['group_name']); ?>
+
+    <?php foreach ($itemCodes as $itemCode): ?>
+        <div class="grid-product" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product"<?php
+        if ($this->isEditSiteSettingsOn): ?> data-product-id="<?= $product['id'] ?>"<?php endif ?>>
+
+            <?php if ($this->isEditSiteSettingsOn): ?>
+                <div class="arrow-block">
+                    <div>
+                        <img src="<?php $this->h()->static()->path('admin/up.png'); ?>" class="arrow-up" data-el-count="-3">
+                        <br>
+                        <img src="<?php $this->h()->static()->path('admin/left.png'); ?>" class="arrow-left" data-el-count="-1"><?php
+                        ?><img src="<?php $this->h()->static()->path('admin/right.png'); ?>" class="arrow-right" data-el-count="1">
+                        <br>
+                        <img src="<?php $this->h()->static()->path('admin/down.png'); ?>" class="arrow-down" data-el-count="3">
+                    </div>
+                </div>
+            <?php endif ?>
+
+            <meta itemprop="position" content="<?= $position++ ?>"/>
+            <div class="preview">
+                <div class="image">
+                    <?= $this->h()->product()->getImg($this->t, $itemCode, $product, 'p'); ?>
+                </div>
+                <div class="info-more">
+                    <?php
+                        $productUrl = (isset($product['seo_url']) && !empty($product['seo_url']))
+                            ? $this->h()->url()->seo($product['seo_url'])
+                            : $this->h()->url()->build("/produces/catalog/item/{$itemCode}", array('id' => $product['id']))
+                    ?>
+                    <a itemprop="url" class="view-item" href="<?= $productUrl ?>">
+                        <span itemprop="name">
+                            <?=(($this->productName == '') ? $this->t->_('deteils') : $this->productName) ?>
+                        </span>
+                    </a>
+                </div>
+                <div class="info" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <link itemprop="availability" href="http://schema.org/InStock"/>
+                    <meta itemprop="priceCurrency" content="UAH"/>
+                    <span itemprop="price">
+                        <?= $this->h()->basket()->showPrice($product, $itemCode); ?>
+                    </span>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+<?php endforeach; ?>

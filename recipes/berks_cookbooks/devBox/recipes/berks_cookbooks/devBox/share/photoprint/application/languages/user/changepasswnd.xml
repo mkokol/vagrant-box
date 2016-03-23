@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="change_password" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Зміна паролю</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Изменение пароля</seg>
+            </tuv>
+        </tu>
+        <tu tuid="cancel" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>відміна</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>отмена</seg>
+            </tuv>
+        </tu>
+        <tu tuid="save" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Збарегти</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Сохранить</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

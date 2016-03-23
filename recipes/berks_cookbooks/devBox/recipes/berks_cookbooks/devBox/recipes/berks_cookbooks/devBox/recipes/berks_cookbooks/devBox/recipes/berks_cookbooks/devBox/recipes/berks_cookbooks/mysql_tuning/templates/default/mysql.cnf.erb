@@ -1,0 +1,13 @@
+<% @config.sort.each do |group, options| -%>
+
+[<%= group.to_s %>]
+<%   options.sort.each do |key, value|
+       key = key.to_s
+       if value == true || key.start_with?('skip')
+-%>
+<%=      key %>
+<%     elsif ![nil, false].include?(value) -%>
+<%=      key %> = <%= value.to_s %>
+<%     end -%>
+<%   end -%>
+<% end -%>

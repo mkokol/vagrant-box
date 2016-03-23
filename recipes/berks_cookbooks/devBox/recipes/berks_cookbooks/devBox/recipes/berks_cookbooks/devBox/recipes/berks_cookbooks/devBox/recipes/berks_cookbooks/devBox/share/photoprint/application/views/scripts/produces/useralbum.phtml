@@ -1,0 +1,20 @@
+<div id="popup-wnd-data-content" class="popup-wnd-produse-user-albums-size">
+    <?php echo $this->render('controls/emptyheader.phtml'); ?>
+    
+    <div class="popup-wnd-header"><?php echo $this->t->_('albums'); ?></div>
+    <div id="popup-wnd-scroll-panel" style="height: 332px; margin-right: 10px;">
+        <ul style="padding-top: 8px; list-style-type: none;">
+            <?php if($this->hasNotSortedImages || (count($this->allAlbums) == 0)): ?>
+                <li style="padding-bottom: 3px;">
+                    <a id="album0" href="#" style="padding:3px;" onclick="changeAlbum('0'); return false;"><?php echo $this->t->_('my_pictures'); ?></a>
+                </li>
+            <?php endif; ?>
+            <?php foreach ($this->allAlbums as $key => $value): ?>
+                <li style="padding-bottom: 3px;">
+                    <a id="album<?php echo $value['id']; ?>" href="#" style="padding:3px;" onclick="changeAlbum('<?php echo $value['id']; ?>'); return false;"><?php echo $value['title']; ?></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <?php echo $this->render('controls/emptyfooter.phtml'); ?>
+</div>

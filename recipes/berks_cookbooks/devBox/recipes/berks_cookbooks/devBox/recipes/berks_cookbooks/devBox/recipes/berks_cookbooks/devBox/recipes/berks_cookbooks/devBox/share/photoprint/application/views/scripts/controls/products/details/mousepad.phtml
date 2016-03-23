@@ -1,0 +1,27 @@
+<?php if(!$this->item): ?>
+    <?php $this->item = ($this->itemXml != '' && $this->itemXml->item != '') ? $this->itemXml->item : 'square'; ?>
+<?php endif; ?>
+
+<?php $borderImg = ($this->item == 'circle') ? 'borderCircle' : 'border'; ?>
+
+
+<!--<div id="detail-mousepad" class="size-origin-mousepad---><?php //echo $this->item; ?><!--">-->
+<!--    <img class="content-image-border size-origin-mousepad---><?php //echo $this->item; ?><!--" src="--><?php //$this->h()->static()->path("produces/mousepad/{$borderImg}.png") ?><!--">-->
+<!--    --><?php //$this->h()->image()->getInBoxImg($this->itemXml, 'main'); ?>
+<!--</div>-->
+
+
+<?php $borderClass = ($this->item == 'circle') ? 'circle' : 'square'; ?>
+
+<div class="mousepad">
+    <div class="<?php echo $borderClass; ?>">
+        <span class="border size"></span>
+<!--        --><?php //if($this->item == 'circle'): ?>
+<!--            --><?php //$this->h()->image()->getSmallInBoxImgView(1.135, $this->itemXml, 'main', $imgAlt, 0, -33); ?>
+<!--        --><?php //else: ?>
+<!--            --><?php //$this->h()->image()->getSmallInBoxImgView(1.300, $this->itemXml, 'main', $imgAlt, 0, 0); ?>
+<!--        --><?php //endif; ?>
+        <?php $this->h()->image()->getInBoxImg($this->itemXml, 'main'); ?>
+    </div>
+</div>
+

@@ -1,0 +1,30 @@
+<?= $this->render('header.phtml') ?>
+
+<tr>
+    <td style="padding: 10px; border-bottom: 1px solid #f2eeed;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td style="padding: 0 0 15px 0; font-size: 20px; line-height: 28px; font-weight: bold;">
+                    <?= $this->t->_('help_us_to_improve_our_quality') ?>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size: 16px; line-height: 22px; padding-bottom: 20px;">
+                    <?= $this->t->_('text_for_email_about_order_review') ?>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-bottom: 20px; text-align: center;">
+                    <a style="width: 250px;padding:10px 0;display:inline-block;background-color:#a46588;border-radius:3px;color:#ffffff;font-size:16px;font-weight:bold;text-decoration:none;text-transform: uppercase"
+                       href="<?= $this->h()->url()->buildFullUrl('/user/order-review', ['hash' => $this->hash]); ?>"
+                       target="_blank">
+                        <?= $this->t->_('leave_a_review') ?>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+
+<?= $this->render('footer.phtml') ?>
+

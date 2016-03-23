@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер резиновий. Мамонт що крадеться.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер резиновый. Крадущийся мамонт.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер резиновий. Мамонт що крадеться та ховається за гілкою.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер резиновый. Крадущийся мамонт что скрывается за веткой.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="keywords" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер резиновий. Мамонт що крадеться та ховається за гілкою.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер резиновый. Крадущийся мамонт что скрывается за веткой.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="header" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер резиновий. Мамонт що крадеться.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер резиновый. Крадущийся мамонт.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="content" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер резиновий. Мамонт що крадеться та ховається за гілкою.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер резиновый. Крадущийся мамонт что скрывается за веткой.</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

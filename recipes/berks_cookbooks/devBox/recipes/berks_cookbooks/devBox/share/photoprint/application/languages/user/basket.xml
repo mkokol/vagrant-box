@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid="quantity" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Кількість</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Количество</seg>
+            </tuv>
+        </tu>
+        <tu tuid="price_per_item" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ціна за одиницю</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Цена за единицу</seg>
+            </tuv>
+        </tu>
+        <tu tuid="color" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Колір</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Цвет</seg>
+            </tuv>
+        </tu>
+        <tu tuid="sum" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Сума</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Сума</seg>
+            </tuv>
+        </tu>
+        <tu tuid="no_item_in_busket" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ваша корзина порожня</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Ваша корзина пуста</seg>
+            </tuv>
+        </tu>
+        <tu tuid="size" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Розмір</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Размер</seg>
+            </tuv>
+        </tu>
+        <tu tuid="order_info" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Підсумок замовлення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Итог заказ</seg>
+            </tuv>
+        </tu>
+        <tu tuid="total_item_amount" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Кількість товарів</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Количество товаров</seg>
+            </tuv>
+        </tu>
+        <tu tuid="total_order_price" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Сума до оплати</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Сумма к оплате</seg>
+            </tuv>
+        </tu>
+        <tu tuid="make_order" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Оформити замовлення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Оформить заказ</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>
