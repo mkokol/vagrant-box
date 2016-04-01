@@ -8,6 +8,7 @@ version          '0.0.1'
 depends 'locale', '~> 1.0.2'
 depends 'apt', '~> 2.9.2'
 depends 'vim', '~> 2.0.1'
+depends 'curl', '~> 2.0.1'
 
 depends 'nginx', '~> 2.7.6'
 depends 'mysql', '~> 6.1.2'

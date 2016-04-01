@@ -378,7 +378,6 @@ class UserController extends Helpers_General_ControllerAction
 
         $this->loadTranslation(['user_menu', 'products', 'user/basket']);
         $this->appendFile('user/basket');
-        $this->appendWidgets('tablesorter');
 
         $baskets = new Baskets();
         $userId = Users::getCarrentUserId();

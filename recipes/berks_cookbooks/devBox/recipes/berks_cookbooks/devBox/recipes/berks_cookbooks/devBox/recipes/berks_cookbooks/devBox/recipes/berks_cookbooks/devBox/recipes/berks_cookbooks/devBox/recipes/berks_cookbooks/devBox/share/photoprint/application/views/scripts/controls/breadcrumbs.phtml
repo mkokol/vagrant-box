@@ -1,0 +1,79 @@
+<div class="grid-container">
+    <div class="breadcrumbs grid-100">
+        <?php $i = 1; ?>
+        <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+            <?php $lastItem = array_pop($this->breadcrumbs); ?>
+            <?php foreach ($this->breadcrumbs as $item): ?>
+                <?php if (isset($item['link'])): ?>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="<?= $this->h()->url()->build($item['link']['url'], $item['link']['params']); ?>">
+                            <span itemprop="name">
+                                <?php echo $this->t->_($item['name']); ?>
+                            </span>
+                        </a>
+                        <meta itemprop="position" content="<?php echo $i++; ?>" />
+                    </li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </ol>
+
+        <?php if($this->showSMLinksInBreadcrumbs): ?>
+            <div id="social-share-btn" class="products-page">
+                <div class="vk">
+                    <div id="vk_like"></div>
+                    <script type="text/javascript" src="//vk.com/js/api/openapi.js?105"></script>
+                    <script type="text/javascript">
+                        VK.init({apiId: 2228139, onlyWidgets: true});
+                        VK.Widgets.Like("vk_like", {type: "mini", height: 20});
+                    </script>
+                </div>
+                <div class="fb">
+                    <div id="fb-root"></div>
+                    <script>
+                        (function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=521117277930288";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                    </script>
+                    <div class="fb-like" data-href="<?php echo $this->requestFullUri ?>" data-layout="button_count"
+                        data-action="like" data-show-faces="true" data-share="false">
+                    </div>
+                </div>
+                <div class="google-plus">
+                    <div class="g-plusone" data-size="medium" data-href="<?php echo $this->requestFullUri ?>"></div>
+                    <script type="text/javascript">
+                        window.___gcfg = {lang: 'en'};
+                        (function () {
+                            var po = document.createElement('script');
+                            po.type = 'text/javascript';
+                            po.async = true;
+                            po.src = 'https://apis.google.com/js/platform.js';
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(po, s);
+                        })();
+                    </script>
+                </div>
+                <div class="tweeter">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+                    <script>
+                        !function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                            if (!d.getElementById(id)) {
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = p + '://platform.twitter.com/widgets.js';
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }
+                        }(document, 'script', 'twitter-wjs');
+                    </script>
+                </div>
+            </div>
+        <?php endif; ?>
+        <div class="underline"></div>
+    </div>
+    <div class="clear"></div>
+</div>

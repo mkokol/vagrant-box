@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="<?= (trim($this->language) == 'ua') ? 'uk' : 'ru'; ?>">
+<head>
+    <meta charset="utf-8">
+    <?php if($this->seo): ?>
+        <title><?= trim($this->seo->title) ?></title>
+        <meta property="og:title" content="<?= trim($this->seo->title) ?>"/>
+        <meta name="description" content="<?= trim($this->seo->description) ?>">
+        <meta property="og:description" content="<?= trim($this->seo->description) ?>"/>
+        <?php if (trim($this->seo->keywords)): ?>
+            <meta name="keywords" content="<?= trim($this->seo->keywords) ?>">
+        <?php endif; ?>
+    <?php else: ?>
+        <title><?= trim($this->title) ?></title>
+        <meta property="og:title" content="<?= trim($this->title) ?>"/>
+        <?php if (trim($this->description)): ?>
+            <meta name="description" content="<?= trim($this->description) ?>">
+            <meta property="og:description" content="<?= trim($this->description) ?>"/>
+        <?php endif; ?>
+        <?php if (trim($this->keywords)): ?>
+            <meta name="keywords" content="<?= trim($this->keywords) ?>">
+        <?php endif; ?>
+    <?php endif; ?>
+    <?php if($this->main_img): ?>
+        <?php $mainUrlImg = $this->h()->product()->getFullImgUrl($this->item, $this->product) ?>
+        <meta property="og:image" content="<?= $mainUrlImg ?>"/>
+        <link rel="image_src" href="<?= $mainUrlImg ?>"/>
+    <?php endif; ?>
+    <link rel="shortcut icon" href="<?= $this->baseUrl; ?>/public/theme/favicon2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="uO8VYTiyktzdYQagV1wSTPw0fG4xne8V2Imy8zuesaw">
+    <meta name="yandex-verification" content="4e83a0294fac0ccf">
+    <script>
+        var basePath='<?= $this->baseUrl ?>',
+            baseUrl='<?= $this->baseUrl.'/'.$this->language ?>',
+            baseVersion='<?= $this->version ?>',
+            islogin=<?= ($this->islogin) ? 'true' : 'false' ?>,
+            tracking='<?= $this->tracking ?>';
+        (function (w, d, u) {
+            w.readyQ = [];
+            w.bindReadyQ = [];
+            function p(x, y) {
+                if (x == "ready") {
+                    w.bindReadyQ.push(y);
+                } else {
+                    w.readyQ.push(x);
+                }
+            };
+            var a = {ready: p, bind: p};
+            w.$ = w.jQuery = function (f) {
+                if (f === d || f === u) {
+                    return a
+                } else {
+                    p(f)
+                }
+            }
+        })(window, document);
+    </script>
+    <?php $this->h()->static()->headCSS(); ?>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+    <header itemscope itemtype="http://schema.org/WPHeader">
+        <?php if ($this->topMenuItems && is_array($this->topMenuItems['adminMenu'])): ?>
+            <div id="admin-menu">
+                <div class="grid-container">
+                    <ul class="grid-100 mobile-grid-100">
+                        <?php foreach ($this->topMenuItems['adminMenu'] as $key => $value): ?>
+                            <li>
+                                <a href="<?= $this->h()->url()->build($value['url']); ?>"
+                                    <?= (in_array($value['url'], array("/{$this->controller}", "/{$this->controller}/$this->action"))) ? ' class="current"' : ''; ?>>
+                                    <span><?= $this->t->_($value['name'], $this->supportLanguage) ?></span>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
+        <?php endif; ?>
+        <div class="top-nav">
+            <div class="grid-container">
+                <div class="grid-25 mobile-grid-25 language">
+                    <?php if (is_array($this->lastLink)): ?>
+                        <?php if($this->language == 'ru'): ?>
+                            <a href="<?= $this->h()->url()->seo($this->lastLink['ua']); ?>">
+                                <span class="ua"></span>
+                            </a>
+                            <span class="ru"></span>
+                        <?php else: ?>
+                            <span class="ua"></span>
+                            <a href="<?= $this->h()->url()->seo($this->lastLink['ru']); ?>">
+                                <span class="ru"></span>
+                            </a>
+                        <?php endif; ?>
+                    <?php else: ?>
+                        <?php if($this->language == 'ru'): ?>
+                            <a href="<?= $this->h()->url()->build($this->lastLink, [], 'ua'); ?>">
+                                <span class="ua"></span>
+                            </a>
+                            <span class="ru"></span>
+                        <?php else: ?>
+                            <span class="ua"></span>
+                            <a href="<?= $this->h()->url()->build($this->lastLink, [], 'ru'); ?>">
+                                <span class="ru"></span>
+                            </a>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                    <?php if (in_array('en', $this->languageList)): ?>
+                        <?php if($this->supportLanguage == 'en'): ?>
+                            <a href="<?= $this->h()->url()->build('/index/language', ['turn' => 'off']); ?>"
+                                style="position: relative; top: -7px; padding-left: 5px; font-size: 14px;">
+                                English Off
+                            </a>
+                        <?php else: ?>
+                            <a href="<?= $this->h()->url()->build('/index/language', ['turn' => 'on']); ?>"
+                               style="position: relative; top: -7px; padding-left: 5px; font-size: 14px;">
+                                English On
+                            </a>
+                        <?php endif ?>
+                    <?php endif ?>
+                </div>
+                <div class="grid-75 mobile-grid-75 user-panel">
+                    <?php if ($this->islogin): ?>
+                        <a href="<?= $this->h()->url()->build('/user/basket'); ?>">
+                            <?= $this->t->_("basket", $this->supportLanguage) . ' '; ?>
+                            <span id="basket-items-count">
+                                <?= $this->basketItemsCount; ?>
+                            </span>
+                        </a>
+                        <a href="<?= $this->h()->url()->build('/user/logout'); ?>">
+                            <?= $this->t->_("quit", $this->supportLanguage); ?>
+                        </a>
+                    <?php else: ?>
+                        <span id="show-login-wnd-btn">
+                            <?= $this->t->_("log_in", $this->supportLanguage); ?>
+                        </span>
+                        <a href="<?= $this->h()->url()->build('/user/registration'); ?>">
+                            <?= $this->t->_("registration", $this->supportLanguage); ?>
+                        </a>
+                        <a href="<?= $this->h()->url()->build('/user/basket'); ?>">
+                            <?= $this->t->_("basket", $this->supportLanguage); ?>
+                            <span id="basket-items-count">
+                                <?= $this->basketItemsCount; ?>
+                            </span>
+                        </a>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+        <div class="store grid-container" itemscope itemtype="http://schema.org/Store">
+            <div class="grid-55 mobile-grid-40 logo">
+                <a itemprop="url" href="<?= $this->h()->url()->build(''); ?>">
+                    <img src="<?php $this->h()->static()->path('new-logo.png') ?>" class="no-border hide-on-mobile"
+                        alt="photoprint.in.ua" width="450" itemprop="logo">
+                    <img src="<?php $this->h()->static()->path('new-m.logo.png') ?>" class="no-border hide-on-desktop"
+                        alt="photoprint.in.ua" width="120" height="48" itemprop="logo">
+                </a>
+            </div>
+            <div class="grid-45 mobile-grid-60">
+                <div class="info hide-on-mobile">
+                    <div class="phone" itemprop="telephone" content="+380988054041"><span class="icon"></span>+3 (8098) 805 40 41</div>
+                    <div class="mail">
+                        <a href="mailto:photoprint.in.ua@gmail.com" itemprop="email"><span class="icon"></span>photoprint.in.ua@gmail.com</a>
+                    </div>
+                    <div class="links">
+                        <a class="payment" href="<?= $this->h()->url()->build('/info/payment'); ?>">
+                            <span class="icon"></span><?= $this->t->_('payment_info', $this->supportLanguage); ?>
+                        </a>
+                        <a class="transportation" href="<?= $this->h()->url()->build('/info/transportation'); ?>">
+                            <span class="icon"></span><?= $this->t->_('transportation_info', $this->supportLanguage); ?>
+                        </a>
+                        <a class="help" href="<?= $this->h()->url()->build('/info/help'); ?>">
+                            <span class="icon"></span><?= $this->t->_('help_info', $this->supportLanguage); ?>
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile-info hide-on-desktop">
+                    <div class="phone" itemprop="telephone" content="+380988054041"><span class="icon"></span>+3 (8098) 805 40 41</div>
+                    <div class="links">
+                        <a class="payment" href="<?= $this->h()->url()->build('/info/payment'); ?>">
+                            <span class="icon"></span><?= $this->t->_('payment_info'); ?>
+                        </a>
+                        <a class="transportation" href="<?= $this->h()->url()->build('/info/transportation'); ?>">
+                            <span class="icon"></span><?= $this->t->_('transportation_info'); ?>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main">
+            <div class="grid-container">
+                <ul class="grid-100">
+                    <?php if ($this->isAdmin === true): ?>
+                        <?php $currentUrl = Zend_Controller_Front::getInstance()->getRequest()->getRequestUri() ?>
+                        <li data-current-url="<?= $currentUrl ?>">
+                            <?php if ($this->editSiteSettings): ?>
+                                <a href="<?= $this->h()->url()->build('/admin/turn-on-off-edit-site-settings', ['edit' => false]); ?>">
+                                    <span style="width: 22px; position: relative; height: 25px;">
+                                        <img class="edit-site-settings" style="left: 5px; position: absolute; top: 4px;"
+                                             src="<?php $this->h()->static()->path('manage-stop.svg') ?>" width="16">
+                                    </span>
+                                </a>
+                            <?php else: ?>
+                                <a href="<?= $this->h()->url()->build('/admin/turn-on-off-edit-site-settings', ['edit' => true]); ?>">
+                                    <span style="width: 22px; position: relative; height: 25px;">
+                                        <img class="edit-site-settings" style="left: 5px; position: absolute; top: 4px;"
+                                             src="<?php $this->h()->static()->path('manage-start.svg') ?>" width="16">
+                                    </span>
+                                </a>
+                            <?php endif; ?>
+                        </li>
+                    <?php endif; ?>
+                    <li>
+                        <a href="javascript:$('.logo a')[0].click();">
+                            <span class="home"><span></span></span>
+                        </a>
+                    </li>
+                    <?php if ($this->topMenuItems && is_array($this->topMenuItems['userMenu'])): ?>
+                        <?php foreach ($this->topMenuItems['userMenu'] as $key => $value): ?>
+                            <li>
+                                <?php
+                                    $cssClass = (in_array($value['url'], ["/{$this->controller}", "/{$this->controller}/$this->action"]))
+                                        ? ' class="current"'
+                                        : '';
+                                ?>
+                                <a href="<?= $this->h()->url()->build($value['url']); ?>" <?= $cssClass; ?>>
+                                    <span>
+                                        <?= $this->t->_($value['name']) ?>
+                                    </span>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                    <li class="search">
+                        <form method="get" action="<?= $this->h()->url()->build('/search/'); ?>">
+                            <input type="text" name="q" value="<?= $this->q ?>"><input type="submit" value="<?= $this->t->_('search') ?>">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="data">

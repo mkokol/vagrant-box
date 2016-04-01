@@ -1,0 +1,79 @@
+<?php echo $this->render('controls/header.phtml'); ?>
+
+<div class="grid-container">
+    <div id="photoList" class="grid-100">
+        <div style="text-align: center; padding-bottom: 7px;">
+            <?php echo $this->render('controls/ajaxPaging.phtml'); ?>
+        </div>
+
+        <table class="tablesorter" cellpadding="3" cellspacing="1">
+            <thead>
+                <tr>
+                    <th width="50px">id</th>
+                    <th width="100px">Image</th>
+                    <th width="100px">Theme</th>
+                    <th width="50px">Real</th>
+                    <th width="50px">Large</th>
+                    <th width="50px">Small</th>
+                    <th>Crated</th>
+                    <th width="100px" class="{sorter: false}"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($this->images as $key => $value): ?>
+                    <tr height="122px">
+                        <td>
+                            <?php echo $value['id']; ?>
+                        </td>
+                        <td style="text-align: center;">
+                            <img src="<?php $this->h()->image()->path($value['img_name'], 's', $value['extension']); ?>" style="background: url(../../public/theme/img-bg.png);" />
+                        </td>
+                        <td>
+                            <?php echo $value['tema']; ?>
+                        </td>
+                        <td>
+                            <?php if (file_exists($_SERVER['DOCUMENT_ROOT'] . $this->h()->image()->getPath($value['img_name'], 'o', $value['extension'], true))): ?>
+                                <a href="<?php $this->h()->image()->path($value['img_name'], 'o', $value['extension'], true); ?>" target="_blank">Yes</a>
+                            <?php else: ?>
+                                No
+                            <?php endif; ?>
+                        </td>
+                        <td>
+                            <?php if (file_exists($_SERVER['DOCUMENT_ROOT'] . $this->h()->image()->getPath($value['img_name'], 'p', $value['extension']))): ?>
+                                <a href="<?php $this->h()->image()->path($value['img_name'], 'p', $value['extension']); ?>" target="_blank">Yes</a>
+                            <?php else: ?>
+                                No
+                            <?php endif; ?>
+                        </td>
+                        <td>
+                            <?php if (file_exists($_SERVER['DOCUMENT_ROOT'] . $this->h()->image()->getPath($value['img_name'], 's', $value['extension']))): ?>
+                                <a href="<?php $this->h()->image()->path($value['img_name'], 's', $value['extension']); ?>" target="_blank">Yes</a>
+                            <?php else: ?>
+                                No
+                            <?php endif; ?>
+                        </td>
+                        <td>
+                            <?php echo date('d/m/Y H:i:s', strtotime($value['created'])); ?>
+                        </td>
+                        <td>
+                            <input onclick="deleteImage('<?php echo $value['id']; ?>', '<?php echo $value['image_id']; ?>', '<?php echo $value['img_name']; ?>')" type="button" value="deletebtn" >
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+
+
+        <div style="text-align: center; padding-top: 7px;">
+            <?php echo $this->render('controls/ajaxPaging.phtml'); ?>
+        </div>
+
+        <script type="text/javascript">
+            $("#produseTovTheme").change(function(){
+                $("#photoList").load(baseUrl + "/admin/photolist?product=" + $("#produseTovEl").val() + "&theme=" + $("#produseTovTheme").val());
+            });
+        </script>
+    </div>
+</div>
+
+<?php echo $this->render('controls/footer.phtml'); ?>

@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="user_name" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ім'я користувача</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Имя пользователя</seg>
+            </tuv>
+        </tu>
+        <tu tuid="email" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Електронна пошта</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Электронная почта</seg>
+            </tuv>
+        </tu>
+        <tu tuid="phone" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Номер телефону</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Номер телефона</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

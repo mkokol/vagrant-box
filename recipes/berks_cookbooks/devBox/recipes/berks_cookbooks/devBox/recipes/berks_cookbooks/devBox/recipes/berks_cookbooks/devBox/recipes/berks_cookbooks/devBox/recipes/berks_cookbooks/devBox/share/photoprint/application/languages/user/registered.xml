@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="congratulation" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Вітаємо! Pеєстрація завершена.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Поздравляем! Pегистрация завершена.</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

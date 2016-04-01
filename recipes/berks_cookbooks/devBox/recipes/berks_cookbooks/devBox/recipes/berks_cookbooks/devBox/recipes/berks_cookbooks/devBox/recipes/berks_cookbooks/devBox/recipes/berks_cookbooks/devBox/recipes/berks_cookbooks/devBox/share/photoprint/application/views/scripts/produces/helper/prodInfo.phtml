@@ -1,0 +1,86 @@
+<style type="text/css">
+    .navigation-tabs {
+        padding-top: 15px;;
+        text-align: center;
+        font-size: 16px;
+        font-family: 'Open Sans', Arial, sans-serif;
+        color: #be6227;
+    }
+    .navigation-tabs > div {
+        border-bottom: 1px solid #be6227;
+        line-height: 1.5;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        cursor: pointer;
+    }
+    .navigation-tabs > div:hover{
+        background-color: #F5F5F5;
+    }
+    .navigation-tabs > div.selected {
+        padding-bottom: 9px;
+        font-weight: bold;
+        /*border: 1px dotted #be6227;*/
+        border-bottom: 3px solid #be6227;
+        background-color: #F5F5F5;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".navigation-tabs div").click(function(){
+            $("#similar-product").hide();
+            $("#warranty-product").hide();
+            $("#" + $(this).attr("data-content-el")).show()
+            $(".navigation-tabs div").removeClass("selected");
+            $(this).addClass("selected");
+        });
+    });
+</script>
+<div class="grid-75 navigation-tabs">
+    <div class="grid-25 alpha selected" data-content-el="similar-product">
+        Похожие продукты
+    </div>
+    <div class="grid-25" data-content-el="warranty-product">
+        Наши гарантии
+    </div>
+    <div class="grid-25 omega">
+        Доставка и оплата
+    </div>
+</div><div class="clear"></div>
+<div class="clear"></div>
+
+<div id="warranty-product" class="grid-75" style="padding-top: 9px; display: none;">
+    <div class="title grid-75 alpha omega" style="padding-top: 11px; margin-bottom: 10px;">
+        Своим клиентам мы не просто продаем продукт, мы гарантируем высокое качество в кратчайшие сроки.
+        <div class="underline-dot" ></div>
+    </div>
+    <div class="grid-25 alpha" style="padding-bottom: 10px;">
+        <img style="padding: 0px 25px 0px 45px; float: left;"
+            src="<?php $this->h()->static()->path('warranty/quality.svg'); ?>" width="50px">
+        <div style="font-size: 16px; padding-top: 10px; color: #347339;">Гарантия качества</div>
+        <br/><br/>
+        <p style="padding-left: 5px; padding-right: 5px;">
+            Каждый продукт мы изготавливаем вручную, а проверка в отделе качества обеспечивает отсутствие брака продукции.
+            Эти две составляющие лежат в основе нашего производства, благодаря чему мы выпускаем продукцию, которой гордимся.
+        </p>
+    </div>
+    <div class="grid-25">
+        <img style="padding: 12px 25px 0px 30px; float: left;"
+            src="<?php $this->h()->static()->path('warranty/delivery.svg'); ?>" width="68px">
+        <div style="font-size: 16px; padding-top: 10px; color: #347339;">Быстрая доставка</div>
+        <br/><br/>
+        <p style="padding-left: 5px; padding-right: 5px;">
+            Мы сотрудничаем только с лучшими перевозчиками, а автоматизация процессов обработки заказа позволяет ускорять
+            процесс изготовления и отправки продукции. Благодаря этому мы обеспечиваем быструю доставку всех наших заказов.
+        </p>
+    </div>
+    <div class="grid-25 omega">
+        <img style="padding: 4px 25px 0px 35px; float: left;"
+            src="<?php $this->h()->static()->path('warranty/coins.svg'); ?>" width="58px">
+        <div style="font-size: 16px; padding-top: 10px; color: #347339;">Гарантия возврата</div>
+        <br/><br/>
+        <p style="padding-left: 5px; padding-right: 5px;">
+            Благодаря ручному производству и автоматизации процессов мы обеспечиваем наивысшее качество нашей продукции.
+            Но все же, если по какой-либо причине вам не подошел наш продукт, мы немедленно вернем Вам деньги.
+        </p>
+    </div>
+</div><div class="clear"></div>

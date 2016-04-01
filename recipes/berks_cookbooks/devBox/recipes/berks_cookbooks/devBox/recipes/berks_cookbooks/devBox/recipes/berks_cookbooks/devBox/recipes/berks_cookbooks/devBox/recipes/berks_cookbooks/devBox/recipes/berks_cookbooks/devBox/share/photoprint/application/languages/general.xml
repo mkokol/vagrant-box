@@ -1,0 +1,518 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="index" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Головна</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Главная</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Home</seg>
+            </tuv>
+        </tu>
+        <tu tuid="produces" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Товари</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Товары</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Products</seg>
+            </tuv>
+        </tu>
+        <tu tuid="about_us" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Про нас</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>О нас</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>About Us</seg>
+            </tuv>
+        </tu>
+        <tu tuid="payment_and_transportation" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Оплата та доставка</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Оплата и доставка</seg>
+            </tuv>
+        </tu>
+        <tu tuid="home" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Моя сторінка</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Моя страница</seg>
+            </tuv>
+        </tu>
+        <tu tuid="products" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Продукти</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Продукты</seg>
+            </tuv>
+        </tu>
+        <tu tuid="photo" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Фото</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Фото</seg>
+            </tuv>
+        </tu>
+        <tu tuid="orders" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Замовлення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Заказы</seg>
+            </tuv>
+        </tu>
+        <tu tuid="statistic" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Відвідуваність</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Посещаемость</seg>
+            </tuv>
+        </tu>
+        <tu tuid="partner" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Кабінет партнера</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Кабинет партнера</seg>
+            </tuv>
+        </tu>
+        <tu tuid="log_in" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Вхід</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Вход</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Log In</seg>
+            </tuv>
+        </tu>
+        <tu tuid="registration" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Реєстрація</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Регистрация</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Registration</seg>
+            </tuv>
+        </tu>
+        <tu tuid="user_page" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Моя сторінка</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Моя страница</seg>
+            </tuv>
+        </tu>
+        <tu tuid="basket" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Корзина</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Корзина</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Basket</seg>
+            </tuv>
+        </tu>
+        <tu tuid="quit" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Вийти</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Выйти</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Log Out</seg>
+            </tuv>
+        </tu>
+
+
+        <tu tuid="main_page_link" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Головна</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Главная</seg>
+            </tuv>
+        </tu>
+        <tu tuid="payment_info" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Оплата</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Оплата</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Payment</seg>
+            </tuv>
+        </tu>
+        <tu tuid="transportation_info" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Доставка</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Доставка</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Delivery</seg>
+            </tuv>
+        </tu>
+        <tu tuid="help_info" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Довідка</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Справка</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Help</seg>
+            </tuv>
+        </tu>
+        <tu tuid="my_room" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Мій магазин</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Мой магазин</seg>
+            </tuv>
+        </tu>
+        <tu tuid="we_in_social_networks" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ми в соцмережах</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Мы в соцсетях</seg>
+            </tuv>
+        </tu>
+        <tu tuid="cooperation" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Співпраця</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Сотрудничество</seg>
+            </tuv>
+        </tu>
+        <tu tuid="designers" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Дизайнерам</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Дизайнерам</seg>
+            </tuv>
+        </tu>
+        <tu tuid="developers" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Вебмайстрам</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Вебмастерам</seg>
+            </tuv>
+        </tu>
+        <tu tuid="business" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Бізнесу</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Бизнесу</seg>
+            </tuv>
+        </tu>
+        <tu tuid="grn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>грн</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>грн</seg>
+            </tuv>
+        </tu>
+        <tu tuid="search" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Шукати</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Искать</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_theme_prefix_title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>%s з фото.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>%s с фото.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_theme_suffix_title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Тема %s на %s.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Тема %s на %s.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_theme_prefix_description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>%s. Друк фото на %s.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>%s. Печать фото на %s.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_theme_suffix_description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>%s нанесення фотографій і зображень на %s.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>%s нанесение фотографий и изображений на %s.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_theme_suffix_header" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>%s серії %s або створіть з власною фотографією.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>%s серии %s или создайте с собственной фотографией.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_item_title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>%s з фото. %s '%s'.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>%s с фото. %s '%s'.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_item_description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Друк фото на %s. %s '%s'. %s.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Печать фото на %s. %s '%s'. %s.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_item_header" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>%s '%s'. Друк Ваших фото на %s.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>%s '%s'. Печать Ваших фото на %s.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_page" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Сторінка %s.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Страница %s.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_postcard" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>листівках</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>открытках</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_puzzle" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>пазлах</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>пазлах</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_tshirt" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>футболках</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>футболках</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_cup" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>горнятках</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>кружках</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_trivet" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>підставках під горнятко</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>подставках под кружку</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_mousepad" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>килимках під мишку</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>ковриках под мышку</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_double" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Подвійна листівка</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Двойная открытка</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_a5" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Пазл А5, 60 елементів</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пазл А5, 60 элементов</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_a4" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Пазл А4, 120 елементів</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пазл А4, 120 элементов</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_a3" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Пазл А3, 240 елементів</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пазл А3, 240 элементов</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_130x180" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Пазл в рамці 130x180 мм, 40 ел</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пазл в рамке 130x180 мм, 40 эл</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_square" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Килимок під мишку прямокутний</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Коврик под мышку прямоугольный</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_circle" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Килимок під мишку круглий</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Коврик под мышку круглый</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_cork" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер корковий. Квадрат</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер пробковый. Квадрат</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_rubber" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер резиновий. Квадрат</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер резиновый. Квадрат</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_ceramic" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер коло</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер круг</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_cardboard" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер квадрат</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер квадрат</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_white" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Біле керамічне горнятко</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Белая керамическая кружка</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_glass" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Матове, скляне горнятко</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Матовая, стеклянная чашка</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_magic" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Керамічне, 'Магічне' горнятко</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Керамическая, 'Магическая' кружка</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_glassmagic" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Скляне, 'Магічне' горнятко</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Стеклянная, 'Магическая' чашка</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_mantshirt" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболка чоловіча</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболка мужская</seg>
+            </tuv>
+        </tu>
+        <tu tuid="seo_womantshirt" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболка жіноча</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболка женская</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

@@ -7,7 +7,7 @@ Vagrant::Config.run do |config|
     config.vm.define :web do |web|
         web.vm.box = "ubuntu-14.04"
         # Debian Squeeze amd64 (Chef 10.24.4, Puppet 3.1.1, VirtualBox 4.2.12)
-        web.vm.box_url = "https://oss-binaries.phusionpassenger.com/vagrant/boxes/latest/ubuntu-14.04-amd64-vbox.box"
+        web.vm.box_url = "~/vagran-box-ubuntu-server-14-04-chef.box"
 
         # Boot with a GUI so you can see the screen. (Default is headless)
         # config.vm.boot_mode = :gui
@@ -17,7 +17,7 @@ Vagrant::Config.run do |config|
 
         web.vm.share_folder "www", "/var/www", "share", :create => true
 
-        web.vm.provision :shell, :inline => "sudo apt-get update"
+        # web.vm.provision :shell, :inline => "sudo apt-get update"
 
         web.vm.provision :chef_solo do |chef|
             # chef.log_level = :debug
@@ -26,13 +26,28 @@ Vagrant::Config.run do |config|
                 "recipes/local_cookbooks"
             ]
 
-            chef.add_recipe "locale"
-            chef.add_recipe "apt"
-            chef.add_recipe "vim"
+            # chef.add_recipe "locale"
+            # chef.add_recipe "apt"
+            # chef.add_recipe "vim"
+
+
+            # chef.add_recipe "php7.0"
+            # chef.add_recipe "nginx"
+            chef.add_recipe "mysql_server"
+            chef.add_recipe "mysql_tuning"
+            # chef.add_recipe "elasticsearch"
 
             chef.json = {
                 :localegen  => {
                     'lang' => ['en_US','en_US.utf8','de_DE','de_DE.utf8' ]
+                },
+                :php => {
+                    :version => "7.0.*"
+                },
+                :mysql => {
+                    :server_root_password => '1',
+                    :server_debian_password => '1',
+                    :server_repl_password => '1'
                 }
             }
         end

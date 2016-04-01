@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="how_to_send_tovar" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Спосіб доставити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Способ доставить</seg>
+            </tuv>
+        </tu>
+        <tu tuid="how_to_send_postcard" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Листівку доставити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Открытку доставить</seg>
+            </tuv>
+        </tu>
+        <tu tuid="with_all_tovars" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>В загальній посилці</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>В общей посылке</seg>
+            </tuv>
+        </tu>
+        <tu tuid="letter" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Листом</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Письмом</seg>
+            </tuv>
+        </tu>
+        <tu tuid="specialLetter" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Заказним листом</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Заказним письмом</seg>
+            </tuv>
+        </tu>
+        <tu tuid="avto_lyks" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Автолюкс</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Автолюкс</seg>
+            </tuv>
+        </tu>
+        <tu tuid="evro_ekspres" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Євро експрес</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Евро экспресс</seg>
+            </tuv>
+        </tu>
+        <tu tuid="mist_expres" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Міст експрес</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Мист экспресс</seg>
+            </tuv>
+        </tu>
+        <tu tuid="new_post" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Нова пошта</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Новая почта</seg>
+            </tuv>
+        </tu>
+        <tu tuid="sat" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>САТ</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>САТ</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

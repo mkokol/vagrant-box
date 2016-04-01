@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки чоловічі на тему конопля, прінти з марихуаною.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Мужские футболки на тему конопля, принты с марихуаной.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки чоловічі на тему конопля, прінти та зображення з марихуаною, приколи про ганджубас.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Мужские футболки на тему конопля, принты и изображеня с марихуаной, приколы про ганджубас.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="keywords" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки на тему конопля, написи з приколами про марихуану.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки на тему конопля, надписи с приколами о марихуане.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="header" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Чоловічі футболки на тему коноплі. Прінти та зображення з листям марихуани.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Мужские футболки на тему конопли. Принты и рисунки с листьями марихуаны.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="content" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Малюнки та зображення про коноплю та легкі наркотики для куріння, легалізовані в деяких країнах.
+                    Конопляне листя, прінти,
+                    <a href="http://photoprint.in.ua/ua/prikolni-napysy-futbolky-cholovichi">футболки з написами</a>
+                    та різними жартами про марихуану. Жартівливе порівняння різних брендів, логотипів компаній, товарних
+                    знаків та символік до канабісу.
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Рисунки и изображения с коноплей и легкими наркотиками для курения, которые легализованные в
+                    некоторых странах. Листья конопли, принты,
+                    <a href="http://photoprint.in.ua/ru/prikolnye-nadpisi-futbolki-muzhskie">футболки с надписью</a>
+                    и разными шутками о марихуане. Шутливое сравнение различных брендов, логотипов компаний, товарных
+                    знаков и символик с каннабисом.
+                </seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

@@ -29,11 +29,7 @@ if ($_SERVER['REQUEST_URI'] === '/p/' && APPLICATION_ENV === 'development') {
                 . '<body><a href="/p/ru">go</a></body>'
             . '</html>';
 } else {
-    try {
-        $application
-            ->bootstrap()
-            ->run();
-    } catch (\Exception $e){
-        var_dump($e->getMessage());
-    }
+    $application
+        ->bootstrap()
+        ->run();
 }

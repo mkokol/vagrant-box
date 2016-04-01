@@ -1,0 +1,31 @@
+# <%= @vhost[:server_name] %> config
+
+server {
+    server_name  www.<%= @vhost[:server_name] %>;
+    rewrite ^(.*) $scheme://<%= @vhost[:server_name] %>$1 permanent;
+}
+
+server {
+    listen 80;
+    # Make site accessible from http://<%= @vhost[:server_name] %>/
+    server_name <%= @vhost[:server_name] %>;
+
+    access_log /var/log/nginx/<%= @vhost[:server_name] %>.access.log;
+    error_log /var/log/nginx/<%= @vhost[:server_name] %>.error.log;
+
+    root <%= @vhost[:path] %>;
+    index index.html index.php;
+
+    location / {
+        try_files $uri $uri/ /index.php?$args;
+    }
+
+    location ~ \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_index  index.php;
+        include fastcgi_params;
+        fastcgi_param  APPLICATION_ENV  development;
+        fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+}

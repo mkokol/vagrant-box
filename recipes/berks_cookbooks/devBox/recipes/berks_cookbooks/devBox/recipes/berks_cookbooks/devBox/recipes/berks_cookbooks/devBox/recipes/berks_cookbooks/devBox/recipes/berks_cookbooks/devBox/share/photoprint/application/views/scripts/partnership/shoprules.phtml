@@ -1,0 +1,22 @@
+<?php echo $this->render('controls/header.phtml'); ?>
+
+<div class="grid-container">
+    <div id="shop-rules" class="grid-100">
+        <h1 style="text-align: center;">
+            <?php echo $this->t->_('shop_rules_title'); ?>
+        </h1>
+        <div style="padding: 20px;">
+            <?php echo $this->t->_('shop_rules_text'); ?>
+        </div>
+        <div style="text-align: center;">
+            <div>
+                <input id="agreed-with-rules" type="checkbox" /> <?php echo $this->t->_('partnership_accept_rules'); ?>
+            </div>
+            <div style="padding-top: 5px;">
+                <input type="button" id="accept-rules" value="<?php echo $this->t->_('accept'); ?>">
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php echo $this->render('controls/footer.phtml'); ?>

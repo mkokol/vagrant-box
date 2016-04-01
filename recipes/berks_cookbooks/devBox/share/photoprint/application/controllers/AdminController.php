@@ -103,7 +103,6 @@ class AdminController extends Helpers_General_ControllerAction
         $this->loadTranslation('admin/products');
         $this->view->topMenuItems = Users::getUserMenuItems();
         $this->appendFile('admin/categories');
-        $this->appendWidgets('tablesorter');
         $products = new Products();
         $productsPrice = $products->getAllProductsPrice();
         $this->view->productsPrice = $productsPrice;
@@ -246,7 +245,6 @@ class AdminController extends Helpers_General_ControllerAction
     {
         $this->loadTranslation(['user_menu', 'admin/themes']);
         $this->view->topMenuItems = Users::getUserMenuItems();
-        $this->appendWidgets('tablesorter');
         $productsThemes = new ProductsThemes();
         $this->view->allThemes = $productsThemes->getAllThemesWithSubThemes();
     }
@@ -325,7 +323,6 @@ class AdminController extends Helpers_General_ControllerAction
     public function tagListAction()
     {
         $this->loadTranslation(['user_menu', 'admin/tags']);
-        $this->appendWidgets('tablesorter');
 
         $this->view->topMenuItems = Users::getUserMenuItems();
 
@@ -440,7 +437,6 @@ class AdminController extends Helpers_General_ControllerAction
         $this->view->topMenuItems = Users::getUserMenuItems();
         $this->loadTranslation(['user_menu', 'products', 'admin/orders']);
         $this->appendFile('admin/orders');
-        $this->appendWidgets('tablesorter');
         $baskets = new Baskets();
         $basketItems = $baskets->getBasketItem(null, 'new');
 
@@ -458,7 +454,6 @@ class AdminController extends Helpers_General_ControllerAction
         $this->view->topMenuItems = Users::getUserMenuItems();
         $this->loadTranslation(['user_menu', 'products', 'admin/orders-history']);
         $this->appendFile('admin/orders');
-        $this->appendWidgets('tablesorter');
         $baskets = new Baskets();
         $basketItems = $baskets->getBasketItem(null, 'old');
         foreach ($basketItems as $key => $product) {
@@ -477,7 +472,6 @@ class AdminController extends Helpers_General_ControllerAction
         $page = $this->_request->getQuery('page', 1);
 
         $this->loadTranslation(['user_menu', 'produces/controls/imagepaging']);
-        $this->appendWidgets('tablesorter');
         $this->appendFile('admin/photo');
 
         $images = new UsersImages();
@@ -783,7 +777,6 @@ class AdminController extends Helpers_General_ControllerAction
         $this->loadTranslation('user_menu');
         $this->view->topMenuItems = Users::getUserMenuItems();
         $this->loadTranslation('admin/payout');
-        $this->appendWidgets('tablesorter');
         $usersPayOut = new UsersPayOut();
         $this->view->payout = $usersPayOut->getNewPayOuts();
     }

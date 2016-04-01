@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="ok" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>ok</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>ok</seg>
+            </tuv>
+        </tu>
+        <tu tuid="cancel_btn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Відміна</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Отмена</seg>
+            </tuv>
+        </tu>
+        <tu tuid="load_image_btn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Завантажити зображення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Загрузить рисунок</seg>
+            </tuv>
+        </tu>
+        <tu tuid="uppload_avatar" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Завантаження аватарки</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Загрузка аватарки</seg>
+            </tuv>
+        </tu>
+        <tu tuid="save_btn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Зберегти</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Сохранить</seg>
+            </tuv>
+        </tu>
+        <tu tuid="select_photo_from_your_pc_msg" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Виберіть фото зі свого комп'ютера.
+                    <br/>
+                    Формати які підтримуються: jpg, png, gif.
+                    <br/>
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Выберите фото со своего компьютера.<br/>Поддерживаемые форматы: jpg, png, gif.
+                </seg>
+            </tuv>
+        </tu>
+        <tu tuid="supported_formats_msg" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Формати які підтримуються: jpg, png, gif.
+                    <br/>
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Поддерживаемые форматы: jpg, png, gif.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="pleas_wait_loading_is_in_process_msg" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Почекайте, будь-ласка, йде завантаження.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Подождите, пожалуйста, идет загрузка.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="select_haw_your_avatar_will_look_like_msg" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Вкажіть як буде виглядати ваш аватар.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Укажите как будет выглядеть ваш аватар.</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

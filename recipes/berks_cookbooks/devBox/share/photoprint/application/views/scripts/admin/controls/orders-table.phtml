@@ -152,15 +152,6 @@
             <?php endforeach; ?>
             </tbody>
         </table>
-        <?php if ($this->pageCount > 1): ?>
-            <div class="basketFunctionalBtn" align="center">
-                <?php for ($i = 1; $i <= $this->pageCount; $i++): ?>
-                    <a href="<?= $this->h()->url()->build("/admin/orders/", array('bpage' => $i)); ?>">
-                        <?php echo $i; ?>
-                    </a>
-                <?php endfor; ?>
-            </div>
-        <?php endif; ?>
     </form>
 <?php else: ?>
     <div class="grid-100" align="center" style="padding-top:70px;">

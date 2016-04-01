@@ -1,0 +1,195 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="user_name" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Прізвище І.П.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Фамилия И.О.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="phone" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Контактний телефон</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Контактный телефон</seg>
+            </tuv>
+        </tu>
+        <tu tuid="email" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>E-mail</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>E-mail</seg>
+            </tuv>
+        </tu>
+        <tu tuid="password" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Пароль</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пароль</seg>
+            </tuv>
+        </tu>
+        <tu tuid="confirm_password" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Повторіть пароль</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Повторите пароль</seg>
+            </tuv>
+        </tu>
+
+        <tu tuid="login" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Увійти</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Войти</seg>
+            </tuv>
+        </tu>
+
+
+
+        <tu tuid="payment_sys" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Cпосіб оплати</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Cпособ оплаты</seg>
+            </tuv>
+        </tu>
+        <tu tuid="privatbank" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>На картку Приватбанку</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>На карту Приватбанка</seg>
+            </tuv>
+        </tu>
+        <tu tuid="creditcart" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Visa, MasterCard, LiqPay</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Visa, MasterCard, LiqPay</seg>
+            </tuv>
+        </tu>
+        <tu tuid="web_money" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>WebMoney</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>WebMoney</seg>
+            </tuv>
+        </tu>
+        <tu tuid="after_receive" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Оплата по доставці (<span style="color:#dc0000;">!!!</span> додатково оплачується зворотня доставка коштів згідно тарифів служби доставки)</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Оплата по доставке (<span style="color:#dc0000;">!!!</span> дополнительно оплачивается обратная доставка средств согласно тарифов службы доставки)</seg>
+            </tuv>
+        </tu>
+
+        <tu tuid="address" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Адреса доставки\ Відділення служби доставки</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Адрес доставки \ Отделение службы доставки</seg>
+            </tuv>
+        </tu>
+        <tu tuid="how_to_send_tovar" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Спосіб доставити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Способ доставить</seg>
+            </tuv>
+        </tu>
+        <tu tuid="how_to_send_postcard" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Листівку доставити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Открытку доставить</seg>
+            </tuv>
+        </tu>
+        <tu tuid="with_all_tovars" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>В загальній посилці</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>В общей посылке</seg>
+            </tuv>
+        </tu>
+        <tu tuid="letter" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Листом</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Письмом</seg>
+            </tuv>
+        </tu>
+        <tu tuid="specialLetter" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Заказним листом</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Заказним письмом</seg>
+            </tuv>
+        </tu>
+        <tu tuid="avto_lyks" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Автолюкс</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Автолюкс</seg>
+            </tuv>
+        </tu>
+        <tu tuid="evro_ekspres" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Євро експрес</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Евро экспресс</seg>
+            </tuv>
+        </tu>
+        <tu tuid="mist_expres" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Міст експрес</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Мист экспресс</seg>
+            </tuv>
+        </tu>
+        <tu tuid="new_post" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Нова пошта</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Новая почта</seg>
+            </tuv>
+        </tu>
+        <tu tuid="sat" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>САТ</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>САТ</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

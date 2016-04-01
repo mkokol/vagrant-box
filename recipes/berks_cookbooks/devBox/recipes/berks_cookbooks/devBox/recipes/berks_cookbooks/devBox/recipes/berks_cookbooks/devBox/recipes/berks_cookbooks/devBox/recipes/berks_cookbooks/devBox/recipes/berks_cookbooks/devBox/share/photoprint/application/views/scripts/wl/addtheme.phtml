@@ -1,0 +1,51 @@
+<div id="popup-wnd-data-content" class="popup-wnd-partnership-add-theme-size">
+    <?php echo $this->render('controls/emptyheader.phtml'); ?>
+
+    <script>
+        $(document).ready(function(){
+            $('.theme').click(function(){
+                $('.theme').removeClass('selected');
+                $(this).addClass('selected');
+                $('#new-theme').val('');
+                $('#themeId').val($(this).attr('data-theme-id'));
+            });
+            $('#new-theme').keyup(function(){
+                $('.theme').removeClass('selected');
+                $('#themeId').val('');
+            });
+            $('#add-theme').click(function(){
+                if($('#themeId').val() || $('#new-theme').val()){
+                    $('#error-msg').hide();
+                    saveProductItem();
+                    mboxRemove();
+                }else{
+                    $('#error-msg').show();
+                }
+            });
+        });
+    </script>
+
+    <div id="popup-wnd-add-theme">
+        <div class="popup-wnd-header">
+            <?php echo $this->t->_('edit_theme'); ?>
+        </div>
+        <div class="popup-wnd-content">
+            <input type="hidden" id="themeId" name="themeId" value="" />
+            <?php foreach ($this->wlThemes as $key => $value): ?>
+                <div class="theme" data-theme-id="<?php echo $value['id']; ?>">
+                    <?php echo $value[$this->language]; ?>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <div class="popup-wnd-functional">
+            <div class="additional-info">
+                <?php echo $this->t->_('new_theme'); ?>: <input id="new-theme" type="text" />
+                <span id="error-msg"><?php echo $this->t->_('select_theme_or_input_new_one'); ?></span>
+            </div>
+            <input id="add-theme" type="button" value="<?php echo $this->t->_('save'); ?>"/>
+            <input class="close-popup-wnd" type="button" value="<?php echo $this->t->_('cancel'); ?>"/>
+        </div>
+    </div>
+
+    <?php echo $this->render('controls/emptyfooter.phtml'); ?>
+</div>

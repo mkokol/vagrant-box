@@ -1664,7 +1664,7 @@ function initRTE(rtePreloadContent, rteCSS) {
         document.write('	</td>');
         document.write('  </tr>');
         document.write('  <tr>');
-        document.write('    <td bgcolor="#C3DAF9" height="25" class="rtebg" align="right" style="padding-right:3px" onmousedown="return false;">');
+        document.write('    <td bgcolor="#c3daf9" height="25" class="rtebg" align="right" style="padding-right:3px" onmousedown="return false;">');
         document.write('            <a class="saveTextButton" onclick="returnRezulText();">&nbsp;'+saveBtnText+'&nbsp;</a> <a class="saveTextButton" onclick="closeWithOutRezulText();">&nbsp;'+cancelBtnText+'&nbsp;</a>');
         document.write('    </td>');
         document.write('  </tr>');

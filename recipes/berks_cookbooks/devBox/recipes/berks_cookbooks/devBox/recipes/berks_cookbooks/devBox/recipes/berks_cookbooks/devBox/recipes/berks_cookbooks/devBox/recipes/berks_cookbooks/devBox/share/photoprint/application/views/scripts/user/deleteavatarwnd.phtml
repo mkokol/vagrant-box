@@ -1,0 +1,33 @@
+<div id="popup-wnd-data-content" class="popup-wnd-dialog-size">
+    <?php echo $this->render('controls/emptyheader.phtml'); ?>
+
+    <script>
+        $(document).ready(function(){
+            $('.remove-avatar-btn').click(function(){
+                $.ajax({
+                    url: baseUrl + "/user/deleteavatar/",
+                    type: "post",
+                    dataType: "json",
+                    data: {},
+                    success: function(data){
+                        $("#avatar-img").attr("src", data.imgSrc);
+                        mboxRemove();
+                    }
+                });
+            });
+        });
+    </script>
+
+    <div id="popup-wnd-delete-avatar">
+        <div class="popup-wnd-header"><?php echo $this->t->_('delete_avatar'); ?></div>
+        <div class="popup-wnd-warn-msg">
+            <?php echo $this->t->_('do_you_realy_wont_to_delete_your_avatar')?>?
+        </div>
+        <div class="popup-wnd-functional">
+            <input class="remove-avatar-btn" type="button" value="<?php echo $this->t->_('yes'); ?>">
+            <input class="close-popup-wnd" type="button" value="<?php echo $this->t->_('no'); ?>">
+        </div>
+    </div>
+
+    <?php echo $this->render('controls/emptyfooter.phtml'); ?>
+</div>

@@ -13,7 +13,8 @@ Vagrant::Config.run do |config|
         # config.vm.boot_mode = :gui
         web.vm.network :hostonly, "192.168.56.11"
         web.vm.network :bridged, :bridge => "en0"
-        web.vm.forward_port 80, 8081
+        web.vm.forward_port 80, 8082
+        web.vm.forward_port 9200, 9202
 
         web.vm.share_folder "www", "/var/www", "share", :create => true
 
@@ -27,34 +28,32 @@ Vagrant::Config.run do |config|
             ]
 
             chef.add_recipe "locale"
-            chef.add_recipe "apt"
-            chef.add_recipe "vim"
+            # chef.add_recipe "apt"
+            # chef.add_recipe "vim"
 
 
-            chef.add_recipe "php7.0"
+            # chef.add_recipe "php7.0"
 
-            chef.add_recipe "imagemagick"
+            # chef.add_recipe "imagemagick"
 
-            chef.add_recipe "nginx"
-            chef.add_recipe "nginx_config"
+            # chef.add_recipe "nginx"
+            # chef.add_recipe "nginx_config"
 
-            chef.add_recipe "mysql_server"
-            chef.add_recipe "mysql_tuning"
+            # chef.add_recipe "mysql_server"
+            # chef.add_recipe "mysql_tuning"
 
+            chef.add_recipe "java"
             chef.add_recipe "elasticsearch"
-
-            # for development
-            chef.add_recipe "nodejs"
 
             chef.json = {
                 :localegen  => {
-                    'lang' => ['en_US','en_US.utf8','de_DE','de_DE.utf8' ]
+                    :lang => ["en_US", "en_US.utf8", "de_DE", "de_DE.utf8"]
                 },
                 :php => {
                     :version => "7.0.*"
                 },
                 :mysql => {
-                    :server_root_password => '1'
+                    :server_root_password => "1"
                 },
                 :nginx_config => {
                     :hosts => [
@@ -63,6 +62,16 @@ Vagrant::Config.run do |config|
                             :environment => "development"
                         }
                     ]
+                },
+                :java => {
+                    :install_flavor => "oracle",
+                    :jdk_version => "7",
+                    :oracle => {
+                        "accept_oracle_download_terms" => true
+                    }
+                },
+                :elasticsearch => {
+                    :node_name => "photoprint"
                 }
             }
         end

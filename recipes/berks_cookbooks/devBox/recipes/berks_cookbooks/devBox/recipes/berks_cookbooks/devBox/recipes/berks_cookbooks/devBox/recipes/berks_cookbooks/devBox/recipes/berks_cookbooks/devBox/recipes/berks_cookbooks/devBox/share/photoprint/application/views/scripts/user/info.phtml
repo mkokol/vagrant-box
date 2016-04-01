@@ -1,0 +1,27 @@
+<?php echo $this->render('controls/header.phtml'); ?>
+
+<div class="grid-container">
+    <div class="grid-25">
+        <?php if($this->avatar && $this->avatar->id): ?>
+            <img id="avatar-img" src="<?php $this->h()->image()->avatar($this->avatar->name, 'a', $this->avatar->extension); ?>" />
+        <?php else: ?>
+            <img src="<?php $this->h()->static()->path('avatar/origin.jpg') ?>" />
+        <?php endif; ?>
+        <a class="mbox" href="<?= $this->h()->url()->build('/user/uploadavatarwnd'); ?>" id="edit-avatar"><?php echo $this->t->_('change_avatar'); ?></a>
+        <a class="mbox" href="<?= $this->h()->url()->build('/user/deleteavatarwnd'); ?>" id="delete-avatar"><?php echo $this->t->_('delete_avatar'); ?></a>
+    </div>
+    <div class="grid-75">
+        <form name="<?php echo $this->updateUserForm->getName(); ?>" action="<?php echo $this->updateUserForm->getAction(); ?>" method="<?php echo $this->updateUserForm->getMethod(); ?>">
+            <dl class="zend_form">
+                <?php echo $this->updateUserForm->getElement('user_name')->render(); ?>
+                <?php echo $this->updateUserForm->getElement('email')->render(); ?>
+                <?php echo $this->updateUserForm->getElement('phone')->render(); ?>
+                <dt>&nbsp;</dt>
+                <dd><a class="mbox" href="<?= $this->h()->url()->build('/user/changepasswnd'); ?>"><?php echo $this->t->_('change_password'); ?>.</a></dd>
+                <?php echo $this->updateUserForm->getElement('submit')->render(); ?>
+            </dl>
+        </form>
+    </div>
+</div>
+
+<?php echo $this->render('controls/footer.phtml'); ?>

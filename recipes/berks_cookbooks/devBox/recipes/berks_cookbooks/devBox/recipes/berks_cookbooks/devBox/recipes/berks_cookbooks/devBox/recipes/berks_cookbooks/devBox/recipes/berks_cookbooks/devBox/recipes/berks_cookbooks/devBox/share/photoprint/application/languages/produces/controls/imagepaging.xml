@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="first" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Перша</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Первая</seg>
+            </tuv>
+        </tu>
+        <tu tuid="previos" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Попередня</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Предыдущая</seg>
+            </tuv>
+        </tu>
+        <tu tuid="next" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Наступна</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Следующая</seg>
+            </tuv>
+        </tu>
+        <tu tuid="last" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Остання</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Последняя</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

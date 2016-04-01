@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Керамічна, "Магічна" чашка. Ріка між скалами.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Керамическая, "Магическая" чашка. Река между скал.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Керамічна, "Магічна" чашка. Гірська ріка між коричневими скалами.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Керамическая, "Магическая" чашка. Горная река между коричневыми скалами.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="keywords" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Керамічна, "Магічна" чашка. Гірська ріка між коричневими скалами.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Керамическая, "Магическая" чашка. Горная река между коричневыми скалами.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="header" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Керамічна, "Магічна" чашка. Ріка між скалами.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Керамическая, "Магическая" чашка. Река между скал.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="content" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Керамічна, "Магічна" чашка. Гірська ріка між коричневими скалами.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Керамическая, "Магическая" чашка. Горная река между коричневыми скалами.</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

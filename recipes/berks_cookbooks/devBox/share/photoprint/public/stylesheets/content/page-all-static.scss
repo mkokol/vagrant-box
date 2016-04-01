@@ -8,56 +8,67 @@
 /* cooperation pages style */
 #cooperation {
   padding-top: 10px;
+
   h1 {
     margin-bottom: 10px;
     text-indent: 25px;
   }
+
   h2 {
-    margin: 20px 0 10px 0;
+    margin: 20px 0 10px;
     text-indent: 25px;
   }
+
   .top-spase {
     padding-top: 10px;
   }
+
   .left-spase {
     padding-left: 15px;
   }
+
   .sapce {
     padding-bottom: 12px;
   }
+
   .large-sapce {
     padding-bottom: 30px;
   }
+
   .list {
-    padding-left: 50px;
     display: block;
+    padding-left: 50px;
     text-indent: 0;
     vertical-align: middle;
+
     a.web-money {
-      margin-right: 10px;
       position: relative;
       top: -18px;
-    }
-    span.web-money-img {
       margin-right: 10px;
+    }
+
+    span.web-money-img {
       position: relative;
       top: -8px;
+      margin-right: 10px;
     }
+
     span.web-money-passport {
       display: inline-block;
+
       span {
         display: block;
       }
     }
   }
+
   ul {
     list-style-type: circle;
     padding: 0 0 20px 45px;
   }
+
   ul.list {
     list-style-type: decimal;
     padding: 10px 0 10px 60px;
   }
 }
-
-

@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="ok" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>ok</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>ok</seg>
+            </tuv>
+        </tu>
+        <tu tuid="add_busket_item" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Попередній перегляд</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Предварительный просмотр</seg>
+            </tuv>
+        </tu>
+        <tu tuid="left" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Зліва</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Слева</seg>
+            </tuv>
+        </tu>
+        <tu tuid="right" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Зправа</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Справа</seg>
+            </tuv>
+        </tu>
+        <tu tuid="front" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Спереду</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Спереди</seg>
+            </tuv>
+        </tu>
+        <tu tuid="back" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ззаду</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Сзади</seg>
+            </tuv>
+        </tu>
+        <tu tuid="main_page" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Головна</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Главная</seg>
+            </tuv>
+        </tu>
+        <tu tuid="inner_page" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Внутрішні</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Внешние</seg>
+            </tuv>
+        </tu>
+        <tu tuid="last_page" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Задня</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Задняя</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

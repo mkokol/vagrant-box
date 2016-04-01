@@ -1,0 +1,41 @@
+<?php echo $this->render('controls/emptyheader.phtml'); ?>
+<div id="bookmarks" style="padding: 20px;">
+    <div class="tabs postcard-tab-front" onclick="mark(2);">
+        <div class="size-origin-postcard" style="float:left; overflow: hidden;">
+            <?php if(!$this->isTov): ?>
+            <div id="start-creating-product" class="size-origin-postcard">
+                No image
+            </div>
+            <?php endif; ?>
+            <img class="content-block size-origin-postcard" src="<?php $this->h()->static()->path('transparent.png') ?>"/>
+            <img class="content-image-border size-origin-postcard" src="<?php echo $this->baseUrl; ?>/public/theme/produces/postcard/border.png">
+            <img class="printData" <?php if ($this->isTov): ?> style="width:<?php echo $this->main->width; ?>px; height:<?php echo $this->main->height; ?>px; margin-top:<?php echo $this->main->top; ?>px; margin-left:<?php echo $this->main->left; ?>px;" <?php endif; ?> src="<?php if ($this->isTov): echo $this->main->url;?> <?php else: ?><?php echo $this->baseUrl; ?>/public/theme/produces/none.png<?php endif; ?>"/>
+        </div>
+        <div class="size-origin-postcard" style="float:left;">
+            <img class="content-image-border size-origin-postcard" src="<?php echo $this->baseUrl; ?>/public/theme/produces/postcard/postcardBack.png">
+        </div>
+    </div>
+    <div class="tabs hidden postcard-tab-middle" onclick="mark(1);">
+        <div class="leftContentView">
+            <div class="insert-img size-origin-postcard" id="insert-img2">
+                <div class="size-origin-postcard">
+                    <?php if(!$this->isTov): ?>
+                        <div id="start-creating-product" class="size-origin-postcard">
+                            No image
+                        </div>
+                    <?php endif; ?>
+                    <img class="content-block size-origin-postcard" src="<?php $this->h()->static()->path('transparent.png') ?>"/>
+                    <img class="content-image-border size-origin-postcard" src="<?php echo $this->baseUrl; ?>/public/theme/produces/postcard/border.png">
+                    <img <?php if ($this->isTov): ?> style="width:<?php echo $this->inner->width; ?>px; height:<?php echo $this->inner->height; ?>px; margin-top:<?php echo $this->inner->top; ?>px; margin-left:<?php echo $this->inner->left; ?>px;" <?php endif; ?> src="<?php if ($this->isTov): echo $this->inner->url;?> <?php else: ?><?php echo $this->baseUrl; ?>/public/theme/produces/none.png<?php endif; ?>"/>
+                </div>
+            </div>
+        </div>
+        <div class="rightContentView" onclick="mark(3);">
+            <div class="size-origin-postcard text-box">
+                <img id="postcardTextBox" class="content-image-border size-origin-postcard no-boder" src="<?php echo $this->baseUrl; ?>/public/theme/produces/postcard/border.png">
+                <div class="text-box-zoomed postcard-content-zoom"><div id="postcardText"><?php if($this->isTov): echo $this->contentText; else: ?><?php echo $this->t->_('click_for_text'); ?><?php endif; ?></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php echo $this->render('controls/emptyfooter.phtml'); ?>

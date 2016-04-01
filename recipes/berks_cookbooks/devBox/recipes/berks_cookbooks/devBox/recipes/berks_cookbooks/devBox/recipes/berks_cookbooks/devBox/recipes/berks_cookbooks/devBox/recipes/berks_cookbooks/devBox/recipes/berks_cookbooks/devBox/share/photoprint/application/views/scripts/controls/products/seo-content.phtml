@@ -1,0 +1,133 @@
+<?php if ($this->isEditSiteSettingsOn || $this->seo): ?>
+    <div class="text-block">
+        <div class="grid-container">
+            <div class="underline"></div>
+            <div class="grid-100">
+                <?php if ($this->isEditSiteSettingsOn): ?>
+                    <?php if (isset($this->seoRouteRecord['id']) && $this->seoRouteRecord['id'] != ''): ?>
+                        <form method="post" action="<?= $this->h()->url()->build('/admin/save-seo-content') ?>">
+                            <input type="hidden" name="seoRouteRecordId" value="<?= $this->seoRouteRecord['id'] ?>">
+                            <div>
+                                <label><?= $this->t->_('page_title') ?></label>
+                                <input name="page_title" id="page-title" type="text"
+                                       value="<?= (is_object($this->seoContent)) ? $this->seoContent->title : '' ?>">
+                                <ul class="copy-seo-data" data-for-field="page-title">
+                                    <li style="padding: 0 5px 5px 5px; cursor: pointer;">
+                                        <?php echo $this->helper_title2; ?>
+                                    </li>
+                                    <li style="padding: 0 5px 5px 5px; cursor: pointer;">
+                                        <?php echo $this->helper_title3; ?>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <label><?= $this->t->_('page_description') ?></label>
+                                <input name="page_description" id="page-description" type="text"
+                                       value="<?= (is_object($this->seoContent)) ? $this->seoContent->description : '' ?>">
+                                <ul class="copy-seo-data" data-for-field="page-description">
+                                    <li style="padding: 0 5px 5px 5px; cursor: pointer;">
+                                        <?php echo $this->helper_description2; ?>
+                                    </li>
+                                    <li style="padding: 0 5px 5px 5px; cursor: pointer;">
+                                        <?php echo $this->helper_description3; ?>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <label><?= $this->t->_('page_keywords') ?></label>
+                                <input name="page_keywords" id="page-keywords" type="text"
+                                       value="<?= (is_object($this->seoContent)) ? $this->seoContent->keywords : '' ?>">
+                                <ul class="copy-seo-data" data-for-field="page-keywords">
+                                    <li style="padding: 0 5px 5px 5px; cursor: pointer;">
+                                        <?php echo $this->helper_keywords2; ?>
+                                    </li>
+                                    <li style="padding: 0 5px 5px 5px; cursor: pointer;">
+                                        <?php echo $this->helper_keywords3; ?>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <label><?= $this->t->_('page_h1') ?></label>
+                                <input name="page_h1" id="page-h1" type="text"
+                                       value="<?= (is_object($this->seoContent)) ? $this->seoContent->h1 : '' ?>">
+                                <ul class="copy-seo-data" data-for-field="page-h1">
+                                    <li style="padding: 0 5px 5px 5px; cursor: pointer;">
+                                        <?php echo $this->header; ?>
+                                    </li>
+                                    <li style="padding: 0 5px 5px 5px; cursor: pointer;">
+                                        <?php echo $this->t->_('header'); ?>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="padding-top: 5px;">
+                                <label><?= $this->t->_('page_text') ?></label>
+                                <textarea name="page_text" id="page-text"
+                                    ><?= (is_object($this->seoContent)) ? $this->seoContent->text : '' ?></textarea>
+                                <ul class="copy-seo-data" data-for-field="page-text">
+                                    <li style="padding: 0 5px 5px 5px; cursor: pointer;">
+                                        <?php echo $this->t->_('content'); ?>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="text-align: right; padding-top: 5px;">
+                                <input type="submit" value="<?= $this->t->_('save') ?>">
+                            </div>
+                        </form>
+                    <?php else: ?>
+                        <span class="seo-warning-msg">
+                            <?= $this->t->_('url_should_be_created_first'); ?>
+                        </span>
+                    <?php endif; ?>
+                <?php else: ?>
+                    <h1 class="header">
+                        <?php echo $this->seo->h1; ?>
+                    </h1>
+                    <div class="text">
+                        <?= $this->h()->seo()->text($this->seo->text); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+<?php else: ?>
+    <?php if ($this->currentPage == 1 || $this->currentPage == ''): ?>
+        <?php if ((($this->t->_('header') != 'header' && $this->t->_('header') != '') || ($this->t->_('content') != 'content' && $this->t->_('content') != '')) && !$this->id): ?>
+            <div class="text-block">
+                <div class="grid-container">
+                    <div class="underline"></div>
+                    <div class="grid-100">
+                        <?php if ($this->t->_('header') != 'header' && $this->t->_('header') != ''): ?>
+                            <h1 class="header">
+                                <?php echo $this->t->_('header'); ?>
+                            </h1>
+                        <?php endif; ?>
+                        <?php if ($this->t->_('content') != 'content' && $this->t->_('content') != ''): ?>
+                            <div class="text">
+                                <?php echo $this->t->_('content'); ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        <?php elseif ($this->header != ''): ?>
+            <div class="text-block">
+                <div class="grid-container">
+                    <div class="underline"></div>
+                    <div class="grid-100">
+                        <h1 class="header">
+                            <?php echo $this->header; ?>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
+    <?php elseif ($this->header != ''): ?>
+        <div class="text-block">
+            <div class="grid-container">
+                <div class="underline"></div>
+                <div class="grid-100"><h1 class="header"><?php echo $this->header; ?></h1></div>
+            </div>
+        </div>
+    <?php endif; ?>
+<?php endif; ?>
+

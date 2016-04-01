@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Жіночі футболки на тему еротика.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Женские футболки на тему эротика.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Жіночі футболки на тему еротика. Еротичні прінти.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Женские футболки на тему эротика. Эротические принты.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="keywords" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Жіночі футболки на тему еротика.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Женские футболки на тему эротика.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="header" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Жіночі футболки з еротичними малюнками.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Женские футболки с эротическими рисунками.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="content" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Жіночі футболки на тему еротика. Тут можна знайти різного роду еротичні прінти на футболки. Жарти
+                    та приколи про жіночі та чоловічі принади та статеві акти. Емблеми та логотипи студій дорослого
+                    кіно.
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Женские футболки на тему эротика. Здесь можно найти разного рода эротические принты на футболки.
+                    Шутки и приколы о женских и мужских прелестях и о половых актах. Эмблемы и логотипы студий взрослого
+                    кино.
+                </seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

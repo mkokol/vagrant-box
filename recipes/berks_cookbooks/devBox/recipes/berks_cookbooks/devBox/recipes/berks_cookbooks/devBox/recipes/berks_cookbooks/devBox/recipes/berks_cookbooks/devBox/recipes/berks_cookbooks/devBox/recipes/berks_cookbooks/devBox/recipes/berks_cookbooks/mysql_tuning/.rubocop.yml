@@ -1,0 +1,8 @@
+AllCops:
+  Exclude:
+  - .kitchen
+  - vendor/**/*
+  Include:
+  - '**/*.rb.erb'
+Metrics/ModuleLength:
+  Max: 158

@@ -1,0 +1,131 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="user_menu_my_info" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Мої дані</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Мои данные</seg>
+            </tuv>
+        </tu>
+        <tu tuid="user_menu_my_photo" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Мої фотографії</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Мои фотографии</seg>
+            </tuv>
+        </tu>
+        <tu tuid="user_menu_basket" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Корзина</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Корзина</seg>
+            </tuv>
+        </tu>
+        <tu tuid="user_menu_partnership" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Мій магазин</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Мой магазин</seg>
+            </tuv>
+        </tu>
+        <tu tuid="user_menu_orders" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Замовлення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Заказы</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Orders</seg>
+            </tuv>
+        </tu>
+        <tu tuid="user_menu_photo" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Фотографії</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Фотографии</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Photo</seg>
+            </tuv>
+        </tu>
+        <tu tuid="user_menu_themes" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Теми</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Темы</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Thems</seg>
+            </tuv>
+        </tu>
+        <tu tuid="user_menu_tags" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Теги</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Теги</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Tags</seg>
+            </tuv>
+        </tu>
+        <tu tuid="user_menu_categories" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Категорії</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Категории</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Categories</seg>
+            </tuv>
+        </tu>
+        <tu tuid="user_menu_products" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Продукти</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Продукты</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Products</seg>
+            </tuv>
+        </tu>
+        <tu tuid="user_menu_payout" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Виплати</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Выплаты</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Pay out</seg>
+            </tuv>
+        </tu>
+        <tu tuid="wl_menu" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>White Label</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>White Label</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

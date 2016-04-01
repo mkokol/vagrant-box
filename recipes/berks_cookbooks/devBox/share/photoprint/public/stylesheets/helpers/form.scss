@@ -13,14 +13,14 @@
 
 input[type="text"], input[type="password"], textarea, select, div.styled, input[type="file"] {
   border-radius: 3px;
-  border: solid 1px #ccc;
+  border: solid 1px $color-d0d0d0;
   padding: 4px;
 }
 
 div.styled, select, input[type="file"]:after {
   background: white url(../theme/formelements-select.png) no-repeat center right;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba($color-000000, 0.2);
+  box-shadow: 0 1px 2px rgba($color-000000, 0.2);
 }
 
 input[type="text"], input[type="password"], textarea, input[type="file"] {
@@ -28,8 +28,8 @@ input[type="text"], input[type="password"], textarea, input[type="file"] {
 }
 
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
-  border: 1px solid #555;
-  box-shadow: 0 0 3px #aaa;
+  border: 1px solid $color-d0d0d0;
+  box-shadow: 0 0 4px $color-d0d0d0;
 }
 
 /* ----------------------------------------------  File field  ----------------------------------------------  */
@@ -59,11 +59,11 @@ input[type="file"]:after {
   display: inline-block;
   left: 100%;
   position: relative;
-  background: white url(../theme/formelements-select.png) no-repeat center left;
+  background: $color-ffffff url(../theme/formelements-select.png) no-repeat center left;
   padding: 0.3em 0.5em;
-  border: solid 1px #ccc !important;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: solid 1px $color-d0d0d0 !important;
+  -webkit-box-shadow: 0 1px 3px rgba($color-000000, 0.2);
+  box-shadow: 0 1px 3px rgba($color-000000, 0.2);
   border-radius: 4px;
 }
 
@@ -73,7 +73,8 @@ input[type="file"]:active:after {
 
 /* ----------------------------------------------  Checkboxes and Radio inputs  ----------------------------------------------  */
 
-.box-form-element input[type="radio"], .box-form-element input[type="checkbox"] {
+.box-form-element input[type="radio"],
+.box-form-element input[type="checkbox"] {
   position: absolute;
   left: -999em;
 }
@@ -81,7 +82,7 @@ input[type="file"]:active:after {
 .box-form-element label:before {
   display: inline-block;
   position: relative;
-  top: 0.25em;
+  top: .25em;
   left: -2px;
   content: '';
   width: 25px;
@@ -121,30 +122,37 @@ input[type="radio"]:checked + label:before {
   margin: 5px auto;
   padding: 0;
   overflow: auto;
+
+  dt,
+  dd {
+    float: left;
+    margin: 5px 5px 5px 0;
+    line-height: 26px;
+    padding: 0;
+  }
+
   dt {
     clear: both;
     width: 45%;
-    float: left;
     text-align: right;
-    margin: 5px 5px 5px 0;
-    padding: 0 10px 0 0;
-    line-height: 26px;
+    padding-right: 10px;
   }
+
   dd {
-    float: left;
     text-align: left;
     width: 50%;
-    margin: 5px 2px 5px 0;
-    padding: 0;
-    line-height: 26px;
+    margin-right: 2px;
   }
+
   p {
     padding: 0;
     margin: 0;
   }
+
   img {
     display: block;
   }
+
   .errors {
     li {
       margin-left: 0;
@@ -154,6 +162,7 @@ input[type="radio"]:checked + label:before {
       display: inline;
     }
   }
+
   .inline-radio {
     padding-right: 20px;
   }
@@ -164,7 +173,7 @@ input[type="radio"]:checked + label:before {
   margin: 0;
   padding: 0;
   border: none;
-  color: #FF0000;
+  color: $color-ff0000;
   display: inline;
 }
 
@@ -173,6 +182,7 @@ input[type="radio"]:checked + label:before {
     dt {
       width: 35% !important;
     }
+
     dd {
       width: 60% !important;
       /*overflow: hidden;*/

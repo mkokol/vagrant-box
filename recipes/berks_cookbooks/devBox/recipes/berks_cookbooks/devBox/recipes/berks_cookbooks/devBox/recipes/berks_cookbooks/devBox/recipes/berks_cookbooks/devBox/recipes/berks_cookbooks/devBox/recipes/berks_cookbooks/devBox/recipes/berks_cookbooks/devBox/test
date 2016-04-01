@@ -17,9 +17,6 @@
 
 
             ,
-                :php => {
-                    :version => "7.0.*"
-                },
                 :memcached => {
                     :memory => 64
                 },
@@ -42,3 +39,19 @@
                         }
                     ]
                 }
+
+
+
+
+
+
+curl -L https://www.opscode.com/chef/install.sh | sudo bash
+chef-client -version
+
+
+
+%w{php5-fpm}.each do |pkg|
+  package pkg do
+    action :install
+  end
+end

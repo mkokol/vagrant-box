@@ -8,7 +8,6 @@ class WlController extends Helpers_General_ControllerAction
      */
     public function indexAction()
     {
-        $this->appendWidgets('tablesorter');
         $this->loadTranslation('wl/index');
         $wls = new Wls();
         $this->view->wlList = $wls->getWlList(Users::getCarrentUserId());
@@ -232,7 +231,6 @@ class WlController extends Helpers_General_ControllerAction
         $wlCode = $this->_request->getParam('code', null);
         $page = (int)$this->_request->getQuery('page', 1);
         $this->view->topMenuItems = Users::getUserMenuItems();
-        $this->appendWidgets('tablesorter');
         $this->loadTranslation(array('partnership/balance', 'user_menu', 'products', 'produces/controls/imagepaging'));
         $wls = new Wls();
         $wl = $wls->getWlByCode($wlCode);

@@ -17,7 +17,7 @@ Vagrant::Config.run do |config|
 
         web.vm.share_folder "www", "/var/www", "share", :create => true
 
-        web.vm.provision :shell, :inline => "sudo apt-get update"
+        #web.vm.provision :shell, :inline => "sudo apt-get update"
 
         web.vm.provision :chef_solo do |chef|
             # chef.log_level = :debug
@@ -26,15 +26,22 @@ Vagrant::Config.run do |config|
                 "recipes/local_cookbooks"
             ]
 
-            chef.add_recipe "locale"
-            chef.add_recipe "apt"
-            chef.add_recipe "vim"
+            #chef.add_recipe "locale"
+            #chef.add_recipe "apt"
+            #chef.add_recipe "vim"
 
 
             chef.add_recipe "php7.0"
+
+            chef.add_recipe "imagemagick"
+
             chef.add_recipe "nginx"
-            chef.add_recipe "mysql::server"
-            chef.add_recipe "elasticsearch"
+            chef.add_recipe "nginx_config"
+
+            chef.add_recipe "mysql_server"
+            chef.add_recipe "mysql_tuning"
+
+            #chef.add_recipe "elasticsearch"
 
             chef.json = {
                 :localegen  => {
@@ -47,6 +54,13 @@ Vagrant::Config.run do |config|
                     :server_root_password => '1',
                     :server_debian_password => '1',
                     :server_repl_password => '1'
+                },
+                :nginx_config => {
+                    :hosts => [
+                        {
+                            :server_name => "photoprint"
+                        }
+                    ]
                 }
             }
         end

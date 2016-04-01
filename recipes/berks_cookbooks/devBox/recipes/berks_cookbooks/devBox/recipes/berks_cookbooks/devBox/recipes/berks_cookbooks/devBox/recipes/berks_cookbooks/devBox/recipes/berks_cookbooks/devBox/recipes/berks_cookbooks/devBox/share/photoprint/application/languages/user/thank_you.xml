@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="thanks" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ваше замовлення прийняте до опрацювання. Найблищим часом з Вами звяжуться наші працівники для
+                    уточнення деталей замовлення. Дякуємо за те, що Ви обрали саме наш сайт. Надіємось, що співпраця з
+                    нами буде приємною та тривалою. З найкращими побажаннями, колектив компанії Photoprint.in.ua
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Ваш заказ принят к обработке. В ближайшее время с Вами свяжутся наши сотрудники для уточнения
+                    деталей заказа. Спасибо, что Вы выбрали именно наш сайт. Надеемся, что сотрудничество с нами будет
+                    приятным и продолжительным. С наилучшими пожеланиями, коллектив компании Photoprint.in.ua
+                </seg>
+            </tuv>
+        </tu>
+
+        <tu tuid="privatbank_info_start" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Проплатіть</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Проплатите</seg>
+            </tuv>
+        </tu>
+        <tu tuid="privatbank_info_end" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>грн на картку 5168 7555 1177 7142, одержувач Коколюс В.Б.
+                    <br/>
+                    Повідомте нас про здійснення оплати телефоном чи на e-mail, які вказані на сайті.
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>грн на карту 5168 7555 1177 7142, получатель Коколюс В.Б.
+                    <br/>
+                    Сообщите нам об осуществлении оплаты по телефону или на e-mail, которые указаны на сайте.
+                </seg>
+            </tuv>
+        </tu>
+
+        <tu tuid="order_is" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Замовлення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Заказ</seg>
+            </tuv>
+        </tu>
+        <tu tuid="go_to_pay" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Перейти до оплати</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Переити к оплате</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

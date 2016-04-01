@@ -1,0 +1,28 @@
+<?php if($this->acceptShopRules): ?>
+
+<div id="partnershp-types" class="grid-container">
+    <div class="grid-100">
+        <h1 style="float: left; margin: 7px 0px 0px 5px;"><?php echo $this->t->_('types_header'); ?></h1>
+        <a href="<?= $this->h()->url()->build("/partnership?type=balance"); ?>" class="green-btn" style="float: right; margin: 5px;">
+            <?php echo $this->t->_("balance") ?>: <?php echo $this->benefit . ' ' . $this->t->_("grn") ?>
+        </a>
+    </div>
+    <div class="clear"></div><div class="underline"></div>
+
+    <div id="referrals-deteils" class="shop-category grid-50">
+        <div class="info parallelogram-right">
+            <h2 style="text-align: center;"><?php echo $this->t->_('referrals'); ?></h2>
+            <?php echo $this->t->_('referrals_text'); ?>
+        </div>
+    </div>
+    <div id="public-shop-deteils" class="shop-category grid-50">
+        <div class="info parallelogram-left">
+            <h2 style="text-align: center;"><?php echo $this->t->_('public_shop'); ?></h2>
+            <?php echo $this->t->_('public_shop_text'); ?>
+        </div>
+    </div>
+</div>
+
+<?php else: ?>
+    <?php echo $this->t->_('you_dont_accept_rules_yet'); ?>
+<?php endif; ?>

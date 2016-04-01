@@ -1,0 +1,238 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костери(підставки під кружку). Підставка під чашку чи під гаряче.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костеры(подставки под чашку). Подставка под кружку или под горячее.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер. Друк фото на підставках під кружку, виготовлення підставки під чашку з різними зображеннями
+                    та логотипами фірм.
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер. Печать фото на подставках под кружку, изготовление подставки под чашку с разными
+                    изображениями и логотипами фирм.
+                </seg>
+            </tuv>
+        </tu>
+        <tu tuid="keywords" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>підставка під кружку, костер, підставка під горянко</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>подставка под кружку, костер, подставка под чашку</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param1" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Матеріал</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Материал</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param2" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Розмір</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Размер</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param3" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Товщина</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Толщина</seg>
+            </tuv>
+        </tu>
+        <tu tuid="cork" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер (підставка під горнятко) корковий. Квадрат.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер (подставка под кружку) пробковый. Квадрат.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param1_cork" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Низ - корок, верх - м'який, глянцевий пластик з невеликим блиском.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Низ – пробка, верх – мягкий, глянцевый пластик с небольшим блеском.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param2_cork" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>95х95 мм.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>95х95 мм.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param3_cork" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>5 мм.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>5 мм.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="ceramic" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер (підставка під горнятко) керамічний. Коло.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер (подставка под чашку) керамический. Круг.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param1_ceramic" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Суцілький керамічний круг (як плитка), покритий глянцевою глазурю.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Цельный керамически круг (как плитка), покрытый глянцевой глазурью.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param2_ceramic" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>90 мм в діаметрі.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>90 мм в диаметре.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param3_ceramic" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>6 мм.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>6 мм.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="rubber" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер (підставка під горнятко) резиновий. Квадрат.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер (подставка под кружку) резиновый. Квадрат.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param1_rubber" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Низ - резина, верх - тканина, на яку наноситься малюнок.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Низ – резина, верх – ткань, на которую наносится рисунок.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param2_rubber" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>100х100 мм.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>100х100 мм.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param3_rubber" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>3 мм.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>3 мм.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="cardboard" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костер (підставка під горнятко, стакан) квадрат.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костер (подставка под кружку, стакан) квадрат.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param1_cardboard" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Низ – прочный прессованный картон, верх – твердый глянцевый пластик.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Низ - міцний пресований картон, верх - твердий глянсовий пластик.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param2_cardboard" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>95х95 мм.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>95х95 мм.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="param3_cardboard" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>3 мм.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>3 мм.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="header" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Костери, підставки під чашку і під гаряче.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Костеры, подставки под кружку и под горячее.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="content" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>
+                    <p><strong>Костер</strong>. Друк фото на<strong>підставках під кружку</strong>, виготовлення
+                        <strong>підставки під чашку</strong>
+                        з різними зображеннями та логотипами фірм.
+                    </p>
+                    <p>Щоб не зіпсувати поверхню наших меблів, ми часто використовуємо в якості підставки під гаряче
+                        різні допоміжні предмети: старі компакт диски, блюдечка, товстий картон, салфетку та ін.
+                    </p>
+                    <p>Ми пропонуємо Вам використовувати якісні підставки під чашку з надрукованими улюбленими фото. Ви
+                        можете замовити керамічну круглу підставку під горнятко або квадратну підставку на корковій
+                        основі з глянцевим блискучим покриттям. Ці підставки під гарячу чашку стануть незамінним
+                        атрибутом Вашого чаювання вдома чи в офісі, а також можуть послужити оригінальним подарунком
+                        Вашим близьким та знайомим.
+                    </p>
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>
+                    <p><strong>Костер</strong>. Печать фото на<strong>подставках под кружку</strong>, изготовление
+                        <strong>подставки под чашку</strong>
+                        с разными изображениями и логотипами фирм.
+                    </p>
+                    <p>Чтобы не испортить поверхность нашей мебели, ми часто используем в качестве подставки под горячее
+                        разные вспомогательные предметы: старые компакт диски, толстый картон, салфетку и пр.
+                    </p>
+                    <p>Мы предлагаем Вам использовать качественные подставки под чашку с напечатанным любимым фото. Вы
+                        можете заказать керамическую круглую подставку под кружку или квадратную подставку на пробковой
+                        основе с глянцевым покрытием. Эти подставки под горячую чашку станут незаменимым атрибутом
+                        Вашего чаепития дома или в офисе, а также могут послужить оригинальным подарком Вашим близким и
+                        знакомым.
+                    </p>
+                </seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

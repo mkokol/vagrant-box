@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки чоловічі на любовну тему.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки мужские на любовную тему.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Чоловічі футболки на любовну тему. Фрази, написи та малюнки про кохання для друку на футболках.
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Мужские футболки на любовную тему. Фразы, надписи и рисунки о любви для печати на футболках.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="keywords" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки любовні, малюнки та прінти про любов. Футболки з серцями.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки любовные, рисунки и принты о любви. Футболки с сердцами.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="header" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Любовні чоловічі футболки. Прінти та малюнки, що стосуються закоханих.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Любовные мужские футболки. Принты и рисунки, касающиеся влюбленных.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="content" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки чоловічі на любовну тематику. Малюнки та<a
+                        href="http://photoprint.in.ua/ua/futbolky-muzhski">фото на футболці</a>, написи та жарти для
+                    людей що люблять одне одного, та парні футболки для закоханих людей. Цікавий, стильнний та
+                    оригінальний подарунок коханому хлопцю, чи дівчині. Зображення на тему нещасливого кохання та
+                    розбитих сердець.
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки на любовную тематику. Рисунки и
+                    <a href="http://photoprint.in.ua/ru/futbolki-muzhskie">фото на футболке</a>
+                    надписи и шутки для людей любящих друг друга, и парные футболки для влюбленных людей. Интересный,
+                    стильнний и оригинальный подарок любимому парню, или девушке. Изображение и рисунки на тему
+                    несчастной любви и разбитых сердец.
+                </seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

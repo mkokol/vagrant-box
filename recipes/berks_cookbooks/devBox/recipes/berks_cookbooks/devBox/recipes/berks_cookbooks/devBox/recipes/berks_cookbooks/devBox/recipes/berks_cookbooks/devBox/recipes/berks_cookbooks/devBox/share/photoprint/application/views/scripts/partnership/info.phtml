@@ -1,0 +1,21 @@
+<?php if(!$this->acceptShopRules): ?>
+    <h1 style="text-align: center;">
+        <?php echo $this->t->_('shop_rules_title'); ?>
+    </h1>
+    <div style="padding: 50px 110px 30px 110px;"><?php echo $this->t->_('partnership_short_rules_info'); ?></div>
+    <div style="text-align: center;">
+        <div>
+            <div style="padding: 5px;">
+                <a href="<?= $this->h()->url()->build('/partnership/shoprules'); ?>">
+                    <?php echo $this->t->_('partnership_rules'); ?>
+                </a>
+            </div>
+            <input id="agreed-with-rules" type="checkbox" /> <?php echo $this->t->_('partnership_accept_rules'); ?>
+        </div>
+        <div style="padding-top: 5px;">
+            <input type="button" id="accept-rules" value="<?php echo $this->t->_('accept'); ?>">
+        </div>
+    </div>
+<?php else: ?>
+    <?php echo $this->t->_('you_olready_accept_rules'); ?>
+<?php endif; ?>

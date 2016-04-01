@@ -1,0 +1,44 @@
+
+            chef.add_recipe "git"
+            chef.add_recipe "subversion"
+
+            chef.add_recipe "memcached"
+            chef.add_recipe "redisio"
+
+            chef.add_recipe "squeeze_php_fpm"
+            chef.add_recipe "php::module_curl"
+            chef.add_recipe "php::module_mysql"
+            chef.add_recipe "php::module_gd"
+            chef.add_recipe "php::module_memcache"
+
+            chef.add_recipe "nginx"
+            chef.add_recipe "nginx_config"
+
+
+
+            ,
+                :php => {
+                    :version => "7.0.*"
+                },
+                :memcached => {
+                    :memory => 64
+                },
+                :nginx_config => {
+                    :folders => [
+                        {
+                            :path => "/var/www/intvou"
+                        }
+                    ],
+                    :hosts => [
+                        {
+                            :path => "/var/www/intvou/frontend/public/",
+                            :server_name => "intvou.frontend.vb",
+                            :server_email => "admin@intvou.frontend"
+                        },
+                        {
+                            :path => "/var/www/intvou/backend/public/",
+                            :server_name => "intvou.backend.vb",
+                            :server_email => "admin@intvou.backend"
+                        }
+                    ]
+                }

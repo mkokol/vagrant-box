@@ -40,7 +40,6 @@ module.exports = function (grunt) {
                     'public/widgets/featureList/code.min.js': ['public/widgets/featureList/code.js'],
                     'public/widgets/jscrollpane/code.min.js': ['public/widgets/jscrollpane/code.js'],
                     'public/widgets/social/code.min.js': ['public/widgets/social/code.js'],
-                    'public/widgets/tablesorter/code.min.js': ['public/widgets/tablesorter/code.js'],
                     'public/widgets/texteditor/code.min.js': ['public/widgets/texteditor/code.js']
                 }
             }
@@ -55,7 +54,6 @@ module.exports = function (grunt) {
                     'public/widgets/featureList/style.css': 'public/widgets/featureList/style.scss',
                     'public/widgets/jscrollpane/style.css': 'public/widgets/jscrollpane/style.scss',
                     'public/widgets/social/style.css': 'public/widgets/social/style.scss',
-                    'public/widgets/tablesorter/style.css': 'public/widgets/tablesorter/style.scss',
                     'public/widgets/texteditor/style.css': 'public/widgets/texteditor/style.scss'
                 }
             }

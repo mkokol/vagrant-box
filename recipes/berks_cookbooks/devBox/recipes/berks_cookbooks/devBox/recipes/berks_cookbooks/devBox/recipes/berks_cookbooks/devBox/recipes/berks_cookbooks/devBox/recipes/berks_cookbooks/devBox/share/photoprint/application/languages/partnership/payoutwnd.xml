@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="pay_out" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Оформити виплату</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Оформить выплату</seg>
+            </tuv>
+        </tu>
+        <tu tuid="card_owner" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Власник картки</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Владелец карты</seg>
+            </tuv>
+        </tu>
+        <tu tuid="card_number" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Номер картки</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Номер карты</seg>
+            </tuv>
+        </tu>
+        <tu tuid="save" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Відправити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Отправить</seg>
+            </tuv>
+        </tu>
+        <tu tuid="cancel" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Відмінити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Отменить</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

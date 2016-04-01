@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="close" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Закрити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Закрыть</seg>
+            </tuv>
+        </tu>
+        <tu tuid="delete_albums" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>видалення альбому</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>удаление альбома</seg>
+            </tuv>
+        </tu>
+        <tu tuid="you_didnt_select_albums_for_delete" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ви не вибрали жодного альбому</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Вы не выбрали ни одного альбома</seg>
+            </tuv>
+        </tu>
+        <tu tuid="close" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Закрити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Закрыть</seg>
+            </tuv>
+        </tu>
+        <tu tuid="yes" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>так</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>да</seg>
+            </tuv>
+        </tu>
+        <tu tuid="no" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>ні</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>нет</seg>
+            </tuv>
+        </tu>
+        <tu tuid="do_you_realy_wont_to_delete_this_albums" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ви дійсно бажаете видалити альбом</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Вы действительно желаете удалить альбом</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

@@ -1,0 +1,176 @@
+<?php echo $this->render('header.phtml'); ?>
+<tr>
+    <td style="padding: 10px; border-bottom: 1px solid #f2eeed; font-family: 'Open Sans', Arial, sans-serif;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td style="padding: 0 0 15px 0; font-size: 20px; line-height: 28px; font-weight: bold;">
+                    <?= $this->t->_('new_order') ?>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <?= $this->t->_('client_name') ?>: <?= $this->orderInfo['user_name'] ?>.
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 3px 0 15px 0;">
+                    <?= $this->t->_('phone') ?>: <?= $this->orderInfo['phone'] ?>.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table style="width: 100%;" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td style="font-weight:600;font-size:14px;line-height:17px;color:#000000;letter-spacing:0;text-align: center;border-bottom: 2px solid #f2eeed;padding: 3px;" colspan="2">
+                                <?= $this->t->_('product_detail') ?>
+                            </td>
+                            <td style="font-weight:600;font-size:14px;line-height:17px;color:#000000;letter-spacing:0;text-align: center;border-bottom: 2px solid #f2eeed;padding: 3px;">
+                                <?= $this->t->_('total') ?>
+                            </td>
+                        </tr>
+                        <?php $totalCount = 0; ?>
+                        <?php $totalPrice = 0; ?>
+                        <?php foreach ($this->orderItems as $key => $item): ?>
+                            <?php $borderSize = ($key !== count($this->orderItems) - 1) ? 1 : 4; ?>
+                            <tr valign="top">
+                                <td width="100" style="padding: 3px; border-bottom: <?= $borderSize ?>px solid #f2eeed;">
+                                    <?= $this->h()->product()->getFullImgPath($this->t, $this->item, $item, 'i'); ?>
+                                </td>
+                                <td style="padding: 3px 3px 3px 7px; text-align: left; font-size: 12px; border-bottom: <?= $borderSize ?>px solid #f2eeed;">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td>
+                                                <?php $itemName = (string)(new SimpleXMLElement(stripslashes($item['dataXml'])))->item;  ?>
+                                                <?= $this->t->_($itemName); ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <?= $this->t->_('price') ?>: &#8372; <?= number_format($item['payment']/$item['count'], 2) ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <?= $this->t->_('count') . ': ' . $item['count'] ?>
+                                                <?php $totalCount += $item['count'] ?>
+                                            </td>
+                                        </tr>
+                                        <?php if ((string)(new SimpleXMLElement(stripslashes($item['dataXml'])))->size): ?>
+                                            <tr>
+                                                <td>
+                                                    <?= $this->t->_('size') . ': ' . (string)(new SimpleXMLElement(stripslashes($item['dataXml'])))->size ?>
+                                                </td>
+                                            </tr>
+                                        <?php endif ?>
+                                    </table>
+                                </td>
+                                <td width="70" style="padding:3px;font-weight:600;text-align: center; font-size: 12px; border-bottom: <?= $borderSize ?>px solid #f2eeed;">
+                                    &#8372; <?= number_format($item['payment'], 2) ?>
+                                    <?php $totalPrice += $item['payment'] ?>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </table>
+                    <table style="width: 100%; font-size: 14px;" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td></td>
+                            <td width="210">
+                                <table style="width: 100%;" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td width="64%" align="left">
+                                            <?= $this->t->_('total_count') ?>:
+                                        </td>
+                                        <td width="36%" align="right" style="font-weight:600;">
+                                            <?= $totalCount ?>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td width="210" style="border-bottom: 2px solid #f2eeed;">
+                                <table style="width: 100%;" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td width="64%" align="left">
+                                            <?= $this->t->_('total_price') ?>:
+                                        </td>
+                                        <td width="46%" align="right" style="font-weight:600;">
+                                            &#8372; <?= number_format($totalPrice, 2) ?>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            <tr>
+            <tr>
+                <td style="font-weight:600;font-size:16px;line-height:17px; padding: 25px 0 10px 0; border-bottom: 2px solid #f2eeed;">
+                    <?= $this->t->_('delivery') ?>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                        <tr valign="top">
+                            <td style="font-weight:600;width:130px;padding:5px 0 0 0;font-size:13px;">
+                                <?= $this->t->_('delivery_system') ?>
+                            </td>
+                            <td style="padding: 5px 0 0 0;">
+                                <?= $this->t->_($this->orderInfo['dostavka_else']) ?>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td style="font-weight:600;width:130px;font-size:13px;">
+                                <?= $this->t->_('delivery_address') ?>
+                            </td>
+                            <td>
+                                <?= $this->orderInfo['address'] ?>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:600;font-size:16px;line-height:17px; padding: 25px 0 5px 0; border-bottom: 2px solid #f2eeed;">
+                    <?= $this->t->_('payment') ?>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                        <tr valign="top">
+                            <td style="font-weight:600;width:130px;padding:5px 0 20px 0;font-size:13px;"">
+                            <?= $this->t->_('payment_system') ?>
+                            </td>
+                            <td style="padding: 5px 0 20px 0;">
+                                <?= $this->t->_($this->orderInfo['payment_sys']) ?>
+                                <?php if ($this->t->_($this->orderInfo['payment_sys'] . '_details') !== $this->orderInfo['payment_sys'] . '_details'): ?>
+                                    <br><?= $this->t->_($this->orderInfo['payment_sys'] . '_details') ?>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                        <tr valign="top">
+                            <td style="padding:5px 0 10px 0;width:50%;display:inline-block;text-align:center;">
+                                <a style="padding:5px 0 5px 0;width:90%;display:inline-block;background-color:#049b00;border-radius:3px;color:#ffffff;font-weight:bold;text-decoration:none;"
+                                   href="<?= $this->h()->url()->buildFullUrl("/admin/set-order-status/order/{$this->orderInfo['id']}/status/inOrder"); ?>"><?= $this->t->_('confirm') ?></a>
+                            </td>
+                            <td style="padding:5px 0 10px 0;width:50%;display:inline-block;text-align:center;">
+                                <a style="padding:5px 0 5px 0;width:90%;display:inline-block;background-color:#bb0000;border-radius:3px;color:#ffffff;font-weight:bold;text-decoration:none;"
+                                   href="<?= $this->h()->url()->buildFullUrl("/admin/set-order-status/order/{$this->orderInfo['id']}/status/canceled"); ?>"><?= $this->t->_('cancel') ?></a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+<tr>
+<?php echo $this->render('footer.phtml'); ?>

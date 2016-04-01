@@ -2,51 +2,64 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+:before,
+:after {
+  box-sizing: inherit;
 }
 
 html {
   min-width: 20rem;
+  font: normal 16px Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   text-align: justify;
+  color: $color-435761;
   font-size: 14px;
-  color: $textColor;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: normal;
+}
+
+h1,
+h4 {
+  line-height: 1.25;
+}
+
+h2,
+h3 {
+  line-height: 1.5;
+}
+
+h4,
+h5,
+h6 {
+  font-weight:bold;
 }
 
 h1 {
   font-size: 22px;
-  line-height: 1.25;
 }
 
 h2 {
   font-size: 20px;
-  line-height: 1.5;
 }
 
 h3 {
   font-size: 18px;
-  line-height: 1.5;
 }
 
 h4 {
   font-size: 17px;
-  font-weight: bold;
-  line-height: 1.25;
 }
 
 h5 {
   font-size: 16px;
-  font-weight: bold;
 }
 
 h6 {
-  color: #707070;
   font-size: 14px;
-  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -58,81 +71,78 @@ p {
 }
 
 a {
-  &:link {
-    color: $linkBaseColor;
-    font-size: 0.8rem;
-    text-decoration: none;
-  }
+  font-size: 0.8rem;
+  text-decoration: none;
+
+  &:link,
   &:visited {
-    color: $linkBaseColor;
-    font-size: 0.8rem;
-    text-decoration: none;
-  }
-  &:active {
-    font-size: 0.8rem;
-    text-decoration: none;
+    color: $color-be6227;
   }
   &:hover {
-    color: $linkHoverColor;
-    font-size: 0.8rem;
+    color: $color-c27f54;
     text-decoration: underline;
+  }
+  &:active {
+    color: lighten($color-be6227, 10);
   }
 }
 
 input[type=button], input[type=submit], .violet-btn {
-  @include button(#fef4e9, #a46588);
-  @include button-bg(#ac767e, #916269);
+  @include button($color-fef4e9, $color-a46588);
+  @include button-bg($color-ac767e, $color-916269);
+
   &:hover {
     text-decoration: none;
-    @include button-bg(#9d626c, #6a3d43);
+    @include button-bg($color-9d626c, $color-6a3d43);
   }
+
   &:active {
     text-decoration: none;
-    @include button-bg(#916269, #ac767e);
+    @include button-bg($color-916269, $color-ac767e);
   }
 }
 
 input[type=button].green-btn, input[type=submit].green-btn, a.green-btn, button.green-btn {
-  background-color: #68b12f;
-  border: 1px solid #509111;
-  border-bottom: 1px solid #5b992b;
-  border-radius: 3px;
-  color: white;
-  font-weight: bold;
-  padding: 6px 20px;
-  text-align: center;
-  text-shadow: 0 -1px 0 #396715;
-  text-transform: uppercase;
   display: inline-block;
+  padding: 6px 20px;
+  border: 1px solid $color-509111;
+  border-bottom-color: $color-5b992b;
+  border-radius: 3px;
+  background-color: $color-68b12f;
+  color: $color-ffffff;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 -1px 0 $color-396715;
+  text-transform: uppercase;
+  cursor: pointer;
+
   &:hover {
-    opacity: .90;
-    cursor: pointer;
+    opacity: .9;
     text-decoration: none;
   }
+
   &:active {
-    border: 1px solid #20911e;
-    box-shadow: 0 0 10px 5px #356b0b inset;
+    border-color: $color-20911e;
+    box-shadow: 0 0 10px 5px $color-356b0b inset;
   }
 }
 
 input[type=submit].add-to-basket {
-  background: #ff2700 url(../theme/add-to-basket.svg) no-repeat;
-  background-size: 24px 24px;
-  background-position: 12px 8px;
-  font-size: 22px;
+  width: 162px;
   height: 44px;
+  border: 0;
+  border-radius: 3px;
+  background: $color-ff2700 url(../theme/add-to-basket.svg) no-repeat 12px 8px;
+  background-size: 24px 24px;
+  font-size: 22px;
   line-height: 40px;
   text-indent: 30px;
-  width: 162px;
-  border-radius: 3px;
-  border: 0;
   text-decoration: none;
-  color: #ffffff;
+  color: $color-ffffff;
   cursor: pointer;
+
   &:hover {
-    background: #fd5100 url(../theme/add-to-basket.svg) no-repeat;
-    background-size: 24px 24px;
-    background-position: 12px 8px;
+    background-color: $color-fd5100;
   }
 }
 
@@ -142,25 +152,35 @@ input[type=text].four-digits {
 
 .share-buttons {
   padding-top: 10px;
-  a{
+
+  a {
     display: inline-block;
     width: 30px;
     height: 30px;
     margin-right: 3px;
+
+    &.fb,
+    &.p,
+    &.vk,
+    &.t,
+    &.g {
+      background: url(../theme/social.png) no-repeat;
+    }
+
     &.fb{
-      background: url(../theme/social.png) 0 0;
+      background-position: 0 0;
     }
     &.p{
-      background: url(../theme/social.png) 30px 0;
+      background-position: 30px 0;
     }
     &.vk{
-      background: url(../theme/social.png) 60px 0;
+      background-position: 60px 0;
     }
     &.t{
-      background: url(../theme/social.png) 90px 0;
+      background-position: 90px 0;
     }
     &.g{
-      background: url(../theme/social.png) 120px 0;
+      background-position: 120px 0;
       margin-right: 0;
     }
   }

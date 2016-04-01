@@ -1,12 +1,81 @@
-// constants
-$main-background-color: #ffffff;
-//$content-background-color: #f5f5f5;
-$main-border-color: #d0d0d0;
+$color-000000: #000000;
+$color-eeeeee: #eeeeee;
+$color-f2ffd7: #f2ffd7;
+$color-ff0000: #ff0000;
+$color-a5628d: #a5628d;
 
-$textColor: #435761;
-$titleColor: #5f3e6f;
-$linkBaseColor: #be6227;
-$linkHoverColor: #c27f54;
+$color-7e7e7e: #7e7e7e; // menu items, slider title, error/warning page
+$color-303030: #303030; // main dark color (top menu)
+$color-ffffff: #ffffff; // main bg color
+$color-f5f5f5: #f5f5f5; // main bg-dark color
+$color-d0d0d0: #d0d0d0; // main border color
+$color-435761: #435761; // main text color
+$color-5f3e6f: #5f3e6f; // main title color
+
+$color-ffc700: #ffc700; // T-shirt yellow
+$color-1aa75f: #1aa75f; // T-shirt green
+$color-0463b3: #0463b3; // T-shirt blue
+$color-ec2834: #ec2834; // T-shirt red
+$color-353535: #353535; // T-shirt black
+
+$color-576d07: #576d07; // menu hover text
+$color-744b54: #744b54; // border selected item
+$color-c27f54: #c27f54; // main link hover color
+$color-be6227: #be6227; // main link color
+
+// BUTTONS -----
+$color-fef4e9: #fef4e9;
+$color-356b0b: #356b0b;
+$color-396715: #396715;
+$color-20911e: #20911e;
+$color-509111: #509111;
+$color-5b992b: #5b992b;
+$color-68b12f: #68b12f;
+
+$color-6a3d43: #6a3d43;
+$color-916269: #916269;
+$color-9d626c: #9d626c;
+$color-ac767e: #ac767e;
+$color-a46588: #a46588;
+
+$color-fd5100: #fd5100;
+$color-ff2700: #ff2700;
+// -------------
+// POP UP WND  -
+$color-4f6b72: #4f6b72;
+$color-c1dad7: #c1dad7;
+$color-f5c9ea: #f5c9ea;
+$color-d69323: #d69323;
+$color-ffe7aa: #ffe7aa;
+// -------------
+// POSTCARD  ---
+$color-0033ff: #0033ff;
+$color-81a9e2: #81a9e2;
+$color-ddecfe: #ddecfe;
+$color-1a331c: #1a331c;
+// -------------
+
+// jscrollpane
+$color-ddddee: #ddddee;
+$color-eeeef4: #eeeef4;
+$color-50506d: #50506d;
+$color-bbbbdd: #bbbbdd;
+// -------------
+
+// home page
+$color-7d5586: #7d5586;
+$color-954e5f: #954e5f;
+$color-9e6563: #9e6563;
+$color-9f5e7b: #9f5e7b;
+$color-c25549: #c25549;
+$color-c15a48: #c15a48;
+$color-b78d40: #b78d40;
+
+$color-c4080f: #c4080f;
+$color-ffad1f: #ffad1f;
+$color-06b243: #06b243;
+// -------------
+
 
 // functions
 @mixin border-radius($top, $right, $bottom, $left){

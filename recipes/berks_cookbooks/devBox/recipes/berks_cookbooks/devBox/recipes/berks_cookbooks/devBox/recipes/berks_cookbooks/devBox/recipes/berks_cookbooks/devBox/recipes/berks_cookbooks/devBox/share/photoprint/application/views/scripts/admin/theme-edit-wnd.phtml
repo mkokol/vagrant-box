@@ -1,0 +1,66 @@
+<div id="popup-wnd-data-content" class="popup-wnd-admin-edit-theme-size">
+    <?php echo $this->render('controls/emptyheader.phtml'); ?>
+    <script>
+        $(document).ready(function(){
+            $('#edit-theme-form').submit(function() {
+                $(this).ajaxSubmit(function(){
+                    if($('tr.theme-<?php echo $this->theme->id; ?> td:eq(1)').length) {
+                        $('tr.theme-<?php echo $this->theme->id; ?> td:eq(1)').html(
+                            $('input:radio[name=status]:checked').val()
+                        );
+                        $('tr.theme-<?php echo $this->theme->id; ?> td:eq(2)').html($('#name').val());
+                        $('tr.theme-<?php echo $this->theme->id; ?> td:eq(3)').html($('#ua').val());
+                        $('tr.theme-<?php echo $this->theme->id; ?> td:eq(4)').html($('#ru').val());
+                    }
+                    mboxRemove();
+                });
+                return false;
+            });
+        });
+    </script>
+    <div id="popup-wnd-edit-theme">
+        <div class="popup-wnd-header">
+            <?php echo ($this->theme->id) ? $this->t->_('edit_theme') : $this->t->_('new_theme'); ?>
+        </div>
+        <form id="edit-theme-form" action="<?= $this->h()->url()->build('/admin/theme-edit'); ?>" method="post">
+            <input type="hidden" name="id" value="<?php echo $this->theme->id; ?>">
+            <dl class="zend_form">
+                <dt><?php echo $this->t->_('name'); ?>:</dt>
+                <dd><input type="text" value="<?php echo $this->theme->name; ?>" id="name" name="name" style="width: 330px;"></dd>
+
+                <dt><label class="required" for="ua"><?php echo $this->t->_('ua'); ?>:</label></dt>
+                <dd><input type="text" value="<?php echo $this->theme->ua; ?>" id="ua" name="ua" style="width: 330px;"></dd>
+
+                <dt><label class="required" for="ru"><?php echo $this->t->_('ru'); ?>:</label></dt>
+                <dd><input type="text" value="<?php echo $this->theme->ru; ?>" id="ru" name="ru" style="width: 330px;"></dd>
+
+                <dt><label class="required" for="status"><?php echo $this->t->_('status'); ?>:</label></dt>
+                <dd>
+                    <?php $tagStatuses = ['new', 'public']; ?>
+                    <?php foreach($tagStatuses as $status): ?>
+                        <?php $checked = ($this->theme->status == $status) ? 'checked' : ''; ?>
+                        <input type="radio" name="status" value="<?php echo $status; ?>"<?php echo $checked; ?>>
+                        <span class="inline-radio"><?php echo $this->t->_($status); ?></span>
+                    <?php endforeach; ?>
+                </dd>
+
+                <dt><label class="required" for="title_ua"><?php echo $this->t->_('title_ua'); ?>:</label></dt>
+                <dd><input type="text" value="<?php echo $this->theme->title_ua; ?>" id="title_ua" name="title_ua" style="width: 330px;"></dd>
+                <dt><label class="required" for="title_ru"><?php echo $this->t->_('title_ru'); ?>:</label></dt>
+                <dd><input type="text" value="<?php echo $this->theme->title_ru; ?>" id="title_ru" name="title_ru" style="width: 330px;"></dd>
+
+                <dt><label class="required" for="description_ua"><?php echo $this->t->_('description_ua'); ?>:</label></dt>
+                <dd><input type="text" value="<?php echo $this->theme->description_ua; ?>" id="description_ua" name="description_ua" style="width: 330px;"></dd>
+                <dt><label class="required" for="description_ru"><?php echo $this->t->_('description_ru'); ?>:</label></dt>
+                <dd><input type="text" value="<?php echo $this->theme->description_ru; ?>" id="description_ru" name="description_ru" style="width: 330px;"></dd>
+
+            </dl>
+            <div class="popup-wnd-functional">
+                <input type="submit" value="<?php echo $this->t->_('save'); ?>">
+                <input class="close-popup-wnd" type="button" value="<?php echo $this->t->_('cancel'); ?>">
+            </div>
+        </form>
+    </div>
+
+    <?php echo $this->render('controls/emptyfooter.phtml'); ?>
+</div>

@@ -1,0 +1,33 @@
+<?php if($this->item == ''): $this->item = 'mantshirt'; endif ?>
+
+<script type="text/javascript">
+    function showSide(side) {
+        $('.front, .back').removeClass('show');
+        $('.' + side).addClass('show');
+    }
+</script>
+
+<div class="tshirt">
+    <div class="template-<?php echo $this->itemXml->template; ?>">
+        <div class="front show">
+            <div class="sides <?php echo $this->item . ' ' . $this->color ?>">
+                <div class="content size">
+                    <?php $this->h()->image()->getInBoxImg($this->itemXml, 'front') ?>
+                </div>
+            </div>
+            <div class="functional">
+                <?php echo $this->t->_('front'); ?> | <a href="javascript:showSide('back');"><?php echo $this->t->_('back') ?></a>
+            </div>
+        </div>
+        <div class="back">
+            <div class="sides <?php echo $this->item . ' ' . $this->color ?>">
+                <div class="content size">
+                    <?php $this->h()->image()->getInBoxImg($this->itemXml, 'back') ?>
+                </div>
+            </div>
+            <div class="functional">
+                <a href="javascript:showSide('front');"><?php echo $this->t->_('front') ?></a> | <?php echo $this->t->_('back') ?>
+            </div>
+        </div>
+    </div>
+</div>

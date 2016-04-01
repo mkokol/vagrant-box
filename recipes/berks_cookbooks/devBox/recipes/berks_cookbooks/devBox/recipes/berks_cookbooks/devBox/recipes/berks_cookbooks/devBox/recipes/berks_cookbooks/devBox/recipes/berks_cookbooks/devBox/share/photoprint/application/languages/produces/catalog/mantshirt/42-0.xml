@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Еротичні футболки.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Эротические футболки.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Еротичні футболки. Прінті на тему еротики.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Эротические футболки. Пинты на тему эротики.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="keywords" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Еротичні футболки.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Эротические футболки.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="header" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Еротичні прінти на футболки.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Эротические принты на футболки.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="content" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Еротичні футболки. В цій категорії розміщені прінти на футболки з тематикою, яка стосується
+                    еротики. Еротичні малюнки, написи, фрази. Зображення та репліки з еротичних фільмів та мультфільмів.
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Эротические футболки. В этой категории размещены принты на футболки с тематикой, котрая относится к
+                    эротике. Эротические рисунки, надписи, фразы. Изображения и реплики с эротических фильмов и
+                    мультфильмов.
+                </seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

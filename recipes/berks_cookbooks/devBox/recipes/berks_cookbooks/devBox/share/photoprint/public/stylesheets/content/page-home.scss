@@ -4,36 +4,40 @@
   position: relative;
   overflow: hidden;
   padding-bottom: 11px;
+
   span {
     &.title {
       margin: 0;
       font-size: 15px;
       padding: 3px;
-      color: #C25549;
+      color: $color-c25549;
     }
+
     &.rectangle {
       float: left;
       display: inline-block;
       width: 8px;
     }
+
     &.postcardR {
-      background: #7d5586;
+      background: $color-7d5586;
     }
-    &.puzzleR {
-      background: #9f5e7b;
+      &.puzzleR {
+      background: $color-9f5e7b;
     }
     &.cupR {
-      background: #b78d40;
+      background: $color-b78d40;
     }
     &.trivetR {
-      background: #c15a48;
+      background: $color-c15a48;
     }
     &.mousepadR {
-      background: #954e5f;
+      background: $color-954e5f;
     }
     &.tshirtR {
-      background: #9e6563;
+      background: $color-9e6563;
     }
+
     &.triangle {
       border: transparent solid 9px;
       float: left;
@@ -43,74 +47,85 @@
       height: 0;
     }
   }
+
   a.current {
     span {
-      &.postcardT {
-        border-color: transparent transparent transparent #7d5586;
+      &.postcardT,
+      &.puzzleT,
+      &.cupT,
+      &.trivetT,
+      &.mousepadT,
+      &.tshirtT {
         display: inline-block;
+        border-color: transparent;
+      }
+
+      &.postcardT {
+        border-left-color: $color-7d5586;
       }
       &.puzzleT {
-        border-color: transparent transparent transparent #9f5e7b;
-        display: inline-block;
+        border-left-color: $color-9f5e7b;
       }
       &.cupT {
-        border-color: transparent transparent transparent #b78d40;
-        display: inline-block;
+        border-left-color: $color-b78d40;
       }
       &.trivetT {
-        border-color: transparent transparent transparent #c15a48;
-        display: inline-block;
+        border-left-color: $color-c15a48;
       }
       &.mousepadT {
-        border-color: transparent transparent transparent #954e5f;
-        display: inline-block;
+        border-left-color: $color-954e5f;
       }
       &.tshirtT {
-        border-color: transparent transparent transparent #9e6563;
-        display: inline-block;
+        border-left-color: $color-9e6563;
       }
     }
   }
+
   span.title {
     font-size: 14px;
     cursor: pointer;
-    color: #878989;
+    color: $color-7e7e7e;
     font-weight: bold;
   }
+
   li {
     &.postcard a.current span.title {
-      color: #7d5586;
+      color: $color-7d5586;
     }
     &.puzzle a.current span.title {
-      color: #9f5e7b;
+      color: $color-9f5e7b;
     }
     &.cup a.current span.title {
-      color: #b78d40;
+      color: $color-b78d40;
     }
     &.trivet a.current span.title {
-      color: #c15a48;
+      color: $color-c15a48;
     }
     &.mousepad a.current span.title {
-      color: #954e5f;
+      color: $color-954e5f;
     }
     &.tshirt a.current span.title {
-      color: #9e6563;
+      color: $color-9e6563;
     }
   }
+
   ul {
     position: absolute;
     top: 0;
     list-style: none;
     padding: 0;
     margin: 0;
+
     &#tabs {
       left: 0;
       z-index: 2;
       width: 240px;
       cursor: pointer;
+
       li {
         font-size: 12px;
         font-family: Arial;
+
         &.postcard {
           background: url('../theme/home/slider/postcard.png') bottom left no-repeat;
         }
@@ -129,9 +144,11 @@
         &.tshirt {
           background: url('../theme/home/slider/tshirt.png') bottom left no-repeat;
         }
+
         &:last-child {
           background: none;
         }
+
         img {
           padding: 5px;
           border: none;
@@ -139,21 +156,24 @@
           margin: 10px 10px 0 0;
           max-width: 530px;
         }
+
         a {
           width: 191px;
           text-decoration: none;
           display: block;
-          padding: 7px;
-          padding-left: 15px;
+          padding: 7px 7px 7px 15px;
           outline: none;
           font-size: 10px;
+
           &:hover {
             text-decoration: underline;
           }
+
           &.current {
             width: 219px;
-            color: #ffffff;
+            color: $color-ffffff;
             padding-left: 7px;
+
             &:hover {
               text-decoration: none;
             }
@@ -161,26 +181,31 @@
         }
       }
     }
+
     &#output {
       right: 0;
       width: 100%;
       height: 320px;
       position: relative;
+
       li {
         position: absolute;
         width: 100%;
         height: 330px;
+
         a {
           position: absolute;
           bottom: 10px;
           right: 0;
         }
+
         img {
           cursor: pointer;
         }
       }
     }
   }
+
   div {
     &#feature-list-6 {
       span {
@@ -188,6 +213,7 @@
           height: 53.33px;
         }
       }
+
       ul {
         &#tabs {
           li {
@@ -197,14 +223,17 @@
           }
         }
       }
+
       span {
         &.title {
           padding-top: 11.66px;
         }
+
         &.triangle {
           top: 11.66px;
         }
       }
+
       img {
         width: 100%;
       }
@@ -216,8 +245,9 @@
 #promo-info {
   h1 {
     text-indent: 25px;
-    padding: 0 0 10px 0;
+    padding: 0 0 10px;
   }
+
   div {
     font-size: 15px;
   }
@@ -226,17 +256,21 @@
 #social-share-btn {
   display: inline-block;
   height: 26px;
+
   &.home-page {
     padding-top: 10px;
   }
+
   &.products-page {
     float: right;
     width: 434px;
   }
+
   .vk, .fb, .google-plus, .tweeter {
     float: left;
     padding: 0 7px 0 0;
   }
+
   .tweeter {
     width: 100px;
   }
@@ -244,46 +278,51 @@
 
 #promo-partner-info {
   padding-bottom: 7px;
+
   .grid-container {
     padding-top: 0.3rem;
   }
+
   .info {
     border-radius: 7px;
-    padding: 0.2rem 0;
-    background-color: #ffffff;
-    border: 1px solid $main-border-color;
+    padding: .2rem 0;
+    background-color: $color-ffffff;
+    border: 1px solid $color-d0d0d0;
     position: relative;
     min-height: 6.6rem;
     overflow: auto;
     margin-bottom: 0.3rem;
+
     .icon {
       display: inline-block;
       height: 6rem;
       width: 6rem;
       padding-top: 55px;
-      margin: 0 0.3rem;
+      margin: 0 .3rem;
       font-size: 10px;
       text-align: center;
       position: absolute;
+
       p {
         text-indent: 0;
       }
     }
+
     .registration-icon {
       background: url(../theme/home/registration-icon-bg.png) no-repeat;
-      color: #c4080f;
+      color: $color-c4080f;
     }
     .share-link-icon {
       background: url(../theme/home/sell-icon-bg.png) no-repeat;
-      color: #ffad1f;
+      color: $color-ffad1f;
     }
     .earn-money-icon {
       background: url(../theme/home/benefit-icon-bg.png) no-repeat;
-      color: #06b243;
+      color: $color-06b243;
     }
+
     .text {
-      padding-left: 6.8rem;
-      padding-right: 0.3rem;
+      padding: 0 .3rem 0 6.8rem;
     }
   }
 }
@@ -292,19 +331,23 @@
   h2 {
     text-align: center;
   }
+
   .info {
     border-top: none;
     padding: 7px;
     margin-bottom: 7px;
   }
+
   .text {
     padding-top: 12px;
     text-indent: 25px;
+
     img {
       float: left;
       cursor: pointer;
     }
   }
+
   .link {
     font-size: 14px;
     text-align: right;

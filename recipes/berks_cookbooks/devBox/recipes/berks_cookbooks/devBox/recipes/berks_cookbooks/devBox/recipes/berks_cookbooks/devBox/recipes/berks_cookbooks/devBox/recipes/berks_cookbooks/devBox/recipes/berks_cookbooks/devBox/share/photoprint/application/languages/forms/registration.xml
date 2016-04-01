@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="user_name" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Прізвище І.П.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Фамилия И.О.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="password" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Пароль</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пароль</seg>
+            </tuv>
+        </tu>
+        <tu tuid="confirm_password" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Повторіть пароль</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Повторите пароль</seg>
+            </tuv>
+        </tu>
+        <tu tuid="email" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>E-mail адрес</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>E-mail адрес</seg>
+            </tuv>
+        </tu>
+        <tu tuid="phone" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Контактний телефон</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Контактный телефон</seg>
+            </tuv>
+        </tu>
+        <tu tuid="captcha" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Код на картинці</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Код на картинке</seg>
+            </tuv>
+        </tu>
+        <tu tuid="save_btn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Реєстрація</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Регистрация</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

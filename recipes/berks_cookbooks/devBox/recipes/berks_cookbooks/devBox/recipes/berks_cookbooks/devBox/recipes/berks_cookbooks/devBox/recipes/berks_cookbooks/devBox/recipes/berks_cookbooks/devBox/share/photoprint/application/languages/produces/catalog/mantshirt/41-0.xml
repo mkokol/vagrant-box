@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки з символікою та лозунгами СРСР.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки с символикой и лозунгами СССР.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки з радянською символікою та лозунгами колишнього СРСР.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки с советской символикой и лозунгами бывшего СССР.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="keywords" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки з радянськими прінтами, комуністична символіка, лозунги та фрази СРСР.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки с советскими принтами, коммунистическая символика, лозунги и фразы СССР.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="header" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки з комуністичною та радянською символікою та фразами колишнього СРСР.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки с коммунистической и советской символикой и фразами бывшего СССР.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="content" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Футболки з комуністичними гербами та символікою, портрети керівників СРСР та генеральних секретарів
+                    великого радянського союзу. Комуністичні та радянські<a
+                            href="http://photoprint.in.ua/ua/futbolky-muzhski">прикольні футболки</a>. Плакати, значки
+                    та популярні висловлювання того часу. Спогади чи ностальгія про цілу епоху надвеликої та вже не
+                    існуючої могутьої держави.
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Футболки с коммунистическими гербами и символикой, портреты руководителей СССР и генеральных
+                    секретарей великого советского союза. Коммунистические и советские<a
+                            href="http://photoprint.in.ua/ru/futbolki-muzhskie">прикольные футболки</a>. Плакаты, значки
+                    и популярные высказывания того времени. Воспоминания или ностальгия о целой эпохе сверхбольшого и
+                    уже не существующего великого государства.
+                </seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

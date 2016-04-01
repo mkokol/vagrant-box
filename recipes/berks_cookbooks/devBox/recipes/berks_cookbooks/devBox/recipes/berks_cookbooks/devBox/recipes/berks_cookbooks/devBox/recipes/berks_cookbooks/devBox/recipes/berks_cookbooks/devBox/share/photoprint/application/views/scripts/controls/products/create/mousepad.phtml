@@ -1,0 +1,25 @@
+<?php if(!$this->item): ?>
+    <?php $this->item = ($this->itemXml != '' && $this->itemXml->item != '') ? $this->itemXml->item : 'square'; ?>
+<?php endif; ?>
+
+<?php $borderClass = ($this->item == 'circle') ? 'circle' : 'square'; ?>
+<?php $borderImg = ($this->item == 'circle') ? 'borderCircle' : 'border'; ?>
+
+<div class="mousepad">
+    <div class="<?php echo $borderClass; ?>">
+        <div class="content size">
+            <?php
+                $this->h()->image()->buildImgHolder(
+                    'main',
+                    1,
+                    $this->itemXml,
+                    "size-origin-mousepad-{$this->item}",
+                    "mousepad/{$borderImg}.png"
+                );
+            ?>
+        </div>
+        <div class="functional-btn" id="btn_1">
+            <?php echo $this->render('produces/controls/button.phtml') ?>
+        </div>
+    </div>
+</div>
