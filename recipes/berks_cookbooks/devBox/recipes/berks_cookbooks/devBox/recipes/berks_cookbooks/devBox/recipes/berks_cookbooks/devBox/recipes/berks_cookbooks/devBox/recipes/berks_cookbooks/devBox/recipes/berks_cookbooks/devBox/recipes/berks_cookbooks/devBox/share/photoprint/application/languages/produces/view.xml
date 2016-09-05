@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="add_busket_item" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Попередній перегляд</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Предварительный просмотр</seg>
+            </tuv>
+        </tu>
+        <tu tuid="front" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Спереду</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Спереди</seg>
+            </tuv>
+        </tu>
+        <tu tuid="back" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ззаду</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Сзади</seg>
+            </tuv>
+        </tu>
+        <tu tuid="color" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Колір</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Цвет</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description_msg" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Опис</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Описание</seg>
+            </tuv>
+        </tu>
+        <tu tuid="author" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Автор</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Автор</seg>
+            </tuv>
+        </tu>
+        <tu tuid="created_products" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Створив продуктів</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Создал продуктов</seg>
+            </tuv>
+        </tu>
+        <tu tuid="t_shirt_sizes" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Таблиця розмірів</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Размерная сетка</seg>
+            </tuv>
+        </tu>
+        <tu tuid="price_s" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>ціна</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>цена</seg>
+            </tuv>
+        </tu>
+        <tu tuid="add_to_basket" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>В корзину</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>В корзину</seg>
+            </tuv>
+        </tu>
+        <tu tuid="similar_products" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Схожі продукти</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Похожие продукты</seg>
+            </tuv>
+        </tu>
+        <tu tuid="our_warranties" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Наші гарантії</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Наши гарантии</seg>
+            </tuv>
+        </tu>
+        <tu tuid="other_products_from_same_category" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Інші товари з цієї категорії які можуть бути вам цікаві.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Другие товары из этой категории которые могут быть вам интересны.</seg>
+            </tuv>
+        </tu>
+
+        <tu tuid="current_page_url" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Урл поточної сторінки</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Урл поточної сторінки</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

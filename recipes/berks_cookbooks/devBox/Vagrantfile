@@ -58,6 +58,12 @@ Vagrant.configure("2") do |config|
                     'allocated_memory' => '512m',
                     'cluster_name' => "photoprint",
                     'node_name' => "photoprint-node01"
+                },
+                :postfix => {
+                    :main => {
+                        'myhostname' => 'photoprint.in.ua',
+                        'inet_interfaces' => 'loopback-only'
+                    }
                 }
             }
 
@@ -75,7 +81,8 @@ Vagrant.configure("2") do |config|
                 "recipe[java]",
                 "recipe[elasticsearch]",
                 "recipe[elasticsearch_config]",
-                "recipe[kibana4]"
+                "recipe[kibana4]",
+                "recipe[postfix]"
             ]
         end
     end

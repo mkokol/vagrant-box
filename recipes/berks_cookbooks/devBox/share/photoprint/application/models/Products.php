@@ -27,6 +27,7 @@ class Products extends Model
             )
             ->where("p.published = 1 AND p_g.name = '$group'")
             ->setIntegrityCheck(false);
+
         return $this->fetchAll($select)->toArray();
     }
 
@@ -40,13 +41,29 @@ class Products extends Model
         $selectProducts = $this->select()
             ->from(array('p' => self::$_tableName), array())
             ->join(array('p_g' => ProductsGroup::$_tableName), 'p_g.id = p.group_id', array())
-            ->columns(array('p.id', 'p.group_id', new Zend_Db_Expr('NULL AS template_id'), 'p.name', 'group_name' => 'p_g.name', 'p.price', 'p.published',))
+            ->columns(array(
+                'p.id',
+                'p.group_id',
+                new Zend_Db_Expr('NULL AS template_id'),
+                'p.name',
+                'group_name' => 'p_g.name',
+                'p.price',
+                'p.published',
+            ))
             ->setIntegrityCheck(false);
         $selectTemplates = $this->select()
             ->from(array('p' => self::$_tableName), array())
             ->join(array('p_g' => ProductsGroup::$_tableName), 'p_g.id = p.group_id', array())
             ->join(array('p_t' => ProductsTemplates::$_tableName), 'p_t.group_id = p.group_id', array())
-            ->columns(array('p.id', 'p.group_id', 'template_id' => 'p_t.id', 'p.name', 'group_name' => 'p_g.name', 'p_t.price', 'p.published'))
+            ->columns(array(
+                'p.id',
+                'p.group_id',
+                'template_id' => 'p_t.id',
+                'p.name',
+                'group_name'  => 'p_g.name',
+                'p_t.price',
+                'p.published'
+            ))
             ->setIntegrityCheck(false);
         $select = $this->select()
             ->union(array($selectProducts, $selectTemplates))
@@ -82,9 +99,9 @@ class Products extends Model
                 array('p_d' => ProductsTemplates::$_tableName),
                 'p_d.group_id = p.group_id',
                 array(
-                    'products_templates_id' => 'id',
-                    'products_templates_name' => 'name',
-                    'products_templates_price' => 'price',
+                    'products_templates_id'      => 'id',
+                    'products_templates_name'    => 'name',
+                    'products_templates_price'   => 'price',
                     'products_templates_default' => 'default'
                 )
             )
@@ -109,7 +126,22 @@ class Products extends Model
                 }
             }
         }
+
         return $productsPrices;
+    }
+
+    public function getProductsGroup()
+    {
+        $select = $this->select()
+            ->from(['p' => self::$_tableName], '*')
+            ->joinLeft(
+                ['p_g' => ProductsGroup::$_tableName],
+                'p_g.id = p.group_id',
+                ['group_name' => 'name']
+            )
+            ->setIntegrityCheck(false);
+
+        return $this->fetchAll($select)->toArray();
     }
 
     /**
@@ -127,9 +159,9 @@ class Products extends Model
                 array('p_d' => ProductsTemplates::$_tableName),
                 'p_d.group_id = p.group_id',
                 array(
-                    'products_templates_id' => 'id',
-                    'products_templates_name' => 'name',
-                    'products_templates_price' => 'price',
+                    'products_templates_id'      => 'id',
+                    'products_templates_name'    => 'name',
+                    'products_templates_price'   => 'price',
                     'products_templates_default' => 'default'
                 )
             )
@@ -151,15 +183,15 @@ class Products extends Model
                     $price = $value['products_templates_price'];
                 }
                 $productsItems[] = array(
-                    'group_id' => $value['group_id'],
+                    'group_id'    => $value['group_id'],
                     'template_id' => ($value['products_templates_id']) ? $value['products_templates_id'] : null,
-                    'code' => $value['name'],
-                    'name' => $t->_($value['name']),
-                    'price' => $price
+                    'code'        => $value['name'],
+                    'name'        => $t->_($value['name']),
+                    'price'       => $price
                 );
-
             }
         }
+
         return $productsItems;
     }
 }

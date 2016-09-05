@@ -1,0 +1,346 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid="keywords" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid="payment_method" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Спосіб оплати</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Cпособ оплаты</seg>
+            </tuv>
+        </tu>
+        <tu tuid="delivery_method" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Спосіб доставки</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Способ доставки</seg>
+            </tuv>
+        </tu>
+        <tu tuid="has_account" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Для постійних клієнтів</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Для постоянных клиентов</seg>
+            </tuv>
+        </tu>
+        <tu tuid="first_time" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Для нових клієнтів</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Для новых клиентов</seg>
+            </tuv>
+        </tu>
+        <tu tuid="thank_you_for_trust" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Дякуємо за довіру</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Спасибо за доверие</seg>
+            </tuv>
+        </tu>
+        <tu tuid="confirm_order" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Підтвердити замовлення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Подтвердить заказ</seg>
+            </tuv>
+        </tu>
+        <tu tuid="info_for_transportation" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Дані для доставки</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Данные для доставки</seg>
+            </tuv>
+        </tu>
+        <tu tuid="info_about_order" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Деталі замовлення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Детали заказа</seg>
+            </tuv>
+        </tu>
+        <tu tuid="requisites" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Реквізити</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Реквизиты</seg>
+            </tuv>
+        </tu>
+        <tu tuid="payment_receiver_msg" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Отримувач платежу</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Получатель платежа</seg>
+            </tuv>
+        </tu>
+        <tu tuid="payment_receiver" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>ФОП Коколюс Володимир Богданович</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>ФОП Коколюс Володимир Богданович</seg>
+            </tuv>
+        </tu>
+        <tu tuid="payment_account" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Розрахунковий рахунок</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Расчетный счет</seg>
+            </tuv>
+        </tu>
+        <tu tuid="setting_of_payment" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Призначення платежу</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Назначение платежа</seg>
+            </tuv>
+        </tu>
+        <tu tuid="bank_name" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Установа банку</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Учреждение банка</seg>
+            </tuv>
+        </tu>
+        <tu tuid="bank_code" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Установа банку</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Учреждение банка</seg>
+            </tuv>
+        </tu>
+        <tu tuid="id_receiver" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Код установи банку (МФО)</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Код учреждениее банка (МФО)</seg>
+            </tuv>
+        </tu>
+        <tu tuid="order_is" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Замовлення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Заказ</seg>
+            </tuv>
+        </tu>
+        <tu tuid="sum_for_pay" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Сума до оплати</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Сума к оплате</seg>
+            </tuv>
+        </tu>
+        <tu tuid="grn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>грн</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>грн</seg>
+            </tuv>
+        </tu>
+        <tu tuid="print_kvutantsia" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Видрукувати квитанцію</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Напечатать квитанцию</seg>
+            </tuv>
+        </tu>
+        <tu tuid="send_to_account" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Перерахуйте</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Перечислите</seg>
+            </tuv>
+        </tu>
+        <tu tuid="purse" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>на гаманець</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>на бумажник</seg>
+            </tuv>
+        </tu>
+        <tu tuid="or" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>або</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>или</seg>
+            </tuv>
+        </tu>
+        <tu tuid="notise_is" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>В "замітках" вкажіть</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>В "заметках" укажите</seg>
+            </tuv>
+        </tu>
+        <tu tuid="dont_proteckt" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>не вносячи код протекції.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>не внося код протекции.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="go_to_pay" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Перейти до оплати</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Переити к оплате</seg>
+            </tuv>
+        </tu>
+        <tu tuid="no_records_selected" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Не було вибрано жодного товару</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Не было выбрано ни одного товара</seg>
+            </tuv>
+        </tu>
+        <tu tuid="next_btn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Далі</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Далее</seg>
+            </tuv>
+        </tu>
+        <tu tuid="save_btn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Далі</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Далее</seg>
+            </tuv>
+        </tu>
+        <tu tuid="prev_btn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Назад</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Назад</seg>
+            </tuv>
+        </tu>
+        <tu tuid="thanks" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ваше замовлення прийняте до опрацювання. Найблищим часом з вами звяжуться наші працівники для
+                    уточнення деталей замовлення. Дякуємо за те що Ви обрали саме наш сайт. Надіємось що співпраця з
+                    нами буде приємною та тривалою. З найкращими побажаннями коликтив компанії Photoprint.in.ua
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Ваш заказ принят к обработке. В ближайшее время с вами свяжутся наши сотрудники для уточнения
+                    деталей заказа. Спасибо, что Вы выбрали именно наш сайт. Надеемся что сотрудничество с нами будет
+                    приятным и продолжительным. С наилучшими пожеланиями коликтив компании Photoprint.in.ua
+                </seg>
+            </tuv>
+        </tu>
+        <tu tuid="privatbank_info_start" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Проплатіть</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Проплатите</seg>
+            </tuv>
+        </tu>
+        <tu tuid="privatbank_info_end" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>грн на картку 5168 7555 1177 7142, одержувач Коколюс В.Б.
+                    <br/>
+                    Повідомте нас про здійснення оплати телефоном чи на e-mail, які вказані на сайті.
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>грн на карту 5168 7555 1177 7142, получатель Коколюс В.Б.
+                    <br/>
+                    Сообщите нам об осуществлении оплаты по телефону или на e-mail, которые указаны на сайте.
+                </seg>
+            </tuv>
+        </tu>
+        <tu tuid="success_payment" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Платіж був виконаний</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Платеж был выполнен</seg>
+            </tuv>
+        </tu>
+        <tu tuid="error_payment" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Платіж не був виконаний</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Платеж не был выполнен</seg>
+            </tuv>
+        </tu>
+        <tu tuid="error_message_incorrect" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Невірний e-mail або пароль.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Неверный e-mail или пароль.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="error_message_missed" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Введіть e-mail і пароль.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Введите e-mail и пароль.</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

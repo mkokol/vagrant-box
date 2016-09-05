@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Друк ваших фото на сувенірах. Форма оплати та їх доставка - photoprint.in.ua</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Печать ваших фото на сувенирах. Форма оплаты и их доставка - photoprint.in.ua</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid="date" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Дата</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Дата</seg>
+            </tuv>
+        </tu>
+        <tu tuid="come_from" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Прийшов з</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пришел с</seg>
+            </tuv>
+        </tu>
+        <tu tuid="payment" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Проплатив</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Проплатил</seg>
+            </tuv>
+        </tu>
+        <tu tuid="my_percent" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ваш дохід з замовлення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Ваш доход с заказа</seg>
+            </tuv>
+        </tu>
+        <tu tuid="status" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Статус замовлення</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Статус заказа</seg>
+            </tuv>
+        </tu>
+        <tu tuid="created" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Замовлено</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Заказано</seg>
+            </tuv>
+        </tu>
+        <tu tuid="payed" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Оплачено</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Оплачено</seg>
+            </tuv>
+        </tu>
+        <tu tuid="cancel" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Відмінений</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Отменен</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

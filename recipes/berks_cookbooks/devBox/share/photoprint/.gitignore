@@ -16,12 +16,12 @@
 !/fabfile.py
 !/build.xml
 !/package.json
-!/Gruntfile.js
 !/gulpfile.js
 !/backstop.json
 !/backstop_data
 
 public/captcha/images/*
+!public/captcha/images/.git-add
 public/stylesheets/main.css
 public/stylesheets/main.css.map
 application/logs/*
@@ -30,6 +30,7 @@ public/scripts/main.min.1.4.*
 public/stylesheets/main.1.4.*
 db-patches/database/*
 !db-patches/database/.git-add
+
 db-patches/properties/prod.ini
 
 .DS_Store

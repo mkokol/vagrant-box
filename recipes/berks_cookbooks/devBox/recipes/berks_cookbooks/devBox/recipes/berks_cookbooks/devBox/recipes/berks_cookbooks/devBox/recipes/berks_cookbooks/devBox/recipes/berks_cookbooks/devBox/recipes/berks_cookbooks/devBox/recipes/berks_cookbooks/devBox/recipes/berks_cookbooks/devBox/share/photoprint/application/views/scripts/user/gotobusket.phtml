@@ -1,0 +1,31 @@
+<div id="popup-wnd-data-content" class="popup-wnd-dialog-size">
+    <?php echo $this->render('controls/emptyheader.phtml'); ?>
+
+    <script>
+        $(document).ready(function(){
+            $("#basket-items-count").text(parseInt($("#basket-items-count").text()) + 1);
+            $('.create-order-btn').click(function(){
+                location.href = baseUrl + "/user/basket";
+            });
+        });
+    </script>
+    
+    <input id="busket-item-id" type="hidden" value="<?php echo $this->busketItemId; ?>"/>
+    <div id="popup-wnd-delete-theme">
+        <div class="popup-wnd-header"><?php echo $this->t->_('add_busket_item'); ?></div>
+        <div class="popup-wnd-warn-msg">
+            <div id="busket-item-added">
+                <?php echo $this->t->_('product_is_added_to_busket')?>.
+            </div>
+        </div>
+
+        <div class="popup-wnd-functional">
+            <div id="busket-btn-section">
+                <input class="create-order-btn" type="button" value="<?php echo $this->t->_('make_oreder'); ?>">
+                <input class="close-popup-wnd" type="button" value="<?php echo $this->t->_('make_oreder_later'); ?>">
+            </div>
+        </div>
+    </div>
+
+    <?php echo $this->render('controls/emptyfooter.phtml'); ?>
+</div>

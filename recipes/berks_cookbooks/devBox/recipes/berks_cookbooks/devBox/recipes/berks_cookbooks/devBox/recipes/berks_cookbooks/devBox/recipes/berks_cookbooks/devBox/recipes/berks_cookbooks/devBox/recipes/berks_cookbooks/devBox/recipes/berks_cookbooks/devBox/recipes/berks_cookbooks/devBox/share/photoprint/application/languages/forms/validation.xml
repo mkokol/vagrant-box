@@ -1,0 +1,126 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="bad_captcha" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ви ввели невірний код.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Вы ввели неверный код.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="is_empty" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Заповніте поле, будь-ласка.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Заполните поле, пожалуйста.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="is_empty_radio" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Виберіть один з варіантів, будь-ласка.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Выберите один из вариантов, пожалуйста.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="too_short" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Довжина введеного значення "%value%", менше ніж %min% символів.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Длина введённого значения "%value%", меньше чем %min% символов.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="too_long" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Довжина введеного значення "%value%", більша ніж %max% символів.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Длина введённого значения "%value%", больше чем %max% символов.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="not_same" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Значення не збігаються.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Значения не совпадают.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="not_match" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Дані введені в поле не співпадають.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Данные введены в поле не совпадают.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="invalid" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>"%value%" неправильна адреса електронної пошти.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>"%value%" неправильный адрес електронной почты.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="invalid_hostname" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>"%hostname%" невірний домен для адреси "%value%"</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>"%hostname%" неверный домен для адреса "%value%"</seg>
+            </tuv>
+        </tu>
+        <tu tuid="invalid_mx_record" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>"%value%" неправильна адреса електронної пошти.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>"%value%" неправильный адрес електронной почты.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="invalid_local_part" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>"%value%" неправильна адреса електронної пошти.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>"%value%" неправильный адрес електронной почты.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="not_unique_email" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Email '%value%' вже зайнятий.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Email '%value%' уже занят.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="not_unique_login" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Логин '%value%' вже зайнятий.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Логин '%value%' уже занят.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="missing_token" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Будь-ласка підтвердите пароль.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пожалуйста подтвердите пароль.</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

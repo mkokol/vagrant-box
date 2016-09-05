@@ -15,7 +15,7 @@ class CrawlerController extends Helpers_General_ControllerAction
         $this->scheme = $this->_request->getScheme();
         $this->httpHost = $this->_request->getHttpHost();
 
-        $pageLinks = $this->parseUrl('http://my/p/ru/', 0);
+        $pageLinks = $this->parseUrl('http://photoprint/ru', 0);
         $this->parseList($pageLinks, 1);
 
         echo '<pre>';
@@ -63,9 +63,11 @@ class CrawlerController extends Helpers_General_ControllerAction
         $html = $response->getBody();
 
         if($response->getStatus() !== 200) {
-            echo 'error' . '<br>';
+            echo 'error' . '--------------------<br>';
             echo $url . '<br>';
-            die;
+            echo 'error' . '--------------------<br>';
+
+            return [];
         }
 
         $dom = new Zend_Dom_Query(

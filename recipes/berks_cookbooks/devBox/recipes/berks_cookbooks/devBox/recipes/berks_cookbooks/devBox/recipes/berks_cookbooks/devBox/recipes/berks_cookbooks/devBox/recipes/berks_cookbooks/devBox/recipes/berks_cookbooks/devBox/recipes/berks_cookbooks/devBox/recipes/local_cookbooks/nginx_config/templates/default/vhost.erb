@@ -1,31 +1,48 @@
 # <%= @vhost[:server_name] %> config
-
 server {
-    server_name  www.<%= @vhost[:server_name] %>;
-    rewrite ^(.*) $scheme://<%= @vhost[:server_name] %>$1 permanent;
+    server_name www.<%= @vhost[:server_name] %>;
+    charset utf-8;
+    rewrite ^(.*) http://<%= @vhost[:server_name] %>$1 permanent;
 }
 
 server {
-    listen 80;
-    # Make site accessible from http://<%= @vhost[:server_name] %>/
     server_name <%= @vhost[:server_name] %>;
+    charset utf-8;
+    rewrite ^/(.*)/$ /$1 permanent;
+
+    root /var/www/<%= @vhost[:server_name] %>;
+    index index.php;
 
     access_log /var/log/nginx/<%= @vhost[:server_name] %>.access.log;
     error_log /var/log/nginx/<%= @vhost[:server_name] %>.error.log;
 
-    root <%= @vhost[:path] %>;
-    index index.html index.php;
+    gzip  on;
+    gzip_vary on;
+    gzip_comp_level  4;
+    gzip_disable "MSIE [1-6]\.(?!.*SV1)";
+    gzip_proxied any;
+    gzip_types text/plain text/css application/json application/javascript application/x-javascript text/javascript;
 
     location / {
         try_files $uri $uri/ /index.php?$args;
     }
 
     location ~ \.php$ {
-        fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass   127.0.0.1:9000;
-        fastcgi_index  index.php;
+        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
         include fastcgi_params;
-        fastcgi_param  APPLICATION_ENV  development;
-        fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param HTTPS off;
+        fastcgi_param APPLICATION_ENV <%= @vhost[:environment] %>;
+        internal;
+    }
+
+    location ~ \.(js|css|png|jpg|jpeg|gif|ico)(\?v=[0-9.]+)?$ {
+        try_files $uri $uri/ /index.php?$args;
+        expires 90d;
+        add_header Pragma "public";
+        add_header Cache-Control "public, must-revalidate, proxy-revalidate";
+        add_header X-Powered-By "W3 Total Cache/0.9.2.4";
+        log_not_found off;
     }
 }

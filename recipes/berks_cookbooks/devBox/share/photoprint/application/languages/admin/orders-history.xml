@@ -245,5 +245,21 @@
                 <seg>Отменен</seg>
             </tuv>
         </tu>
+        <tu tuid="duplicate" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Дублікат</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Дубликат</seg>
+            </tuv>
+        </tu>
+        <tu tuid="test" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Тестове</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Тестовое</seg>
+            </tuv>
+        </tu>
     </body>
 </tmx>

@@ -49,14 +49,14 @@ class Baskets extends Model
                     ->orWhere('b.status = ?', 'sended');
             } else if ($status == 'old') {
                 $selectOrders = $this->select()
-                    ->distinct()
-                    ->from(['b' => self::$_tableName], ['order_id'])
-                    ->where('b.order_id != ?', '0')
-                    ->where('b.status != ?', 'inOrder')
-                    ->where('b.status != ?', 'produced')
-                    ->where('b.status != ?', 'sended')
+//                    ->distinct()
+//                    ->from(['b' => self::$_tableName], ['order_id'])
+//                    ->where('b.order_id != ?', '0')
+//                    ->where('b.status != ?', 'inOrder')
+//                    ->where('b.status != ?', 'produced')
+//                    ->where('b.status != ?', 'sended')
                     ->order('order_id DESC')
-                    ->limit(50);
+                    ->limit(500000);
 
                 $orderIdList = $this->fetchAll($selectOrders)->toArray();
                 $orderIds = array_map(

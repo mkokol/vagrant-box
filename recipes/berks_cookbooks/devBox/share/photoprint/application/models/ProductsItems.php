@@ -613,6 +613,21 @@ class ProductsItems extends Model
         return $this->fetchAll($select)->toArray();
     }
 
+
+    public function getAllItemsSeoInfoNew()
+    {
+        $select = $this->select()
+            ->from(['p_i' => self::$_tableName], ['id', 'group_id', 'ua', 'ru', 'created'])
+            ->join(
+                ['p_g' => ProductsGroup::$_tableName],
+                'p_g.id = p_i.group_id',
+                ['group_id' => 'id', 'group_name' => 'name']
+            )
+            ->setIntegrityCheck(false);
+
+        return $this->fetchAll($select)->toArray();
+    }
+
     // ----------------------------------------------------------
 
     /**

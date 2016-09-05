@@ -6,7 +6,7 @@ trait Helpers_General_Traits_Breadcrumbs
         0 => [
             'name' => 'main_page_link',
             'link' => [
-                'url'    => '/',
+                'url'    => '',
                 'params' => []
             ]
         ]

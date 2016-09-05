@@ -1,0 +1,38 @@
+<script>
+    $(document).ready(function(){
+        reloadBox();
+        $('.product-image-block').click(function(event){
+            showBox(baseUrl + "/wl/previewitem?id=" + $(this).attr('data-product-id'));
+        });
+    });
+</script>
+
+<div style="float: left; text-align: center; width: 100%;">
+    <?php echo $this->render('controls/ajaxPaging.phtml'); ?>
+</div>
+
+<?php foreach ($this->userProducts as $product): ?>
+    <div class="preview-product">
+        <div class="functional">
+            <a href="<?= $this->h()->url()->build("/wl/create/group/{$product['group_name']}/code/{$this->wlCode}", array('id' => $product['id'])); ?>"><img style="cursor:pointer;" src="<?php echo $this->baseUrl ?>/public/theme/user/table/edit.png" /></a>
+            <a class="mbox" href="<?= $this->h()->url()->build("/wl/deleteproductwnd/code/{$this->wlCode}", array('id' => $product['id'])); ?>"><img style="cursor:pointer;" src="<?php echo $this->baseUrl ?>/public/theme/user/table/remove.png" /></a>
+        </div>
+        <div class="product-image-block" data-product-id="<?php echo $product['id']; ?>">
+            <?php $this->itemXml = $product['content_xml']; $this->item = null; ?>
+            <?php echo $this->render("controls/products/preview/{$product['group_name']}.phtml"); ?>
+        </div>
+        <div class="info"><?php echo $this->t->_($product['group_name']); ?></div>
+        <div class="info">
+            <label><?php echo $this->t->_('themes'); ?>:</label>
+            <?php echo $product["theme_{$this->language}"]; ?>
+        </div>
+        <div class="info">
+            <label><?php echo $this->t->_('status'); ?>:</label>
+            <?php echo $this->t->_($product["status"]); ?>
+        </div>
+    </div>
+<?php endforeach; ?>
+
+<div style="float: left; text-align: center; width: 100%;">
+    <?php echo $this->render('controls/ajaxPaging.phtml'); ?>
+</div>

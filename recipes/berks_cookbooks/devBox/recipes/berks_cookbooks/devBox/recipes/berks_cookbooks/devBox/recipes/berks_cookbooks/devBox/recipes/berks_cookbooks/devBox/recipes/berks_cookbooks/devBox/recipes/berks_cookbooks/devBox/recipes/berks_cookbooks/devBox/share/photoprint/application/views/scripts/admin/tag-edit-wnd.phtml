@@ -1,0 +1,57 @@
+<div id="popup-wnd-data-content" class="popup-wnd-admin-edit-tag-size">
+    <?php echo $this->render('controls/emptyheader.phtml'); ?>
+
+    <script>
+        $(document).ready(function(){
+            $('#edit-tag-form').submit(function() {
+                $(this).ajaxSubmit(function(){
+                    if($('tr.tag-<?php echo $this->tag->id; ?> td:eq(1)').length) {
+                        $('tr.tag-<?php echo $this->tag->id; ?> td:eq(1)').html(
+                            $('input:radio[name=status]:checked').val()
+                        );
+                        $('tr.tag-<?php echo $this->tag->id; ?> td:eq(2)').html($('#name').val());
+                        $('tr.tag-<?php echo $this->tag->id; ?> td:eq(3)').html($('#ua').val());
+                        $('tr.tag-<?php echo $this->tag->id; ?> td:eq(4)').html($('#ru').val());
+                    }
+                    mboxRemove();
+                });
+                return false;
+            });
+        });
+    </script>
+
+    <div id="popup-wnd-edit-tag">
+        <div class="popup-wnd-header">
+            <?php echo ($this->tag->id) ? $this->t->_('edit_tag') : $this->t->_('new_tag'); ?>
+        </div>
+        <form id="edit-tag-form" action="<?= $this->h()->url()->build('/admin/tag-edit'); ?>" method="post">
+            <input type="hidden" name="id" value="<?php echo $this->tag->id; ?>">
+            <dl class="zend_form">
+                <dt><?php echo $this->t->_('name'); ?>:</dt>
+                <dd><input type="text" value="<?php echo $this->tag->name; ?>" id="name" name="name" style="width: 330px;"></dd>
+
+                <dt><label class="required" for="ua"><?php echo $this->t->_('ua'); ?>:</label></dt>
+                <dd><input type="text" value="<?php echo $this->tag->ua; ?>" id="ua" name="ua" style="width: 330px;"></dd>
+
+                <dt><label class="required" for="ru"><?php echo $this->t->_('ru'); ?>:</label></dt>
+                <dd><input type="text" value="<?php echo $this->tag->ru; ?>" id="ru" name="ru" style="width: 330px;"></dd>
+
+                <dt><label class="required" for="status"><?php echo $this->t->_('status'); ?>:</label></dt>
+                <dd>
+                    <?php $tagStatuses = ['new', 'public']; ?>
+                    <?php foreach($tagStatuses as $status): ?>
+                        <?php $checked = ($this->tag->status == $status) ? 'checked' : ''; ?>
+                        <input type="radio" name="status" value="<?php echo $status; ?>"<?php echo $checked; ?>>
+                        <span class="inline-radio"><?php echo $this->t->_($status); ?></span>
+                    <?php endforeach; ?>
+                </dd>
+            </dl>
+            <div class="popup-wnd-functional">
+                <input type="submit" value="<?php echo $this->t->_('save'); ?>">
+                <input class="close-popup-wnd" type="button" value="<?php echo $this->t->_('cancel'); ?>">
+            </div>
+        </form>
+    </div>
+
+    <?php echo $this->render('controls/emptyfooter.phtml'); ?>
+</div>

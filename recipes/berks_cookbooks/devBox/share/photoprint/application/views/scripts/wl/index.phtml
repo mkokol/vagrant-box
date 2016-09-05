@@ -1,7 +1,7 @@
 <?php echo $this->render('controls/header.phtml'); ?>
 <div class="grid-container">
     <div class="breadcrumbs grid-100" itemprop="breadcrumb">
-        <a href="<?= $this->h()->url()->build('/'); ?>"><?php echo $this->t->_('main_page_link'); ?></a> &raquo;
+        <a href="<?= $this->h()->url()->build(''); ?>"><?php echo $this->t->_('main_page_link'); ?></a> &raquo;
         <?php echo $this->t->_('wl_menu'); ?>
         <?php if(!$this->wlList): ?><div class="underline"></div><?php endif; ?>
     </div>

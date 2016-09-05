@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="your_account_has_been_created_photoprint" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Вам створений аккаунт на photoprint.in.ua</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Вам создан аккаунт на photoprint.in.ua</seg>
+            </tuv>
+        </tu>
+        <tu tuid="your_account_has_been_created" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ваш аккаунт створений.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Ваш аккаунт создан.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="congratulation_your_account_is_created" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Вітаємо, Ви успішно зареєструвалися.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Поздравляем, Вы успешно зарегистрировались.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="your_registration_data" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ваші реєстраційні дані для доступу в особистий кабінет</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Ваши регистрационные данные для доступа в личный кабинет</seg>
+            </tuv>
+        </tu>
+        <tu tuid="login" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Логін</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Логин</seg>
+            </tuv>
+        </tu>
+        <tu tuid="password" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Пароль</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пароль</seg>
+            </tuv>
+        </tu>
+        <tu tuid="to_confirm_you_email_go_to" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Для підтвердження вашого email %s перейдіть за посиланням:</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Для подтверждения вашего email %s перейдите по ссылке:</seg>
+            </tuv>
+        </tu>
+        <tu tuid="confirm_email" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Підтвердити емейл</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Подтвердить емейл</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

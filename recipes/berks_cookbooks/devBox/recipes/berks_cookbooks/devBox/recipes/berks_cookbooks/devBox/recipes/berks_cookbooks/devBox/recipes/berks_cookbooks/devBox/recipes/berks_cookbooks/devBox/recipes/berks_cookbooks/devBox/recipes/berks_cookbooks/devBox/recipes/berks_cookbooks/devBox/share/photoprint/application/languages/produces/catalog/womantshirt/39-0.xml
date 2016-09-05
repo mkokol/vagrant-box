@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Жіночі футболки на алкоголну тему.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Женские футболки на алкогольную тему.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Жіночі футболки на тему алкоголь. Відомі торгові марки алкоголю.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Женские футболки на тему алкоголь. Известные торговые марки алкоголя.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="keywords" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Жіночі футболки на тему алкоголь.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Женские футболки на тему алкоголь.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="header" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Жіночі футболки на алкогольну тему.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Женские футболки на алкогольную тему.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="content" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Жіночі футболки на тему алкоголь. Алкогольні бренди, торгові марки та популярні фірми. Все, що
+                    пов’язане з вечірками, святкуваннями, забавами та алкоголем. Жарти та приколи про алкоголь.
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Женские футболки на тему алкоголь. Алкогольные бренды, торговые марки и популярные фирмы. Все что
+                    связано с вечеринками, празднованиями, весельем, забавами и алкоголем. Шутки и приколы про алкоголь.
+                </seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

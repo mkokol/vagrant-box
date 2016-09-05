@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>// DEV</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <style>
+        *,
+        :before,
+        :after {
+            box-sizing: inherit;
+        }
+
+        html {
+            font: 400 100%/1 'Century', serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .viewport {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .media img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        .layer {
+            position: absolute;
+        }
+
+        .layer--full {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .layer--bottom {
+            top: auto;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .rotator {
+            max-width: 50rem;
+            margin: auto;
+            perspective: 75rem;
+            transform-style: preserve-3d;
+        }
+
+        .rotator__media {
+            font-size: 0;
+            /*transform: translate3d(45%, 0, -800px);*/
+            transform: rotatey(180deg) translate3d(-45%, 0, 800px) rotatey(-180deg);
+            -webkit-animation: to-back 1.5s both;
+            pointer-events: none;
+        }
+
+        .rotator__media:before {
+            content: ' ';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .rotator__media--active {
+            /*transform: translate3d(-15%, 0, 0);*/
+            transform: rotatey(0deg) translate3d(-15%, 0, 0) rotatey(0deg);
+            -webkit-animation: to-front 1.5s both;
+        }
+
+        .rotator__navbar {
+            height: 10%;
+            min-height: 2.5rem;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .rotator__nav {
+            display: inline-block;
+            margin: 0 2vw;
+            border-bottom: 1px solid;
+            font-size: 1.375rem;
+            font-variant: small-caps;
+            cursor: pointer;
+            transition: all .2s;
+        }
+
+        .rotator__nav--left {
+            padding-left: 0.9375rem;
+        }
+
+        .rotator__nav--left:hover {
+            padding-left: 0;
+            padding-right: 0.9375rem;
+        }
+
+        .rotator__nav--right {
+            padding-right: 0.9375rem;
+        }
+
+        .rotator__nav--right:hover {
+            padding-left: 0.9375rem;
+            padding-right: 0;
+        }
+
+        @-webkit-keyframes to-back {
+            0% {
+                transform: rotatey(0deg) translate3d(-15%, 0, 0) rotatey(0deg);
+            }
+            100% {
+                transform: rotatey(-180deg) translate3d(-45%, 0, 800px) rotatey(180deg);
+            }
+        }
+
+        @-webkit-keyframes to-front {
+            0% {
+                transform: rotatey(-180deg) translate3d(-45%, 0, 800px) rotatey(180deg);
+            }
+            100% {
+                transform: rotatey(-360deg) translate3d(-15%, 0, 0) rotatey(360deg);
+            }
+        }
+    </style>
+    <script>
+        function handler(e) {
+            e.preventDefault();
+            if ((e.touches ? e.touches[0].target : e.target).classList.contains('rotator__nav')) {
+                Array.prototype.forEach.call(document.querySelectorAll('.rotator__media'), function (el) {
+                    if (el.classList.contains('rotator__media--active')) {
+                        el.classList.remove('rotator__media--active');
+                    } else {
+                        el.classList.add('rotator__media--active');
+                    }
+                });
+            }
+        }
+
+        document.addEventListener('click', handler);
+        document.addEventListener('touchstart', handler);
+    </script>
+</head>
+<body>
+<div class="viewport">
+    <div class="rotator layer layer--full">
+        <div class="rotator__media rotator__media--active media layer layer--full">
+            <img src="womantshirt-1405_front_yellow.o.png"
+                 alt="" width="1200" height="1200">
+        </div>
+        <div class="rotator__media media layer layer--full">
+            <img src="mantshirt-1405_front_yellow.o.png"
+                 alt="" width="1200" height="1200">
+        </div>
+        <div class="rotator__navbar layer layer--bottom">
+            <div class="rotator__nav rotator__nav--left">Toggle</div>
+        </div>
+    </div>
+</div>
+<script src="prod.js?1a160c626a7166dee6e6"></script></body>
+</html>

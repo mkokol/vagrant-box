@@ -6,7 +6,7 @@
 </script>
 <div class="grid-container">
     <div class="breadcrumbs grid-100" itemprop="breadcrumb">
-        <a href="<?= $this->h()->url()->build('/'); ?>"><?php echo $this->t->_('main_page_link'); ?></a> &raquo;
+        <a href="<?= $this->h()->url()->build(''); ?>"><?php echo $this->t->_('main_page_link'); ?></a> &raquo;
         <a href="<?= $this->h()->url()->build("/produces/products/group/{$this->group}"); ?>"><?php echo $this->t->_($this->group); ?></a> &raquo;
         <?php echo $this->t->_($this->item); ?>
     </div>

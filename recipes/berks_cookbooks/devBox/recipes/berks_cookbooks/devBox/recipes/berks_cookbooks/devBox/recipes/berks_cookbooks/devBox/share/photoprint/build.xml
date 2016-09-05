@@ -6,7 +6,7 @@
         <then><property name="env" value="dev" /></then>
     </if>
 
-    <property file="./build/properties/${env}.ini" />
+    <property file="./db-patches/properties/${env}.ini" />
 
     <php function="preg_replace" returnProperty="consoleSrcPath">
         <param value="/(Dropbox\ \(Personal\))+/"/>
@@ -16,10 +16,10 @@
 
     <target name="main">
         <echo message="+------------------------------------------+"/>
-        <echo message="| Build PhotoPrint.in.ua                   |"/>
+        <echo message="| DB patches  for PhotoPrint.in.ua         |"/>
         <echo message="+------------------------------------------+"/>
 
-        <phing phingfile="${project.basedir}/build/phing/database.xml" target="database" />
+        <phing phingfile="${project.basedir}/db-patches/phing/database.xml" target="database" />
     </target>
 
 </project>

@@ -36,5 +36,6 @@ execute "install-sense" do
 end
 
 service "kibana" do
-  action :restart
+  supports :status => true, :restart => true, :reload => true
+  action   :start
 end

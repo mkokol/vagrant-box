@@ -1,0 +1,60 @@
+<div id="popup-wnd-data-content" class="popup-wnd-pay-out-size">
+    <?php echo $this->render('controls/emptyheader.phtml'); ?>
+
+    <script>
+        $(document).ready(function(){
+            $('.add-pay-out-btn').click(function() {
+                $.ajax({
+                    type: "POST",
+                    url: baseUrl + "/partnership/payout",
+                    data: {
+                        cardOwner: $('#card-owner').val()
+                        , cardNumber: $('#card-number-1').val() + ' ' + $('#card-number-2').val() + ' '
+                            + $('#card-number-3').val() + ' ' + $('#card-number-4').val()
+                    },
+                    success: function(data) {
+                        document.location.href = baseUrl + '/partnership?type=balance';
+                    }
+                });
+            });
+            $('#card-number-1').keyup(function(){
+                if($(this).val().length == 4){
+                    $('#card-number-2').focus();
+                }
+            });
+            $('#card-number-2').keyup(function(){
+                if($(this).val().length == 4){
+                    $('#card-number-3').focus();
+                }
+            });
+            $('#card-number-3').keyup(function(){
+                if($(this).val().length == 4){
+                    $('#card-number-4').focus();
+                }
+            });
+        });
+    </script>
+
+    <div id="popup-wnd-delete-theme">
+        <div class="popup-wnd-header"><?php echo $this->t->_('pay_out'); ?></div>
+        <div style="padding: 10px 0px 15px 0px; text-align: left;">
+            <div>
+                <label style="width: 140px; display: inline-block; text-align: right;"><?php echo $this->t->_('card_owner'); ?>:</label>
+                <input id="card-owner" type="text" style="width: 200px;">
+            </div>
+            <div>
+                <label style="width: 140px; display: inline-block; text-align: right;"><?php echo $this->t->_('card_number'); ?>:</label>
+                <input id="card-number-1" type="text" class="four-digits" maxlength="4">
+                <input id="card-number-2" type="text" class="four-digits" maxlength="4">
+                <input id="card-number-3" type="text" class="four-digits" maxlength="4">
+                <input id="card-number-4" type="text" class="four-digits" maxlength="4">
+            </div>
+        </div>
+        <div class="popup-wnd-functional">
+            <input class="add-pay-out-btn" type="button" value="<?php echo $this->t->_('save'); ?>">
+            <input class="close-popup-wnd" type="button" value="<?php echo $this->t->_('cancel'); ?>">
+        </div>
+    </div>
+
+    <?php echo $this->render('controls/emptyfooter.phtml'); ?>
+</div>

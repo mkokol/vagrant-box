@@ -10,7 +10,7 @@ trait Helpers_General_Traits_Email
     protected function sendUserRegistrationConfirmation($userName, $email, $password, $usersHash)
     {
         $this->loadTranslation(['mail/general', 'mail/user/registration'], null, 'mail');
-        $t = Helpers_General_ControllerAction::getLoadedTranslation();
+        $t = Helpers_General_ControllerAction::getLoadedTranslation('mail');
 
         $emailHelper = new Helpers_General_Mail();
         $emailHelper->addTo($email, $userName);
@@ -28,7 +28,7 @@ trait Helpers_General_Traits_Email
     protected function sendUserResetPasswordLink($userName, $email, $hash)
     {
         $this->loadTranslation(['mail/general', 'mail/user/reset-password'], null, 'mail');
-        $t = Helpers_General_ControllerAction::getLoadedTranslation();
+        $t = Helpers_General_ControllerAction::getLoadedTranslation('mail');
 
         $emailHelper = new Helpers_General_Mail();
         $emailHelper->addTo($email, $userName);
@@ -46,7 +46,7 @@ trait Helpers_General_Traits_Email
     protected function sendUserOrderConfirmation($userName, $email, $orderId)
     {
         $this->loadTranslation(['products', 'mail/general', 'mail/user/order-confirmation'], null, 'mail');
-        $t = Helpers_General_ControllerAction::getLoadedTranslation();
+        $t = Helpers_General_ControllerAction::getLoadedTranslation('mail');
 
         $order = new Orders();
         $orderInfo = $order->fetchRow('id = ' . $orderId)->toArray();
@@ -66,7 +66,7 @@ trait Helpers_General_Traits_Email
     protected function sendUserOrderReviewRequest($language, $userName, $email, $hash)
     {
         $this->loadTranslation(['products', 'mail/general', 'mail/user/order-review-request'], $language, 'mail');
-        $t = Helpers_General_ControllerAction::getLoadedTranslation();
+        $t = Helpers_General_ControllerAction::getLoadedTranslation('mail');
 
         $emailHelper = new Helpers_General_Mail();
         $emailHelper->addTo($email, $userName);
@@ -85,7 +85,7 @@ trait Helpers_General_Traits_Email
     protected function sendAdminOrderConfirmation($userName, $email, $orderId)
     {
         $this->loadTranslation(['products', 'mail/general', 'mail/admin/order-confirmation'], null, 'mail');
-        $t = Helpers_General_ControllerAction::getLoadedTranslation();
+        $t = Helpers_General_ControllerAction::getLoadedTranslation('mail');
 
         $order = new Orders();
         $orderInfo = $order->fetchRow('id = ' . $orderId)->toArray();
@@ -105,7 +105,7 @@ trait Helpers_General_Traits_Email
     protected function sendAdminNewPartnerRegistration($userName, $email)
     {
         $this->loadTranslation(['products', 'mail/general'], null, 'mail');
-        $t = Helpers_General_ControllerAction::getLoadedTranslation();
+        $t = Helpers_General_ControllerAction::getLoadedTranslation('mail');
 
         $emailHelper = new Helpers_General_Mail();
         $emailHelper->addTo($email, $userName);
@@ -120,7 +120,7 @@ trait Helpers_General_Traits_Email
     protected function sendAdminPartnerCreatedProduct($userName, $email)
     {
         $this->loadTranslation(['products', 'mail/general'], null, 'mail');
-        $t = Helpers_General_ControllerAction::getLoadedTranslation();
+        $t = Helpers_General_ControllerAction::getLoadedTranslation('mail');
 
         $emailHelper = new Helpers_General_Mail();
         $emailHelper->addTo($email, $userName);

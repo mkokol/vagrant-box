@@ -1,20 +1,14 @@
 # install ngings configuration
 
-node["nginx_config"]["folders"].each do |folder|
-  Chef::Log.info("Add new directory: #{folder}")
-
-  # create root directory for project
-  directory folder["path"] do
+node["nginx_config"]["hosts"].each do |vhost|
+  Chef::Log.info("Add new directory: #{vhost}")
+  directory "/var/www/#{vhost['server_name']}" do
     owner "vagrant"
     group "vagrant"
     mode "0755"
     action :create
     recursive true
   end
-end
-
-node["nginx_config"]["hosts"].each do |vhost|
-  Chef::Log.info("Add new virtual host: #{vhost}")
 
   # create VirtualHost for nginx
   template "/etc/nginx/sites-available/#{vhost['server_name']}.conf" do
@@ -33,9 +27,6 @@ node["nginx_config"]["hosts"].each do |vhost|
 end
 
 
-
-%W{nginx php5-fpm}.each do |s|
-  service s do
-    action :restart
-  end
+service :nginx do
+  action :restart
 end

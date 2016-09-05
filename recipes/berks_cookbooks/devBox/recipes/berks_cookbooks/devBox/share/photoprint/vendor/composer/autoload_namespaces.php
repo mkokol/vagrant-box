@@ -9,6 +9,7 @@ return array(
     'phpDocumentor' => array($vendorDir . '/phpdocumentor/reflection-docblock/src'),
     'Zend_' => array($vendorDir . '/zendframework/zendframework1/library'),
     'TokenReflection' => array($vendorDir . '/andrewsville/php-token-reflection'),
+    'Psr\\Log\\' => array($vendorDir . '/psr/log'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
     'Doctrine\\Common\\Annotations\\' => array($vendorDir . '/doctrine/annotations/lib'),

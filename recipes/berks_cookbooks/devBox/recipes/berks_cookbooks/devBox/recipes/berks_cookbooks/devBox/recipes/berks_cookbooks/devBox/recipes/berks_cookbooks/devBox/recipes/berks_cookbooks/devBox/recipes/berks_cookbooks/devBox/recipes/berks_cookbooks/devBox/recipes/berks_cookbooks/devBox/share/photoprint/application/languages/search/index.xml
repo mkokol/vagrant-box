@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid="search_result" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Результат пошуку</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Результат поиска</seg>
+            </tuv>
+        </tu>
+        <tu tuid="search_no_result" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>На жаль по вашому запиту "%s" ми нічого не змогли знайти.
+                    Ви можете <a href="%s/%s/produces/create/item/mantshirt">створити свою власну</a> унікальну футболку.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>К сожалению по вашему запросу "%s" мы ничего не смогли найти.
+                    Вы можете <a href="%s/%s/produces/create/item/mantshirt">создать свою собственную</a> уникальную футболку.</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

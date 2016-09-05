@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Листівка подвійна. Церква та ялинка.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Двойная открытка. Церковь и елка.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Листівка подвійна. Маленька церква та ялинка в гірляндах що світяться.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Двойная открытка. Маленькая церковь и елка в светящихся гирляндах.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="keywords" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Листівка подвійна. Маленька церква та ялинка в гірляндах що світяться.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Двойная открытка. Маленькая церковь и елка в светящихся гирляндах.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="header" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Листівка подвійна. Церква та ялинка.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Двойная открытка. Церковь и елка.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="content" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Листівка подвійна. Маленька церква та ялинка в гірляндах що світяться.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Двойная открытка. Маленькая церковь и елка в светящихся гирляндах.</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

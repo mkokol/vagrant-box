@@ -8,6 +8,9 @@
   "platforms": {
   },
   "dependencies": {
+    "locale": "~> 1.0.2",
+    "apt": "~> 2.9.2",
+    "vim": "~> 2.0.1",
     "nginx": "~> 2.7.6",
     "mysql": "~> 6.1.2",
     "php": "~> 1.8.0",

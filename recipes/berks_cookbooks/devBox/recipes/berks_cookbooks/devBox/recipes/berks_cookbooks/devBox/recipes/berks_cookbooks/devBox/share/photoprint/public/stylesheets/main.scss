@@ -3,6 +3,8 @@
 @import 'content/main';
 @import 'content/global';
 
+@import 'helpers/tablesorter';
+
 @import 'helpers/form';
 @import 'helpers/mbox';
 @import 'content/page-home';
@@ -52,7 +54,7 @@
     }
     .details {
       h2 {
-        padding: 0 0 7px 0;
+        padding: 0 0 7px;
       }
       div {
         height: auto;
@@ -69,7 +71,7 @@
       span {
         width: 100%;
         &.price {
-          color: #5F3E6F;
+          color: $color-5f3e6f;
           font-weight: bold;
         }
       }
@@ -96,8 +98,199 @@ span.border {
   z-index: 1;
 }
 
+.create,
+.details {
+  .cup {
+    .long {
+      .size {
+        width: 612px;
+        height: 273px;
+      }
+    }
+  }
+}
+
+.create,
+.details,
+.view {
+  .tshirt {
+    .front {
+      .mantshirt {
+        background: url(../theme/produces/tshirt/man-front.png) no-repeat left top;
+      }
+
+      .womantshirt {
+        background: url(../theme/produces/tshirt/woman-front.png) no-repeat left top;
+      }
+    }
+
+    .back {
+      .mantshirt {
+        background: url(../theme/produces/tshirt/man-back.png) no-repeat left top;
+      }
+      .womantshirt {
+        background: url(../theme/produces/tshirt/woman-back.png) no-repeat left top;
+      }
+    }
+
+    .functional {
+      position: absolute;
+    }
+
+    .template-1 {
+      .front {
+        display: block;
+      }
+      .back,
+      .functional {
+        display: none;
+      }
+    }
+    .template-2 {
+      .front,
+      .functional {
+        display: none;
+      }
+      .back {
+        display: block;
+      }
+    }
+  }
+
+  .postcard {
+    overflow: hidden;
+    position: relative;
+
+    .border {
+      border: 1px solid #744B54;
+      background: #FFFFFF;
+      cursor: pointer;
+      font-family: 'Times New Roman', serif;
+      font-size: 16px;
+
+      .content {
+        background: #FFFFFF;
+        position: relative;
+        overflow: hidden;
+      }
+    }
+
+    .size {
+      width: 300px;
+      height: 429px;
+    }
+  }
+
+  .trivet {
+    .content {
+      overflow: hidden;
+    }
+
+    .size {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+.details,
+.view {
+  .tshirt {
+    position: relative;
+
+    .functional {
+      top: 370px;
+      left: 173px;
+    }
+
+    .size {
+      width: 190px;
+      height: 250px;
+    }
+  }
+
+  .cup {
+    display: inline-block;
+    position: relative;
+
+    .long {
+      text-align: right;
+
+      .content {
+        overflow: hidden;
+        text-align: left;
+      }
+
+      .cup-head {
+        background: url(../theme/produces/cup/cupView.png) no-repeat right top;
+        height: 80px;
+      }
+    }
+
+    .left {
+      background: url(../theme/produces/cup/cupLeft.png) no-repeat right top;
+      width: 400px;
+
+      .position {
+        padding-top: 50px;
+        padding-left: 117px;
+      }
+
+      .size {
+        width: 190px;
+        height: 210px;
+      }
+    }
+
+    .right {
+      background: url(../theme/produces/cup/cupRight.png) no-repeat right top;
+      float: left;
+      width: 400px;
+      display: none;
+
+      .position {
+        padding-top: 50px;
+        padding-left: 113px;
+      }
+
+      .size {
+        width: 190px;
+        height: 210px;
+      }
+    }
+
+    .functional {
+      position: absolute;
+    }
+  }
+
+  .trivet {
+    .content {
+      span {
+        &.square {
+          background: url(../theme/produces/trivet/border.png) no-repeat left top;
+        }
+        &.circle {
+          background: url(../theme/produces/trivet/borderCircle.png) no-repeat left top;
+        }
+      }
+    }
+  }
+
+  .mousepad {
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+
+    .square,
+    .circle {
+      overflow: hidden;
+    }
+  }
+}
+
 .preview {
-  border: 1px solid $main-border-color;
+  border: 1px solid $color-d0d0d0;
   margin: 10px 0;
   cursor: pointer;
   position: relative;
@@ -136,7 +329,7 @@ span.border {
     }
     span.list {
       border-right: 1px dotted #d0d0d0;
-      padding: 2px 5px 2px 5px;
+      padding: 2px 5px;
     }
     span.list:last-child {
       border-right: none;
@@ -163,7 +356,7 @@ span.border {
       span {
         display: inline-block;
         width: 100%;
-        padding: 5px 10px 5px 10px;
+        padding: 5px 10px;
         font-size: 13px;
       }
     }
@@ -239,7 +432,7 @@ span.border {
       }
       .right {
         background: url(../theme/produces/cup/cup-right-small.png) no-repeat right top;
-        margin: 31px 0 31px 0;
+        margin: 31px 0;
         .content {
           padding: 32px 0 24px 23px;
           text-align: left;
@@ -255,10 +448,10 @@ span.border {
       }
       .left {
         background: url(../theme/produces/cup/cup-left-small.png) no-repeat right top;
-        margin: 31px 0px 55px 0px;
+        margin: 31px 0 55px;
         display: none;
         .content {
-          padding: 32px 0px 24px 46px;
+          padding: 32px 0 24px 46px;
           text-align: left;
         }
         .image {
@@ -280,7 +473,7 @@ span.border {
         height: 207px;
       }
       .content {
-        margin: 22px 0px 23px 0px;
+        margin: 22px 0 23px;
         position: relative;
         overflow: hidden;
         span {
@@ -302,7 +495,7 @@ span.border {
         overflow: hidden;
       }
       .circle {
-        margin: 22px 0px 23px 0px;
+        margin: 22px 0 23px;
         span {
           background: url(../theme/produces/mousepad/border-circle-small.png) no-repeat left top;
         }
@@ -312,7 +505,7 @@ span.border {
         }
       }
       .square {
-        margin: 36px 0px;
+        margin: 36px 0;
         span {
           background: url(../theme/produces/mousepad/border-small.png) no-repeat left top;
         }
@@ -327,7 +520,7 @@ span.border {
       margin: 10px;
       overflow: auto;
       .content {
-        margin: 52px 0px 53px 0px;
+        margin: 52px 0 53px;
         position: relative;
         overflow: hidden;
         span {
@@ -342,7 +535,7 @@ span.border {
     .postcard {
       margin: 10px;
       .border {
-        margin: 0px 19px 0px 19px;
+        margin: 0 19px;
         border: 1px solid #744B54;
         .content {
           position: relative;
@@ -359,27 +552,6 @@ span.border {
 
 .view {
   .tshirt {
-    position: relative;
-    .size {
-      width: 190px;
-      height: 250px;
-    }
-    .front {
-      .mantshirt {
-        background: url(../theme/produces/tshirt/man-front.png) no-repeat left top;
-      }
-      .womantshirt {
-        background: url(../theme/produces/tshirt/woman-front.png) no-repeat left top;
-      }
-    }
-    .back {
-      .mantshirt {
-        background: url(../theme/produces/tshirt/man-back.png) no-repeat left top;
-      }
-      .womantshirt {
-        background: url(../theme/produces/tshirt/woman-back.png) no-repeat left top;
-      }
-    }
     .sides {
       padding: 90px 106px 198px 126px;
       width: 210px;
@@ -387,22 +559,6 @@ span.border {
     .content {
       position: relative;
       overflow: hidden;
-    }
-    .functional {
-      position: absolute;
-      top: 370px;
-      left: 173px;
-    }
-    .template-1 {
-      .front {
-        display: block;
-      }
-      .back {
-        display: none;
-      }
-      .functional {
-        display: none;
-      }
     }
     .template-3 {
       .front {
@@ -415,79 +571,30 @@ span.border {
         display: block;
       }
     }
-    .template-2 {
-      .front {
-        display: none;
-      }
-      .back {
-        display: block;
-      }
-      .functional {
-        display: none;
-      }
-    }
   }
   .cup {
-    display: inline-block;
-    position: relative;
     .long {
-      text-align: right;
       height: 300px;
       .content {
         position: relative;
-        overflow: hidden;
-        text-align: left;
         span {
           background: url(../theme/produces/view/cup/long.png) no-repeat left top;
         }
-      }
-      .cup-head {
-        background: url(../theme/produces/cup/cupView.png) no-repeat right top;
-        height: 80px;
       }
       .size {
         width: 440px;
         height: 196px;
       }
     }
-    .left {
-      background: url(../theme/produces/cup/cupLeft.png) no-repeat right top;
-      width: 400px;
-      height: 320px;
-      .position {
-        padding-top: 50px;
-        padding-left: 117px;
-      }
-      .content {
-        position: relative;
-        overflow: hidden;
-      }
-      .size {
-        width: 190px;
-        height: 210px;
-      }
-    }
+    .left,
     .right {
-      background: url(../theme/produces/cup/cupRight.png) no-repeat right top;
-      float: left;
-      width: 400px;
       height: 320px;
-      display: none;
-      .position {
-        padding-top: 50px;
-        padding-left: 113px;
-      }
       .content {
         position: relative;
         overflow: hidden;
-      }
-      .size {
-        width: 190px;
-        height: 210px;
       }
     }
     .functional {
-      position: absolute;
       top: 300px;
       left: 168px;
     }
@@ -495,39 +602,6 @@ span.border {
   .trivet {
     .content {
       position: relative;
-      overflow: hidden;
-      span {
-        &.square {
-          background: url(../theme/produces/trivet/border.png) no-repeat left top;
-        }
-        &.circle {
-          background: url(../theme/produces/trivet/borderCircle.png) no-repeat left top;
-        }
-      }
-    }
-    .size {
-      width: 300px;
-      height: 300px;
-    }
-  }
-  .postcard {
-    overflow: hidden;
-    position: relative;
-    .border {
-      border: 1px solid #744B54;
-      background: #FFFFFF;
-      cursor: pointer;
-      font-family: 'Times New Roman';
-      font-size: 16;
-      .content {
-        background: #FFFFFF;
-        position: relative;
-        overflow: hidden;
-      }
-    }
-    .size {
-      width: 300px;
-      height: 429px;
     }
   }
   .puzzle {
@@ -545,14 +619,10 @@ span.border {
     }
   }
   .mousepad {
-    overflow: hidden;
-    position: relative;
-    text-align: left;
     .square {
       width: 440px;
       height: 382px;
       position: relative;
-      overflow: hidden;
       span {
         background: url(../theme/produces/view/mousepad/rectangle.png) no-repeat left top;
       }
@@ -564,7 +634,6 @@ span.border {
     .circle {
       width: 440px;
       height: 440px;
-      overflow: hidden;
       position: relative;
       span {
         background: url(../theme/produces/view/mousepad/circle.png) no-repeat left top;
@@ -594,7 +663,7 @@ span.border {
     padding-bottom: 10px;
   }
   h2 {
-    margin: 0 0 10px 0;
+    margin: 0 0 10px;
     text-indent: 25px;
   }
   .message {
@@ -608,24 +677,24 @@ span.border {
     width: 100px;
   }
   p {
-    padding: 33px 5px 0px 5px;
+    padding: 33px 5px 0;
   }
   img {
     float: left;
   }
   .quality {
     img {
-      margin: 0px 25px 0px 45px;
+      margin: 0 25px 0 45px;
     }
   }
   .delivery {
     img {
-      margin: 12px 25px 0px 30px;
+      margin: 12px 25px 0 30px;
     }
   }
   .coins {
     img {
-      margin: 4px 25px 0px 35px;
+      margin: 4px 25px 0 35px;
     }
   }
 }
@@ -638,7 +707,7 @@ span.border {
   .details {
     .owner {
       padding: 3px;
-      border: 1px solid $main-border-color;
+      border: 1px solid $color-d0d0d0;
       overflow: auto;
       margin-bottom: 15px;
       .name {
@@ -664,9 +733,9 @@ span.border {
 }
 
 #draggable-img-list {
-  padding: 10px 0px 15px 0px;
+  padding: 10px 0 15px;
   .holder {
-    border: 1px solid $main-border-color;
+    border: 1px solid $color-d0d0d0;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     -o-border-radius: 3px;
@@ -682,7 +751,7 @@ span.border {
         color: #5f3e6f;
         font-size: 16px;
         background: url(../theme/produces/arrow.png) no-repeat 0px 3px;
-        padding: 0px 0px 4px 17px;
+        padding: 0 0 4px 17px;
       }
       .functional {
         padding-top: 7px;
@@ -705,7 +774,7 @@ span.border {
         border: 1px solid #744b54;
         -webkit-border-radius: 7px;
         -moz-border-radius: 7px;
-        padding: 3px 0px 0px 5px;
+        padding: 3px 0 0 5px;
         background-color: #f7f7f7;
       }
       .arrow-img {
@@ -756,8 +825,8 @@ span.border {
       margin-top: 100px;
     }
     p {
-      text-indent: 0px;
-      padding: 0px 9px 0px 9px
+      text-indent: 0;
+      padding: 0 9px
     }
   }
   .functional-btn {
@@ -800,43 +869,15 @@ span.border {
       }
     }
     .content {
-      padding: 90px 126px 198px 126px;
+      padding: 90px 126px 198px;
     }
     .size {
       width: 190px;
       height: 250px;
     }
-    .front {
-      .mantshirt {
-        background: url(../theme/produces/tshirt/man-front.png) no-repeat left top;
-      }
-      .womantshirt {
-        background: url(../theme/produces/tshirt/woman-front.png) no-repeat left top;
-      }
-    }
-    .back {
-      .mantshirt {
-        background: url(../theme/produces/tshirt/man-back.png) no-repeat left top;
-      }
-      .womantshirt {
-        background: url(../theme/produces/tshirt/woman-back.png) no-repeat left top;
-      }
-    }
     .functional {
-      position: absolute;
       top: 780px;
       left: 790px;
-    }
-    .template-1 {
-      .front {
-        display: block;
-      }
-      .back {
-        display: none;
-      }
-      .functional {
-        display: none;
-      }
     }
     .template-3 {
       .front {
@@ -850,17 +891,6 @@ span.border {
       }
       .show {
         display: block;
-      }
-    }
-    .template-2 {
-      .front {
-        display: none;
-      }
-      .back {
-        display: block;
-      }
-      .functional {
-        display: none;
       }
     }
   }
@@ -881,10 +911,6 @@ span.border {
         background: url(../theme/produces/cup/cupView.png) no-repeat right top;
         height: 80px;
         width: 612px;
-      }
-      .size {
-        width: 612px;
-        height: 273px;
       }
     }
     .double {
@@ -930,12 +956,12 @@ span.border {
     }
 
     .template img {
-      border: 1px solid #dddddd;
+      border: 1px solid $color-d0d0d0;
       cursor: pointer;
       opacity: 0.5;
       &:hover {
         opacity: 0.95;
-        border: 1px solid #744B54;
+        border: 1px solid $color-744b54;
       }
     }
     #cup-templates-selector {
@@ -945,7 +971,7 @@ span.border {
     .template-4 {
       img#cup-long_image {
         display: block;
-        border: 1px solid #744B54;
+        border: 1px solid $color-744b54;
         opacity: 1;
       }
       .long {
@@ -958,7 +984,7 @@ span.border {
     .template-5 {
       img#cup-double_image {
         display: block;
-        border: 1px solid #744B54;
+        border: 1px solid $color-744b54;
         opacity: 1;
       }
       .long {
@@ -972,41 +998,17 @@ span.border {
   .trivet {
     .content {
       float: left;
-      overflow: hidden;
       margin-left: 342px;
-
     }
     .functional-btn {
       float: left;
     }
-    .size {
-      width: 300px;
-      height: 300px;
-    }
   }
   .postcard {
-    overflow: hidden;
-    position: relative;
-    .border {
-      border: 1px solid #744B54;
-      background: #FFFFFF;
-      cursor: pointer;
-      font-family: 'Times New Roman';
-      font-size: 16px;
-      .content {
-        background: #FFFFFF;
-        position: relative;
-        overflow: hidden;
-      }
-    }
-    .size {
-      width: 300px;
-      height: 429px;
-    }
     .postcard-tab-front {
       .left-tab {
         background: url(../theme/produces/postcard/rightTab.png) right no-repeat;
-        margin: 0px 0px 0px 530px;
+        margin: 0 0 0 530px;
         text-indent: 39px;
       }
       .content-img-left {
@@ -1018,12 +1020,12 @@ span.border {
     .postcard-tab-middle {
       .left-tab {
         background: url(../theme/produces/postcard/leftTab.png) right no-repeat;
-        margin: 0px 0px 0px 202px;
+        margin: 0 0 0 202px;
         text-indent: 25px;
       }
       .right-tab {
         background: url(../theme/produces/postcard/rightTab.png) right no-repeat;
-        margin: 0px 0px 0px 351px;
+        margin: 0 0 0 351px;
         text-indent: 50px;
       }
       .content-img-left {
@@ -1033,16 +1035,16 @@ span.border {
       .content-img-right {
         float: left;
         width: 300px;
-        font-family: 'Times New Roman';
+        font-family: 'Times New Roman', serif;
         font-size: 16px;
-        color: #000000;
+        color: $color-000000;
 
       }
     }
     .postcard-tab-back {
       .left-tab {
         background: url(../theme/produces/postcard/leftTab.png) right no-repeat;
-        margin: 0px 0px 0px 352px;
+        margin: 0 0 0 352px;
         text-indent: 19px;
       }
       .content-img-left {
@@ -1056,7 +1058,7 @@ span.border {
     }
     .tab {
       float: left;
-      color: #ffffff;
+      color: $color-ffffff;
       width: 125px;
       height: 22px;
       cursor: pointer;
@@ -1109,7 +1111,7 @@ span.border {
     }
     .text-box {
       position: relative;
-      background: #FFFFFF;
+      background: $color-ffffff;
       overflow: hidden;
       text-align: left;
     }
@@ -1158,159 +1160,74 @@ span.border {
 #text-editor {
   font: 12px Arial, Helvetica, sans-serif;
   position: fixed;
-  background: #ffffff;
+  background: $color-ffffff;
   z-index: 102;
-  color: #000000;
-  border: 4px solid #1a331c;
+  color: $color-000000;
+  border: 4px solid $color-1a331c;
   text-align: left;
-  display: hidden;
 }
 
 .details {
   .tshirt {
-    position: relative;
-    .size {
-      width: 190px;
-      height: 250px;
-    }
     .sides {
-      padding: 90px 126px 198px 126px;
+      padding: 90px 126px 198px;
       overflow: hidden;
       display: inline-block;
     }
     .content {
       overflow: hidden;
     }
-    .front {
-      .mantshirt {
-        background: url(../theme/produces/tshirt/man-front.png) no-repeat left top;
-        height: 538px;
-        width: 442px;
-      }
-      .womantshirt {
-        background: url(../theme/produces/tshirt/woman-front.png) no-repeat left top;
-        height: 538px;
-        width: 442px;
-      }
-    }
+    .front,
     .back {
-      .mantshirt {
-        background: url(../theme/produces/tshirt/man-back.png) no-repeat left top;
-        height: 538px;
-        width: 442px;
-      }
+      .mantshirt,
       .womantshirt {
-        background: url(../theme/produces/tshirt/woman-back.png) no-repeat left top;
         height: 538px;
         width: 442px;
-      }
-    }
-    .functional {
-      position: absolute;
-      top: 370px;
-      left: 173px;
-    }
-    .template-1 {
-      .front {
-        display: block;
-      }
-      .back {
-        display: none;
-      }
-      .functional {
-        display: none;
       }
     }
     .template-3 {
-      .front {
-        display: none;
-      }
+      .front,
       .back {
         display: none;
       }
-      .functional {
-        display: block;
-      }
+      .functional,
       .show {
         display: block;
-      }
-    }
-    .template-2 {
-      .front {
-        display: none;
-      }
-      .back {
-        display: block;
-      }
-      .functional {
-        display: none;
       }
     }
   }
   .cup {
     width: 612px;
     height: 300px;
-    display: inline-block;
-    position: relative;
     text-align: left;
     .long {
-      text-align: right;
       .content {
-        overflow: hidden;
-        text-align: left;
         span {
           background: url(../theme/produces/cup/borderLarge.png) no-repeat left top;
         }
       }
-      .cup-head {
-        background: url(../theme/produces/cup/cupView.png) no-repeat right top;
-        height: 80px;
-      }
-      .size {
-        width: 612px;
-        height: 273px;
-      }
     }
     .left {
-      background: url(../theme/produces/cup/cupLeft.png) no-repeat right top;
-      width: 400px;
       height: 300px;
       text-align: left;
       .position {
-        padding-top: 50px;
-        padding-left: 117px;
         .content {
           display: inline-block;
           overflow: hidden;
         }
-      }
-      .size {
-        width: 190px;
-        height: 210px;
       }
     }
     .right {
-      background: url(../theme/produces/cup/cupRight.png) no-repeat right top;
-      float: left;
-      width: 400px;
       height: 300px;
-      display: none;
       text-align: left;
       .position {
-        padding-top: 50px;
-        padding-left: 113px;
         .content {
           display: inline-block;
           overflow: hidden;
         }
       }
-      .size {
-        width: 190px;
-        height: 210px;
-      }
     }
     .functional {
-      position: absolute;
       padding-top: 40px;
       top: 260px;
       left: 160px;
@@ -1318,41 +1235,10 @@ span.border {
   }
   .trivet {
     .content {
-      overflow: hidden;
       margin-left: 10px;
-      span {
-        &.square {
-          background: url(../theme/produces/trivet/border.png) no-repeat left top;
-        }
-        &.circle {
-          background: url(../theme/produces/trivet/borderCircle.png) no-repeat left top;
-        }
-      }
-    }
-    .size {
-      width: 300px;
-      height: 300px;
     }
   }
   .postcard {
-    overflow: hidden;
-    position: relative;
-    .border {
-      border: 1px solid #744B54;
-      background: #FFFFFF;
-      cursor: pointer;
-      font-family: 'Times New Roman';
-      font-size: 16;
-      .content {
-        background: #FFFFFF;
-        position: relative;
-        overflow: hidden;
-      }
-    }
-    .size {
-      width: 300px;
-      height: 429px;
-    }
     .postcard-tab-front {
       margin-left: 162px;
       .content {
@@ -1361,7 +1247,7 @@ span.border {
         height: 429px;
         overflow: hidden;
         display: inline-block;
-        border: 1px solid #000000;
+        border: 1px solid $color-000000;
       }
     }
     .postcard-tab-middle {
@@ -1373,7 +1259,7 @@ span.border {
           width: 300px;
           height: 429px;
           overflow: hidden;
-          border: 1px solid #000000;
+          border: 1px solid $color-000000;
         }
       }
       .right {
@@ -1382,10 +1268,10 @@ span.border {
           float: left;
           width: 300px;
           height: 429px;
-          font-family: 'Times New Roman';
+          font-family: 'Times New Roman', serif;
           font-size: 16px;
-          color: #000000;
-          border: 1px solid #000000;
+          color: $color-000000;
+          border: 1px solid $color-000000;
         }
       }
       .side-links {
@@ -1397,12 +1283,12 @@ span.border {
       .content {
         float: left;
         width: 300px;
-        border: 1px solid #000000;
+        border: 1px solid $color-000000;
       }
     }
     .tab {
       float: left;
-      color: #ffffff;
+      color: $color-ffffff;
       width: 125px;
       height: 22px;
       cursor: pointer;
@@ -1456,7 +1342,7 @@ span.border {
     }
     .text-box {
       position: relative;
-      background: #FFFFFF;
+      background: $color-ffffff;
       overflow: hidden;
       text-align: left;
     }
@@ -1475,13 +1361,9 @@ span.border {
     }
   }
   .mousepad {
-    overflow: hidden;
-    position: relative;
-    text-align: left;
     .square {
       width: 572px;
       height: 497px;
-      overflow: hidden;
       margin-left: 10px;
       span {
         background: url(../theme/produces/mousepad/border.png) no-repeat left top;
@@ -1494,7 +1376,6 @@ span.border {
     .circle {
       width: 497px;
       height: 497px;
-      overflow: hidden;
       margin-left: 10px;
       span {
         background: url(../theme/produces/mousepad/borderCircle.png) no-repeat left top;
@@ -1512,18 +1393,18 @@ span.border {
   display: none;
   text-align: center;
   width: 850px;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   img {
-    padding: 14px 0px 14px 0px;
+    padding: 14px 0;
   }
 }
 
 .studio-funcional-btn {
-  border: 0px solid #f2ffd7;
+  border: 0 solid $color-f2ffd7;
   width: 64px;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   tr {
     height: 32px;
   }
@@ -1531,9 +1412,9 @@ span.border {
     width: 32px;
   }
   img {
-    border: 1px solid #f2ffd7;
+    border: 1px solid $color-f2ffd7;
     &:hover {
-      border: 1px solid #744b54;
+      border: 1px solid $color-744b54;
     }
   }
 }
@@ -1544,10 +1425,10 @@ span.border {
   visibility: visible;
   zoom: 1;
   opacity: 0.6;
-  background-color: rgb(255, 255, 255);
+  background-color: $color-ffffff;
   position: absolute;
   z-index: 11;
-  top: 0px;
+  top: 0;
 }
 
 .new-label {
@@ -1559,7 +1440,7 @@ span.border {
 
 // on view product page
 .sub-category-tag {
-  border-bottom: 1px #E7E7E7 solid;
+  border-bottom: 1px $color-d0d0d0 solid;
   padding-bottom: 0.5em;
   padding-top: 0.5em;
   margin-bottom: 0.5em;
@@ -1568,10 +1449,10 @@ span.border {
 .details {
   // TODO: Fix this.
   .view-price {
-    padding: 40px 12px 5px 0px;
+    padding: 40px 12px 5px 0;
     span {
       font-size: 24px;
-      color: #ff2700;
+      color: $color-ff2700;
     }
   }
 }
@@ -1590,65 +1471,54 @@ span.border {
 
 // global components
 
-#tshirt-color, #allowed-tshirt-color {
-  //padding-bottom: 5px;
-  padding-top: 7px;
-  label {
-    display: block;
-    padding-bottom: 5px;
-  }
-  span {
-    border: 1px solid $main-border-color;
-    border-radius: 3px 3px 3px 3px;
-    cursor: pointer;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    padding: 4px;
-    margin: 2px;
-    &:hover {
-      border: 1px solid #BE6227;
-      -moz-box-shadow: 0 0 5px #BE6227;
-      -webkit-box-shadow: 0 0 5px #BE6227;
-      box-shadow: 0 0 5px #BE6227;
-    }
-    &.selected {
-      border: 1px solid #A5628D;
-      background-color: #F5F5F5;
-      -moz-box-shadow: 0 0 5px #A5628D;
-      -webkit-box-shadow: 0 0 5px #A5628D;
-      box-shadow: 0 0 5px #A5628D;
-    }
-  }
-}
-
+#tshirt-color,
+#allowed-tshirt-color,
 #tshirt-sizes {
   label {
     display: block;
   }
+
   span {
-    border: 1px solid $main-border-color;
-    border-radius: 3px 3px 3px 3px;
+    border: 1px solid $color-d0d0d0;
+    border-radius: 3px;
     cursor: pointer;
     display: inline-block;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: bold;
-    margin: 2px;
-    min-width: 25px;
     padding: 4px;
-    text-align: center;
+    margin: 2px;
+
     &:hover {
-      border: 1px solid #BE6227;
-      -moz-box-shadow: 0 0 5px #BE6227;
-      -webkit-box-shadow: 0 0 5px #BE6227;
-      box-shadow: 0 0 5px #BE6227;
+      border: 1px solid $color-be6227;
+      -moz-box-shadow: 0 0 5px $color-be6227;
+      -webkit-box-shadow: 0 0 5px $color-be6227;
+      box-shadow: 0 0 5px $color-be6227;
     }
     &.selected {
-      border: 1px solid #A5628D;
-      background-color: #F5F5F5;
-      -moz-box-shadow: 0 0 5px #A5628D;
-      -webkit-box-shadow: 0 0 5px #A5628D;
-      box-shadow: 0 0 5px #A5628D;
+      border: 1px solid $color-a5628d;
+      background-color: $color-f5f5f5;
+      -moz-box-shadow: 0 0 5px $color-a5628d;
+      -webkit-box-shadow: 0 0 5px $color-a5628d;
+      box-shadow: 0 0 5px $color-a5628d;
     }
+  }
+}
+
+#tshirt-color, #allowed-tshirt-color {
+  //padding-bottom: 5px;
+  padding-top: 7px;
+  label {
+    padding-bottom: 5px;
+  }
+  span {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+#tshirt-sizes {
+  span {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    min-width: 25px;
+    text-align: center;
   }
 }

@@ -1,0 +1,44 @@
+</div><div class="clear"></div>
+    <footer itemscope itemtype="http://schema.org/WPFooter">
+        <div class="grid-container">
+            <div class="grid-55 mobile-grid-55">
+                <div class="social">
+                    <div class="group-title"><?php echo $this->t->_('we_in_social_networks'); ?>:</div>
+                    <ul>
+                        <li class="vk"><a href="http://vk.com/club_photoprint_in_ua" target="_blank" rel="nofollow"><span></span></a></li><li class="fb"><a href="https://www.facebook.com/groups/photoprint.in.ua/" target="_blank" rel="nofollow"><span></span></a></li><li class="g-plus"><a href="https://plus.google.com/u/0/communities/116171746531229456166" target="_blank" rel="nofollow publisher"><span></span></a></li><li class="twitter"><a href="https://twitter.com/photoprint_ua" target="_blank" rel="nofollow"><span></span></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">© «Фотопрінт» 2010-<?php echo date("Y"); ?></div>
+            </div>
+            <div class="grid-45 mobile-grid-45">
+                <div class="cooperating">
+                    <div class="group-title"><?php echo $this->t->_('cooperation') ?>:</div>
+                    <div class="group-message">&rarr;
+                        <a href="<?= $this->h()->url()->build('/info/designers'); ?>"><?php echo $this->t->_('designers') ?></a>
+                    </div>
+                    <div class="group-message">&rarr;
+                        <a href="<?= $this->h()->url()->build('/info/developers'); ?>"><?php echo $this->t->_('developers') ?></a>
+                    </div>
+                    <div class="group-message">&rarr;
+                        <a href="<?= $this->h()->url()->build('/info/business'); ?>"><?php echo $this->t->_('business') ?></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </footer>
+<?php $this->h()->static()->headJS(); ?>
+<?php echo $this->render('controls/rteEditor.phtml') ?>
+<?php echo $this->render('controls/ga/init.phtml') ?>
+<script>
+    (function ($, d) {
+        $.each(readyQ, function (i, f) {
+            $(f)
+        });
+        $.each(bindReadyQ, function (i, f) {
+            $(d).bind("ready", f)
+        })
+    })(jQuery, document)
+</script>
+</body>
+</html>

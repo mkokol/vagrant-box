@@ -1,0 +1,36 @@
+<?= $this->render('controls/header.phtml') ?>
+
+<div class="grid-container order-review">
+    <div class="grid-60 push-20 mobile-grid-100">
+        <form method="post">
+            <div class="review">
+                <label><?= $this->t->_('are_you_happy_with_our_service') ?></label>
+                <span class="star-rating quality">
+                    <input type="radio" name="service_rating" value="1"><i></i>
+                    <input type="radio" name="service_rating" value="2"><i></i>
+                    <input type="radio" name="service_rating" value="3"><i></i>
+                    <input type="radio" name="service_rating" value="4"><i></i>
+                    <input type="radio" name="service_rating" value="5"><i></i>
+                </span>
+                <textarea name="service_comment" rows="5" placeholder="<?= $this->t->_('leave_here_your_comment') ?>"></textarea>
+                <div class="clear"></div>
+            </div>
+            <div class="review">
+                <label><?= $this->t->_('are_you_happy_with_the_quality_of_the_product') ?></label>
+                <span class="star-rating quality">
+                    <input type="radio" name="product_rating" value="1"><i></i>
+                    <input type="radio" name="product_rating" value="2"><i></i>
+                    <input type="radio" name="product_rating" value="3"><i></i>
+                    <input type="radio" name="product_rating" value="4"><i></i>
+                    <input type="radio" name="product_rating" value="5"><i></i>
+                </span>
+                <textarea name="product_comment" rows="5" cols="60" placeholder="<?= $this->t->_('leave_here_your_comment') ?>"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="<?= $this->t->_('send') ?>"
+            </div>
+        </form>
+    </div>
+</div>
+
+<?= $this->render('controls/footer.phtml') ?>

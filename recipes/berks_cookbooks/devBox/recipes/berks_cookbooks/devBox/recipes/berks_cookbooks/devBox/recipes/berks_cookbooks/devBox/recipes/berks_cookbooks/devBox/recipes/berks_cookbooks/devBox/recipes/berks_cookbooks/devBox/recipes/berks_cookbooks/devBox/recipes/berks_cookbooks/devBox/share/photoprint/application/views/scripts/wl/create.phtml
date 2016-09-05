@@ -1,0 +1,26 @@
+<?php echo $this->render('controls/header.phtml'); ?>
+
+<script type="text/javascript">
+    var saveBtnText= '<?php echo $this->t->_('save_btn'); ?>';
+    var cancelBtnText= '<?php echo $this->t->_('cancel_btn'); ?>';
+</script>
+<div class="grid-container">
+    <div class="breadcrumbs grid-100" itemprop="breadcrumb">
+        <a href="<?= $this->h()->url()->build('/'); ?>"><?php echo $this->t->_('main_page_link'); ?></a> &raquo;
+        <a href="<?= $this->h()->url()->build('/partnership', array('type' => 'public')); ?>"><?php echo $this->t->_('my_room'); ?></a> &raquo;
+        <?php echo $this->t->_($this->group); ?>
+    </div>
+    <div id="dragImagesStudia" class="grid-100" data-wl-code="<?php echo $this->wlCode ?>">
+        <?php if($this->itemId): ?><input type="hidden" id="itemId" name="itemId" value="<?php echo $this->itemId    ?>" /><?php endif; ?>
+        <input type="hidden" id="group" name="group" value="<?php echo $this->group; ?>" />
+        <input type="hidden" id="item" name="item" value="<?php echo $this->item; ?>" />
+        <input type="hidden" id="template" name="template" value="<?php echo $this->templateId; ?>" />
+
+        <?php echo $this->render('produces/controls/dragubleimage.phtml'); ?>
+        <div class="preview-created-product">
+            <?php echo $this->render("controls/products/create/$this->group.phtml"); ?>
+        </div>
+    </div>
+</div>
+
+<?php echo $this->render('controls/footer.phtml'); ?>

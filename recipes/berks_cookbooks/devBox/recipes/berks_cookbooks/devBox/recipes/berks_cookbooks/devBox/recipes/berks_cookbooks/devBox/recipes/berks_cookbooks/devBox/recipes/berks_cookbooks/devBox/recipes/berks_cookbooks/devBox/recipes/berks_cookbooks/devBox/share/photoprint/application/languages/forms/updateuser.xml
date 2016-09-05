@@ -1,0 +1,184 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <!-- Заголовки полів -->
+        <tu tuid="user_name" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Прізвище І.П.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Фамилия И.О.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="name" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ім'я</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Имя</seg>
+            </tuv>
+        </tu>
+        <tu tuid="surname" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Прізвище</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Фамилия</seg>
+            </tuv>
+        </tu>
+        <tu tuid="password" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Пароль</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пароль</seg>
+            </tuv>
+        </tu>
+        <tu tuid="confirm_password" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Повторіть пароль</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Повторите пароль</seg>
+            </tuv>
+        </tu>
+        <tu tuid="email" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>E-mail адрес</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>E-mail адрес</seg>
+            </tuv>
+        </tu>
+        <tu tuid="phone" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Телефон</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Телефон</seg>
+            </tuv>
+        </tu>
+        <tu tuid="captcha" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Код на картинці</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Код на картинке</seg>
+            </tuv>
+        </tu>
+        <!-- Помилки валідації -->
+        <tu tuid="bad_captcha" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Вы ввели неверный код.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="is_empty" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Заповніте поле, будь-ласка.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Заполните поле, пожалуйста.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="too_short" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Довжина введеного значення "%value%", менше ніж %min% символів.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Длина введённого значения "%value%", меньше чем %min% символов.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="too_long" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Довжина введеного значення "%value%", більша ніж %max% символів.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Длина введённого значения "%value%", больше чем %max% символов.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="not_same" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Значення не збігаються.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Значения не совпадают.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="not_match" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Значение "%value%" не подходит под шаблон регулярного выражения "%pattern%"</seg>
+            </tuv>
+        </tu>
+        <tu tuid="invalid" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>"%value%" неправильный адрес електронной почты.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="invalid_hostname" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>"%hostname%" неверный домен для адреса "%value%"</seg>
+            </tuv>
+        </tu>
+        <tu tuid="invalid_mx_record" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Домен "%hostname%" не имеет MX-записи об адресе "%value%"</seg>
+            </tuv>
+        </tu>
+        <tu tuid="dot_atom" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>"%localPart%" не соответствует формату dot-atom</seg>
+            </tuv>
+        </tu>
+        <tu tuid="quoted_string" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>"%localPart%" не соответствует формату указанной строки</seg>
+            </tuv>
+        </tu>
+        <tu tuid="invalid_local_part" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>"%localPart%" не правильное имя для адреса "%value%", вводите адрес вида имя@домен</seg>
+            </tuv>
+        </tu>
+        <tu tuid="save_btn" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Зберегти</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Сохранить</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

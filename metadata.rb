@@ -16,3 +16,7 @@ depends 'mysql_tuning', '~> 0.4.0'
 depends 'imagemagick', '~> 0.2.3'
 depends 'java', '~> 1.39.0'
 depends 'elasticsearch', '~> 2.2.1'
+depends 'logstash', '~> 0.12.0'
+depends 'postfix', '~> 3.8.0'
+
+depends 'phpmyadmin', '~> 1.0.8'

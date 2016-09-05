@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="select_products" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Вибір продукта</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Выбор продукта</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

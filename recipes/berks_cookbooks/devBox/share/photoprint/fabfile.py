@@ -4,15 +4,15 @@ from fabric.operations import run, settings, put
 # connect to EC2
 env.host_string = 'ec2-54-194-205-17.eu-west-1.compute.amazonaws.com'
 env.user = 'ubuntu'
-env.key_filename = 'mk-ireland.pem'
+env.key_filename = '~/.ssh/mk-ireland.pem'
 
 def deploy():
     local("export COPYFILE_DISABLE=true")
     local("sudo rm -rf public/products")
 
     local("php composer.phar self-update")
-    local("grunt")
-    local("tar czf update-photoprint.tar.gz application public vendor build index.php build.xml composer.json composer.lock composer.phar")
+    local("gulp")
+    local("tar czf update-photoprint.tar.gz application public vendor db-patches index.php build.xml composer.json composer.lock composer.phar")
 
     run("rm -rf /var/www/photoprint.in.ua.new");
     run("rm -rf /var/www/photoprint.in.ua.old");

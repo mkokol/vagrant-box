@@ -1,0 +1,124 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Друк ваших фото на сувенірах. Форма оплати</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Печать ваших фото на сувенирах. Форма оплаты</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Форма оплати на сайте photoprint.in.ua</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Форма оплаты на сайте photoprint.in.ua</seg>
+            </tuv>
+        </tu>
+        <tu tuid="forma_oplaty" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Спосіб оплати</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Способы оплаты</seg>
+            </tuv>
+        </tu>
+        <tu tuid="partnership" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Партнерська програма</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Партнерская программа</seg>
+            </tuv>
+        </tu>
+        <tu tuid="partnership_text" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ми пропонуємо партнерське рішення для конвертації трафіку в гроші з кожного замовлення зробленого
+                    по посиланню з вашого сайту 15% ваші, щотижнева виплата, та інше ... Докладніше можна прочитати
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Мы предлагаем партнёрское решение для конвертации трафика в деньги с каждого заказа сделанного по
+                    ссылке с вашего сайта 15% ваши, еженедельная выплата, и другое... Подробнее можно прочитать
+                </seg>
+            </tuv>
+        </tu>
+        <tu tuid="partnership_info_link" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>тут</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>здесь</seg>
+            </tuv>
+        </tu>
+        <tu tuid="partnership_register_text" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Для реєстрації на партнерскую программу перейдіть</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Для регистрации на партнерскую программу перейдите</seg>
+            </tuv>
+        </tu>
+        <tu tuid="partnership_register_link" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>сюда</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>сюда</seg>
+            </tuv>
+        </tu>
+        <tu tuid="area" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Товар доставляється по всій території України.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Товар доставляется по всей территории Украины.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="bad_produces" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Ми зобов’язуємось якісно виготовити Ваше замовлення і в найкоротші терміни відправити його Вам.
+                </seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Мы обязуемся качественно изготовить Ваш заказ и в кратчайший срок отправить его Вам.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="after_receive" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Оплата по доставці (Доставка тільки через Автолюкс чи Нова пошта)</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Оплата по доставке (Доставка только через Автолюкс или Новая почта)</seg>
+            </tuv>
+        </tu>
+        <tu tuid="payment_types_you_can_use" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>В інтернет магазині Photoprint.in.ua ви можете оплатити замовлення наступними способами</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>В интернет магазине Photoprint.in.ua вы можете оплатить заказ следующими способами</seg>
+            </tuv>
+        </tu>
+        <tu tuid="check_passport" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Перевірити атестат</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Проверить аттестат</seg>
+            </tuv>
+        </tu>
+
+    </body>
+</tmx>

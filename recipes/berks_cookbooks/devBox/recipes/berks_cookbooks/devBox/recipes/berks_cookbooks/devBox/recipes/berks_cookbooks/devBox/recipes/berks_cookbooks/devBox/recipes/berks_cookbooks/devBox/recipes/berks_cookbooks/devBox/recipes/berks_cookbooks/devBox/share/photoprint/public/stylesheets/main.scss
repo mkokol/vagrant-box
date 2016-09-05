@@ -1,0 +1,1654 @@
+@import 'helpers/helpers';
+@import 'helpers/grid';
+@import 'content/main';
+@import 'content/global';
+
+@import 'helpers/form';
+@import 'helpers/mbox';
+@import 'content/page-home';
+@import 'content/page-all-static';
+@import 'content/page-basket';
+@import 'content/page-order-review';
+
+// mobile-info
+
+.alpha {
+  padding-left: 0;
+}
+
+.omega {
+  padding-right: 0;
+}
+
+// product list
+.products {
+  .info {
+    float: left;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    .image {
+      float: left;
+      width: 210px;
+      overflow: hidden;
+      img {
+        cursor: pointer;
+      }
+      .zoom {
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+        width: 200px;
+        cursor: pointer;
+        img {
+          margin-right: 7px;
+        }
+        span {
+          position: relative;
+          top: -6px;
+        }
+      }
+    }
+    .details {
+      h2 {
+        padding: 0 0 7px 0;
+      }
+      div {
+        height: auto;
+        overflow: auto;
+        &.functional {
+          padding-top: 15px;
+        }
+      }
+      label {
+        display: inline-block;
+        width: 85px;
+        font-weight: bold;
+      }
+      span {
+        width: 100%;
+        &.price {
+          color: #5F3E6F;
+          font-weight: bold;
+        }
+      }
+      .green-btn{
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #products {
+    .info {
+      .details {
+        float: left;
+      }
+    }
+  }
+}
+
+span.border {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+}
+
+.preview {
+  border: 1px solid $main-border-color;
+  margin: 10px 0;
+  cursor: pointer;
+  position: relative;
+  &:hover {
+    -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+    .functional {
+      display: block;
+      a {
+        opacity: 0.5;
+        margin-left: 3px;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    .info-more {
+      overflow: visible;
+      a {
+        height: auto;
+        top: inherit;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+  .info {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: right;
+    padding-bottom: 10px;
+    label.list {
+      padding: 2px 2px 2px 0;
+    }
+    span.list {
+      border-right: 1px dotted #d0d0d0;
+      padding: 2px 5px 2px 5px;
+    }
+    span.list:last-child {
+      border-right: none;
+    }
+    span::before {
+      content: "₴ ";
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+  .info-more {
+    display: inline-block;
+    width: 100%;
+    height: 23px;
+    position: relative;
+    overflow: hidden;
+    a {
+      position: absolute;
+      display: inline-block;
+      height: 23px;
+      width: 100%;
+      border-top: 1px dotted #E7E7E7;
+      top: 0;
+      span {
+        display: inline-block;
+        width: 100%;
+        padding: 5px 10px 5px 10px;
+        font-size: 13px;
+      }
+    }
+  }
+  .functional {
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    padding-right: 5px;
+    text-align: right;
+    display: none;
+  }
+  .image {
+    cursor: pointer;
+    text-align: center;
+    height: 270px;
+    font: 0/0 a;
+    &:before {
+      content: ' ';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      font: 16px/1 Arial sans-serif;
+    }
+    .tshirt {
+      margin: 10px;
+      .mantshirt {
+        background: url(../theme/produces/tshirt/man-front-preview.png) no-repeat right top;
+        overflow: auto;
+      }
+      .womantshirt {
+        background: url(../theme/produces/tshirt/woman-front-preview.png) no-repeat right top;
+        overflow: auto;
+      }
+      .content {
+        margin: 42px 60px 93px 58px;
+        position: relative;
+        overflow: hidden;
+        width: 89px;
+        height: 117px;
+      }
+    }
+    .cup {
+      margin: 10px;
+      overflow: auto;
+      .content {
+        overflow: hidden;
+      }
+      .long {
+        text-align: right;
+        margin: 60px 0 60px 0;
+        overflow: auto;
+        .head {
+          background: url(../theme/produces/cup/cupViewSmall.png) no-repeat right top;
+          height: 40px;
+        }
+        .content {
+          text-align: left;
+          width: 207px;
+          height: 92px;
+          position: relative;
+          overflow: hidden;
+          span {
+            background: url(../theme/produces/cup/border-large-small.png) no-repeat left top;
+            width: 207px;
+            height: 92px;
+          }
+        }
+      }
+      .right {
+        background: url(../theme/produces/cup/cup-right-small.png) no-repeat right top;
+        margin: 31px 0 31px 0;
+        .content {
+          padding: 32px 0 24px 23px;
+          text-align: left;
+        }
+        .image {
+          position: relative;
+          overflow: hidden;
+        }
+        .size {
+          width: 122px;
+          height: 134px;
+        }
+      }
+      .left {
+        background: url(../theme/produces/cup/cup-left-small.png) no-repeat right top;
+        margin: 31px 0px 55px 0px;
+        display: none;
+        .content {
+          padding: 32px 0px 24px 46px;
+          text-align: left;
+        }
+        .image {
+          position: relative;
+          overflow: hidden;
+        }
+        .size {
+          width: 122px;
+          height: 134px;
+        }
+      }
+    }
+    .trivet {
+      text-align: left;
+      margin: 10px;
+      overflow: auto;
+      .size {
+        width: 207px;
+        height: 207px;
+      }
+      .content {
+        margin: 22px 0px 23px 0px;
+        position: relative;
+        overflow: hidden;
+        span {
+          &.square {
+            background: url(../theme/produces/trivet/border-small.png) no-repeat left top;
+          }
+          &.circle {
+            background: url(../theme/produces/trivet/border-circle-small.png) no-repeat left top;
+          }
+        }
+      }
+    }
+    .mousepad {
+      text-align: left;
+      margin: 10px;
+      overflow: auto;
+      .content {
+        position: relative;
+        overflow: hidden;
+      }
+      .circle {
+        margin: 22px 0px 23px 0px;
+        span {
+          background: url(../theme/produces/mousepad/border-circle-small.png) no-repeat left top;
+        }
+        .size {
+          width: 207px;
+          height: 207px;
+        }
+      }
+      .square {
+        margin: 36px 0px;
+        span {
+          background: url(../theme/produces/mousepad/border-small.png) no-repeat left top;
+        }
+        .size {
+          width: 207px;
+          height: 180px;
+        }
+      }
+    }
+    .puzzle {
+      text-align: left;
+      margin: 10px;
+      overflow: auto;
+      .content {
+        margin: 52px 0px 53px 0px;
+        position: relative;
+        overflow: hidden;
+        span {
+          background: url(../theme/produces/puzzle/border-rectangle-small.png) no-repeat left top;
+        }
+      }
+      .size {
+        width: 207px;
+        height: 147px;
+      }
+    }
+    .postcard {
+      margin: 10px;
+      .border {
+        margin: 0px 19px 0px 19px;
+        border: 1px solid #744B54;
+        .content {
+          position: relative;
+          overflow: hidden;
+        }
+      }
+      .size {
+        width: 171px;
+        height: 252px;
+      }
+    }
+  }
+}
+
+.view {
+  .tshirt {
+    position: relative;
+    .size {
+      width: 190px;
+      height: 250px;
+    }
+    .front {
+      .mantshirt {
+        background: url(../theme/produces/tshirt/man-front.png) no-repeat left top;
+      }
+      .womantshirt {
+        background: url(../theme/produces/tshirt/woman-front.png) no-repeat left top;
+      }
+    }
+    .back {
+      .mantshirt {
+        background: url(../theme/produces/tshirt/man-back.png) no-repeat left top;
+      }
+      .womantshirt {
+        background: url(../theme/produces/tshirt/woman-back.png) no-repeat left top;
+      }
+    }
+    .sides {
+      padding: 90px 106px 198px 126px;
+      width: 210px;
+    }
+    .content {
+      position: relative;
+      overflow: hidden;
+    }
+    .functional {
+      position: absolute;
+      top: 370px;
+      left: 173px;
+    }
+    .template-1 {
+      .front {
+        display: block;
+      }
+      .back {
+        display: none;
+      }
+      .functional {
+        display: none;
+      }
+    }
+    .template-3 {
+      .front {
+        display: block;
+      }
+      .back {
+        display: none;
+      }
+      .functional {
+        display: block;
+      }
+    }
+    .template-2 {
+      .front {
+        display: none;
+      }
+      .back {
+        display: block;
+      }
+      .functional {
+        display: none;
+      }
+    }
+  }
+  .cup {
+    display: inline-block;
+    position: relative;
+    .long {
+      text-align: right;
+      height: 300px;
+      .content {
+        position: relative;
+        overflow: hidden;
+        text-align: left;
+        span {
+          background: url(../theme/produces/view/cup/long.png) no-repeat left top;
+        }
+      }
+      .cup-head {
+        background: url(../theme/produces/cup/cupView.png) no-repeat right top;
+        height: 80px;
+      }
+      .size {
+        width: 440px;
+        height: 196px;
+      }
+    }
+    .left {
+      background: url(../theme/produces/cup/cupLeft.png) no-repeat right top;
+      width: 400px;
+      height: 320px;
+      .position {
+        padding-top: 50px;
+        padding-left: 117px;
+      }
+      .content {
+        position: relative;
+        overflow: hidden;
+      }
+      .size {
+        width: 190px;
+        height: 210px;
+      }
+    }
+    .right {
+      background: url(../theme/produces/cup/cupRight.png) no-repeat right top;
+      float: left;
+      width: 400px;
+      height: 320px;
+      display: none;
+      .position {
+        padding-top: 50px;
+        padding-left: 113px;
+      }
+      .content {
+        position: relative;
+        overflow: hidden;
+      }
+      .size {
+        width: 190px;
+        height: 210px;
+      }
+    }
+    .functional {
+      position: absolute;
+      top: 300px;
+      left: 168px;
+    }
+  }
+  .trivet {
+    .content {
+      position: relative;
+      overflow: hidden;
+      span {
+        &.square {
+          background: url(../theme/produces/trivet/border.png) no-repeat left top;
+        }
+        &.circle {
+          background: url(../theme/produces/trivet/borderCircle.png) no-repeat left top;
+        }
+      }
+    }
+    .size {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .postcard {
+    overflow: hidden;
+    position: relative;
+    .border {
+      border: 1px solid #744B54;
+      background: #FFFFFF;
+      cursor: pointer;
+      font-family: 'Times New Roman';
+      font-size: 16;
+      .content {
+        background: #FFFFFF;
+        position: relative;
+        overflow: hidden;
+      }
+    }
+    .size {
+      width: 300px;
+      height: 429px;
+    }
+  }
+  .puzzle {
+    overflow: hidden;
+    span {
+      background: url(../theme/produces/view/puzzle/rectangle.png) no-repeat left top;
+    }
+    .content {
+      overflow: hidden;
+      position: relative;
+    }
+    .size {
+      width: 440px;
+      height: 312px;
+    }
+  }
+  .mousepad {
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    .square {
+      width: 440px;
+      height: 382px;
+      position: relative;
+      overflow: hidden;
+      span {
+        background: url(../theme/produces/view/mousepad/rectangle.png) no-repeat left top;
+      }
+      .size {
+        width: 440px;
+        height: 383px;
+      }
+    }
+    .circle {
+      width: 440px;
+      height: 440px;
+      overflow: hidden;
+      position: relative;
+      span {
+        background: url(../theme/produces/view/mousepad/circle.png) no-repeat left top;
+      }
+      .size {
+        width: 440px;
+        height: 440px;
+      }
+    }
+  }
+}
+
+#similar-product {
+  padding-top: 12px;
+  position: relative;
+  .message {
+    padding-bottom: 5px
+  }
+}
+
+#warranty-product {
+  padding-top: 12px;
+  padding-bottom: 15px;
+  position: relative;
+  h1 {
+    text-indent: 25px;
+    padding-bottom: 10px;
+  }
+  h2 {
+    margin: 0 0 10px 0;
+    text-indent: 25px;
+  }
+  .message {
+    margin-bottom: 15px;
+  }
+  .item-title {
+    font-size: 16px;
+    padding-top: 10px;
+    color: #347339;
+    display: inline-block;
+    width: 100px;
+  }
+  p {
+    padding: 33px 5px 0px 5px;
+  }
+  img {
+    float: left;
+  }
+  .quality {
+    img {
+      margin: 0px 25px 0px 45px;
+    }
+  }
+  .delivery {
+    img {
+      margin: 12px 25px 0px 30px;
+    }
+  }
+  .coins {
+    img {
+      margin: 4px 25px 0px 35px;
+    }
+  }
+}
+
+.catalog {
+  h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .details {
+    .owner {
+      padding: 3px;
+      border: 1px solid $main-border-color;
+      overflow: auto;
+      margin-bottom: 15px;
+      .name {
+        float: left;
+      }
+      span {
+        padding-right: 5px;
+        float: right;
+      }
+      img {
+        float: right;
+      }
+    }
+    .description {
+      padding-top: 5px;
+      padding-bottom: 10px;
+    }
+  }
+  .view {
+    float: left;
+    padding-bottom: 10px;
+  }
+}
+
+#draggable-img-list {
+  padding: 10px 0px 15px 0px;
+  .holder {
+    border: 1px solid $main-border-color;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    overflow: auto;
+    padding: 7px;
+    .albums {
+      text-align: left;
+      display: inline-block;
+      width: 190px;
+      float: left;
+      .selected {
+        color: #5f3e6f;
+        font-size: 16px;
+        background: url(../theme/produces/arrow.png) no-repeat 0px 3px;
+        padding: 0px 0px 4px 17px;
+      }
+      .functional {
+        padding-top: 7px;
+      }
+      #add-photo {
+        display: block;
+        float: left;
+        width: 125px;
+      }
+    }
+    #help-msg {
+      width: 193px;
+      display: none;
+      position: absolute;
+      text-align: left;
+      cursor: pointer;
+      .msg {
+        width: 191px;
+        height: 20px;
+        border: 1px solid #744b54;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        padding: 3px 0px 0px 5px;
+        background-color: #f7f7f7;
+      }
+      .arrow-img {
+        background: url(../theme/arrow.png);
+        width: 17px;
+        height: 10px;
+        margin-left: 8px;
+      }
+    }
+    table {
+      float: right;
+      width: 760px;
+      tr.img {
+        height: 122px;
+        td {
+          width: 20%;
+        }
+      }
+    }
+    .img-holder {
+      z-index: 999;
+      cursor: pointer;
+      img {
+        border: 1px solid #744b54;
+        &.hidden {
+          border: none;
+          display: none;
+        }
+      }
+    }
+    .upload-helper {
+      cursor: pointer;
+    }
+    #pagination {
+      text-align: center;
+      padding: 5px;
+    }
+  }
+}
+
+.create {
+  .start-txt {
+    z-index: 3;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    &:first-child {
+      margin-top: 100px;
+    }
+    p {
+      text-indent: 0px;
+      padding: 0px 9px 0px 9px
+    }
+  }
+  .functional-btn {
+    float: right;
+    padding-left: 10px;
+    width: 70px;
+  }
+  .content-image-border {
+    position: absolute;
+    z-index: 1;
+  }
+  .printData {
+    position: absolute;
+  }
+  .content-block {
+    position: absolute;
+    z-index: 2;
+    cursor: move;
+  }
+  .insert-img {
+    .box {
+      position: absolute;
+      overflow: hidden;
+    }
+  }
+
+  .tshirt {
+    .template {
+      float: left;
+      width: 239px;
+      text-align: left;
+    }
+    .constructor {
+      margin-left: 70px;
+      float: left;
+      width: 442px;
+      .functional-btn {
+        margin-top: 90px;
+        margin-right: 53px;
+      }
+    }
+    .content {
+      padding: 90px 126px 198px 126px;
+    }
+    .size {
+      width: 190px;
+      height: 250px;
+    }
+    .front {
+      .mantshirt {
+        background: url(../theme/produces/tshirt/man-front.png) no-repeat left top;
+      }
+      .womantshirt {
+        background: url(../theme/produces/tshirt/woman-front.png) no-repeat left top;
+      }
+    }
+    .back {
+      .mantshirt {
+        background: url(../theme/produces/tshirt/man-back.png) no-repeat left top;
+      }
+      .womantshirt {
+        background: url(../theme/produces/tshirt/woman-back.png) no-repeat left top;
+      }
+    }
+    .functional {
+      position: absolute;
+      top: 780px;
+      left: 790px;
+    }
+    .template-1 {
+      .front {
+        display: block;
+      }
+      .back {
+        display: none;
+      }
+      .functional {
+        display: none;
+      }
+    }
+    .template-3 {
+      .front {
+        display: none;
+      }
+      .back {
+        display: none;
+      }
+      .functional {
+        display: block;
+      }
+      .show {
+        display: block;
+      }
+    }
+    .template-2 {
+      .front {
+        display: none;
+      }
+      .back {
+        display: block;
+      }
+      .functional {
+        display: none;
+      }
+    }
+  }
+  .cup {
+    .template {
+      width: 210px;
+      float: left;
+      text-align: left;
+    }
+    .long {
+      float: left;
+      .content {
+        text-align: left;
+        overflow: hidden;
+        float: left;
+      }
+      .markup-img {
+        background: url(../theme/produces/cup/cupView.png) no-repeat right top;
+        height: 80px;
+        width: 612px;
+      }
+      .size {
+        width: 612px;
+        height: 273px;
+      }
+    }
+    .double {
+      float: left;
+      padding-left: 100px;
+      .left {
+        background: url(../theme/produces/cup/cupLeft.png) no-repeat left top;
+        width: 373px;
+        height: 300px;
+        padding-left: 117px;
+        padding-top: 50px;
+        .position {
+          padding-top: 50px;
+          padding-left: 117px;
+        }
+        .functional {
+          padding-left: 50px;
+          padding-top: 40px;
+        }
+      }
+      .right {
+        background: url(../theme/produces/cup/cupRight.png) no-repeat left top;
+        width: 419px;
+        height: 300px;
+        text-align: left !important;
+        padding-left: 113px;
+        padding-top: 50px;
+        padding-right: 50px;
+        display: none;
+        .position {
+          padding-top: 50px;
+          padding-left: 113px;
+        }
+        .functional {
+          padding-left: 50px;
+          padding-top: 40px;
+        }
+      }
+      .size {
+        width: 190px;
+        height: 210px;
+      }
+    }
+
+    .template img {
+      border: 1px solid #dddddd;
+      cursor: pointer;
+      opacity: 0.5;
+      &:hover {
+        opacity: 0.95;
+        border: 1px solid #744B54;
+      }
+    }
+    #cup-templates-selector {
+      padding-bottom: 5px;
+      padding-left: 50px;
+    }
+    .template-4 {
+      img#cup-long_image {
+        display: block;
+        border: 1px solid #744B54;
+        opacity: 1;
+      }
+      .long {
+        display: block;
+      }
+      .double {
+        display: none;
+      }
+    }
+    .template-5 {
+      img#cup-double_image {
+        display: block;
+        border: 1px solid #744B54;
+        opacity: 1;
+      }
+      .long {
+        display: none;
+      }
+      .double {
+        display: block;
+      }
+    }
+  }
+  .trivet {
+    .content {
+      float: left;
+      overflow: hidden;
+      margin-left: 342px;
+
+    }
+    .functional-btn {
+      float: left;
+    }
+    .size {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .postcard {
+    overflow: hidden;
+    position: relative;
+    .border {
+      border: 1px solid #744B54;
+      background: #FFFFFF;
+      cursor: pointer;
+      font-family: 'Times New Roman';
+      font-size: 16px;
+      .content {
+        background: #FFFFFF;
+        position: relative;
+        overflow: hidden;
+      }
+    }
+    .size {
+      width: 300px;
+      height: 429px;
+    }
+    .postcard-tab-front {
+      .left-tab {
+        background: url(../theme/produces/postcard/rightTab.png) right no-repeat;
+        margin: 0px 0px 0px 530px;
+        text-indent: 39px;
+      }
+      .content-img-left {
+        float: left;
+        width: 300px;
+        margin-left: 355px;
+      }
+    }
+    .postcard-tab-middle {
+      .left-tab {
+        background: url(../theme/produces/postcard/leftTab.png) right no-repeat;
+        margin: 0px 0px 0px 202px;
+        text-indent: 25px;
+      }
+      .right-tab {
+        background: url(../theme/produces/postcard/rightTab.png) right no-repeat;
+        margin: 0px 0px 0px 351px;
+        text-indent: 50px;
+      }
+      .content-img-left {
+        float: left;
+        width: 300px;
+      }
+      .content-img-right {
+        float: left;
+        width: 300px;
+        font-family: 'Times New Roman';
+        font-size: 16px;
+        color: #000000;
+
+      }
+    }
+    .postcard-tab-back {
+      .left-tab {
+        background: url(../theme/produces/postcard/leftTab.png) right no-repeat;
+        margin: 0px 0px 0px 352px;
+        text-indent: 19px;
+      }
+      .content-img-left {
+        float: left;
+        width: 655px;
+        div {
+          float: right;
+        }
+
+      }
+    }
+    .tab {
+      float: left;
+      color: #ffffff;
+      width: 125px;
+      height: 22px;
+      cursor: pointer;
+      line-height: 25px;
+    }
+    .right-functional-btn {
+      padding-left: 8px;
+      float: left;
+      img {
+        display: block;
+      }
+    }
+    .left-functional-btn {
+      float: left;
+      text-align: right;
+      width: 203px;
+      table {
+        padding-left: 131px;
+      }
+    }
+    .side-links {
+      float: left;
+      width: 600px;
+      text-align: right;
+      padding-top: 7px;
+    }
+
+    .size-origin-postcard {
+      width: 300px;
+      height: 429px;
+    }
+
+    #postcardText {
+      padding: 20px;
+    }
+    .postcard-content-zoom {
+      width: 400px;
+      height: 572px;
+      -moz-transform: scale(0.75);
+      -webkit-transform: scale(0.75);
+      -o-transform: scale(0.75);
+      transform: scale(0.75);
+      position: relative;
+      top: -70px;
+      left: -48px;
+    }
+    .text-box-zoomed {
+      overflow: hidden;
+      position: absolute;
+    }
+    .text-box {
+      position: relative;
+      background: #FFFFFF;
+      overflow: hidden;
+      text-align: left;
+    }
+  }
+  .puzzle {
+    .content {
+      float: left;
+      margin-left: 208px;
+    }
+    .functional-btn {
+      float: left;
+    }
+    .size {
+      width: 572px;
+      height: 406px;
+    }
+  }
+  .mousepad {
+    .content {
+      float: left;
+    }
+    .functional-btn {
+      float: left;
+    }
+    .square {
+      .content {
+        margin-left: 180px;
+      }
+      .size {
+        width: 572px;
+        height: 497px;
+      }
+    }
+    .circle {
+      .content {
+        margin-left: 228px;
+      }
+      .size {
+        width: 497px;
+        height: 497px;
+      }
+    }
+  }
+}
+
+#text-editor {
+  font: 12px Arial, Helvetica, sans-serif;
+  position: fixed;
+  background: #ffffff;
+  z-index: 102;
+  color: #000000;
+  border: 4px solid #1a331c;
+  text-align: left;
+  display: hidden;
+}
+
+.details {
+  .tshirt {
+    position: relative;
+    .size {
+      width: 190px;
+      height: 250px;
+    }
+    .sides {
+      padding: 90px 126px 198px 126px;
+      overflow: hidden;
+      display: inline-block;
+    }
+    .content {
+      overflow: hidden;
+    }
+    .front {
+      .mantshirt {
+        background: url(../theme/produces/tshirt/man-front.png) no-repeat left top;
+        height: 538px;
+        width: 442px;
+      }
+      .womantshirt {
+        background: url(../theme/produces/tshirt/woman-front.png) no-repeat left top;
+        height: 538px;
+        width: 442px;
+      }
+    }
+    .back {
+      .mantshirt {
+        background: url(../theme/produces/tshirt/man-back.png) no-repeat left top;
+        height: 538px;
+        width: 442px;
+      }
+      .womantshirt {
+        background: url(../theme/produces/tshirt/woman-back.png) no-repeat left top;
+        height: 538px;
+        width: 442px;
+      }
+    }
+    .functional {
+      position: absolute;
+      top: 370px;
+      left: 173px;
+    }
+    .template-1 {
+      .front {
+        display: block;
+      }
+      .back {
+        display: none;
+      }
+      .functional {
+        display: none;
+      }
+    }
+    .template-3 {
+      .front {
+        display: none;
+      }
+      .back {
+        display: none;
+      }
+      .functional {
+        display: block;
+      }
+      .show {
+        display: block;
+      }
+    }
+    .template-2 {
+      .front {
+        display: none;
+      }
+      .back {
+        display: block;
+      }
+      .functional {
+        display: none;
+      }
+    }
+  }
+  .cup {
+    width: 612px;
+    height: 300px;
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    .long {
+      text-align: right;
+      .content {
+        overflow: hidden;
+        text-align: left;
+        span {
+          background: url(../theme/produces/cup/borderLarge.png) no-repeat left top;
+        }
+      }
+      .cup-head {
+        background: url(../theme/produces/cup/cupView.png) no-repeat right top;
+        height: 80px;
+      }
+      .size {
+        width: 612px;
+        height: 273px;
+      }
+    }
+    .left {
+      background: url(../theme/produces/cup/cupLeft.png) no-repeat right top;
+      width: 400px;
+      height: 300px;
+      text-align: left;
+      .position {
+        padding-top: 50px;
+        padding-left: 117px;
+        .content {
+          display: inline-block;
+          overflow: hidden;
+        }
+      }
+      .size {
+        width: 190px;
+        height: 210px;
+      }
+    }
+    .right {
+      background: url(../theme/produces/cup/cupRight.png) no-repeat right top;
+      float: left;
+      width: 400px;
+      height: 300px;
+      display: none;
+      text-align: left;
+      .position {
+        padding-top: 50px;
+        padding-left: 113px;
+        .content {
+          display: inline-block;
+          overflow: hidden;
+        }
+      }
+      .size {
+        width: 190px;
+        height: 210px;
+      }
+    }
+    .functional {
+      position: absolute;
+      padding-top: 40px;
+      top: 260px;
+      left: 160px;
+    }
+  }
+  .trivet {
+    .content {
+      overflow: hidden;
+      margin-left: 10px;
+      span {
+        &.square {
+          background: url(../theme/produces/trivet/border.png) no-repeat left top;
+        }
+        &.circle {
+          background: url(../theme/produces/trivet/borderCircle.png) no-repeat left top;
+        }
+      }
+    }
+    .size {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .postcard {
+    overflow: hidden;
+    position: relative;
+    .border {
+      border: 1px solid #744B54;
+      background: #FFFFFF;
+      cursor: pointer;
+      font-family: 'Times New Roman';
+      font-size: 16;
+      .content {
+        background: #FFFFFF;
+        position: relative;
+        overflow: hidden;
+      }
+    }
+    .size {
+      width: 300px;
+      height: 429px;
+    }
+    .postcard-tab-front {
+      margin-left: 162px;
+      .content {
+        float: left;
+        width: 300px;
+        height: 429px;
+        overflow: hidden;
+        display: inline-block;
+        border: 1px solid #000000;
+      }
+    }
+    .postcard-tab-middle {
+      .left {
+        float: left;
+        margin-left: 10px;
+        .content {
+          float: left;
+          width: 300px;
+          height: 429px;
+          overflow: hidden;
+          border: 1px solid #000000;
+        }
+      }
+      .right {
+        float: left;
+        .content {
+          float: left;
+          width: 300px;
+          height: 429px;
+          font-family: 'Times New Roman';
+          font-size: 16px;
+          color: #000000;
+          border: 1px solid #000000;
+        }
+      }
+      .side-links {
+        margin-left: 162px;
+      }
+    }
+    .postcard-tab-back {
+      margin-left: 162px;
+      .content {
+        float: left;
+        width: 300px;
+        border: 1px solid #000000;
+      }
+    }
+    .tab {
+      float: left;
+      color: #ffffff;
+      width: 125px;
+      height: 22px;
+      cursor: pointer;
+      line-height: 25px;
+    }
+
+    .right-functional-btn {
+      padding-left: 8px;
+      float: left;
+      img {
+        display: block;
+      }
+    }
+    .left-functional-btn {
+      float: left;
+      text-align: right;
+      width: 203px;
+      table {
+        padding-left: 131px;
+      }
+    }
+    .side-links {
+      float: left;
+      text-align: center;
+      width: 300px;
+      padding-top: 7px;
+    }
+
+    .size-origin-postcard {
+      width: 300px;
+      height: 429px;
+    }
+
+    #postcardText {
+      padding: 20px;
+    }
+    .postcard-content-zoom {
+      width: 400px;
+      height: 572px;
+      -moz-transform: scale(0.75);
+      -webkit-transform: scale(0.75);
+      -o-transform: scale(0.75);
+      transform: scale(0.75);
+      position: relative;
+      top: -70px;
+      left: -48px;
+    }
+    .text-box-zoomed {
+      overflow: hidden;
+      position: absolute;
+    }
+    .text-box {
+      position: relative;
+      background: #FFFFFF;
+      overflow: hidden;
+      text-align: left;
+    }
+  }
+  .puzzle {
+    .content {
+      overflow: hidden;
+      margin-left: 10px;
+    }
+    span {
+      background: url(../theme/produces/puzzle/border-rectangle.png) no-repeat left top;
+    }
+    .size {
+      width: 572px;
+      height: 406px;
+    }
+  }
+  .mousepad {
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    .square {
+      width: 572px;
+      height: 497px;
+      overflow: hidden;
+      margin-left: 10px;
+      span {
+        background: url(../theme/produces/mousepad/border.png) no-repeat left top;
+      }
+      .size {
+        width: 572px;
+        height: 497px;
+      }
+    }
+    .circle {
+      width: 497px;
+      height: 497px;
+      overflow: hidden;
+      margin-left: 10px;
+      span {
+        background: url(../theme/produces/mousepad/borderCircle.png) no-repeat left top;
+      }
+      .size {
+        width: 497px;
+        height: 497px;
+      }
+    }
+  }
+}
+
+#image-upload-process {
+  position: absolute;
+  display: none;
+  text-align: center;
+  width: 850px;
+  margin: 0px;
+  padding: 0px;
+  img {
+    padding: 14px 0px 14px 0px;
+  }
+}
+
+.studio-funcional-btn {
+  border: 0px solid #f2ffd7;
+  width: 64px;
+  margin: 0px;
+  padding: 0px;
+  tr {
+    height: 32px;
+  }
+  td {
+    width: 32px;
+  }
+  img {
+    border: 1px solid #f2ffd7;
+    &:hover {
+      border: 1px solid #744b54;
+    }
+  }
+}
+
+.ajax-overlay {
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+  zoom: 1;
+  opacity: 0.6;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  z-index: 11;
+  top: 0px;
+}
+
+.new-label {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+// on view product page
+.sub-category-tag {
+  border-bottom: 1px #E7E7E7 solid;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.details {
+  // TODO: Fix this.
+  .view-price {
+    padding: 40px 12px 5px 0px;
+    span {
+      font-size: 24px;
+      color: #ff2700;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .details {
+    // TODO: Fix this.
+    .view-price {
+      padding: 15px 12px 5px 10px;
+    }
+    .functional{
+      padding-bottom: 10px;
+    }
+  }
+}
+
+// global components
+
+#tshirt-color, #allowed-tshirt-color {
+  //padding-bottom: 5px;
+  padding-top: 7px;
+  label {
+    display: block;
+    padding-bottom: 5px;
+  }
+  span {
+    border: 1px solid $main-border-color;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    margin: 2px;
+    &:hover {
+      border: 1px solid #BE6227;
+      -moz-box-shadow: 0 0 5px #BE6227;
+      -webkit-box-shadow: 0 0 5px #BE6227;
+      box-shadow: 0 0 5px #BE6227;
+    }
+    &.selected {
+      border: 1px solid #A5628D;
+      background-color: #F5F5F5;
+      -moz-box-shadow: 0 0 5px #A5628D;
+      -webkit-box-shadow: 0 0 5px #A5628D;
+      box-shadow: 0 0 5px #A5628D;
+    }
+  }
+}
+
+#tshirt-sizes {
+  label {
+    display: block;
+  }
+  span {
+    border: 1px solid $main-border-color;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    margin: 2px;
+    min-width: 25px;
+    padding: 4px;
+    text-align: center;
+    &:hover {
+      border: 1px solid #BE6227;
+      -moz-box-shadow: 0 0 5px #BE6227;
+      -webkit-box-shadow: 0 0 5px #BE6227;
+      box-shadow: 0 0 5px #BE6227;
+    }
+    &.selected {
+      border: 1px solid #A5628D;
+      background-color: #F5F5F5;
+      -moz-box-shadow: 0 0 5px #A5628D;
+      -webkit-box-shadow: 0 0 5px #A5628D;
+      box-shadow: 0 0 5px #A5628D;
+    }
+  }
+}

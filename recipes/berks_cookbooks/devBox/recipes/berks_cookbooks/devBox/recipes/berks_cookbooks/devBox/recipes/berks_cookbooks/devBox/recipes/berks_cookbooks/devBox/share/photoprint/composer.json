@@ -2,7 +2,8 @@
     "name": "PhotoPrint",
     "require": {
         "php": ">=5.5.0",
-        "zendframework/zendframework1": "1.12.13",
+        "zendframework/zendframework1": "1.12.17",
+        "elasticsearch/elasticsearch": "2.1.5",
         "googleads/googleads-php-lib": "6.2.0",
         "google/apiclient": "1.1.4",
         "phing/phing": "2.11.0"

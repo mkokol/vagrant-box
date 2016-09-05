@@ -56,20 +56,16 @@
     </div>
     <div>
         <?php if ($this->group == 'tshirt'): ?>
-            <div id="tshirt-sizes">
-                <label class="new-label"><?php echo $this->t->_('size') ?>:</label>
-                <span>S</span>
-                <span>M</span>
-                <span>L</span>
-                <span>XL</span>
-                <span>XXL</span>
+            <div id="product-picker">
+                <div<?php if($this->item == 'mantshirt'): ?> class="selected"<?php endif ?> data-item="mantshirt">
+                    <img class="svg" src="<?php $this->h()->static()->path('produces/tshirt/icons/m-thisrt.svg') ?>">
+                    <?php echo $this->t->_('mantshirt') ?>
+                </div>
+                <div<?php if($this->item == 'womantshirt'): ?> class="selected"<?php endif ?> data-item="womantshirt">
+                    <img class="svg" src="<?php $this->h()->static()->path('produces/tshirt/icons/w-tshirt.svg') ?>">
+                    <?php echo $this->t->_('womantshirt') ?>
+                </div>
             </div>
-            <div>
-                <span class="t-shirt-sizes-grid linker" data-product-item="<?= $this->item ?>">
-                    <?php echo $this->t->_('t_shirt_sizes') ?>
-                </span>
-            </div>
-
             <?php if ($this->colors && is_array($this->colors) && count($this->colors)): ?>
                 <div id="tshirt-color">
                     <label class="new-label"><?php echo $this->t->_('color') ?>:</label>
@@ -83,6 +79,20 @@
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
+
+            <div id="tshirt-sizes">
+                <label class="new-label"><?php echo $this->t->_('size') ?>:</label>
+                <span>S</span>
+                <span>M</span>
+                <span>L</span>
+                <span>XL</span>
+                <span>XXL</span>
+            </div>
+            <div>
+                <span class="t-shirt-sizes-grid linker" data-product-item="<?= $this->item ?>">
+                    <?php echo $this->t->_('t_shirt_sizes') ?>
+                </span>
+            </div>
         <?php endif; ?>
 
         <?php if (($this->product["description_{$this->language}"]) || ($this->t->_('content') != 'content' && $this->t->_('content') != '')): ?>

@@ -4,12 +4,11 @@
 !/.gitignore
 !/application
 !/public
-!/build
+!/db-patches
 !/utils
 !/README.md
 !/.htaccess
 !/index.php
-!/updates.sql
 !/composer.json
 !/composer.lock
 !/composer.phar
@@ -19,15 +18,19 @@
 !/package.json
 !/Gruntfile.js
 !/gulpfile.js
+!/backstop.json
+!/backstop_data
 
 public/captcha/images/*
 public/stylesheets/main.css
 public/stylesheets/main.css.map
 application/logs/*
 public/products/*
-build/database/*
 public/scripts/main.min.1.4.*
 public/stylesheets/main.1.4.*
+db-patches/database/*
+!db-patches/database/.git-add
+db-patches/properties/prod.ini
 
 .DS_Store
 application/tests/_output/*

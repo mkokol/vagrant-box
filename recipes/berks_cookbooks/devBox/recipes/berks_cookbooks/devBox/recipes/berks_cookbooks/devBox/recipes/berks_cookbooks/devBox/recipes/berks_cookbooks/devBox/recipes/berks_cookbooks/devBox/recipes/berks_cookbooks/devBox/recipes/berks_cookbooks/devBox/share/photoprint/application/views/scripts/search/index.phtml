@@ -1,0 +1,23 @@
+<?php echo $this->render('controls/header.phtml'); ?>
+
+<style>
+    .grid-product {
+        width: 25%;
+    }
+</style>
+<div class="grid-container">
+    <div class="grid-100">
+        <h1><?= $this->t->_('search_result') ?></h1>
+        <?php if ($this->productList): ?>
+            <div id="products" data-page-count="<?= $this->pageCount ?>">
+                <?php echo $this->render('produces/catalog-products.phtml'); ?>
+            </div>
+        <?php else: ?>
+            <div style="padding-top: 10px;">
+                <?= sprintf($this->t->_('search_no_result'), $this->q, $this->baseUrl, $this->language) ?>
+            </div>
+        <?php endif; ?>
+    </div>
+</div>
+
+<?php echo $this->render('controls/footer.phtml'); ?>

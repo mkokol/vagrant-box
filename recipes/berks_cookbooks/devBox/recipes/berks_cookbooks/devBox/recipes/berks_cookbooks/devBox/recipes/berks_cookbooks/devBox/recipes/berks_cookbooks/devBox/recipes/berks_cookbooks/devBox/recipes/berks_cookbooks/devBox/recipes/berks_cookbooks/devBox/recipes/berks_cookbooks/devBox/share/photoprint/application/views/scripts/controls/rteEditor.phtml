@@ -1,0 +1,8 @@
+<?php if ($this->displayRteEditor === true): ?>
+    <div id="text-editor">
+        <script type="text/javascript">
+            initRTE('<?php echo ($this->itemId) ? $this->contentText : ''; ?>');
+            $("#text-editor").css({"display": "none"});
+        </script>
+    </div>
+<?php endif; ?>

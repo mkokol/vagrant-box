@@ -5,8 +5,8 @@ let fs = require('fs'),
     gulp = require('gulp'),
     plugins = require('gulp-load-plugins')(),
     merge = require('merge-stream'),
-    lazy = require('lazypipe');
-
+    lazy = require('lazypipe'),
+    gutil = require('gulp-util');
 
 const ROOT_PATH = __dirname,
     CONFIG_PATH = path.resolve(ROOT_PATH, 'application', 'configs'),
@@ -20,19 +20,13 @@ let config = ini.parse(fs.readFileSync(INI_PATH, 'utf-8')),
 
 
 let sass = lazy()
-    .pipe(plugins.debug, {title: 'sass in'})
-    .pipe(plugins.sass, {precision: 10})
-    .pipe(plugins.debug, {title: 'sass out'});
+    .pipe(plugins.sass, {precision: 10});
 
 let cssmin = lazy()
-    .pipe(plugins.debug, {title: 'cssmin in'})
-    .pipe(plugins.cssnano, {safe: true})
-    .pipe(plugins.debug, {title: 'cssmin out'});
+    .pipe(plugins.cssnano, {safe: true});
 
 let uglify = lazy()
-    .pipe(plugins.debug, {title: 'uglify in'})
-    .pipe(plugins.uglify)
-    .pipe(plugins.debug, {title: 'uglify out'});
+    .pipe(plugins.uglify);
 
 gulp.task('default', () => {
     let assets = merge();
@@ -43,24 +37,20 @@ gulp.task('default', () => {
         }
 
         let concat = lazy()
-            .pipe(plugins.debug, {title: 'concat in'})
-            .pipe(plugins.concat, {path: dest})
-            .pipe(plugins.debug, {title: 'concat out'});
+            .pipe(plugins.concat, {path: dest});
 
         let versioning = lazy()
-            .pipe(plugins.debug, {title: 'versioning in'})
             .pipe(plugins.rename, {suffix: (dest.match(/js$/) ? '.min.' : '.') + version})
-            .pipe(plugins.debug, {title: 'versioning out'})
             .pipe(gulp.dest, ROOT_PATH);
 
         let task = gulp.src(paths[dest])
-                       .pipe(plugins.debug({title: 'src out'}))
-                       .pipe(plugins.if(['**.scss'], sass()).on('error', plugins.sass.logError))
-                       .pipe(plugins.if(['**.css'], cssmin()))
-                       .pipe(plugins.if(['**.js'], uglify()))
-                       .pipe(concat())
-                       .pipe(gulp.dest(ROOT_PATH))
-                       .pipe(plugins.if((file) => plugins.match(file, ['**/main.+(js|css)']), versioning()));
+            .pipe(plugins.if(['**.scss'], sass()).on('error', plugins.sass.logError))
+            .pipe(plugins.if(['**.css'], cssmin()))
+            .pipe(plugins.if(['**.js'], uglify()))
+            .pipe(concat())
+            .pipe(gulp.dest(ROOT_PATH))
+            .pipe(plugins.if((file) => plugins.match(file, ['**/main.+(js|css)']), versioning()))
+            .on('end', function(){ gutil.log(dest); });
 
         assets.add(task);
     }

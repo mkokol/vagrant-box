@@ -16,7 +16,7 @@ execute "add php7 repository" do
   notifies :run, resources(:execute => "apt-get-update"), :immediately
 end
 
-%w{php7.0 php7.0-mysql php7.0-xml php-memcache php-mbstring php-imagick}.each do |pkg|
+%w{php7.0 php7.0-mysql php7.0-xml php7.0-curl php-mbstring php-imagick php-memcache}.each do |pkg|
   package pkg do
     action :install
   end

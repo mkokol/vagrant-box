@@ -1,22 +1,40 @@
 $(document).ready(function () {
-    if (isDefined($('#tshirt-sizes'))) {
-        $('#tshirt-sizes span').click(function () {
-            $('#tshirt-sizes span').removeClass('selected');
-            $(this).addClass('selected');
-            $('#add-to-basket #size').val($(this).text());
-        });
-    }
-
-    if (isDefined($('#tshirt-color'))) {
-        $('#tshirt-color span').click(function () {
-            $('#tshirt-color span').removeClass('selected');
-            $(this).addClass('selected');
-            $('.view img').attr({'src': $(this).attr('data-img')});
-        });
-    }
+    $('#product-picker div').click(function () {
+        $('#product-picker div').removeClass('selected');
+        $(this).addClass('selected');
+        var src = $('#tshirt-color span.selected').data('img');
+        src = ($(this).data('item') == 'mantshirt')
+            ? src.replace("womantshirt", "mantshirt")
+            : src.replace("mantshirt", "womantshirt");
+        $('.view img').attr({'src': src});
+    });
+    $('#tshirt-color span').click(function () {
+        $('#tshirt-color span').removeClass('selected');
+        $(this).addClass('selected');
+        var src = $(this).data('img');
+        src = ($('#product-picker div.selected').data('item') == 'mantshirt')
+            ? src.replace("womantshirt", "mantshirt")
+            : src.replace("mantshirt", "womantshirt");
+        $('.view img').attr({'src': src});
+    });
+    $('#tshirt-sizes span').click(function () {
+        $('#tshirt-sizes span').removeClass('selected');
+        $(this).addClass('selected');
+        $('#add-to-basket #size').val($(this).text());
+    });
 
     $('#add-to-basket').submit(function () {
-        $('#add-to-basket #color').val($('#tshirt-color span.selected').attr('data-color'));
+        if ($('#tshirt-color').length) {
+            $('#add-to-basket #color').val(
+                $('#tshirt-color span.selected').data('color')
+            );
+        }
+
+        if ($('#product-picker').length) {
+            $('#add-to-basket #item').val(
+                $('#product-picker div.selected').data('item')
+            );
+        }
 
         if ($('#tshirt-sizes').length && !$('#tshirt-sizes span.selected').length) {
             showBox(baseUrl + '/index/message?message=please_select_tshirt_size');

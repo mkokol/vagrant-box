@@ -7,6 +7,6 @@ create virtual mashine based on debian-squeeze
 instaling and configuring:
 --------------------------
 
-nginx, php 5.3, mysql, memcached
+nginx, php 7.0, mysql, elasticsearch
 
 configuring  multi-VM environments

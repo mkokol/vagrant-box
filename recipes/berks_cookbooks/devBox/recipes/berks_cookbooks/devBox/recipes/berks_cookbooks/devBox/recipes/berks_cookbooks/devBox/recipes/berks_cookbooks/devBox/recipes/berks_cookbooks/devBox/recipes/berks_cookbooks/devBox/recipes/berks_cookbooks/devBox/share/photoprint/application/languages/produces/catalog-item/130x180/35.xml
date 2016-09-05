@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<tmx version="1.4">
+    <header
+            creationtool="XYZTool"
+            creationtoolversion="1.01-023"
+            datatype="PlainText"
+            segtype="sentence"
+            adminlang="en-us"
+            srclang="EN"
+            o-tmf="ABCTransMem">
+    </header>
+    <body>
+        <tu tuid="title" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Пазл 130х180. Маяк на скелі.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пазл 130х180. Маяк на скале.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="description" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Пазл 130х180. Білий маяк на скелі біля берега.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пазл 130х180. Белый маяк на скале у берега.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="keywords" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Пазл 130х180. Білий маяк на скелі біля берега.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пазл 130х180. Белый маяк на скале у берега.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="header" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Пазл 130х180. Маяк на скелі.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пазл 130х180. Маяк на скале.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="content" datatype="plaintext">
+            <tuv xml:lang="uk">
+                <seg>Пазл 130х180. Білий маяк на скелі біля берега.</seg>
+            </tuv>
+            <tuv xml:lang="ru">
+                <seg>Пазл 130х180. Белый маяк на скале у берега.</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

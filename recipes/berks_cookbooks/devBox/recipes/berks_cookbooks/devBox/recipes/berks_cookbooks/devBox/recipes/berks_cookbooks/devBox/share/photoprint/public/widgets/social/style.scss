@@ -1,95 +1,132 @@
+// DO I USE THIS AT ALL )))
+
+$color-ffffff: #ffffff;
+$color-000000: #000000;
+
+$color-9f9f9f: #9f9f9f;
+$color-aaaaaa: #aaaaaa;
+$color-b8b8b8: #b8b8b8;
+$color-cbcbcb: #cbcbcb;
+$color-cccccc: #cccccc;
+$color-dfdfdf: #dfdfdf;
+$color-e4e4e4: #e4e4e4;
+$color-e8e8e8: #e8e8e8;
+$color-eaeaea: #eaeaea;
+$color-f2f2f2: #f2f2f2;
+$color-f4f4f4: #f4f4f4;
+$color-f7f7f7: #f7f7f7;
+$color-43658a: #43658a;
+$color-45688e: #45688e;
+$color-3b6798: #3b6798;
+$color-51769e: #51769e;
+$color-51779f: #51779f;
+$color-597da3: #597da3;
+$color-5c82ab: #5c82ab;
+$color-6688ad: #6688ad;
+$color-648cb7: #648cb7;
+$color-6d8fb3: #6d8fb3;
+$color-7293b7: #7293b7;
+$color-7495b8: #7495b8;
+$color-7e9cbc: #7e9cbc;
+$color-84a1bf: #84a1bf;
+$color-92acc7: #92acc7;
+
 #vk-popup {
-    position: absolute;
-    background: url("../images/vk/transpx2.png") repeat scroll 0 0 transparent;
-    padding: 10px;
-    display: block;
-    width: 300px;
+  position: absolute;
+  background: url("../images/vk/transpx2.png") repeat scroll 0 0 transparent;
+  padding: 10px;
+  display: block;
+  width: 300px;
 }
-#vk-popup .vk-title{
-    border-top: 1px solid #648CB7;
-    padding: 6px 10px 8px;
-    background-color: #597DA3;
-    border-color: #45688E #43658A;
-    border-style: solid;
-    border-width: 1px;
-    color: #FFFFFF;
-    font-size: 13px;
-    font-weight: bold;
+
+#vk-popup .vk-title {
+  border: 1px solid $color-43658a;
+  border-top-color: $color-648cb7;
+  border-bottom-color: $color-45688e;
+  padding: 6px 10px 8px;
+  background-color: $color-597da3;
+  color: $color-ffffff;
+  font-size: 13px;
+  font-weight: bold;
 }
-#vk-popup .vk-content{
-    background-color: #FFFFFF;
-    border-left: 1px solid #AAAAAA;
-    border-right: 1px solid #AAAAAA;
-    padding: 15px;
-    text-align: center;
+
+#vk-popup .vk-content {
+  background-color: $color-ffffff;
+  border-left: 1px solid $color-aaaaaa;
+  border-right: 1px solid $color-aaaaaa;
+  padding: 15px;
+  text-align: center;
 }
+
 #vk-popup .vk-input {
-    border: 1px solid #cbcbcb;
+  border: 1px solid $color-cbcbcb;
 }
+
 #vk-popup .vk-buttons {
-    background-color: #F2F2F2;
-    border-top: 1px solid #CCCCCC;
-    height: 30px;
-    padding: 5px;
-    border-right: 1px solid #AAAAAA;
-    border-left: 1px solid #AAAAAA;
-    border-bottom: 1px solid #AAAAAA;
-    border-style: none solid solid;
-    border-width: 0 1px 1px;
-    text-align: right;
+  background-color: $color-f2f2f2;
+  border: 1px solid $color-aaaaaa;
+  border-top: 0;
+  height: 30px;
+  padding: 5px;
+  text-align: right;
 }
-#vk-popup .vk-yse-btn,#vk-popup .vk-no-btn{
-    cursor: pointer;
-    height: auto;
-    margin: 2px 5px;
-    width: auto;
+
+#vk-popup .vk-yse-btn, #vk-popup .vk-no-btn {
+  cursor: pointer;
+  height: auto;
+  margin: 2px 5px;
+  width: auto;
 }
-#vk-popup .vk-yse-btn div,#vk-popup .vk-no-btn div{
-    padding: 4px 14px;
-    text-align: center;
+
+#vk-popup .vk-yse-btn div, #vk-popup .vk-no-btn div {
+  padding: 4px 14px;
+  text-align: center;
 }
-#vk-popup .vk-yse-btn{ 
-    float: right;
-    border: 1px solid #3B6798;
-    text-shadow: 0 1px 0 #45688E;
+
+#vk-popup .vk-yse-btn {
+  float: right;
+  border: 1px solid $color-3b6798;
+  text-shadow: 0 1px 0 $color-45688e;
 }
-#vk-popup .vk-yse-btn div{
-	background-color: #6D8FB3;
-    border-color: #7E9CBC #5C82AB #5C82AB;
-    border-style: solid;
-    border-width: 1px;
-    color: #FFFFFF;
+
+#vk-popup .vk-yse-btn div {
+  background-color: $color-6d8fb3;
+  border: 1px solid $color-5c82ab;
+  border-top-color: $color-7e9cbc;
+  color: $color-ffffff;
 }
-#vk-popup .vk-yse-btn div:hover{
-    border-color: #92ACC7 #7293B7 #7293B7;
-    background-color: #84A1BF;
+
+#vk-popup .vk-yse-btn div:hover {
+  border-color: $color-92acc7 $color-7293b7 $color-7293b7;
+  background-color: $color-84a1bf;
 }
-#vk-popup .vk-yse-btn div:active{
-    border-color: #51769e #51779f #7495b8;
-    background-color: #6688ad;
+
+#vk-popup .vk-yse-btn div:active {
+  border-color: $color-51769e $color-51779f $color-7495b8;
+  background-color: $color-6688ad;
 }
-#vk-popup .vk-no-btn{
-    float: right;
-    border-color: #9F9F9F #B8B8B8 #B8B8B8;
-    border-right: 1px solid #B8B8B8;
-    border-style: solid;
-    border-width: 1px;
-    text-shadow: 0 1px 0 #FFFFFF;
+
+#vk-popup .vk-no-btn {
+  float: right;
+  border: 1px solid $color-b8b8b8;
+  border-top-color: $color-9f9f9f;
+  text-shadow: 0 1px 0 $color-ffffff;
 }
-#vk-popup .vk-no-btn div{
-	background-color: #EAEAEA;
-    border-color: #FFFFFF #F4F4F4 #DFDFDF;
-    border-left: 1px solid #F4F4F4;
-    border-right: 1px solid #F4F4F4;
-    border-style: solid;
-    border-width: 1px;
-    color: #000000;
-    text-decoration: none;
+
+#vk-popup .vk-no-btn div {
+  background-color: $color-eaeaea;
+  border: 1px solid $color-f4f4f4;
+  border-top-color: $color-ffffff;
+  border-bottom-color: $color-dfdfdf;
+  color: $color-000000;
+  text-decoration: none;
 }
-#vk-popup .vk-no-btn div:hover{
-    background-color: #f7f7f7;
+
+#vk-popup .vk-no-btn div:hover {
+  background-color: $color-f7f7f7;
 }
+
 #vk-popup .vk-no-btn div:active {
-    border-color: #cccccc #cbcbcb #e8e8e8;
-    background-color: #e4e4e4;
+  border-color: $color-cccccc $color-cbcbcb $color-e8e8e8;
+  background-color: $color-e4e4e4;
 }

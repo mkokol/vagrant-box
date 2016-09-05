@@ -26,16 +26,25 @@ Vagrant::Config.run do |config|
                 "recipes/local_cookbooks"
             ]
 
-            # chef.add_recipe "locale"
-            # chef.add_recipe "apt"
-            # chef.add_recipe "vim"
+            chef.add_recipe "locale"
+            chef.add_recipe "apt"
+            chef.add_recipe "vim"
 
 
-            # chef.add_recipe "php7.0"
-            # chef.add_recipe "nginx"
+            chef.add_recipe "php7.0"
+
+            chef.add_recipe "imagemagick"
+
+            chef.add_recipe "nginx"
+            chef.add_recipe "nginx_config"
+
             chef.add_recipe "mysql_server"
             chef.add_recipe "mysql_tuning"
-            # chef.add_recipe "elasticsearch"
+
+            chef.add_recipe "elasticsearch"
+
+            # for development
+            chef.add_recipe "nodejs"
 
             chef.json = {
                 :localegen  => {
@@ -45,9 +54,15 @@ Vagrant::Config.run do |config|
                     :version => "7.0.*"
                 },
                 :mysql => {
-                    :server_root_password => '1',
-                    :server_debian_password => '1',
-                    :server_repl_password => '1'
+                    :server_root_password => '1'
+                },
+                :nginx_config => {
+                    :hosts => [
+                        {
+                            :server_name => "photoprint",
+                            :environment => "development"
+                        }
+                    ]
                 }
             }
         end

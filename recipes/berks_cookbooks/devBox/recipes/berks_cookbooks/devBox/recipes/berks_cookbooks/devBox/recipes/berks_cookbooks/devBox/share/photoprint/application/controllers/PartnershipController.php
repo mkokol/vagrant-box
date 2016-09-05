@@ -17,7 +17,6 @@ class PartnershipController extends Helpers_General_ControllerAction
         $this->loadTranslation('user_menu');
         $this->appendStylesheet('pages/partnership_index');
         $this->appendFile('partnership/index');
-        $this->appendWidgets('tablesorter');
         $this->view->acceptShopRules = Zend_Auth::getInstance()->getIdentity()->accept_shop_rules;
     }
 

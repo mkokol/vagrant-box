@@ -1,0 +1,4 @@
+#partnershp-types .shop-category .info{border: 1px solid #dddddd; margin: 29px; padding: 10px 20px 20px 20px; text-align: justify; border-radius: 5px; cursor: pointer;}
+#partnershp-types .shop-category .info:hover {-moz-box-shadow: 0 0 7px rgba(0,0,0,0.3); -webkit-box-shadow: 0 0 7px rgba(0,0,0,0.3); box-shadow: 0 0 7px rgba(0,0,0,0.3);}
+#partnershp-types .parallelogram-right{height:120px; transform: skew(-5deg); -o-transform: skew(-5deg); -moz-transform: skew(-5deg); -webkit-transform: skew(-5deg);}
+#partnershp-types .parallelogram-left{height:120px; transform: skew(5deg); -o-transform: skew(5deg); -moz-transform: skew(5deg); -webkit-transform: skew(5deg);}

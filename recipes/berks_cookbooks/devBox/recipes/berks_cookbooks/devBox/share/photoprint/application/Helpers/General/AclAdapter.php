@@ -21,6 +21,7 @@ class Helpers_General_AclAdapter extends Zend_Acl
         $this->addResource(new Zend_Acl_Resource('statistic'));
         $this->addResource(new Zend_Acl_Resource('search'));
         $this->addResource(new Zend_Acl_Resource('crawler'));
+        $this->addResource(new Zend_Acl_Resource('cron'));
 
 
         $this->addRole(new Zend_Acl_Role('guest'));
@@ -41,6 +42,7 @@ class Helpers_General_AclAdapter extends Zend_Acl
         $this->deny('guest', 'update');
         $this->deny('guest', 'search', ['reindex']);
 
+
         $this->allow('member', 'user', ['home']);
         $this->allow('member', 'partnership');
         $this->allow('member', 'wl');
@@ -49,6 +51,7 @@ class Helpers_General_AclAdapter extends Zend_Acl
         $this->allow('admin', 'update');
         $this->allow('admin', 'statistic');
         $this->allow('admin', 'crawler');
+        $this->allow('admin', 'cron');
         $this->allow('admin', 'search', ['reindex']);
     }
 }
