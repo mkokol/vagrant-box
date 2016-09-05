@@ -37,5 +37,5 @@ end
 
 service "kibana" do
   supports :status => true, :restart => true, :reload => true
-  action   :start
+  action [:enable,:start]
 end
