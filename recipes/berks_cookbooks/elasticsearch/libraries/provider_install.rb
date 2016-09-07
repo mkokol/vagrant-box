@@ -21,7 +21,7 @@ class ElasticsearchCookbook::InstallProvider < Chef::Provider::LWRPBase
     elsif install_type == 'package'
       install_package_wrapper_action
     else
-      fail "#{install_type} is not a valid install type"
+      raise "#{install_type} is not a valid install type"
     end
   end
 
@@ -33,7 +33,7 @@ class ElasticsearchCookbook::InstallProvider < Chef::Provider::LWRPBase
     elsif install_type == 'package'
       remove_package_wrapper_action
     else
-      fail "#{install_type} is not a valid install type"
+      raise "#{install_type} is not a valid install type"
     end
   end
 
@@ -75,7 +75,7 @@ class ElasticsearchCookbook::InstallProvider < Chef::Provider::LWRPBase
   end
 
   def remove_package_wrapper_action
-    package_url = get_package_url(new_resource, node)
+    package_url = determine_download_url(new_resource, node)
     filename = package_url.split('/').last
 
     pkg_r = if node['platform_family'] == 'debian'

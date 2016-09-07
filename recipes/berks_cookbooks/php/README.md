@@ -196,10 +196,12 @@ This recipe installs PHP from source.
 ## Deprecated Recipes
 The following recipes are deprecated and will be removed from a future version of this cookbook.
 - `module_apc`
+- `module_apcu`
 - `module_curl`
 - `module_fileinfo`
 - `module_fpdf`
 - `module_gd`
+- `module_imap`
 - `module_ldap`
 - `module_memcache`
 - `module_mysql`

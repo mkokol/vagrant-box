@@ -9,5 +9,6 @@ elasticsearch_configure 'elasticsearch' do
 end
 
 service "elasticsearch" do
-  action :restart
+  supports :status => true, :restart => true, :reload => true
+  action [:enable, :start]
 end

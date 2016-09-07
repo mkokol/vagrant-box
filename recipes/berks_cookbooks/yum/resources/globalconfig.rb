@@ -3,7 +3,7 @@
 # Resource:: repository
 #
 # Author:: Sean OMeara <someara@chef.io>
-# Copyright 2013, Chef
+# Copyright 2013-2016, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -105,5 +105,4 @@ attribute :timeout, kind_of: String, regex: /^\d+$/, default: nil
 attribute :tolerant, kind_of: [TrueClass, FalseClass], default: nil
 attribute :tsflags, kind_of: String, regex: /.*/, default: nil
 attribute :username, kind_of: String, regex: /.*/, default: nil
-
 attribute :options, kind_of: Hash

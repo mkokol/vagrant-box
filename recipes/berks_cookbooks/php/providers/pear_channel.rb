@@ -20,9 +20,13 @@
 
 # http://pear.php.net/manual/en/guide.users.commandline.channels.php
 
+use_inline_resources
+
 require 'chef/mixin/shell_out'
 require 'chef/mixin/language'
 include Chef::Mixin::ShellOut
+
+use_inline_resources
 
 def whyrun_supported?
   true

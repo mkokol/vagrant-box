@@ -18,6 +18,8 @@
 # limitations under the License.
 #
 
+use_inline_resources
+
 require 'chef/mixin/shell_out'
 require 'chef/mixin/language'
 include Chef::Mixin::ShellOut
@@ -25,6 +27,8 @@ include Chef::Mixin::ShellOut
 # the logic in all action methods mirror that of
 # the Chef::Provider::Package which will make
 # refactoring into core chef easy
+
+use_inline_resources
 
 def whyrun_supported?
   true
@@ -172,14 +176,14 @@ def remove_package(name, version)
 end
 
 def enable_package(name)
-  execute "/usr/sbin/php5enmod #{name}" do
-    only_if { platform?('ubuntu') && node['platform_version'].to_f >= 12.04 && ::File.exist?('/usr/sbin/php5enmod') }
+  execute "#{node['php']['enable_mod']} #{name}" do
+    only_if { platform?('ubuntu') && node['platform_version'].to_f >= 12.04 && ::File.exist?(node['php']['enable_mod']) }
   end
 end
 
 def disable_package(name)
-  execute "/usr/sbin/php5dismod #{name}" do
-    only_if { platform?('ubuntu') && node['platform_version'].to_f >= 12.04 && ::File.exist?('/usr/sbin/php5dismod') }
+  execute "#{node['php']['disable_mod']} #{name}" do
+    only_if { platform?('ubuntu') && node['platform_version'].to_f >= 12.04 && ::File.exist?(node['php']['disable_mod']) }
   end
 end
 

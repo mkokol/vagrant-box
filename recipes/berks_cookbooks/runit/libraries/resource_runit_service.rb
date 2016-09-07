@@ -50,6 +50,8 @@ class Chef
         @start_down = false
         @delete_downfile = false
         @finish = false
+        @supervisor_owner = nil
+        @supervisor_group = nil
         @owner = nil
         @group = nil
         @enabled = false
@@ -166,6 +168,14 @@ class Chef
         set_or_return(:delete_downfile, arg, kind_of: [TrueClass, FalseClass])
       end
 
+      def supervisor_owner(arg = nil)
+        set_or_return(:supervisor_owner, arg, regex: [Chef::Config[:user_valid_regex]])
+      end
+
+      def supervisor_group(arg = nil)
+        set_or_return(:supervisor_group, arg, regex: [Chef::Config[:group_valid_regex]])
+      end
+
       def owner(arg = nil)
         set_or_return(:owner, arg, regex: [Chef::Config[:user_valid_regex]])
       end
@@ -185,7 +195,7 @@ class Chef
       def run_template_name(arg = nil)
         set_or_return(:run_template_name, arg, kind_of: [String])
       end
-      alias_method :template_name, :run_template_name
+      alias template_name run_template_name
 
       def log_template_name(arg = nil)
         set_or_return(:log_template_name, arg, kind_of: [String])

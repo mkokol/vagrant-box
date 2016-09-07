@@ -2,6 +2,47 @@
 
 ## [Unreleased](https://github.com/elastic/cookbook-elasticsearch/tree/HEAD)
 
+## [v2.3.2](https://github.com/elastic/cookbook-elasticsearch/tree/v2.3.2) (2016-06-17)
+[Full Changelog](https://github.com/elastic/cookbook-elasticsearch/compare/v2.3.1...v2.3.2)
+
+**Implemented enhancements:**
+
+- Update init scripts and configs to latest [\#461](https://github.com/elastic/cookbook-elasticsearch/issues/461)
+- Don't make environment file executable [\#474](https://github.com/elastic/cookbook-elasticsearch/issues/474)
+- Don't make config YAML file executable [\#465](https://github.com/elastic/cookbook-elasticsearch/issues/465)
+- Make latest Foodcritic rules pass [\#466](https://github.com/elastic/cookbook-elasticsearch/issues/466)
+- ES 2.3.3 SHA256 sums and default version [\#464](https://github.com/elastic/cookbook-elasticsearch/issues/464)
+- Point to determine_download_url instead of non-existent get_package_url [\#463](https://github.com/elastic/cookbook-elasticsearch/issues/463)
+
+## [v2.3.1](https://github.com/elastic/cookbook-elasticsearch/tree/v2.3.1) (2016-05-06)
+[Full Changelog](https://github.com/elastic/cookbook-elasticsearch/compare/v2.3.0...v2.3.1)
+
+**Implemented enhancements:**
+
+- Update documentation for dir in elasticsearch_install [\#453](https://github.com/elastic/cookbook-elasticsearch/issues/453)
+- Define custom matchers helpers for notification testing [\#458](https://github.com/elastic/cookbook-elasticsearch/issues/458)
+- Add checksums for version 2.3.2 [\#457](https://github.com/elastic/cookbook-elasticsearch/issues/457)
+- Default ES version bump to 2.3.2 [\#459](https://github.com/elastic/cookbook-elasticsearch/issues/459)
+
+**Fixed bugs:**
+
+- Fix quoting bug in plugin remove action [\#455](https://github.com/elastic/cookbook-elasticsearch/issues/455)
+- Fix typo in README [\#456](https://github.com/elastic/cookbook-elasticsearch/issues/456)
+
+## [v2.3.0](https://github.com/elastic/cookbook-elasticsearch/tree/v2.3.0) (2016-04-07)
+[Full Changelog](https://github.com/elastic/cookbook-elasticsearch/compare/v2.2.2...v2.3.0)
+
+**Implemented enhancements:**
+
+- Add checksums for 2.3.1 [\#451](https://github.com/elastic/cookbook-elasticsearch/issues/451)
+
+## [v2.2.2](https://github.com/elastic/cookbook-elasticsearch/tree/v2.2.2) (2016-03-22)
+[Full Changelog](https://github.com/elastic/cookbook-elasticsearch/compare/v2.2.1...v2.2.2)
+
+**Fixed bugs:**
+
+- elasticsearch_configure provider should not modify default resource parameters [\#445](https://github.com/elastic/cookbook-elasticsearch/issues/445)
+
 ## [v2.2.1](https://github.com/elastic/cookbook-elasticsearch/tree/v2.2.1) (2016-03-04)
 [Full Changelog](https://github.com/elastic/cookbook-elasticsearch/compare/v2.2.0...v2.2.1)
 

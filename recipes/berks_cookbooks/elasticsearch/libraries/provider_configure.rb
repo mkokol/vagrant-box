@@ -14,18 +14,19 @@ class ElasticsearchCookbook::ConfigureProvider < Chef::Provider::LWRPBase
     es_install = find_es_resource(run_context, :elasticsearch_install, new_resource)
     es_svc = find_es_resource(run_context, :elasticsearch_service, new_resource)
 
+    default_configuration = new_resource.default_configuration.dup
     # if a subdir parameter is missing but dir is set, infer the subdir name
     # then go and be sure it's also set in the YML hash if it wasn't given there
-    if new_resource.path_conf[es_install.type] && new_resource.default_configuration['path.conf'].nil?
-      new_resource.default_configuration['path.conf'] = new_resource.path_conf[es_install.type]
+    if new_resource.path_conf[es_install.type] && default_configuration['path.conf'].nil?
+      default_configuration['path.conf'] = new_resource.path_conf[es_install.type]
     end
 
-    if new_resource.path_data[es_install.type] && new_resource.default_configuration['path.data'].nil?
-      new_resource.default_configuration['path.data'] = new_resource.path_data[es_install.type]
+    if new_resource.path_data[es_install.type] && default_configuration['path.data'].nil?
+      default_configuration['path.data'] = new_resource.path_data[es_install.type]
     end
 
-    if new_resource.path_logs[es_install.type] && new_resource.default_configuration['path.logs'].nil?
-      new_resource.default_configuration['path.logs'] = new_resource.path_logs[es_install.type]
+    if new_resource.path_logs[es_install.type] && default_configuration['path.logs'].nil?
+      default_configuration['path.logs'] = new_resource.path_logs[es_install.type]
     end
 
     # calculation for memory allocation; 50% or 31g, whatever is smaller
@@ -89,7 +90,7 @@ class ElasticsearchCookbook::ConfigureProvider < Chef::Provider::LWRPBase
     params[:ES_JAVA_OPTS] = ''
     params[:ES_JAVA_OPTS] << '-server '
     params[:ES_JAVA_OPTS] << '-Djava.awt.headless=true '
-    params[:ES_JAVA_OPTS] << '-Djava.net.preferIPv4Stack=true '
+    params[:ES_JAVA_OPTS] << '-Djava.net.preferIPv4Stack=true ' if new_resource.disable_ipv6
     params[:ES_JAVA_OPTS] << "-Xss#{new_resource.thread_stack_size} "
     params[:ES_JAVA_OPTS] << "#{new_resource.gc_settings.tr("\n", ' ')} " if new_resource.gc_settings
     params[:ES_JAVA_OPTS] << '-Dfile.encoding=UTF-8 '
@@ -102,7 +103,7 @@ class ElasticsearchCookbook::ConfigureProvider < Chef::Provider::LWRPBase
       path node['platform_family'] == 'rhel' ? "/etc/sysconfig/#{default_config_name}" : "/etc/default/#{default_config_name}"
       source new_resource.template_elasticsearch_env
       cookbook new_resource.cookbook_elasticsearch_env
-      mode 0755
+      mode 0644
       variables(params: params)
       action :nothing
     end
@@ -117,14 +118,14 @@ class ElasticsearchCookbook::ConfigureProvider < Chef::Provider::LWRPBase
       cookbook new_resource.cookbook_logging_yml
       owner es_user.username
       group es_user.groupname
-      mode 0755
+      mode 0644
       variables(logging: new_resource.logging)
       action :nothing
     end
     logging_template.run_action(:create)
     new_resource.updated_by_last_action(true) if logging_template.updated_by_last_action?
 
-    merged_configuration = new_resource.default_configuration.merge(new_resource.configuration)
+    merged_configuration = default_configuration.merge(new_resource.configuration.dup)
     merged_configuration['#_seen'] = {} # magic state variable for what we've seen in a config
 
     # warn if someone is using symbols. we don't support.
@@ -139,7 +140,7 @@ class ElasticsearchCookbook::ConfigureProvider < Chef::Provider::LWRPBase
       cookbook new_resource.cookbook_elasticsearch_yml
       owner es_user.username
       group es_user.groupname
-      mode 0755
+      mode 0644
       helpers(ElasticsearchCookbook::Helpers)
       variables(config: merged_configuration)
       action :nothing

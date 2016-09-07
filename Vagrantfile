@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
     # photoprint server
     config.vm.define :photoprint do |photoprint|
         photoprint.vm.box = "ubuntu-14.04"
-        photoprint.vm.hostname = 'photoprint'
+        photoprint.vm.hostname = "photoprint"
         photoprint.vm.box_url = "~/vagran-box-ubuntu-server-14-04-chef.box"
 
         # Boot with a GUI so you can see the screen. (Default is headless)
@@ -96,31 +96,27 @@ Vagrant.configure("2") do |config|
 
     # pinloft server
     config.vm.define :pinloft do |pinloft|
-        pinloft.vm.box = "ubuntu-14.04"
-        pinloft.vm.hostname = 'pinloft'
-        pinloft.vm.box_url = "~/vagran-box-ubuntu-server-14-04-chef.box"
+        pinloft.vm.box = "ubuntu/xenial64"
+        pinloft.vm.hostname = "pinloft"
+        # pinloft.vm.box_url = "~/vagran-box-ubuntu-server-14-04-chef.box"
 
         # Boot with a GUI so you can see the screen. (Default is headless)
-        # config.vm.boot_mode = :gui
+        # pinloft.gui = true
 
-        config.vm.provider "virtualbox" do |v|
+        pinloft.vm.provider "virtualbox" do |v|
             v.name = "pinloft"
             v.cpus = 2
             v.memory = 2048
         end
 
-        pinloft.vm.network :private_network, ip: "192.168.56.11", bridge: "en0"
-
-        pinloft.vm.network "forwarded_port", guest: 22, host: 2202, id: "ssh"
-        pinloft.vm.network "forwarded_port", guest: 80, host: 8082, id: "http"
-        pinloft.vm.network "forwarded_port", guest: 9200, host: 9202, id: "elastic"
-
-        pinloft.vm.synced_folder "share", "/var/www", :create => true, owner: "vagrant", group: "www-data"
+        pinloft.vm.synced_folder "share", "/var/www", create: true, type: "nfs"
+        pinloft.vm.network :private_network, ip: "192.168.56.12", bridge: "en0"
 
         pinloft.vm.provision :shell, :inline => "sudo apt-get update"
 
         pinloft.vm.provision :chef_solo do |chef|
             # chef.log_level = :debug
+
             chef.cookbooks_path = [
                 "recipes/berks_cookbooks",
                 "recipes/local_cookbooks"
@@ -140,6 +136,7 @@ Vagrant.configure("2") do |config|
                     :hosts => [
                         {
                             :server_name => "pinloft",
+                            :index_location => "/public",
                             :environment => "development"
                         }
                     ]
@@ -151,10 +148,13 @@ Vagrant.configure("2") do |config|
                         "accept_oracle_download_terms" => true
                     }
                 },
+                :elasticsearch => {
+                    "version" => "2.4.0"
+                },
                 :elasticsearch_config => {
-                    'allocated_memory' => '512m',
-                    'cluster_name' => "pinloft",
-                    'node_name' => "pinloft-node01"
+                    "allocated_memory" => "512m",
+                    "cluster_name" => "pinloft",
+                    "node_name" => "pinloft-node01"
                 },
                 :postfix => {
                     :main => {
@@ -169,12 +169,10 @@ Vagrant.configure("2") do |config|
                 'recipe[apt]',
                 'recipe[vim]',
                 'recipe[curl]',
-                'recipe[php7.0]',
-                'recipe[imagemagick]',
                 'recipe[nginx]',
                 'recipe[nginx_config]',
-                'recipe[mysql_server]',
-                'recipe[mysql_tuning]',
+                'recipe[php7.0]',
+                'recipe[imagemagick]',
                 'recipe[java]',
                 'recipe[elasticsearch]',
                 'recipe[elasticsearch_config]',

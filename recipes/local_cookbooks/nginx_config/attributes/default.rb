@@ -1,0 +1,1 @@
+default['nginx_config']['index_location'] = '/public'

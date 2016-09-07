@@ -18,6 +18,8 @@
 # limitations under the License.
 #
 
+use_inline_resources
+
 def whyrun_supported?
   true
 end
@@ -36,7 +38,7 @@ def install_fpm_package
     end
     package node['php']['fpm_package'] do
       action :install
-      notifies :delete, "file[#{node['php']['fpm_default_conf']}]"
+      notifies :delete, "file[#{node['php']['fpm_default_conf']}]", :immediately
     end
   end
 end
@@ -62,6 +64,8 @@ action :install do
       fpm_pool_user: new_resource.user,
       fpm_pool_group: new_resource.group,
       fpm_pool_listen: new_resource.listen,
+      fpm_pool_listen_user: new_resource.listen_user,
+      fpm_pool_listen_group: new_resource.listen_group,
       fpm_pool_manager: new_resource.process_manager,
       fpm_pool_max_children: new_resource.max_children,
       fpm_pool_start_servers: new_resource.start_servers,
@@ -79,7 +83,7 @@ action :uninstall do
   # Ensure the FPM pacakge is installed, and the service is registered
   register_fpm_service
   # Delete the FPM pool.
-  f = file "#{node['php']['fpm_pooldir']}/#{new_resource.pool_name}" do
+  f = file "#{node['php']['fpm_pooldir']}/#{new_resource.pool_name}.conf" do
     action :delete
   end
   new_resource.updated_by_last_action(f.updated_by_last_action?)
