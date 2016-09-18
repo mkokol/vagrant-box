@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
             v.memory = 2048
         end
 
-        photoprint.vm.network :private_network, ip: "192.168.56.11", bridge: "en0"
+        photoprint.vm.network :private_network, ip: "192.168.56.11"
 
         photoprint.vm.network "forwarded_port", guest: 22, host: 2202, id: "ssh"
         photoprint.vm.network "forwarded_port", guest: 80, host: 8082, id: "http"
@@ -96,25 +96,29 @@ Vagrant.configure("2") do |config|
 
     # pinloft server
     config.vm.define :pinloft do |pinloft|
-        pinloft.vm.box = "ubuntu/xenial64"
+        pinloft.vm.box = "bento/ubuntu-16.04"
         pinloft.vm.hostname = "pinloft"
-        # pinloft.vm.box_url = "~/vagran-box-ubuntu-server-14-04-chef.box"
-
-        # Boot with a GUI so you can see the screen. (Default is headless)
-        # pinloft.gui = true
 
         pinloft.vm.provider "virtualbox" do |v|
+            # Boot with a GUI so you can see the screen. (Default is headless)
+            # v.gui = true
+
             v.name = "pinloft"
             v.cpus = 2
             v.memory = 2048
         end
 
         pinloft.vm.synced_folder "share", "/var/www", create: true, type: "nfs"
-        pinloft.vm.network :private_network, ip: "192.168.56.12", bridge: "en0"
+        pinloft.vm.network :private_network, ip: "192.168.56.12"
+
+        pinloft.vm.network "forwarded_port", guest: 22, host: 2203, id: "ssh"
+        pinloft.vm.network "forwarded_port", guest: 80, host: 8083, id: "http"
+        pinloft.vm.network "forwarded_port", guest: 9200, host: 9203, id: "elastic"
 
         pinloft.vm.provision :shell, :inline => "sudo apt-get update"
 
         pinloft.vm.provision :chef_solo do |chef|
+            # Rub chef with debug mode
             # chef.log_level = :debug
 
             chef.cookbooks_path = [
