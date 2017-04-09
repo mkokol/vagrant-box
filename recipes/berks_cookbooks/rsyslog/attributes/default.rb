@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: rsyslog
+# Cookbook:: rsyslog
 # Attributes:: default
 #
-# Copyright 2009-2015, Chef Software, Inc.
+# Copyright:: 2009-2016, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -51,8 +51,9 @@ default['rsyslog']['tls_auth_mode']             = 'anon'
 default['rsyslog']['tls_permitted_peer']        = nil
 default['rsyslog']['use_local_ipv4']            = false
 default['rsyslog']['allow_non_local']           = false
-default['rsyslog']['custom_remote']             = [{}]
-default['rsyslog']['additional_directives'] = {}
+default['rsyslog']['custom_remote']             = []
+default['rsyslog']['additional_directives']     = {}
+default['rsyslog']['templates']                 = %w()
 
 # The most likely platform-specific attributes
 default['rsyslog']['service_name']              = 'rsyslog'
@@ -62,19 +63,19 @@ default['rsyslog']['priv_seperation']           = false
 default['rsyslog']['priv_user']                 = nil
 default['rsyslog']['priv_group']                = nil
 default['rsyslog']['modules']                   = %w(imuxsock imklog)
+default['rsyslog']['file_create_mode']          = '0640'
+default['rsyslog']['dir_create_mode']           = '0755'
+default['rsyslog']['umask']                     = '0022'
+default['rsyslog']['dir_owner']                 = 'root'
+default['rsyslog']['dir_group']                 = 'adm'
 
 # platform specific attributes
 case node['platform']
 when 'ubuntu'
-  # syslog user introduced with natty package
-  if node['platform_version'].to_f >= 11.04
-    default['rsyslog']['user'] = 'syslog'
-    default['rsyslog']['group'] = 'adm'
-    default['rsyslog']['priv_seperation'] = true
-    default['rsyslog']['priv_group'] = 'syslog'
-  end
-when 'arch'
-  default['rsyslog']['service_name'] = 'rsyslogd'
+  default['rsyslog']['user'] = 'syslog'
+  default['rsyslog']['group'] = 'adm'
+  default['rsyslog']['priv_seperation'] = true
+  default['rsyslog']['priv_group'] = 'syslog'
 when 'smartos'
   default['rsyslog']['config_prefix'] = '/opt/local/etc'
   default['rsyslog']['modules'] = %w(immark imsolaris imtcp imudp)
@@ -105,7 +106,7 @@ when 'suse'
     'local0.*;local1.*' => "-#{node['rsyslog']['default_log_dir']}/localmessages",
     'local2.*;local3.*' => "-#{node['rsyslog']['default_log_dir']}/localmessages",
     'local4.*;local5.*' => "-#{node['rsyslog']['default_log_dir']}/localmessages",
-    'local6.*;local7.*' => "-#{node['rsyslog']['default_log_dir']}/localmessages"
+    'local6.*;local7.*' => "-#{node['rsyslog']['default_log_dir']}/localmessages",
   }
 when 'rhel', 'fedora'
   default['rsyslog']['working_dir'] = '/var/lib/rsyslog'
@@ -117,10 +118,10 @@ when 'rhel', 'fedora'
     'cron.*' => "#{node['rsyslog']['default_log_dir']}/cron",
     '*.emerg' => ':omusrmsg:*',
     'uucp,news.crit' => "#{node['rsyslog']['default_log_dir']}/spooler",
-    'local7.*' => "#{node['rsyslog']['default_log_dir']}/boot.log"
+    'local7.*' => "#{node['rsyslog']['default_log_dir']}/boot.log",
   }
-  # RHEL >= 7 and Fedora >= 19 use journald in systemd. Amazon Linux doesn't.
-  if node['platform'] != 'amazon' && (node['platform_version'].to_i == 7 || node['platform_version'].to_i >= 19)
+  # RHEL >= 7 and Fedora use journald in systemd. Amazon Linux doesn't.
+  if node['platform'] != 'amazon' && node['platform_version'].to_i >= 7
     default['rsyslog']['modules'] = %w(imuxsock imjournal)
     default['rsyslog']['additional_directives'] = { 'OmitLocalLogging' => 'on', 'IMJournalStateFile' => 'imjournal.state' }
   end
@@ -141,11 +142,11 @@ else
     'news.notice' => "-#{node['rsyslog']['default_log_dir']}/news/news.notice",
     '*.=debug;auth,authpriv.none;news.none;mail.none' => "-#{node['rsyslog']['default_log_dir']}/debug",
     '*.=info;*.=notice;*.=warn;auth,authpriv.none;cron,daemon.none;mail,news.none' => "-#{node['rsyslog']['default_log_dir']}/messages",
-    '*.emerg' => ':omusrmsg:*'
+    '*.emerg' => ':omusrmsg:*',
   }
 end
 
 # rsyslog 3/4 do not support the new :omusrmsg:* format and need * instead
-if (node['platform'] == 'ubuntu' && node['platform_version'].to_i < 12) || (node['platform_family'] == 'rhel' && node['platform_version'].to_i < 6)
+if node['platform_family'] == 'rhel' && node['platform_version'].to_i < 6
   default['rsyslog']['default_facility_logs']['*.emerg'] = '*'
 end

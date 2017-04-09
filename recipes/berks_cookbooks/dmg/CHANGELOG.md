@@ -2,6 +2,18 @@
 
 This file is used to list changes made in each version of the dmg cookbook.
 
+## 3.1.0 (2017-01-18)
+
+- Fixed pkg,mpkg installation when it was using mounted app name while it was actually mounted under different name for some applications
+- Cookstyle fixes
+
+## 3.0.0 (2016-09-06)
+
+- Add chef_version metadata
+- Run the specs against a mock of OS X
+- Testing updates
+- Require Chef 12+
+
 ## v2.4.0 (2016-04-26)
 
 - Added support for local .dmg files with the file property. See the readme for details

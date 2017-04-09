@@ -1,0 +1,41 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+  require_chef_omnibus: 11.18
+
+platforms:
+  - name: windows-2012r2
+    driver:
+      box: dhoer/windows-2012r2
+    attributes:
+      mozilla_firefox:
+        version: latest
+  - name: ubuntu-12.04
+  - name: ubuntu-14.04
+  - name: centos-6.8
+  - name: centos-7.2
+  - name: debian-7.11
+  - name: debian-8.5
+
+suites:
+  - name: default
+    run_list:
+      - mozilla_firefox_test
+    attributes:
+
+  - name: windows_force_32bit
+    run_list:
+      - mozilla_firefox_test
+    attributes:
+      mozilla_firefox:
+        force_32bit: true
+    excludes:
+     - ubuntu-12.04
+     - ubuntu-14.04
+     - centos-6.8
+     - centos-7.2
+     - debian-7.11
+     - debian-8.5

@@ -1,9 +1,9 @@
 #
 # Author::  Seth Chisamore (<schisamo@chef.io>)
-# Cookbook Name:: php
+# Cookbook:: php
 # Recipe:: source
 #
-# Copyright 2011-2016, Chef Software, Inc.
+# Copyright:: 2011-2016, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -29,9 +29,7 @@ mysql_client 'default' do
   only_if { configure_options =~ /mysql/ }
 end
 
-node['php']['src_deps'].each do |pkg|
-  package pkg
-end
+package node['php']['src_deps']
 
 version = node['php']['version']
 
@@ -39,7 +37,7 @@ remote_file "#{Chef::Config[:file_cache_path]}/php-#{version}.tar.gz" do
   source "#{node['php']['url']}/php-#{version}.tar.gz/from/this/mirror"
   checksum node['php']['checksum']
   mode '0644'
-  not_if "which #{node['php']['bin']} --version | grep #{version}"
+  not_if "$(which #{node['php']['bin']}) --version | grep #{version}"
 end
 
 if node['php']['ext_dir']
@@ -66,9 +64,9 @@ bash 'build php' do
   code <<-EOF
   tar -zxf php-#{version}.tar.gz
   (cd php-#{version} && #{ext_dir_prefix} ./configure #{configure_options})
-  (cd php-#{version} && make && make install)
+  (cd php-#{version} && make -j #{node['cpu']['total']} && make install)
   EOF
-  not_if "which #{node['php']['bin']} --version | grep #{version}"
+  not_if "$(which #{node['php']['bin']}) --version | grep #{version}"
 end
 
 directory node['php']['conf_dir'] do

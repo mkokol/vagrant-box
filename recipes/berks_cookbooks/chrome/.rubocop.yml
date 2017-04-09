@@ -1,0 +1,10 @@
+AllCops:
+  Exclude:
+    - '.kitchen/**/*'
+    - 'vendor/**/*'
+
+LineLength:
+  Max: 120
+
+BlockLength:
+  Max: 35

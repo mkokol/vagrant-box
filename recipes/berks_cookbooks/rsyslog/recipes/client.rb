@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: rsyslog
+# Cookbook:: rsyslog
 # Recipe:: client
 #
-# Copyright 2009-2015, Chef Software, Inc.
+# Copyright:: 2009-2016, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ server_ips.each do |ip|
   rsyslog_servers << { 'server' => ip, 'port' => node['rsyslog']['port'], 'logs' => node['rsyslog']['logs_to_forward'], 'protocol' => node['rsyslog']['protocol'], 'remote_template' => node['rsyslog']['default_remote_template'] }
 end
 
-unless node['rsyslog']['custom_remote'].first.empty?
+unless node['rsyslog']['custom_remote'].empty? || node['rsyslog']['custom_remote'].first.empty?
   node['rsyslog']['custom_remote'].each do |server|
     if server['server'].nil?
       Chef::Application.fatal!('Found a custom_remote server with no IP. Check your custom_remote attribute definition!')

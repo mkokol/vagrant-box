@@ -1,0 +1,51 @@
+{
+  "name": "windows_autologin",
+  "description": "Configures Winlogon",
+  "long_description": "# Windows Autologin Cookbook\n\n[![Cookbook Version](http://img.shields.io/cookbook/v/windows_autologin.svg?style=flat-square)][cookbook]\n[![Build Status](https://img.shields.io/appveyor/ci/dhoer/chef-windows-autologin/master.svg?style=flat-square)][win]\n\n[cookbook]: https://supermarket.chef.io/cookbooks/windows_autologin\n[win]: https://ci.appveyor.com/project/dhoer/chef-windows-autologin\n\nEnables/disables automatic logon using Windows \n[AutoAdminLogon](https://technet.microsoft.com/en-us/library/cc939702.aspx).\n \nAutomatic logon uses username (domain can be included, e.g., \ndomain\\username) and password stored in the registry to log users on \nto the computer when the system starts. The Log On to Windows dialog \nbox is not displayed.\n\nUse count to limit the Number of Automatic Logins. Once the limit has \nbeen reached the auto logon feature will be disabled. \n\n**WARNING:** Automatic logon allows other users to start your computer \nand to log on using your account, password is stored \nunencrypted under windows registry \n`HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon` when \nenabled, and Chef outputs the password when updating autologin registry.   \n                                                  \n## Requirements\n\n- Chef 11.6+ (includes a built-in registry_key resource) \n\n### Platforms\n\n- Windows\n\n## Usage\n\nRequires Administrator privileges. \n\nEnable automatic login for user\n\n```ruby\nwindows_autologin 'enable autologin' do\n  username 'username'\n  password my_secret\n  action :enable\nend\n```\n\nDisable automatic login and remove password and count entry\n\n```ruby\nwindows_autologin 'username' do\n  action :disable\nend\n```\n\n### Actions\n\n- `enable` - Enables autologin.\n- `disable` - Disables autologin.\n\n### Attributes\n\n* `username` -  The username to autologin as. Defaults to resource \nblock name. Note that username can include domain.\n* `password` - Required to enable. Default: `nil`.\n* `count` - Number of Automatic Logins. Once the limit has been reached \nthe auto logon feature will be disabled. Default: `0`.\n* `confidential` - Ensure that sensitive resource data is not logged by \nthe chef-client. Default: `true`.\n\n## ChefSpec Matchers\n\nThis cookbook includes custom [ChefSpec](https://github.com/sethvargo/chefspec) matchers you can use to test \nyour own cookbooks.\n\nExample Matcher Usage\n\n```ruby\nexpect(chef_run).to enable_windows_autologin('username').with(\n  password: 'password'\n)\n```\n      \nCookbook Matchers\n\n- enable_windows_autologin(resource_name)\n- disable_windows_autologin(resource_name)\n\n## Getting Help\n\n- Ask specific questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/windows+autologin).\n- Report bugs and discuss potential features in\n[Github issues](https://github.com/dhoer/chef-windows_autologin/issues).\n\n## Contributing\n\nPlease refer to [CONTRIBUTING](https://github.com/dhoer/chef-windows_autologin/blob/master/CONTRIBUTING.md).\n\n## License\n\nMIT - see the accompanying [LICENSE](https://github.com/dhoer/chef-windows_autologin/blob/master/LICENSE.md) file\nfor details.\n",
+  "maintainer": "Dennis Hoer",
+  "maintainer_email": "dennis.hoer@gmail.com",
+  "license": "MIT",
+  "platforms": {
+    "windows": ">= 0.0.0"
+  },
+  "dependencies": {
+
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "4.0.0",
+  "source_url": "https://github.com/dhoer/chef-windows_autologin",
+  "issues_url": "https://github.com/dhoer/chef-windows_autologin/issues",
+  "privacy": false,
+  "chef_versions": [
+
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}

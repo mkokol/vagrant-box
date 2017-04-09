@@ -18,13 +18,12 @@ Vagrant.configure("2") do |config|
             v.memory = 2048
         end
 
+        photoprint.vm.synced_folder "share", "/var/www", create: true, type: "nfs"
         photoprint.vm.network :private_network, ip: "192.168.56.11"
 
         photoprint.vm.network "forwarded_port", guest: 22, host: 2202, id: "ssh"
         photoprint.vm.network "forwarded_port", guest: 80, host: 8082, id: "http"
         photoprint.vm.network "forwarded_port", guest: 9200, host: 9202, id: "elastic"
-
-        photoprint.vm.synced_folder "share", "/var/www", :create => true, owner: "vagrant", group: "www-data"
 
         photoprint.vm.provision :shell, :inline => "sudo apt-get update"
 
@@ -87,7 +86,7 @@ Vagrant.configure("2") do |config|
                 'recipe[java]',
                 'recipe[elasticsearch]',
                 'recipe[elasticsearch_config]',
-                'recipe[kibana4]',
+                'recipe[kibana5]',
                 'recipe[postfix]',
                 'recipe[phpmyadmin]'
             ]
@@ -140,25 +139,37 @@ Vagrant.configure("2") do |config|
                     :hosts => [
                         {
                             :server_name => "pinloft",
+                            :folder_name => "pinloft",
                             :index_location => "/public",
-                            :environment => "development"
+                            :environment => "dev"
+                        },
+                        {
+                            :server_name => "test.pinloft",
+                            :folder_name => "pinloft",
+                            :index_location => "/public",
+                            :environment => "test"
                         }
                     ]
                 },
                 :java => {
-                    :install_flavor => "oracle",
-                    :jdk_version => "7",
-                    :oracle => {
-                        "accept_oracle_download_terms" => true
-                    }
+                    :jdk_version => "8",
+                    :accept_license_agreement => true
                 },
                 :elasticsearch => {
-                    "version" => "2.4.0"
+                    :version => "5.3.0"
                 },
                 :elasticsearch_config => {
                     "allocated_memory" => "512m",
                     "cluster_name" => "pinloft",
                     "node_name" => "pinloft-node01"
+                },
+                :selenium_grid => {
+                    :chrome => {
+                        :max_instances => 10
+                    },
+                    :firefox => {
+                        :max_instances => 10
+                    }
                 },
                 :postfix => {
                     :main => {
@@ -177,10 +188,11 @@ Vagrant.configure("2") do |config|
                 'recipe[nginx_config]',
                 'recipe[php7.0]',
                 'recipe[imagemagick]',
-                'recipe[java]',
-                'recipe[elasticsearch]',
-                'recipe[elasticsearch_config]',
-                'recipe[kibana4]',
+                'recipe[redis::install_from_package]',
+                'recipe[java::openjdk]',
+                'recipe[elk]',
+                'recipe[selenium_grid::node]',
+                'recipe[selenium_grid::hub]',
                 'recipe[postfix]'
             ]
         end

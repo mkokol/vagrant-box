@@ -31,12 +31,19 @@ end
 
 def install_deb
   base_url = new_resource.base_url
-  repo_url = construct_uri_with_options({base_url: base_url, repo: new_resource.repository, endpoint: node['platform']})
+  repo_url = construct_uri_with_options({base_url: base_url, repo: new_resource.repository, endpoint: os_platform })
 
   Chef::Log.debug("#{new_resource.name} deb repo url = #{repo_url}")
 
   package 'wget'
   package 'apt-transport-https'
+  package 'lsb-release'
+
+  ohai "reload-lsb-#{filename}" do
+    plugin 'lsb'
+    action :nothing
+    subscribes :reload, 'package[lsb-release]', :immediately
+  end
 
   repo_url = read_token(repo_url)
 
@@ -44,18 +51,21 @@ def install_deb
     source 'apt.erb'
     cookbook 'packagecloud'
     mode '0644'
-    variables :base_url     => repo_url.to_s,
-              :distribution => node['lsb']['codename'],
-              :component    => 'main'
+    variables lazy {
+      { :base_url     => repo_url.to_s,
+        :distribution => dist_name,
+        :component    => 'main' }
+    }
 
     notifies :run, "execute[apt-key-add-#{filename}]", :immediately
     notifies :run, "execute[apt-get-update-#{filename}]", :immediately
   end
 
-  gpg_url = gpg_url(new_resource.base_url, new_resource.repository, :deb, new_resource.master_token)
-
   execute "apt-key-add-#{filename}" do
-    command "wget --auth-no-challenge -qO - #{gpg_url.to_s} | apt-key add -"
+    command lazy {
+      gpg_url = gpg_url(new_resource.base_url, new_resource.repository, :deb, new_resource.master_token)
+      "wget --auth-no-challenge -qO - #{gpg_url.to_s} | apt-key add -"
+    }
     action :nothing
   end
 
@@ -172,10 +182,7 @@ def read_token(repo_url, gems=false)
 end
 
 def install_endpoint_params
-  dist = new_resource.force_dist || value_for_platform_family(
-    'debian' => node['lsb']['codename'],
-    ['rhel', 'fedora'] => node['platform_version'],
-  )
+  dist = dist_name
 
   hostname = node['packagecloud']['hostname_override'] ||
              node['fqdn'] ||
@@ -193,6 +200,13 @@ end
 
 def os_platform
   new_resource.force_os || node['platform']
+end
+
+def dist_name
+  new_resource.force_dist || value_for_platform_family(
+    'debian' => node['lsb']['codename'],
+    ['rhel', 'fedora'] => node['platform_version'],
+  )
 end
 
 def filename

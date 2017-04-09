@@ -1,5 +1,6 @@
 /.idea
 /.vagrant
+/.DS_Store
 /share/*
 !/share/.git-add
-
+/ubuntu-xenial-16.04-cloudimg-console.log

@@ -1,0 +1,64 @@
+{
+  "name": "selenium_grid",
+  "description": "Installs/Configures Selenium-Grid",
+  "long_description": "# Selenium-Grid Cookbook\n\n[![Cookbook Version](http://img.shields.io/cookbook/v/selenium_grid.svg?style=flat-square)][cookbook]\n[![linux](http://img.shields.io/travis/dhoer/chef-selenium_grid/master.svg?label=linux&style=flat-square)][linux]\n[![win](https://img.shields.io/appveyor/ci/dhoer/chef-selenium-grid/master.svg?label=windows&style=flat-square)][win]\n\n[cookbook]: https://supermarket.chef.io/cookbooks/selenium_grid\n[linux]: https://travis-ci.org/dhoer/chef-selenium_grid/branches\n[win]: https://ci.appveyor.com/project/dhoer/chef-selenium-grid\n\n\nSetup a selenium grid in minutes.  Create selenium hub, then add selenium nodes on Linux, Mac OS X and/or Windows \nplatforms.  Set max instances greater than zero to install and/or configure Browsers and JavaScript engines.  Browsers \nand JavaScript engines will be ignored on operating systems that are not compatible. \n\nSupported Browser and JavaScript engines:\n\n- Chrome\n- Firefox\n- HtmlUnit\n- Internet Explorer\n\n## Requirements\n\n- Java (not installed by this cookbook)\n- Chef 12.14+ \n\n### Platforms\n\n- CentOS, RedHat\n- Debian, Ubuntu\n- Windows\n\n## Recipes\n\n## hub\n\nInstalls and configures a Selenium Hub as a service.  See selenium \n[hub](https://github.com/dhoer/chef-selenium#attributes-1)\nrecipe attributes for more information about configuring the hub.\n\n## node\n\nInstalls and configures a Selenium Node as service on Linux and a GUI service on Windows. See selenium\n[node](https://github.com/dhoer/chef-selenium#attributes-2) recipe attributes for more information about configuring \nthe node. The following attributes are in addition to the node attributes. See associated browsers and drivers cookbook \nattributes (if any) for more information about configuring them as well.\n\n### Attributes\n\n- `node['selenium_grid']['chrome']['max_instances']` - Installs \n[Chrome](https://github.com/dhoer/chef-chrome#attributes) and \n[ChromeDriver](https://github.com/dhoer/chef-chromedriver#attributes), if > 0. Default `0`.\n- `node['selenium_grid']['chrome']['version']` - Version of browser installed, if nil. Default `nil`.\n- `node['selenium_grid']['firefox']['max_instances']` - Installs \n[MozillaFirefox](https://github.com/dhoer/chef-mozilla_firefox#attributes), if > 0. Default `0`.\n- `node['selenium_grid']['firefox']['version']` - Version of browser installed, if nil. Default `nil`.\n- `node['selenium_grid']['htmlunit']['max_instances']` - Activates HtmlUnit, if > 0. Default `0`.\n- `node['selenium_grid']['htmlunit']['version']` - Default `nil`.\n- `node['selenium_grid']['ie']['max_instances']` - Installs \n[IEDriver](https://github.com/dhoer/chef-iedriver#attributes) and configures \n[IE](https://github.com/dhoer/chef-ie#ie-cookbook), if > 0. Only one instance\nof IE is recommended. Windows only. Default `0`.\n- `node['selenium_grid']['ie']['version']` - Version of browser installed, if nil. Default `nil`.\n\n##### Account\n\n- `node['selenium_grid']['username']` - Windows only. Default `nil`.\n- `node['selenium_grid']['password']` - Windows only. Default `nil`.\n- `node['selenium_grid']['domain']` - Windows only. Default `nil`.\n\n##### Display\n\n- `node['selenium_grid']['display']['width']` - Linux and Windows only. Default `1024`.\n- `node['selenium_grid']['display']['height']` - Linux and Window only. Default `768`.\n- `node['selenium_grid']['display']['depth']` - Linux only. Default `24`.\n- `node['selenium_grid']['display']['windows']` - Windows only. Default `true`.\n    \n### Examples\n\n#### Role to create Selenium Node with Chrome and Firefox capabilities\n\n```ruby\nname \"selenium_node\"\ndescription \"Install Selenium Node with Chrome and Firefox capabilities\"\ndefault_attributes(\n  \"selenium_grid\": {\n    \"chrome\": {\n      \"max_instances\": 5\n    },\n    \"firefox\": {\n      \"max_instances\": 5\n    } \n  }\n)\nrun_list(\n  \"recipe[selenium_grid::node]\"\n)\n```\n\n#### Selenium Node with IE capability and custom version\n\n```ruby\nv = ie_version.split('.')\nmajor_version = v[0]\nminor_version = v[1]\n\nnode.set['selenium_grid']['ie']['max_instances'] = 1\nnode.set['selenium_grid']['ie']['version'] = \"#{major_version}.#{minor_version}\"\n  \ninclude_recipe 'selenium_grid::node'\n```\n\n## Getting Help\n\n- Ask specific questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/selenium).\n- Report bugs and discuss potential features in [Github issues](https://github.com/dhoer/chef-selenium_grid/issues).\n\n## Contributing\n\nPlease refer to [CONTRIBUTING](https://github.com/dhoer/chef-selenium_grid/blob/master/CONTRIBUTING.md).\n\n## License\n\nMIT - see the accompanying [LICENSE](https://github.com/dhoer/chef-selenium_grid/blob/master/LICENSE.md) file for details.\n",
+  "maintainer": "Dennis Hoer",
+  "maintainer_email": "dennis.hoer@gmail.com",
+  "license": "MIT",
+  "platforms": {
+    "centos": ">= 0.0.0",
+    "debian": ">= 0.0.0",
+    "redhat": ">= 0.0.0",
+    "ubuntu": ">= 0.0.0",
+    "windows": ">= 0.0.0"
+  },
+  "dependencies": {
+    "selenium": ">= 0.0.0",
+    "xvfb": ">= 0.0.0",
+    "mozilla_firefox": ">= 0.0.0",
+    "geckodriver": ">= 0.0.0",
+    "chrome": ">= 0.0.0",
+    "chromedriver": ">= 0.0.0",
+    "iedriver": ">= 0.0.0",
+    "windows_screenresolution": ">= 0.0.0"
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "2.0.0",
+  "source_url": "https://github.com/dhoer/chef-selenium_grid",
+  "issues_url": "https://github.com/dhoer/chef-selenium_grid/issues",
+  "privacy": false,
+  "chef_versions": [
+    [
+      ">= 12.14"
+    ]
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}

@@ -12,7 +12,7 @@ module MysqlCookbook
     property :major_version, String, default: lazy { major_from_full(version) }, desired_state: false
     property :package_name, String, default: lazy { default_package_name }, desired_state: false
     property :package_options, [String, nil], desired_state: false
-    property :package_version, [String, nil], default: lazy { default_package_version }, desired_state: false
+    property :package_version, [String, nil], default: nil, desired_state: false
 
     ################
     # Helper Methods
@@ -37,7 +37,7 @@ module MysqlCookbook
         when 'package'
           install = mysql_server_installation_package(name, &block)
         when 'none'
-          Chef::Log.info('Skipping Mysql installation. Assuming it was handled previously.')
+          Chef::Log.info('Skipping MySQL installation. Assuming it was handled previously.')
           return
         end
         copy_properties_to(install)

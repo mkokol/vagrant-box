@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: php
+# Cookbook:: php
 # Attributes:: default
 #
-# Copyright 2011-2016, Chef Software, Inc.
+# Copyright:: 2011-2016, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -60,7 +60,11 @@ when 'rhel', 'fedora'
     default['php']['packages'] = %w(php53 php53-devel php53-cli php-pear)
     default['php']['mysql']['package'] = 'php53-mysql'
   else # set fpm attributes as we're on a modern PHP release
-    default['php']['packages'] = %w(php php-devel php-cli php-pear)
+    default['php']['packages'] = if node['platform'] == 'amazon' # amazon names their packages with versions
+                                   %w(php56 php56-devel php-pear)
+                                 else # redhat does not name their packages with version on RHEL 6+
+                                   %w(php php-devel php-cli php-pear)
+                                 end
     default['php']['mysql']['package'] = 'php-mysql'
     default['php']['fpm_package']   = 'php-fpm'
     default['php']['fpm_pooldir']   = '/etc/php-fpm.d'
@@ -72,11 +76,6 @@ when 'rhel', 'fedora'
       default['php']['fpm_listen_user'] = 'apache'
       default['php']['fpm_listen_group'] = 'apache'
     end
-    default['php']['packages'] = if node['platform'] == 'amazon' # amazon names their packages with versions
-                                   %w(php56 php56-devel php-pear)
-                                 else # redhat does not name their packages with version on RHEL 6+
-                                   %w(php php-devel php-pear)
-                                 end
   end
 when 'debian'
   default['php']['conf_dir'] = '/etc/php5/cli'
@@ -119,8 +118,6 @@ when 'debian'
       default['php']['ext_conf_dir']     = '/etc/php/7.0/mods-available'
     when 13.04..15.10
       default['php']['ext_conf_dir'] = '/etc/php5/mods-available'
-    when 10.04..12.10
-      default['php']['ext_conf_dir'] = '/etc/php5/conf.d'
     end
   when 'debian'
     case node['platform_version'].to_i
@@ -140,8 +137,8 @@ when 'suse'
   default['php']['mysql']['package'] = 'php5-mysql'
   lib_dir = node['kernel']['machine'] =~ /x86_64/ ? 'lib64' : 'lib'
 when 'windows'
-  default['php']['windows']['msi_name']      = 'PHP 5.3.28'
-  default['php']['windows']['msi_source']    = 'http://windows.php.net/downloads/releases/php-5.3.28-nts-Win32-VC9-x86.msi'
+  default['php']['windows']['msi_name']      = 'PHP 5.6.30'
+  default['php']['windows']['msi_source']    = 'http://windows.php.net/downloads/releases/php-5.6.30-nts-Win32-VC11-x86.msi'
   default['php']['bin']           = 'php.exe'
   default['php']['conf_dir']      = 'C:\Program Files (x86)\PHP'
   default['php']['ext_conf_dir']  = node['php']['conf_dir']

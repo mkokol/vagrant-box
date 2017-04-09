@@ -1,10 +1,18 @@
 # install ngings configuration
 
+link '/etc/nginx/sites-enabled/000-default' do
+  action :delete
+  only_if 'test -L /etc/nginx/sites-enabled/000-default'
+end
+
+link '/etc/nginx/sites-enabled/default' do
+  action :delete
+  only_if 'test -L /etc/nginx/sites-enabled/default'
+end
+
 node["nginx_config"]["hosts"].each do |vhost|
   Chef::Log.info("Add new directory: #{vhost}")
-  directory "/var/www/#{vhost['server_name']}" do
-    owner "vagrant"
-    group "vagrant"
+  directory "/var/www/#{vhost['folder_name']}" do
     mode "0755"
     action :create
     recursive true

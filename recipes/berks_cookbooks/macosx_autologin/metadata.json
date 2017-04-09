@@ -1,0 +1,39 @@
+{
+  "name": "macosx_autologin",
+  "description": "Configures automatic login using a Gavin Brock's kcpassword",
+  "long_description": "# Mac OS X Autologin Cookbook\n\n[![Cookbook Version](http://img.shields.io/cookbook/v/macosx_autologin.svg?style=flat-square)][cookbook]\n[![Build Status](http://img.shields.io/travis/dhoer/chef-macosx_autologin.svg?style=flat-square)][travis]\n\n[cookbook]: https://supermarket.chef.io/cookbooks/macosx_autologin\n[travis]: https://travis-ci.org/dhoer/chef-macosx_autologin\n\nEnables/disables automatic login for user on boot using a modified version of \nGavin Brock's [kcpassword](http://www.brock-family.org/gavin/perl/kcpassword.html). \n                                                  \n## Requirements\n\n- Chef 11.14+ \n\n### Platforms\n\n- Mac OS X 10.7+\n\n## Usage\n\nRequires super-user privileges. \n\nEnable automatic login for user and display login screen\n\n```ruby\nmacosx_autologin 'username' do\n  password 'password\n  restart_loginwindow true\n  action :enable\nend\n```\n\nDisable automatic login and display login screen\n\n```ruby\nmacosx_autologin 'username' do\n  restart_loginwindow true\n  action :disable\nend\n```\n\n### Actions\n\n- `enable` - Enables autologin.\n- `disable` - Disables autologin.\n\n### Attributes\n\n- `username` - Username to login as. Required when enabled. Defaults \nto resource block name. \n- `password` - Password of username. Required when enabled.\n- `restart_loginwindow` - Display login screen. Default `false`.\n\n## ChefSpec Matchers\n\nThis cookbook includes custom [ChefSpec](https://github.com/sethvargo/chefspec) matchers you can use to test \nyour own cookbooks.\n\nExample Matcher Usage\n\n```ruby\nexpect(chef_run).to enable_macosx_autologin('username').with(\n  password: 'password'\n)\n```\n      \nCookbook Matchers\n\n- enable_macosx_autologin(resource_name)\n- disable_macosx_autologin(resource_name)\n\n## Getting Help\n\n- Ask specific questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/osx+autologin).\n- Report bugs and discuss potential features in\n[Github issues](https://github.com/dhoer/chef-macosx_autologin/issues).\n\n## Contributing\n\nPlease refer to [CONTRIBUTING](https://github.com/dhoer/chef-macosx_autologin/blob/master/CONTRIBUTING.md).\n\n## License\n\nMIT - see the accompanying [LICENSE](https://github.com/dhoer/chef-macosx_autologin/blob/master/LICENSE.md) file\nfor details.\n",
+  "maintainer": "Dennis Hoer",
+  "maintainer_email": "dennis.hoer@gmail.com",
+  "license": "MIT",
+  "platforms": {
+    "mac_os_x": ">= 10.7"
+  },
+  "dependencies": {
+
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "5.0.0"
+}

@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: rsyslog
+# Cookbook:: rsyslog
 # Recipe:: default
 #
-# Copyright 2009-2015, Chef Software, Inc.
+# Copyright:: 2009-2016, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ package 'rsyslog'
 package 'rsyslog-relp' if node['rsyslog']['use_relp']
 
 if node['rsyslog']['enable_tls'] && node['rsyslog']['tls_ca_file']
-  Chef::Log.fatal("Recipe rsyslog::default can not use 'enable_tls' with protocol '#{node['rsyslog']['protocol']}' (requires 'tcp')") unless node['rsyslog']['protocol'] == 'tcp'
+  raise "Recipe rsyslog::default can not use 'enable_tls' with protocol '#{node['rsyslog']['protocol']}' (requires 'tcp')" unless node['rsyslog']['protocol'] == 'tcp'
   package 'rsyslog-gnutls'
 end
 
@@ -30,8 +30,6 @@ directory "#{node['rsyslog']['config_prefix']}/rsyslog.d" do
   group 'root'
   mode  '0755'
 end
-
-log node['rsyslog']['group']
 
 directory node['rsyslog']['working_dir'] do
   owner node['rsyslog']['user']

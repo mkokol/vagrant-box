@@ -2,6 +2,43 @@
 
 This file is used to list changes made in each version of the php cookbook.
 
+## 3.0.0 (2017-03-27)
+- Converted pear_channel LWRP into custom resource
+- Removed use of pear node attribute from pear_channel resource
+- Fix cookstyle issue with missing line on metadata.rb
+- Clean up kitchen.dokken.yml file to eliminate duplication of testing suites.
+- Eliminate duplicated resource from test cookbook that is in the default recipe.
+- Rename php-test to standard cookbook testing cookbook of "test"
+- Remove EOL ubuntu platform logic
+**NOTE** Windows package installation is currently broken. 
+
+## 2.2.1 (2017-02-21)
+
+- Fix double definition of ['php']['packages'] for rhel.
+
+## 2.2.0 (2016-12-12)
+
+- Use multipackage for installs to speed up chef runs
+- Use all CPUs when building from source
+- Remove need for apt/yum in testing
+- Add opensuse to the metadata
+- Migrate to inspec for integration testing
+
+## 2.1.1 (2016-09-15)
+
+- Fix recompile un-pack php creates
+- Resolve cookstyle warnings
+
+## 2.1.0 (2016-09-14)
+
+- Fix source php version check
+- Require Chef 12.1 not 12.0
+
+## 2.0.0 (2016-09-07)
+
+- Require Chef 12+
+- Remove the dependency on the Windows cookbook which isn't necessary with Chef 12+
+
 ## 1.10.1 (2016-08-30)
 
 - [fix] bug fixes related with Ubuntu 16.04 and PHP 7 support

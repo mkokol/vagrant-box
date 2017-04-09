@@ -1,0 +1,52 @@
+{
+  "name": "windows_screenresolution",
+  "description": "Sets headless screen resolution on Windows",
+  "long_description": "# Windows Screen Resolution Cookbook\n\n[![Cookbook Version](http://img.shields.io/cookbook/v/windows_screenresolution.svg?style=flat-square)][cookbook]\n[![Build Status](https://img.shields.io/appveyor/ci/dhoer/chef-windows-screenresolution/master.svg?style=flat-square)][win]\n\n[cookbook]: https://supermarket.chef.io/cookbooks/windows_screenresolution\n[win]: https://ci.appveyor.com/project/dhoer/chef-windows-screenresolution\n\nSets headless screen resolution on Windows.  \n\nIt does this by:\n \n- creating a new user called `rdp_local` \n- creating a startup script to RDP into the specified user account at specified resolution (default is 1920x1080) \n- adding a firewall rule to open RDP port 3389\n- configuring auto-logon to login as `rdp_local` on reboot\n\nNote that auto-logon requires a username and password and that the password is stored unencrypted under \nwindows registry `HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon`.\n\nTested on Amazon Windows Server 2012 R2 AMI.\n\n## Requirements\n\n- Chef 11.6+ (registry_key resource)\n- Windows Server 2008 R2+ (due to usage of [window_home](https://github.com/dhoer/chef-windows_home))\n\n## Platforms\n\n- Windows\n\n## Dependencies\n\n- windows_autologin\n- windows_home\n\n## Usage\n\nInclude default recipe in run list or in another cookbook to set the screen resolution. \nThe `username` and `password` must be set in order to user this cookbook.  \n\nSet newuser's screen resolution to `1920x1080` (default)\n\n``` ruby\nwindows_screenresolution 'newuser do\n  password my_secret\n  action :run\nend\n```\n\nSet newuser's screen resolution to `1366x768`\n\n```ruby\nwindows_screenresolution 'newuser do\n  password my_secret\n  width 1366\n  height 768  \n  action :run\nend\n```\n\n### Attributes\n\n- `username` - Username of account to remote login as (required).\n- `password` - Password of account to remote login as (required).\n- `width` -  Display width in pixels. Default: `1920`.\n- `height` - Display height in pixels. Default: `1080`.\n- `target` -   Identifies the computer or domain name that username and \npassword account will be associated with for remote login. \nDefault: `localhost`.\n- `rdp_autologin` - Logon as RDP user automatically on reboot. Default:\n`true`. Note that the password is stored unencrypted under windows \nregistry `HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon`.\n- `rdp_username` -  RDP username. Default: `rdp_local`.\n- `rdp_password` - RDP password. Defaults to password of account to \nremote login as, if `nil`.\n- `confidential` - Ensure that sensitive resource data is not logged by \nthe chef-client. Default: `true`.\n\n## ChefSpec Matchers\n\nThis cookbook includes custom [ChefSpec](https://github.com/sethvargo/chefspec) matchers you can use to test \nyour own cookbooks.\n\nExample Matcher Usage\n\n```ruby\nexpect(chef_run).to run_windows_screenresolution('username').with(\n  password: 'password'\n)\n```\n      \nCookbook Matchers\n\n- run_windows_screenresolution(resource_name)\n\n## Getting Help\n\n- Ask specific questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/chef+windows+screen+resolution).\n- Report bugs and discuss potential features in \n[Github issues](https://github.com/dhoer/chef-windows_screenresolution/issues).\n\n## Contributing\n\nPlease refer to [CONTRIBUTING](https://github.com/dhoer/chef-windows_screenresolution/blob/master/CONTRIBUTING.md).\n\n## License\n\nMIT - see the accompanying [LICENSE](https://github.com/dhoer/chef-windows_screenresolution/blob/master/LICENSE.md) \nfile for details.\n",
+  "maintainer": "Dennis Hoer",
+  "maintainer_email": "dennis.hoer@gmail.com",
+  "license": "MIT",
+  "platforms": {
+    "windows": ">= 0.0.0"
+  },
+  "dependencies": {
+    "windows_home": ">= 0.0.0",
+    "windows_autologin": ">= 3.0"
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "3.0.0",
+  "source_url": "https://github.com/dhoer/chef-windows_screenresolution",
+  "issues_url": "https://github.com/dhoer/chef-windows_screenresolution/issues",
+  "privacy": false,
+  "chef_versions": [
+
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}

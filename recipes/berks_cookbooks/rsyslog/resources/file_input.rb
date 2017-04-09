@@ -1,7 +1,7 @@
-# Cookbook Name:: rsyslog
+# Cookbook:: rsyslog
 # Resource:: file_input
 #
-# Copyright 2012-2015, Joseph Holsten
+# Copyright:: 2012-2016, Joseph Holsten
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,8 +15,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-actions :create
 
 property :name, String, name_attribute: true, required: true
 property :file, String, required: true
@@ -39,7 +37,7 @@ action :create do
               'state_file' => log_name,
               'severity' => severity,
               'facility' => facility
-    notifies :restart, "service[#{node['rsyslog']['service_name']}]"
+    notifies :restart, "service[#{node['rsyslog']['service_name']}]", :delayed
   end
 
   service node['rsyslog']['service_name'] do

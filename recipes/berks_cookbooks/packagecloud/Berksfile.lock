@@ -10,4 +10,4 @@ GRAPH
   packagecloud_test (0.0.0)
     packagecloud (>= 0.0.0)
     yum (>= 0.0.0)
-  yum (3.5.2)
+  yum (3.3.2)

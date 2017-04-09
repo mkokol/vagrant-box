@@ -2,11 +2,6 @@ module MysqlCookbook
   module HelpersBase
     require 'shellwords'
 
-    def el5?
-      return true if node['platform_family'] == 'rhel' && node['platform_version'].to_i == 5
-      false
-    end
-
     def el6?
       return true if node['platform_family'] == 'rhel' && node['platform_version'].to_i == 6
       false
@@ -14,21 +9,6 @@ module MysqlCookbook
 
     def el7?
       return true if node['platform_family'] == 'rhel' && node['platform_version'].to_i == 7
-      false
-    end
-
-    def fc23?
-      return true if node['platform'] == 'fedora' && node['platform_version'].to_i == 23
-      false
-    end
-
-    def fc24?
-      return true if node['platform'] == 'fedora' && node['platform_version'].to_i == 24
-      false
-    end
-
-    def squeeze?
-      return true if node['platform'] == 'debian' && node['platform_version'].to_i == 6
       false
     end
 
@@ -58,25 +38,13 @@ module MysqlCookbook
       false
     end
 
-    def amazon?
-      return true if node['platform'] == 'amazon'
-    end
-
-    def opensuse?
-      return true if node['platform'] == 'opensuse'
-    end
-
-    def opensuseleap?
-      return true if node['platform'] == 'opensuseleap'
-    end
-
     def defaults_file
       "#{etc_dir}/my.cnf"
     end
 
     def default_data_dir
-      return "/opt/local/lib/#{mysql_name}" if node['os'] == 'solaris2'
       return "/var/lib/#{mysql_name}" if node['os'] == 'linux'
+      return "/opt/local/lib/#{mysql_name}" if node['os'] == 'solaris2'
       return "/var/db/#{mysql_name}" if node['os'] == 'freebsd'
     end
 
@@ -90,13 +58,11 @@ module MysqlCookbook
 
     def default_major_version
       # rhelish
-      return '5.0' if el5?
       return '5.1' if el6?
       return '5.6' if el7?
-      return '5.5' if amazon?
+      return '5.5' if node['platform'] == 'amazon'
 
       # debian
-      return '5.1' if squeeze?
       return '5.5' if wheezy?
       return '5.5' if jessie?
 
@@ -124,75 +90,21 @@ module MysqlCookbook
     end
 
     def default_client_package_name
-      return 'mysql' if major_version == '5.0' && el5?
-      return 'mysql51-mysql' if major_version == '5.1' && el5?
-      return 'mysql' if major_version == '5.1' && el6?
-      return 'mysql55-mysql' if major_version == '5.5' && el5?
-      return 'mysql-client-5.5' if major_version == '5.5' && node['platform_family'] == 'debian'
-      return 'mysql-client-5.6' if major_version == '5.6' && node['platform_family'] == 'debian'
-      return 'mysql-client-5.7' if major_version == '5.7' && node['platform_family'] == 'debian'
+      return ['mysql', 'mysql-devel'] if major_version == '5.1' && el6?
+      return ['mysql-client-5.5', 'libmysqlclient-dev'] if major_version == '5.5' && node['platform_family'] == 'debian'
+      return ['mysql-client-5.6', 'libmysqlclient-dev'] if major_version == '5.6' && node['platform_family'] == 'debian'
+      return ['mysql-client-5.7', 'libmysqlclient-dev'] if major_version == '5.7' && node['platform_family'] == 'debian'
       return 'mysql-community-server-client' if major_version == '5.6' && node['platform_family'] == 'suse'
-      'mysql-community-client'
+      ['mysql-community-client', 'mysql-community-devel']
     end
 
     def default_server_package_name
-      return 'mysql-server' if major_version == '5.0' && el5?
-      return 'mysql51-mysql-server' if major_version == '5.1' && el5?
       return 'mysql-server' if major_version == '5.1' && el6?
-      return 'mysql55-mysql-server' if major_version == '5.5' && el5?
       return 'mysql-server-5.5' if major_version == '5.5' && node['platform_family'] == 'debian'
       return 'mysql-server-5.6' if major_version == '5.6' && node['platform_family'] == 'debian'
       return 'mysql-server-5.7' if major_version == '5.7' && node['platform_family'] == 'debian'
       return 'mysql-community-server' if major_version == '5.6' && node['platform_family'] == 'suse'
       'mysql-community-server'
-    end
-
-    def default_package_version
-      # el5
-      return '5.0.95-5.el5_9' if major_version == '5.0' && el5?
-      return '5.1.70-1.el5' if major_version == '5.1' && el5?
-      return '5.5.45-1.el5' if major_version == '5.5' && el5?
-      return '5.6.29-2.el5' if major_version == '5.6' && el5?
-      return '5.7.11-1.el5' if major_version == '5.7' && el5?
-
-      # el6
-      return '5.1.73-7.el6' if major_version == '5.1' && el6?
-      return '5.5.48-2.el6' if major_version == '5.5' && el6?
-      return '5.6.29-2.el6' if major_version == '5.6' && el6?
-      return '5.7.11-1.el6' if major_version == '5.7' && el6?
-
-      # el7
-      return '5.5.48-2.el7' if major_version == '5.5' && el7?
-      return '5.6.29-2.el7' if major_version == '5.6' && el7?
-      return '5.7.11-1.el7' if major_version == '5.7' && el7?
-
-      # amazon
-      return '5.5.48-2.el6' if major_version == '5.5' && amazon?
-      return '5.6.31-2.el6' if major_version == '5.6' && amazon?
-      return '5.7.11-1.el6' if major_version == '5.7' && amazon?
-
-      # N-1 fedora
-      return '5.6.31-1.fc23' if major_version == '5.6' && fc23?
-      return '5.7.13-1.fc23' if major_version == '5.7' && fc23?
-
-      return '5.6.31-1.fc24' if major_version == '5.6' && fc24?
-      return '5.7.13-1.fc24' if major_version == '5.7' && fc24?
-
-      # debian
-      return '5.5.49-0+deb7u1' if major_version == '5.5' && wheezy?
-      return '5.5.49-0+deb8u1' if major_version == '5.5' && jessie?
-
-      # ubuntu
-      return '5.5.50-0ubuntu0.12.04.1' if major_version == '5.5' && precise?
-      return '5.5.50-0ubuntu0.14.04.1' if major_version == '5.5' && trusty?
-      return '5.6.31-0ubuntu0.14.04.2' if major_version == '5.6' && trusty?
-      return '5.7.13-0ubuntu0.16.04.2' if major_version == '5.7' && xenial?
-
-      # suse
-      return '5.6.30-2.20.2' if major_version == '5.6' && opensuse?
-      return '5.6.30-16.2' if major_version == '5.6' && opensuseleap?
-
-      raise "No package version found for version #{major_version} on #{node['platform']} #{node['platform_version']}. Aborting."
     end
 
     def socket_dir
@@ -239,10 +151,7 @@ module MysqlCookbook
       return 'mysql55-mysqld' if node['platform_family'] == 'rhel' && scl_name == 'mysql55'
       return 'mysqld' if node['platform_family'] == 'rhel'
       return 'mysqld' if node['platform_family'] == 'fedora'
-      return 'mysql' if node['platform_family'] == 'debian'
-      return 'mysql' if node['platform_family'] == 'suse'
-      return 'mysql' if node['platform_family'] == 'omnios'
-      return 'mysql' if node['platform_family'] == 'smartos'
+      'mysql' # not one of the above
     end
 
     def v56plus
@@ -266,17 +175,20 @@ module MysqlCookbook
       "#{prefix_dir}/var/log/#{mysql_name}"
     end
 
-    def lc_messages_dir
-    end
+    def lc_messages_dir; end
 
     def init_records_script
+      # Note: shell-escaping passwords in a SQL file may cause corruption - eg
+      # mysql will read \& as &, but \% as \%. Just escape bare-minimum \ and '
+      sql_escaped_password = root_password.gsub('\\') { '\\\\' }.gsub("'") { '\\\'' }
+
       <<-EOS
         set -e
         rm -rf /tmp/#{mysql_name}
         mkdir /tmp/#{mysql_name}
 
-        cat > /tmp/#{mysql_name}/my.sql <<-EOSQL
-UPDATE mysql.user SET #{password_column_name}=PASSWORD('#{root_password}')#{password_expired} WHERE user = 'root';
+        cat > /tmp/#{mysql_name}/my.sql <<-'EOSQL'
+UPDATE mysql.user SET #{password_column_name}=PASSWORD('#{sql_escaped_password}')#{password_expired} WHERE user = 'root';
 DELETE FROM mysql.user WHERE USER LIKE '';
 DELETE FROM mysql.user WHERE user = 'root' and host NOT IN ('127.0.0.1', 'localhost');
 FLUSH PRIVILEGES;
@@ -304,7 +216,7 @@ EOSQL
         Chef::Log.info('Root password is empty')
         return ''
       end
-      Shellwords.escape(initial_root_password)
+      initial_root_password
     end
 
     def password_expired
@@ -327,7 +239,7 @@ EOSQL
       cmd = mysql_install_db_bin
       cmd << " --defaults-file=#{etc_dir}/my.cnf"
       cmd << " --datadir=#{data_dir}"
-      cmd << ' --explicit_defaults_for_timestamp' if v56plus
+      cmd << ' --explicit_defaults_for_timestamp' if v56plus && !v57plus
       return "scl enable #{scl_name} \"#{cmd}\"" if scl_package?
       cmd
     end
@@ -371,10 +283,6 @@ EOSQL
       cmd << ' &'
       return "scl enable #{scl_name} \"#{cmd}\"" if scl_package?
       cmd
-    end
-
-    def sensitive_supported?
-      Gem::Version.new(Chef::VERSION) >= Gem::Version.new('11.14.0')
     end
   end
 end

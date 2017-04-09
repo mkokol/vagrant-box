@@ -10,7 +10,7 @@ server {
     charset utf-8;
     rewrite ^/(.*)/$ /$1 permanent;
 
-    root /var/www/<%= @vhost[:server_name] %><%= @vhost[:index_location] %>;
+    root /var/www/<%= @vhost[:folder_name] %><%= @vhost[:index_location] %>;
     index index.php;
 
     access_log /var/log/nginx/<%= @vhost[:server_name] %>.access.log;
@@ -33,7 +33,7 @@ server {
         include fastcgi_params;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         fastcgi_param HTTPS off;
-        fastcgi_param APPLICATION_ENV <%= @vhost[:environment] %>;
+        fastcgi_param APP_ENV <%= @vhost[:environment] %>;
         internal;
     }
 

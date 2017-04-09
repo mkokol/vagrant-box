@@ -1,9 +1,9 @@
 #
 # Author:: Seth Chisamore (<schisamo@chef.io>)
-# Cookbook Name:: iis
+# Cookbook:: iis
 # Recipe:: mod_management
 #
-# Copyright 2011-2016, Chef Software, Inc.
+# Copyright:: 2011-2016, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -29,5 +29,6 @@ features = if Opscode::IIS::Helper.older_than_windows2008r2?
 features.each do |feature|
   windows_feature feature do
     action :install
+    all !Opscode::IIS::Helper.older_than_windows2012?
   end
 end

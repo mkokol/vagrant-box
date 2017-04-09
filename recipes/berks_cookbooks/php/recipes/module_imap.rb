@@ -1,6 +1,6 @@
 #
 # Author:: Artur Melo (<artur.melo@beubi.com>)
-# Cookbook Name:: php
+# Cookbook:: php
 # Recipe:: module_imap
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,7 +19,7 @@
 pkg = value_for_platform(
   %w(centos redhat scientific fedora amazon oracle) => {
     el5_range => 'php53-imap',
-    'default' => 'php-imap'
+    'default' => 'php-imap',
   },
   'default' => 'php5-imap'
 )

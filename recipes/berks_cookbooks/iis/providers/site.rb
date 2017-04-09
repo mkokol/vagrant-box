@@ -1,9 +1,9 @@
 #
 # Author:: Seth Chisamore (<schisamo@chef.io>)
-# Cookbook Name:: iis
+# Cookbook:: iis
 # Provider:: site
 #
-# Copyright:: 2011, Chef Software, Inc.
+# Copyright:: 2011-2016, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -46,7 +46,7 @@ action :add do
     configure
 
     if new_resource.application_pool
-      shell_out!("#{appcmd(node)} set app \"#{new_resource.site_name}/\" /applicationPool:\"#{new_resource.application_pool}\"", returns: [0, 42])
+      shell_out!("#{appcmd(node)} set site /site.name:\"#{new_resource.site_name}\" /[path='/'].applicationPool:\"#{new_resource.application_pool}\"", returns: [0, 42])
     end
     new_resource.updated_by_last_action(true)
     Chef::Log.info("#{new_resource} added new site '#{new_resource.site_name}'")
@@ -114,7 +114,7 @@ def load_current_resource
       @current_resource.site_id(result[2].to_i)
       @current_resource.exists = true
       @current_resource.bindings(result[3])
-      @current_resource.running = (result[4] =~ /Started/) ? true : false
+      @current_resource.running = result[4] =~ /Started/ ? true : false
     else
       @current_resource.exists = false
       @current_resource.running = false
